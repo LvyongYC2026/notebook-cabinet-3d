@@ -1,0 +1,21 @@
+{
+  "file": "smart_cabinet.glb",
+  "sha256": "051f8342c37322856f84942bdf970ecfde19737bd26d5d746050f42588a40412",
+  "size_bytes": 17347020,
+  "nodes": 2087,
+  "unique_meshes": 1267,
+  "unique_triangles": 435704,
+  "native_morph_cables": 30,
+  "parking_cable_meshes": 36,
+  "checks": [
+    "embedded buffers/textures",
+    "no studio camera/light",
+    "finite numeric accessors",
+    "valid index ranges",
+    "18 bay/door/tray nodes",
+    "15 laptop roots",
+    "30 native morph target names"
+  ],
+  "passed": true,
+  "limits": "File structure checks only; motion and clearances are recorded separately."
+}

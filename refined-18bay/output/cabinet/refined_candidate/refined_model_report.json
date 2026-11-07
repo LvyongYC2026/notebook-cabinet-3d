@@ -1,0 +1,134 @@
+{
+  "configuration": {
+    "width_mm": 420,
+    "depth_mm": 650,
+    "height_mm": 450,
+    "tray_mm": [
+      376,
+      470,
+      2
+    ],
+    "laptop_mm": [
+      300,
+      210,
+      18
+    ],
+    "laptop_center_xy_mm": [
+      30,
+      -75
+    ],
+    "laptop_lid_height_mm": 195,
+    "laptop_opening_degrees": 105,
+    "led_center_mm": [
+      0,
+      -245,
+      460
+    ],
+    "font_path": ""
+  },
+  "cabinet_dimensions_mm": [
+    3300,
+    650,
+    1850
+  ],
+  "bay_count": 18,
+  "occupied_bays": 15,
+  "empty_bays": [
+    "A3",
+    "B2",
+    "B6"
+  ],
+  "front_bay_doors": 18,
+  "rear_maintenance_doors": 3,
+  "front_door_limit_degrees": 95,
+  "support_heights_mm": [
+    350,
+    800,
+    1250
+  ],
+  "actual_laptop_base_mm": [
+    300,
+    210,
+    18
+  ],
+  "actual_tray_deck_mm": [
+    376,
+    470,
+    2
+  ],
+  "horizontal_shelf_center_below_support_mm": 29.4,
+  "clear_height_above_support_mm": 420,
+  "rail_hardware_raise_mm": 5,
+  "rail_support_shim_mm": 1.05,
+  "installation_spacer_depth_mm": [
+    12.5,
+    24.65
+  ],
+  "led_center_above_support_mm": 413,
+  "led_top_clearance_to_ceiling_mm": 1,
+  "parking_min_sampled_radius_mm": {
+    "network": 47.63510586824226,
+    "power": 57.55170934184699
+  },
+  "native_cables": 30,
+  "stowed_bay_cables": 6,
+  "parking_alternatives": 30,
+  "shared_static_meshes": 15,
+  "source_script_sha256": "124997f0077206652ec9d26e07036045db067bab86cb9819ace22021cd5ef710",
+  "candidate_files": [
+    "smart_cabinet_18bay.blend",
+    "smart_cabinet.glb",
+    "components.json"
+  ],
+  "status": "validated_candidate_ready_for_review",
+  "limits": [
+    "Sampled geometry only; no load, heat, electrical or manufacturing certification."
+  ],
+  "motion_audit": {
+    "file": "refined_clearance_audit.json",
+    "sample_count": 167,
+    "intersection_occurrences": 0,
+    "passed_within_scope": true
+  },
+  "font_packaging_audit": {
+    "method": "Evaluated mesh coordinates rounded to1e-7m and polygon indices of30 existing text objects before/after subset embedding",
+    "all_30_geometry_hashes_identical": true,
+    "preserved_original_font_head_bounds": true,
+    "subset_includes": "all existing model characters plus ASCII",
+    "new_characters_require_full_font": true
+  },
+  "native_file_bytes": 3441765,
+  "glb_audit_file": "refined_glb_audit.json",
+  "baseline": [
+    "output/cabinet/refinement_baseline/smart_cabinet_18bay_before_refinement.blend",
+    "output/cabinet/refinement_baseline/components_before_refinement.json"
+  ],
+  "implementation_script_sha256": "1fdcaa82f9331b93348486f9ff1361d4b494661ea45685607aa6d0bfd4425b4f",
+  "previews": [
+    {
+      "file": "previews/refined_A1_detail.png",
+      "pixels": [
+        1200,
+        900
+      ],
+      "visual_review": "checked"
+    },
+    {
+      "file": "previews/refined_A3_detail.png",
+      "pixels": [
+        1200,
+        900
+      ],
+      "visual_review": "checked"
+    },
+    {
+      "file": "previews/refined_full_open.png",
+      "pixels": [
+        1500,
+        1000
+      ],
+      "visual_review": "checked"
+    }
+  ],
+  "assembly_note": "Existing baseline internal README text blocks are historical; this delivery README and components.json describe the refined version."
+}
