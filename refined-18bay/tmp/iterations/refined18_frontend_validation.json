@@ -1,0 +1,66 @@
+{
+  "all_18_interlocked_open_close": true,
+  "rapid_mechanism_reversal": true,
+  "borrow_return_fixed_adapters": true,
+  "deep_link_enumeration": true,
+  "rapid_back_then_all_doors": true,
+  "cabinet": {
+    "doors": 22,
+    "trays": 18,
+    "cables": 36,
+    "all_front_doors": true,
+    "closed_reset_fit": true
+  },
+  "refined_cabinet": {
+    "focused_bay_cases": 12,
+    "native_cables": 30,
+    "stowed_cables": 6,
+    "native_configurations": 150,
+    "max_actual_endpoint_error_mm": 1.9951372697015264e-05,
+    "max_length_deviation_mm": 0.004062638653635986,
+    "empty_cables_static": true,
+    "all_adapters_fixed": true,
+    "optimized_meshes": 1101,
+    "estimated_triangles": 1241036,
+    "geometry_objects": 1161,
+    "asset_bytes": 17347020
+  },
+  "single": {
+    "repeat_roundtrips": 3,
+    "focused_tray_target_cases": 4,
+    "doors": 1,
+    "trays": 1,
+    "cables": 2,
+    "metadata": 17,
+    "successful_cache_loads": 1,
+    "failed_load_preserves_cabinet": true,
+    "tray_interlock": true,
+    "return_preserves_cabinet": true,
+    "cable_configurations": 10,
+    "max_actual_mesh_endpoint_error_mm": 8.573556325958295e-06,
+    "max_cable_length_deviation_mm": 0.002603823688104967
+  },
+  "validated_artifacts": {
+    "app.js": {
+      "sha256": "7c0194c816ac4f8ca7a4798a955b1d11153755cc4c4d73fc8f56948d773f4bad",
+      "bytes": 67190
+    },
+    "assets/smart_cabinet.glb": {
+      "sha256": "051f8342c37322856f84942bdf970ecfde19737bd26d5d746050f42588a40412",
+      "bytes": 17347020
+    },
+    "assets/components.json": {
+      "sha256": "1b4a95fc8698aec041c668ce92ae86703875708d5df354d4c2086f85492aaddd",
+      "bytes": 892129
+    },
+    "assets/smart_cabinet_single_compartment.glb": {
+      "sha256": "68e6cd80994d697786e9caafa37ff81297cd889f6b94bb8c2f513cfe25dfc26a",
+      "bytes": 4498196
+    },
+    "assets/single_compartment.json": {
+      "sha256": "476ad1d991f9cbaf016ccbe2eb5144d4d4f86d5ec8b7095c6721e24732d8d42b",
+      "bytes": 42962
+    }
+  },
+  "validation_status": "passed"
+}

@@ -1,0 +1,11 @@
+{
+  "frozen_app_sha256": "7c0194c816ac4f8ca7a4798a955b1d11153755cc4c4d73fc8f56948d773f4bad",
+  "parking_endpoint_checks": 72,
+  "max_actual_endpoint_error_mm": 0,
+  "parking_static_configurations": 180,
+  "all_parking_endpoints_inside_plugs": true,
+  "empty_stowed_always_visible": true,
+  "borrow_return_parking_switch": true,
+  "model_sha256": "051f8342c37322856f84942bdf970ecfde19737bd26d5d746050f42588a40412",
+  "metadata_sha256": "1b4a95fc8698aec041c668ce92ae86703875708d5df354d4c2086f85492aaddd"
+}
