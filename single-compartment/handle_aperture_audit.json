@@ -1,0 +1,52 @@
+{
+  "method": "Scene ray cast from outside along door-local +Y at closed pose, evaluated modifiers",
+  "checks": [
+    {
+      "x_mm": 430.0,
+      "z_mm": 3.0,
+      "first_object": "Door_HandleCup_Back",
+      "hit_local_y_mm": 5.0
+    },
+    {
+      "x_mm": 430.0,
+      "z_mm": 23.0,
+      "first_object": "Door_HandleGraspLip",
+      "hit_local_y_mm": -5.3
+    },
+    {
+      "x_mm": 430.0,
+      "z_mm": -25.0,
+      "first_object": "Door_HandleCup_Back",
+      "hit_local_y_mm": 5.0
+    },
+    {
+      "x_mm": 430.0,
+      "z_mm": 34.0,
+      "first_object": "Door_HandleCup_Back",
+      "hit_local_y_mm": 5.0
+    },
+    {
+      "x_mm": 422.5,
+      "z_mm": 3.0,
+      "first_object": "Door_VerticalFrame_FrontPerforated",
+      "hit_local_y_mm": -9.0
+    },
+    {
+      "x_mm": 430.0,
+      "z_mm": 174.0,
+      "first_object": "Door_StatusLED",
+      "hit_local_y_mm": -9.05
+    }
+  ],
+  "passed": true,
+  "handle_opening_mm": [
+    12,
+    77
+  ],
+  "recess_depth_from_sheet_inside_mm": 12.5,
+  "indicator_opening_mm": [
+    6,
+    6
+  ],
+  "limits": "Visibility and real-aperture geometry check; not grip ergonomics or lock certification"
+}
