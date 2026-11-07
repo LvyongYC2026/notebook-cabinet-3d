@@ -1,0 +1,53 @@
+{
+  "method": "evaluated mesh triangle BVH intersection, nine mechanism poses",
+  "checks": "payload and moving cables vs fixed shell/service panel/adapter/door; moving cables vs laptop; frame/glass vs fixed shell",
+  "excluded": "fasteners, rail nested surfaces, hinge knuckle assemblies, plug/socket engagement; not a continuous swept-solid or tolerance test",
+  "poses": [
+    {
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "door_degrees": 100,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "door_degrees": 100,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "door_degrees": 100,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "door_degrees": 100,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "door_degrees": 100,
+      "tray_mm": 320,
+      "intersections": []
+    }
+  ],
+  "intersecting_pairs": 0
+}

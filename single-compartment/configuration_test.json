@@ -1,0 +1,105 @@
+{
+  "tested_configuration": {
+    "width_mm": 480,
+    "depth_mm": 680,
+    "height_mm": 480,
+    "sheet_mm": 1.5,
+    "glass_mm": 6,
+    "door_degrees": 100,
+    "tray_travel_mm": 300,
+    "laptop_mm": [
+      310,
+      220,
+      18
+    ],
+    "laptop_opening_degrees": 110,
+    "tray_mm": [
+      400,
+      480,
+      2
+    ],
+    "network_cable_radius_mm": 2.1,
+    "power_cable_radius_mm": 2.4,
+    "cable_bend_radius_mm": 28,
+    "interface_panel_mm": [
+      4.5,
+      170,
+      260
+    ],
+    "interface_panel_center_mm": [
+      -231.5,
+      -115.0,
+      284
+    ],
+    "rj45_body_mm": [
+      14,
+      26,
+      24
+    ],
+    "ac_socket_mm": [
+      16,
+      35,
+      42
+    ],
+    "adapter_mm": [
+      48,
+      80,
+      90
+    ],
+    "led_center_mm": [
+      0,
+      -260.0,
+      462
+    ],
+    "laptop_center_xy_mm": [
+      25,
+      -90.0
+    ],
+    "laptop_lid_height_mm": 204,
+    "resolution": [
+      2560,
+      1440
+    ],
+    "cycles_samples": 96,
+    "font_path": ""
+  },
+  "actual_metadata_dimensions_mm": [
+    480,
+    680,
+    480
+  ],
+  "actual_closed_bounds_mm": [
+    [
+      -240.0,
+      -340.115,
+      0.0
+    ],
+    [
+      240.698,
+      340.0,
+      480.0
+    ]
+  ],
+  "cable_lengths": [
+    {
+      "id": "single_network",
+      "closed_length_mm": 735.84,
+      "extended_length_mm": 735.84
+    },
+    {
+      "id": "single_power",
+      "closed_length_mm": 811.99,
+      "extended_length_mm": 811.99
+    }
+  ],
+  "font_fallback_to_blender_default": true,
+  "scope": "Build/export/configuration smoke test; not an alternate manufacturing design or full clearance certification.",
+  "invalid_configuration_check": {
+    "input": {
+      "width_mm": -1
+    },
+    "result": "rejected before model generation",
+    "process_exit_code": 1,
+    "message": "width_mm must be a positive number"
+  }
+}

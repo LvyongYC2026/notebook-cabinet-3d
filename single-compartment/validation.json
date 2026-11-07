@@ -1,0 +1,506 @@
+{
+  "status": "completed_with_sampled_geometry_and_visual_checks",
+  "blender_version": "5.2.3 LTS",
+  "nominal_dimensions_mm": [
+    450,
+    650,
+    450
+  ],
+  "closed_product_bounds_xyz_mm": [
+    [
+      -225.0,
+      -325.115,
+      0.0
+    ],
+    [
+      225.0,
+      325.0,
+      450.0
+    ]
+  ],
+  "open_extended_bounds_xyz_mm": [
+    [
+      -300.064,
+      -753.361,
+      0.0
+    ],
+    [
+      225.0,
+      325.0,
+      450.0
+    ]
+  ],
+  "collection_names": [
+    "Cabinet_Main",
+    "Cabinet_Door",
+    "Glass_Panel",
+    "Door_Hinges",
+    "Lock_System",
+    "Laptop",
+    "Laptop_Tray",
+    "Power_Module",
+    "Network_Module",
+    "Cable_Management",
+    "LED_Lighting",
+    "Ventilation",
+    "Camera_Lights"
+  ],
+  "object_counts": {
+    "product_objects": 335,
+    "product_meshes": 313,
+    "doors": 1,
+    "laptops": 1,
+    "trays": 1,
+    "hinges": 2,
+    "rear_apertures": 24
+  },
+  "base_mesh_triangles": 11658,
+  "checks": {
+    "13_required_collections": true,
+    "door_pivot_present": true,
+    "tray_parent_contract": true,
+    "laptop_open_lid_bounds_xyz_mm": [
+      [
+        -137.5,
+        -187.5,
+        50.0
+      ],
+      [
+        186.0,
+        91.091,
+        267.287
+      ]
+    ],
+    "adapter_basket_bounds_xyz_mm": [
+      [
+        -213.0,
+        -145.0,
+        86.25
+      ],
+      [
+        -153.0,
+        -55.0,
+        87.75
+      ]
+    ],
+    "tray_support_bounds_xyz_mm": [
+      [
+        -198.0,
+        -250.0,
+        32.0
+      ],
+      [
+        198.0,
+        220.0,
+        61.0
+      ]
+    ],
+    "roof_inner_z_mm": 448.5,
+    "rj45_boot_short_neck": "5 mm molded neck bridges the boot to fixed network feed, with positive geometric overlap at both ends",
+    "cable_closed_lengths_mm": {
+      "single_network": 736.24,
+      "single_power": 814.08
+    },
+    "cable_extended_lengths_mm": {
+      "single_network": 736.24,
+      "single_power": 814.08
+    },
+    "studio_export_excluded": true,
+    "rj45_boot_continuity": {
+      "bridge_dimensions_mm": [
+        5,
+        5.6,
+        5.6
+      ],
+      "boot_overlap_mm_approx": 1.0,
+      "feed_overlap_axis_x_mm_approx": 3.1,
+      "basis": "analytical default model coordinate/interval check; not electrical testing"
+    }
+  },
+  "limitations": [
+    "No physical load, thermal, electrical, tolerance or full collision solver validation.",
+    "Door pivot and hardware are visualization design assumptions.",
+    "Open door and extended tray deliberately exceed the closed cabinet envelope."
+  ],
+  "cable_geometry_samples": [
+    {
+      "id": "single_network",
+      "method": "five poses; three-point circumcircle of sampled centreline; not a cable manufacturer validation",
+      "samples": [
+        {
+          "travel_mm": 0,
+          "length_mm": 736.242,
+          "minimum_sampled_radius_mm": 27.998
+        },
+        {
+          "travel_mm": 80.0,
+          "length_mm": 736.242,
+          "minimum_sampled_radius_mm": 27.998
+        },
+        {
+          "travel_mm": 160.0,
+          "length_mm": 736.242,
+          "minimum_sampled_radius_mm": 27.996
+        },
+        {
+          "travel_mm": 240.0,
+          "length_mm": 736.242,
+          "minimum_sampled_radius_mm": 27.998
+        },
+        {
+          "travel_mm": 320,
+          "length_mm": 736.242,
+          "minimum_sampled_radius_mm": 27.998
+        }
+      ]
+    },
+    {
+      "id": "single_power",
+      "method": "five poses; three-point circumcircle of sampled centreline; not a cable manufacturer validation",
+      "samples": [
+        {
+          "travel_mm": 0,
+          "length_mm": 814.083,
+          "minimum_sampled_radius_mm": 27.998
+        },
+        {
+          "travel_mm": 80.0,
+          "length_mm": 814.083,
+          "minimum_sampled_radius_mm": 27.998
+        },
+        {
+          "travel_mm": 160.0,
+          "length_mm": 814.083,
+          "minimum_sampled_radius_mm": 27.996
+        },
+        {
+          "travel_mm": 240.0,
+          "length_mm": 814.083,
+          "minimum_sampled_radius_mm": 27.998
+        },
+        {
+          "travel_mm": 320,
+          "length_mm": 814.083,
+          "minimum_sampled_radius_mm": 27.998
+        }
+      ]
+    }
+  ],
+  "design_assumptions": [
+    "450×650×450 mm单仓外包络为设计假设，并非原文档制造定版尺寸。",
+    "采用6 mm玻璃、320 mm行程、105°开盖无品牌笔记本；器件型号未确定。",
+    "以原PDF第5页单仓场景与用户文字为主要依据；本次未收到新红框标注版，未宣称精确还原缺失标注图。",
+    "三维模型只验证视觉与部分几何关系；承载、装配公差、电气、热工与续航未实测。"
+  ],
+  "configuration_overrides": {},
+  "file_sizes_bytes": {
+    "smart_cabinet_single_compartment.blend": 781893,
+    "smart_cabinet_single_compartment.glb": 4498196
+  },
+  "render_resolution": [
+    2560,
+    1440
+  ],
+  "render_engine": "CYCLES",
+  "render_samples": 96,
+  "render_outputs": [
+    {
+      "file": "render_front_open.png",
+      "pixels": [
+        2560,
+        1440
+      ],
+      "size_bytes": 3669517,
+      "sha256": "11c2da607ce0040b1c65677fb6b468c9b48fdbc345b0d79bc8cc9454c27e95b1",
+      "visual_review": "checked"
+    },
+    {
+      "file": "render_internal_detail.png",
+      "pixels": [
+        2560,
+        1440
+      ],
+      "size_bytes": 3871980,
+      "sha256": "fcf6f126b6e153d7aa49c9afc617785f06f117ffbaf3632b76f470b4ddd8c819",
+      "visual_review": "checked"
+    },
+    {
+      "file": "render_front_view.png",
+      "pixels": [
+        2560,
+        1440
+      ],
+      "size_bytes": 3714426,
+      "sha256": "6921c1a805b8804acd3a53401a7cbc9e83f766b6be90712deaaf4c64e01b3174",
+      "visual_review": "checked"
+    },
+    {
+      "file": "render_door_closed.png",
+      "pixels": [
+        2560,
+        1440
+      ],
+      "size_bytes": 3681859,
+      "sha256": "b2a485ba5a01add2e6e334843a81bf35a6e32cbcb8e569deec917b754b8a631b",
+      "visual_review": "checked"
+    }
+  ],
+  "independent_glb_audit": {
+    "file": "smart_cabinet_single_compartment.glb",
+    "size_bytes": 4498196,
+    "gltf_version": 2,
+    "nodes": 335,
+    "meshes": 330,
+    "primitives": 330,
+    "triangles": 85070,
+    "materials": 15,
+    "component_keys": [
+      "single:ac_socket",
+      "single:adapter",
+      "single:adapter_bracket",
+      "single:cables",
+      "single:door",
+      "single:glass",
+      "single:hinges",
+      "single:housing",
+      "single:interface_panel",
+      "single:laptop",
+      "single:led",
+      "single:lock",
+      "single:network",
+      "single:power",
+      "single:tray",
+      "single:ventilation"
+    ],
+    "extensions_used": [
+      "KHR_materials_transmission",
+      "KHR_materials_emissive_strength",
+      "KHR_materials_specular",
+      "KHR_materials_ior"
+    ],
+    "normal_length_range": [
+      0.9999999147712465,
+      1.000000134236767
+    ],
+    "checks": [
+      "valid GLB header",
+      "embedded buffers and textures",
+      "required interaction nodes",
+      "finite geometry and transforms",
+      "valid index ranges",
+      "unit vertex normals",
+      "no studio cameras or lights"
+    ],
+    "limits": "This file audit does not establish mechanical clearance, manufacturability or load capacity."
+  },
+  "sampled_interference_audit": {
+    "method": "evaluated mesh triangle BVH intersection, nine mechanism poses",
+    "checks": "payload and moving cables vs fixed shell/service panel/adapter/door; moving cables vs laptop; frame/glass vs fixed shell",
+    "excluded": "fasteners, rail nested surfaces, hinge knuckle assemblies, plug/socket engagement; not a continuous swept-solid or tolerance test",
+    "poses": [
+      {
+        "door_degrees": 0,
+        "tray_mm": 0,
+        "intersections": []
+      },
+      {
+        "door_degrees": 25,
+        "tray_mm": 0,
+        "intersections": []
+      },
+      {
+        "door_degrees": 50,
+        "tray_mm": 0,
+        "intersections": []
+      },
+      {
+        "door_degrees": 75,
+        "tray_mm": 0,
+        "intersections": []
+      },
+      {
+        "door_degrees": 100,
+        "tray_mm": 0,
+        "intersections": []
+      },
+      {
+        "door_degrees": 100,
+        "tray_mm": 80,
+        "intersections": []
+      },
+      {
+        "door_degrees": 100,
+        "tray_mm": 160,
+        "intersections": []
+      },
+      {
+        "door_degrees": 100,
+        "tray_mm": 240,
+        "intersections": []
+      },
+      {
+        "door_degrees": 100,
+        "tray_mm": 320,
+        "intersections": []
+      }
+    ],
+    "intersecting_pairs": 0
+  },
+  "handle_aperture_audit": {
+    "method": "Scene ray cast from outside along door-local +Y at closed pose, evaluated modifiers",
+    "checks": [
+      {
+        "x_mm": 430.0,
+        "z_mm": 3.0,
+        "first_object": "Door_HandleCup_Back",
+        "hit_local_y_mm": 5.0
+      },
+      {
+        "x_mm": 430.0,
+        "z_mm": 23.0,
+        "first_object": "Door_HandleGraspLip",
+        "hit_local_y_mm": -5.3
+      },
+      {
+        "x_mm": 430.0,
+        "z_mm": -25.0,
+        "first_object": "Door_HandleCup_Back",
+        "hit_local_y_mm": 5.0
+      },
+      {
+        "x_mm": 430.0,
+        "z_mm": 34.0,
+        "first_object": "Door_HandleCup_Back",
+        "hit_local_y_mm": 5.0
+      },
+      {
+        "x_mm": 422.5,
+        "z_mm": 3.0,
+        "first_object": "Door_VerticalFrame_FrontPerforated",
+        "hit_local_y_mm": -9.0
+      },
+      {
+        "x_mm": 430.0,
+        "z_mm": 174.0,
+        "first_object": "Door_StatusLED",
+        "hit_local_y_mm": -9.05
+      }
+    ],
+    "passed": true,
+    "handle_opening_mm": [
+      12,
+      77
+    ],
+    "recess_depth_from_sheet_inside_mm": 12.5,
+    "indicator_opening_mm": [
+      6,
+      6
+    ],
+    "limits": "Visibility and real-aperture geometry check; not grip ergonomics or lock certification"
+  },
+  "configuration_test": {
+    "tested_configuration": {
+      "width_mm": 480,
+      "depth_mm": 680,
+      "height_mm": 480,
+      "sheet_mm": 1.5,
+      "glass_mm": 6,
+      "door_degrees": 100,
+      "tray_travel_mm": 300,
+      "laptop_mm": [
+        310,
+        220,
+        18
+      ],
+      "laptop_opening_degrees": 110,
+      "tray_mm": [
+        400,
+        480,
+        2
+      ],
+      "network_cable_radius_mm": 2.1,
+      "power_cable_radius_mm": 2.4,
+      "cable_bend_radius_mm": 28,
+      "interface_panel_mm": [
+        4.5,
+        170,
+        260
+      ],
+      "interface_panel_center_mm": [
+        -231.5,
+        -115.0,
+        284
+      ],
+      "rj45_body_mm": [
+        14,
+        26,
+        24
+      ],
+      "ac_socket_mm": [
+        16,
+        35,
+        42
+      ],
+      "adapter_mm": [
+        48,
+        80,
+        90
+      ],
+      "led_center_mm": [
+        0,
+        -260.0,
+        462
+      ],
+      "laptop_center_xy_mm": [
+        25,
+        -90.0
+      ],
+      "laptop_lid_height_mm": 204,
+      "resolution": [
+        2560,
+        1440
+      ],
+      "cycles_samples": 96,
+      "font_path": ""
+    },
+    "actual_metadata_dimensions_mm": [
+      480,
+      680,
+      480
+    ],
+    "actual_closed_bounds_mm": [
+      [
+        -240.0,
+        -340.115,
+        0.0
+      ],
+      [
+        240.698,
+        340.0,
+        480.0
+      ]
+    ],
+    "cable_lengths": [
+      {
+        "id": "single_network",
+        "closed_length_mm": 735.84,
+        "extended_length_mm": 735.84
+      },
+      {
+        "id": "single_power",
+        "closed_length_mm": 811.99,
+        "extended_length_mm": 811.99
+      }
+    ],
+    "font_fallback_to_blender_default": true,
+    "scope": "Build/export/configuration smoke test; not an alternate manufacturing design or full clearance certification.",
+    "invalid_configuration_check": {
+      "input": {
+        "width_mm": -1
+      },
+      "result": "rejected before model generation",
+      "process_exit_code": 1,
+      "message": "width_mm must be a positive number"
+    }
+  }
+}

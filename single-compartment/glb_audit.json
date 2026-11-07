@@ -1,0 +1,48 @@
+{
+  "file": "smart_cabinet_single_compartment.glb",
+  "size_bytes": 4498196,
+  "gltf_version": 2,
+  "nodes": 335,
+  "meshes": 330,
+  "primitives": 330,
+  "triangles": 85070,
+  "materials": 15,
+  "component_keys": [
+    "single:ac_socket",
+    "single:adapter",
+    "single:adapter_bracket",
+    "single:cables",
+    "single:door",
+    "single:glass",
+    "single:hinges",
+    "single:housing",
+    "single:interface_panel",
+    "single:laptop",
+    "single:led",
+    "single:lock",
+    "single:network",
+    "single:power",
+    "single:tray",
+    "single:ventilation"
+  ],
+  "extensions_used": [
+    "KHR_materials_transmission",
+    "KHR_materials_emissive_strength",
+    "KHR_materials_specular",
+    "KHR_materials_ior"
+  ],
+  "normal_length_range": [
+    0.9999999147712465,
+    1.000000134236767
+  ],
+  "checks": [
+    "valid GLB header",
+    "embedded buffers and textures",
+    "required interaction nodes",
+    "finite geometry and transforms",
+    "valid index ranges",
+    "unit vertex normals",
+    "no studio cameras or lights"
+  ],
+  "limits": "This file audit does not establish mechanical clearance, manufacturability or load capacity."
+}

@@ -1,0 +1,95 @@
+{
+  "files": [
+    {
+      "name": "build_smart_cabinet.py",
+      "size_bytes": 53605,
+      "sha256": "124997f0077206652ec9d26e07036045db067bab86cb9819ace22021cd5ef710"
+    },
+    {
+      "name": "smart_cabinet_single_compartment.blend",
+      "size_bytes": 781893,
+      "sha256": "176bf5b027504611248fca125709d49bc88788f3faac7d0bbaf8b3bcbbee34d8"
+    },
+    {
+      "name": "smart_cabinet_single_compartment.glb",
+      "size_bytes": 4498196,
+      "sha256": "68e6cd80994d697786e9caafa37ff81297cd889f6b94bb8c2f513cfe25dfc26a"
+    },
+    {
+      "name": "render_front_open.png",
+      "size_bytes": 3669517,
+      "sha256": "11c2da607ce0040b1c65677fb6b468c9b48fdbc345b0d79bc8cc9454c27e95b1"
+    },
+    {
+      "name": "render_internal_detail.png",
+      "size_bytes": 3871980,
+      "sha256": "fcf6f126b6e153d7aa49c9afc617785f06f117ffbaf3632b76f470b4ddd8c819"
+    },
+    {
+      "name": "render_front_view.png",
+      "size_bytes": 3714426,
+      "sha256": "6921c1a805b8804acd3a53401a7cbc9e83f766b6be90712deaaf4c64e01b3174"
+    },
+    {
+      "name": "render_door_closed.png",
+      "size_bytes": 3681859,
+      "sha256": "b2a485ba5a01add2e6e334843a81bf35a6e32cbcb8e569deec917b754b8a631b"
+    },
+    {
+      "name": "model_metadata.json",
+      "size_bytes": 42962,
+      "sha256": "476ad1d991f9cbaf016ccbe2eb5144d4d4f86d5ec8b7095c6721e24732d8d42b"
+    },
+    {
+      "name": "validation.json",
+      "size_bytes": 11951,
+      "sha256": "fcb1ee4043875a947d5f124903a53dbc142326cbd9666caea7fbd34445aab051"
+    },
+    {
+      "name": "README.md",
+      "size_bytes": 8974,
+      "sha256": "73444a5fa70c32086c4de894107736e6ab7dea70aeda927b5cbdf919d5466d0a"
+    },
+    {
+      "name": "configuration_example.json",
+      "size_bytes": 238,
+      "sha256": "f1315e523a2942dd5d96b04adcbbd0d065c2a64a359921c8490519976b473308"
+    },
+    {
+      "name": "configuration_test.json",
+      "size_bytes": 1845,
+      "sha256": "204f7fb60852bf72bf1893477bd8a495968771be1a284a6a4bdfe88e10510893"
+    },
+    {
+      "name": "validate_geometry.py",
+      "size_bytes": 3536,
+      "sha256": "99a730b7255c24b22b57712c1e246fe57d61e53cf974b38c2b3267823ee5f17f"
+    },
+    {
+      "name": "validate_glb.py",
+      "size_bytes": 4271,
+      "sha256": "80253584ff981096e191b2bfc9d2a5cc08e93aa6ea7375d90d99e2a14eefbde1"
+    },
+    {
+      "name": "clearance_audit.json",
+      "size_bytes": 1184,
+      "sha256": "ed4147357fed9f45ad5249a4e41deea789cc034058e195bf62fa45de74322754"
+    },
+    {
+      "name": "glb_audit.json",
+      "size_bytes": 1154,
+      "sha256": "8393fa55650a8b653d52b4d972154f6158c4788ea7527a0d84ef8032c36aecd5"
+    },
+    {
+      "name": "handle_aperture_audit.json",
+      "size_bytes": 1151,
+      "sha256": "8f50f8c350ad1f2000bce503d11195b24098911e88de7f22b7591f2c6273530c"
+    }
+  ],
+  "exclude": [
+    "preview_*.png",
+    "*.log",
+    "*.blend1",
+    "_work/"
+  ]
+}
