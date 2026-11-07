@@ -1,0 +1,4350 @@
+{
+  "cabinet_dimensions_mm": [
+    3300,
+    650,
+    1850
+  ],
+  "bay_layout": [
+    3,
+    3
+  ],
+  "unit": "mm",
+  "dimension_order": [
+    "宽",
+    "深",
+    "高"
+  ],
+  "empty_bays": [
+    "A3",
+    "B2",
+    "B6"
+  ],
+  "components": {
+    "cabinet": {
+      "title": "笔记本智能检测存储柜",
+      "dimensions_mm": [
+        3300,
+        650,
+        1850
+      ],
+      "basis": "user",
+      "notes": "按用户18仓修改：三模块1350 + 600 + 1350 mm；左右各3列×3层，保留420 mm建议净宽。"
+    },
+    "screen": {
+      "title": "32英寸竖向触摸屏",
+      "dimensions_mm": [
+        435,
+        50,
+        750
+      ],
+      "basis": "model",
+      "notes": "32英寸为用户修改；可视区398.5×708.4 mm。外框435×50×750 mm为选型示意，中心离地1285 mm。"
+    },
+    "equipment_bay": {
+      "title": "服务器设备舱",
+      "dimensions_mm": [
+        540,
+        500,
+        680
+      ],
+      "basis": "model",
+      "notes": "文档参考净高650–700 mm，本模型取680 mm；交换机上部、主机中层、UPS低位、控制配电右侧。",
+      "anchor": [
+        0,
+        0.44,
+        0.12
+      ]
+    },
+    "equipment_door": {
+      "title": "服务器舱前检修门",
+      "dimensions_mm": [
+        558,
+        22,
+        690
+      ],
+      "basis": "model",
+      "notes": "右侧铰链，开门105°；低位进风与保护接地。"
+    },
+    "host": {
+      "title": "紧凑主机",
+      "dimensions_mm": [
+        260,
+        280,
+        64
+      ],
+      "basis": "model",
+      "notes": "国产兼容主机的外形占位，实际CPU、OS与型号待选型。",
+      "anchor": [
+        -0.065,
+        0.514,
+        0.04
+      ]
+    },
+    "switch": {
+      "title": "24口可管理交换机",
+      "dimensions_mm": [
+        440,
+        300,
+        44
+      ],
+      "basis": "model",
+      "notes": "24口配置来自文档建议；外形和端口布置为示意。",
+      "anchor": [
+        0,
+        0.698,
+        0.03
+      ]
+    },
+    "ups": {
+      "title": "UPS后备电源",
+      "dimensions_mm": [
+        150,
+        350,
+        290
+      ],
+      "basis": "model",
+      "notes": "低位固定；文档30分钟为关键控制后备目标，不代表本模型已经验证。",
+      "anchor": [
+        -0.15,
+        0.249,
+        0.005
+      ]
+    },
+    "controller": {
+      "title": "锁控与采集控制器",
+      "dimensions_mm": [
+        160,
+        180,
+        48
+      ],
+      "basis": "model",
+      "notes": "文档要求18仓扩展需至少18路锁控、36路门位/锁位采集；端子及外形为示意。"
+    },
+    "dc": {
+      "title": "24V低压电源",
+      "dimensions_mm": [
+        150,
+        170,
+        60
+      ],
+      "basis": "model",
+      "notes": "24V为文档优先值；实际电压与锁具匹配。"
+    },
+    "pdu": {
+      "title": "18路受控配电总成",
+      "dimensions_mm": [
+        440,
+        56,
+        108
+      ],
+      "basis": "model",
+      "notes": "随18仓扩展为18路，双排9+9；插座与器件尺寸为示意。"
+    },
+    "distribution": {
+      "title": "配电与保护器件",
+      "dimensions_mm": [
+        245,
+        75,
+        82
+      ],
+      "basis": "model",
+      "notes": "保护器件、端子与维护隔离布置示意。"
+    },
+    "fan": {
+      "title": "设备舱风机",
+      "dimensions_mm": [
+        130,
+        60,
+        130
+      ],
+      "basis": "model",
+      "notes": "110 mm风机芯外形示意；含保护网，风量和热性能需实测。"
+    },
+    "display_fans": {
+      "title": "大屏背部散热风机",
+      "dimensions_mm": [
+        92,
+        32,
+        92
+      ],
+      "basis": "model",
+      "notes": "两只风机形成独立大屏背部冷却路径；风机选型未冻结。"
+    },
+    "chassis": {
+      "title": "设备安装框架",
+      "dimensions_mm": [
+        540,
+        500,
+        680
+      ],
+      "basis": "model",
+      "notes": "分层托板与开放式后安装框；保留线缆与检修路径。"
+    },
+    "mains": {
+      "title": "总电源进线",
+      "dimensions_mm": [
+        42,
+        12,
+        56
+      ],
+      "basis": "model",
+      "notes": "电源插入口示意；强弱电分区及PE保护接地。"
+    },
+    "rear:Left": {
+      "title": "左仓区后检修门",
+      "dimensions_mm": [
+        1318.0,
+        24,
+        1766
+      ],
+      "basis": "model",
+      "notes": "225个贯通散热孔，单孔约48.0×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+      "rear": true
+    },
+    "rear:Center": {
+      "title": "中央后检修门",
+      "dimensions_mm": [
+        568.0,
+        24,
+        1766
+      ],
+      "basis": "model",
+      "notes": "150个贯通散热孔，单孔约54.7×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+      "rear": true
+    },
+    "rear:Right": {
+      "title": "右仓区后检修门",
+      "dimensions_mm": [
+        1318.0,
+        24,
+        1766
+      ],
+      "basis": "model",
+      "notes": "225个贯通散热孔，单孔约48.0×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+      "rear": true
+    },
+    "housing:Left": {
+      "title": "左仓模块",
+      "dimensions_mm": [
+        1350,
+        650,
+        1850
+      ],
+      "basis": "user",
+      "notes": "三模块独立运输；板厚1.5 mm为文档范围内模型选值。"
+    },
+    "housing:Center": {
+      "title": "中央中控模块",
+      "dimensions_mm": [
+        600,
+        650,
+        1850
+      ],
+      "basis": "user",
+      "notes": "三模块独立运输；板厚1.5 mm为文档范围内模型选值。"
+    },
+    "housing:Right": {
+      "title": "右仓模块",
+      "dimensions_mm": [
+        1350,
+        650,
+        1850
+      ],
+      "basis": "user",
+      "notes": "三模块独立运输；板厚1.5 mm为文档范围内模型选值。"
+    },
+    "bay:A1": {
+      "title": "A1电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地1250 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A1",
+      "occupied": true
+    },
+    "door:A1": {
+      "title": "A1透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A1"
+    },
+    "glass:A1": {
+      "title": "A1安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A1"
+    },
+    "tray:A1": {
+      "title": "A1抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地1250 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A1"
+    },
+    "laptop:A1": {
+      "title": "A1开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A1"
+    },
+    "adapter:A1": {
+      "title": "A1电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A1"
+    },
+    "ports:A1": {
+      "title": "A1接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A1"
+    },
+    "light:A1": {
+      "title": "A1仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A1"
+    },
+    "lock:A1": {
+      "title": "A1电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A1"
+    },
+    "cables:A1": {
+      "title": "A1活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A1"
+    },
+    "air:A1": {
+      "title": "A1后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A1"
+    },
+    "bay:A2": {
+      "title": "A2电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地1250 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A2",
+      "occupied": true
+    },
+    "door:A2": {
+      "title": "A2透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A2"
+    },
+    "glass:A2": {
+      "title": "A2安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A2"
+    },
+    "tray:A2": {
+      "title": "A2抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地1250 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A2"
+    },
+    "laptop:A2": {
+      "title": "A2开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A2"
+    },
+    "adapter:A2": {
+      "title": "A2电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A2"
+    },
+    "ports:A2": {
+      "title": "A2接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A2"
+    },
+    "light:A2": {
+      "title": "A2仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A2"
+    },
+    "lock:A2": {
+      "title": "A2电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A2"
+    },
+    "cables:A2": {
+      "title": "A2活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A2"
+    },
+    "air:A2": {
+      "title": "A2后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A2"
+    },
+    "bay:A3": {
+      "title": "A3电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地1250 mm。当前为空仓；净空参考不替代真实装配校验。",
+      "bay_id": "A3",
+      "occupied": false
+    },
+    "door:A3": {
+      "title": "A3透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A3"
+    },
+    "glass:A3": {
+      "title": "A3安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A3"
+    },
+    "tray:A3": {
+      "title": "A3抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地1250 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A3"
+    },
+    "laptop:A3": {
+      "title": "A3开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A3"
+    },
+    "adapter:A3": {
+      "title": "A3电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A3"
+    },
+    "ports:A3": {
+      "title": "A3接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A3"
+    },
+    "light:A3": {
+      "title": "A3仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A3"
+    },
+    "lock:A3": {
+      "title": "A3电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A3"
+    },
+    "cables:A3": {
+      "title": "A3活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A3"
+    },
+    "air:A3": {
+      "title": "A3后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A3"
+    },
+    "bay:A4": {
+      "title": "A4电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地800 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A4",
+      "occupied": true
+    },
+    "door:A4": {
+      "title": "A4透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A4"
+    },
+    "glass:A4": {
+      "title": "A4安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A4"
+    },
+    "tray:A4": {
+      "title": "A4抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地800 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A4"
+    },
+    "laptop:A4": {
+      "title": "A4开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A4"
+    },
+    "adapter:A4": {
+      "title": "A4电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A4"
+    },
+    "ports:A4": {
+      "title": "A4接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A4"
+    },
+    "light:A4": {
+      "title": "A4仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A4"
+    },
+    "lock:A4": {
+      "title": "A4电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A4"
+    },
+    "cables:A4": {
+      "title": "A4活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A4"
+    },
+    "air:A4": {
+      "title": "A4后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A4"
+    },
+    "bay:A5": {
+      "title": "A5电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地800 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A5",
+      "occupied": true
+    },
+    "door:A5": {
+      "title": "A5透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A5"
+    },
+    "glass:A5": {
+      "title": "A5安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A5"
+    },
+    "tray:A5": {
+      "title": "A5抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地800 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A5"
+    },
+    "laptop:A5": {
+      "title": "A5开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A5"
+    },
+    "adapter:A5": {
+      "title": "A5电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A5"
+    },
+    "ports:A5": {
+      "title": "A5接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A5"
+    },
+    "light:A5": {
+      "title": "A5仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A5"
+    },
+    "lock:A5": {
+      "title": "A5电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A5"
+    },
+    "cables:A5": {
+      "title": "A5活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A5"
+    },
+    "air:A5": {
+      "title": "A5后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A5"
+    },
+    "bay:A6": {
+      "title": "A6电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地800 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A6",
+      "occupied": true
+    },
+    "door:A6": {
+      "title": "A6透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A6"
+    },
+    "glass:A6": {
+      "title": "A6安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A6"
+    },
+    "tray:A6": {
+      "title": "A6抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地800 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A6"
+    },
+    "laptop:A6": {
+      "title": "A6开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A6"
+    },
+    "adapter:A6": {
+      "title": "A6电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A6"
+    },
+    "ports:A6": {
+      "title": "A6接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A6"
+    },
+    "light:A6": {
+      "title": "A6仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A6"
+    },
+    "lock:A6": {
+      "title": "A6电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A6"
+    },
+    "cables:A6": {
+      "title": "A6活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A6"
+    },
+    "air:A6": {
+      "title": "A6后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A6"
+    },
+    "bay:A7": {
+      "title": "A7电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地350 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A7",
+      "occupied": true
+    },
+    "door:A7": {
+      "title": "A7透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A7"
+    },
+    "glass:A7": {
+      "title": "A7安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A7"
+    },
+    "tray:A7": {
+      "title": "A7抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地350 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A7"
+    },
+    "laptop:A7": {
+      "title": "A7开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A7"
+    },
+    "adapter:A7": {
+      "title": "A7电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A7"
+    },
+    "ports:A7": {
+      "title": "A7接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A7"
+    },
+    "light:A7": {
+      "title": "A7仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A7"
+    },
+    "lock:A7": {
+      "title": "A7电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A7"
+    },
+    "cables:A7": {
+      "title": "A7活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A7"
+    },
+    "air:A7": {
+      "title": "A7后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A7"
+    },
+    "bay:A8": {
+      "title": "A8电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地350 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A8",
+      "occupied": true
+    },
+    "door:A8": {
+      "title": "A8透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A8"
+    },
+    "glass:A8": {
+      "title": "A8安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A8"
+    },
+    "tray:A8": {
+      "title": "A8抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地350 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A8"
+    },
+    "laptop:A8": {
+      "title": "A8开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A8"
+    },
+    "adapter:A8": {
+      "title": "A8电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A8"
+    },
+    "ports:A8": {
+      "title": "A8接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A8"
+    },
+    "light:A8": {
+      "title": "A8仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A8"
+    },
+    "lock:A8": {
+      "title": "A8电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A8"
+    },
+    "cables:A8": {
+      "title": "A8活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A8"
+    },
+    "air:A8": {
+      "title": "A8后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A8"
+    },
+    "bay:A9": {
+      "title": "A9电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地350 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "A9",
+      "occupied": true
+    },
+    "door:A9": {
+      "title": "A9透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "A9"
+    },
+    "glass:A9": {
+      "title": "A9安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "A9"
+    },
+    "tray:A9": {
+      "title": "A9抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地350 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "A9"
+    },
+    "laptop:A9": {
+      "title": "A9开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "A9"
+    },
+    "adapter:A9": {
+      "title": "A9电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "A9"
+    },
+    "ports:A9": {
+      "title": "A9接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "A9"
+    },
+    "light:A9": {
+      "title": "A9仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "A9"
+    },
+    "lock:A9": {
+      "title": "A9电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "A9"
+    },
+    "cables:A9": {
+      "title": "A9活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "A9"
+    },
+    "air:A9": {
+      "title": "A9后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "A9"
+    },
+    "bay:B1": {
+      "title": "B1电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地1250 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B1",
+      "occupied": true
+    },
+    "door:B1": {
+      "title": "B1透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B1"
+    },
+    "glass:B1": {
+      "title": "B1安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B1"
+    },
+    "tray:B1": {
+      "title": "B1抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地1250 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B1"
+    },
+    "laptop:B1": {
+      "title": "B1开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B1"
+    },
+    "adapter:B1": {
+      "title": "B1电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B1"
+    },
+    "ports:B1": {
+      "title": "B1接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B1"
+    },
+    "light:B1": {
+      "title": "B1仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B1"
+    },
+    "lock:B1": {
+      "title": "B1电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B1"
+    },
+    "cables:B1": {
+      "title": "B1活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B1"
+    },
+    "air:B1": {
+      "title": "B1后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B1"
+    },
+    "bay:B2": {
+      "title": "B2电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地1250 mm。当前为空仓；净空参考不替代真实装配校验。",
+      "bay_id": "B2",
+      "occupied": false
+    },
+    "door:B2": {
+      "title": "B2透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B2"
+    },
+    "glass:B2": {
+      "title": "B2安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B2"
+    },
+    "tray:B2": {
+      "title": "B2抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地1250 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B2"
+    },
+    "laptop:B2": {
+      "title": "B2开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B2"
+    },
+    "adapter:B2": {
+      "title": "B2电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B2"
+    },
+    "ports:B2": {
+      "title": "B2接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B2"
+    },
+    "light:B2": {
+      "title": "B2仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B2"
+    },
+    "lock:B2": {
+      "title": "B2电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B2"
+    },
+    "cables:B2": {
+      "title": "B2活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B2"
+    },
+    "air:B2": {
+      "title": "B2后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B2"
+    },
+    "bay:B3": {
+      "title": "B3电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地1250 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B3",
+      "occupied": true
+    },
+    "door:B3": {
+      "title": "B3透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B3"
+    },
+    "glass:B3": {
+      "title": "B3安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B3"
+    },
+    "tray:B3": {
+      "title": "B3抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地1250 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B3"
+    },
+    "laptop:B3": {
+      "title": "B3开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B3"
+    },
+    "adapter:B3": {
+      "title": "B3电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B3"
+    },
+    "ports:B3": {
+      "title": "B3接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B3"
+    },
+    "light:B3": {
+      "title": "B3仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B3"
+    },
+    "lock:B3": {
+      "title": "B3电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B3"
+    },
+    "cables:B3": {
+      "title": "B3活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B3"
+    },
+    "air:B3": {
+      "title": "B3后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B3"
+    },
+    "bay:B4": {
+      "title": "B4电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地800 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B4",
+      "occupied": true
+    },
+    "door:B4": {
+      "title": "B4透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B4"
+    },
+    "glass:B4": {
+      "title": "B4安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B4"
+    },
+    "tray:B4": {
+      "title": "B4抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地800 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B4"
+    },
+    "laptop:B4": {
+      "title": "B4开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B4"
+    },
+    "adapter:B4": {
+      "title": "B4电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B4"
+    },
+    "ports:B4": {
+      "title": "B4接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B4"
+    },
+    "light:B4": {
+      "title": "B4仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B4"
+    },
+    "lock:B4": {
+      "title": "B4电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B4"
+    },
+    "cables:B4": {
+      "title": "B4活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B4"
+    },
+    "air:B4": {
+      "title": "B4后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B4"
+    },
+    "bay:B5": {
+      "title": "B5电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地800 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B5",
+      "occupied": true
+    },
+    "door:B5": {
+      "title": "B5透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B5"
+    },
+    "glass:B5": {
+      "title": "B5安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B5"
+    },
+    "tray:B5": {
+      "title": "B5抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地800 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B5"
+    },
+    "laptop:B5": {
+      "title": "B5开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B5"
+    },
+    "adapter:B5": {
+      "title": "B5电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B5"
+    },
+    "ports:B5": {
+      "title": "B5接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B5"
+    },
+    "light:B5": {
+      "title": "B5仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B5"
+    },
+    "lock:B5": {
+      "title": "B5电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B5"
+    },
+    "cables:B5": {
+      "title": "B5活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B5"
+    },
+    "air:B5": {
+      "title": "B5后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B5"
+    },
+    "bay:B6": {
+      "title": "B6电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地800 mm。当前为空仓；净空参考不替代真实装配校验。",
+      "bay_id": "B6",
+      "occupied": false
+    },
+    "door:B6": {
+      "title": "B6透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B6"
+    },
+    "glass:B6": {
+      "title": "B6安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B6"
+    },
+    "tray:B6": {
+      "title": "B6抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地800 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B6"
+    },
+    "laptop:B6": {
+      "title": "B6开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B6"
+    },
+    "adapter:B6": {
+      "title": "B6电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B6"
+    },
+    "ports:B6": {
+      "title": "B6接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B6"
+    },
+    "light:B6": {
+      "title": "B6仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B6"
+    },
+    "lock:B6": {
+      "title": "B6电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B6"
+    },
+    "cables:B6": {
+      "title": "B6活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B6"
+    },
+    "air:B6": {
+      "title": "B6后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B6"
+    },
+    "bay:B7": {
+      "title": "B7电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地350 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B7",
+      "occupied": true
+    },
+    "door:B7": {
+      "title": "B7透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B7"
+    },
+    "glass:B7": {
+      "title": "B7安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B7"
+    },
+    "tray:B7": {
+      "title": "B7抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地350 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B7"
+    },
+    "laptop:B7": {
+      "title": "B7开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B7"
+    },
+    "adapter:B7": {
+      "title": "B7电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B7"
+    },
+    "ports:B7": {
+      "title": "B7接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B7"
+    },
+    "light:B7": {
+      "title": "B7仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B7"
+    },
+    "lock:B7": {
+      "title": "B7电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B7"
+    },
+    "cables:B7": {
+      "title": "B7活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B7"
+    },
+    "air:B7": {
+      "title": "B7后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B7"
+    },
+    "bay:B8": {
+      "title": "B8电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地350 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B8",
+      "occupied": true
+    },
+    "door:B8": {
+      "title": "B8透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B8"
+    },
+    "glass:B8": {
+      "title": "B8安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B8"
+    },
+    "tray:B8": {
+      "title": "B8抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地350 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B8"
+    },
+    "laptop:B8": {
+      "title": "B8开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B8"
+    },
+    "adapter:B8": {
+      "title": "B8电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B8"
+    },
+    "ports:B8": {
+      "title": "B8接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B8"
+    },
+    "light:B8": {
+      "title": "B8仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B8"
+    },
+    "lock:B8": {
+      "title": "B8电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B8"
+    },
+    "cables:B8": {
+      "title": "B8活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B8"
+    },
+    "air:B8": {
+      "title": "B8后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B8"
+    },
+    "bay:B9": {
+      "title": "B9电脑仓",
+      "dimensions_mm": [
+        420,
+        420,
+        420
+      ],
+      "basis": "document",
+      "notes": "文档建议最小有效净空；承托面离地350 mm。当前为有设备仓；净空参考不替代真实装配校验。",
+      "bay_id": "B9",
+      "occupied": true
+    },
+    "door:B9": {
+      "title": "B9透明仓门",
+      "dimensions_mm": [
+        444,
+        24,
+        442
+      ],
+      "basis": "model",
+      "notes": "左铰链、右侧锁闭；金属门框及独立门位/锁位反馈。",
+      "bay_id": "B9"
+    },
+    "glass:B9": {
+      "title": "B9安全玻璃",
+      "dimensions_mm": [
+        391,
+        6,
+        397
+      ],
+      "basis": "model",
+      "notes": "6 mm为文档5–6 mm打样范围内选值；周边柔性垫与压条固定。",
+      "bay_id": "B9"
+    },
+    "tray:B9": {
+      "title": "B9抽拉托盘",
+      "dimensions_mm": [
+        412,
+        480,
+        2
+      ],
+      "basis": "model",
+      "notes": "承托面离地350 mm；示意抽出行程320 mm，文档建议300–350 mm；≥10 kg为未验证载荷目标。",
+      "bay_id": "B9"
+    },
+    "laptop:B9": {
+      "title": "B9开盖笔记本",
+      "dimensions_mm": [
+        320,
+        225,
+        18
+      ],
+      "basis": "model",
+      "notes": "尺寸指机身底座，开盖108°；未指定实际机型，非开盖整机包络。",
+      "bay_id": "B9"
+    },
+    "adapter:B9": {
+      "title": "B9电源适配器",
+      "dimensions_mm": [
+        48,
+        78,
+        68
+      ],
+      "basis": "model",
+      "notes": "独立收纳；不遮挡设备风口或进入滑轨运动范围。",
+      "bay_id": "B9"
+    },
+    "ports:B9": {
+      "title": "B9接线与接口预留",
+      "dimensions_mm": [
+        110,
+        10,
+        230
+      ],
+      "basis": "model",
+      "notes": "电源插座、网络接口、检测接口预留；检测接口形式须经实机验证。",
+      "bay_id": "B9"
+    },
+    "light:B9": {
+      "title": "B9仓内照明",
+      "dimensions_mm": [
+        310,
+        22,
+        12
+      ],
+      "basis": "model",
+      "notes": "低压仓灯，与门外状态灯分别控制。",
+      "bay_id": "B9"
+    },
+    "lock:B9": {
+      "title": "B9电控锁",
+      "dimensions_mm": [
+        12,
+        14,
+        58
+      ],
+      "basis": "model",
+      "notes": "门位与锁位独立采集；外形为占位尺寸，最终锁型待定。",
+      "bay_id": "B9"
+    },
+    "cables:B9": {
+      "title": "B9活动线束与应力释放",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "电源、网线分色编号；固定端、护口与应力释放夹固定，托盘端随动。850 mm余量为走线路径示意，须实机验证插头、弯曲半径与手部空间。",
+      "bay_id": "B9"
+    },
+    "air:B9": {
+      "title": "B9后部散热与走线",
+      "dimensions_mm": [
+        390,
+        1.2,
+        83
+      ],
+      "basis": "model",
+      "notes": "33个贯通散热开孔，固定线束与接口避开抽拉轨道。",
+      "bay_id": "B9"
+    }
+  },
+  "rear_doors": {
+    "Left": {
+      "width_mm": 1318.0,
+      "height_mm": 1766,
+      "aperture_count": 225,
+      "slot_width_mm": 48.0,
+      "slot_height_mm": 9
+    },
+    "Center": {
+      "width_mm": 568.0,
+      "height_mm": 1766,
+      "aperture_count": 150,
+      "slot_width_mm": 54.7,
+      "slot_height_mm": 9
+    },
+    "Right": {
+      "width_mm": 1318.0,
+      "height_mm": 1766,
+      "aperture_count": 225,
+      "slot_width_mm": 48.0,
+      "slot_height_mm": 9
+    }
+  },
+  "cable_paths": [
+    {
+      "id": "cable_A1_power",
+      "bay_id": "A1",
+      "component_key": "cables:A1",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.578,
+        1.445,
+        -0.217
+      ],
+      "moving": [
+        -1.567,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.578,
+          1.445,
+          -0.217
+        ],
+        [
+          -1.609,
+          1.58,
+          -0.19
+        ],
+        [
+          -1.609,
+          1.62,
+          -0.08
+        ],
+        [
+          -1.609,
+          1.54,
+          0.12
+        ],
+        [
+          -1.609,
+          1.38,
+          0.07
+        ],
+        [
+          -1.567,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A1_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A1_network",
+      "bay_id": "A1",
+      "component_key": "cables:A1",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.578,
+        1.53,
+        -0.217
+      ],
+      "moving": [
+        -1.567,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.578,
+          1.53,
+          -0.217
+        ],
+        [
+          -1.609,
+          1.58,
+          -0.19
+        ],
+        [
+          -1.609,
+          1.62,
+          -0.08
+        ],
+        [
+          -1.609,
+          1.54,
+          0.12
+        ],
+        [
+          -1.609,
+          1.38,
+          0.07
+        ],
+        [
+          -1.567,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A1_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A2_power",
+      "bay_id": "A2",
+      "component_key": "cables:A2",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.128,
+        1.445,
+        -0.217
+      ],
+      "moving": [
+        -1.117,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.128,
+          1.445,
+          -0.217
+        ],
+        [
+          -1.159,
+          1.58,
+          -0.19
+        ],
+        [
+          -1.159,
+          1.62,
+          -0.08
+        ],
+        [
+          -1.159,
+          1.54,
+          0.12
+        ],
+        [
+          -1.159,
+          1.38,
+          0.07
+        ],
+        [
+          -1.117,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A2_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A2_network",
+      "bay_id": "A2",
+      "component_key": "cables:A2",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.128,
+        1.53,
+        -0.217
+      ],
+      "moving": [
+        -1.117,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.128,
+          1.53,
+          -0.217
+        ],
+        [
+          -1.159,
+          1.58,
+          -0.19
+        ],
+        [
+          -1.159,
+          1.62,
+          -0.08
+        ],
+        [
+          -1.159,
+          1.54,
+          0.12
+        ],
+        [
+          -1.159,
+          1.38,
+          0.07
+        ],
+        [
+          -1.117,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A2_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A3_power",
+      "bay_id": "A3",
+      "component_key": "cables:A3",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -0.678,
+        1.445,
+        -0.217
+      ],
+      "moving": [
+        -0.667,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -0.678,
+          1.445,
+          -0.217
+        ],
+        [
+          -0.709,
+          1.58,
+          -0.19
+        ],
+        [
+          -0.709,
+          1.62,
+          -0.08
+        ],
+        [
+          -0.709,
+          1.54,
+          0.12
+        ],
+        [
+          -0.709,
+          1.38,
+          0.07
+        ],
+        [
+          -0.667,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A3_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A3_network",
+      "bay_id": "A3",
+      "component_key": "cables:A3",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -0.678,
+        1.53,
+        -0.217
+      ],
+      "moving": [
+        -0.667,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -0.678,
+          1.53,
+          -0.217
+        ],
+        [
+          -0.709,
+          1.58,
+          -0.19
+        ],
+        [
+          -0.709,
+          1.62,
+          -0.08
+        ],
+        [
+          -0.709,
+          1.54,
+          0.12
+        ],
+        [
+          -0.709,
+          1.38,
+          0.07
+        ],
+        [
+          -0.667,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A3_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A4_power",
+      "bay_id": "A4",
+      "component_key": "cables:A4",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.578,
+        0.995,
+        -0.217
+      ],
+      "moving": [
+        -1.567,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.578,
+          0.995,
+          -0.217
+        ],
+        [
+          -1.609,
+          1.13,
+          -0.19
+        ],
+        [
+          -1.609,
+          1.17,
+          -0.08
+        ],
+        [
+          -1.609,
+          1.09,
+          0.12
+        ],
+        [
+          -1.609,
+          0.93,
+          0.07
+        ],
+        [
+          -1.567,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A4_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A4_network",
+      "bay_id": "A4",
+      "component_key": "cables:A4",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.578,
+        1.08,
+        -0.217
+      ],
+      "moving": [
+        -1.567,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.578,
+          1.08,
+          -0.217
+        ],
+        [
+          -1.609,
+          1.13,
+          -0.19
+        ],
+        [
+          -1.609,
+          1.17,
+          -0.08
+        ],
+        [
+          -1.609,
+          1.09,
+          0.12
+        ],
+        [
+          -1.609,
+          0.93,
+          0.07
+        ],
+        [
+          -1.567,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A4_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A5_power",
+      "bay_id": "A5",
+      "component_key": "cables:A5",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.128,
+        0.995,
+        -0.217
+      ],
+      "moving": [
+        -1.117,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.128,
+          0.995,
+          -0.217
+        ],
+        [
+          -1.159,
+          1.13,
+          -0.19
+        ],
+        [
+          -1.159,
+          1.17,
+          -0.08
+        ],
+        [
+          -1.159,
+          1.09,
+          0.12
+        ],
+        [
+          -1.159,
+          0.93,
+          0.07
+        ],
+        [
+          -1.117,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A5_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A5_network",
+      "bay_id": "A5",
+      "component_key": "cables:A5",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.128,
+        1.08,
+        -0.217
+      ],
+      "moving": [
+        -1.117,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.128,
+          1.08,
+          -0.217
+        ],
+        [
+          -1.159,
+          1.13,
+          -0.19
+        ],
+        [
+          -1.159,
+          1.17,
+          -0.08
+        ],
+        [
+          -1.159,
+          1.09,
+          0.12
+        ],
+        [
+          -1.159,
+          0.93,
+          0.07
+        ],
+        [
+          -1.117,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A5_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A6_power",
+      "bay_id": "A6",
+      "component_key": "cables:A6",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -0.678,
+        0.995,
+        -0.217
+      ],
+      "moving": [
+        -0.667,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -0.678,
+          0.995,
+          -0.217
+        ],
+        [
+          -0.709,
+          1.13,
+          -0.19
+        ],
+        [
+          -0.709,
+          1.17,
+          -0.08
+        ],
+        [
+          -0.709,
+          1.09,
+          0.12
+        ],
+        [
+          -0.709,
+          0.93,
+          0.07
+        ],
+        [
+          -0.667,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A6_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A6_network",
+      "bay_id": "A6",
+      "component_key": "cables:A6",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -0.678,
+        1.08,
+        -0.217
+      ],
+      "moving": [
+        -0.667,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -0.678,
+          1.08,
+          -0.217
+        ],
+        [
+          -0.709,
+          1.13,
+          -0.19
+        ],
+        [
+          -0.709,
+          1.17,
+          -0.08
+        ],
+        [
+          -0.709,
+          1.09,
+          0.12
+        ],
+        [
+          -0.709,
+          0.93,
+          0.07
+        ],
+        [
+          -0.667,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A6_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A7_power",
+      "bay_id": "A7",
+      "component_key": "cables:A7",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.578,
+        0.545,
+        -0.217
+      ],
+      "moving": [
+        -1.567,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.578,
+          0.545,
+          -0.217
+        ],
+        [
+          -1.609,
+          0.68,
+          -0.19
+        ],
+        [
+          -1.609,
+          0.72,
+          -0.08
+        ],
+        [
+          -1.609,
+          0.64,
+          0.12
+        ],
+        [
+          -1.609,
+          0.48,
+          0.07
+        ],
+        [
+          -1.567,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A7_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A7_network",
+      "bay_id": "A7",
+      "component_key": "cables:A7",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.578,
+        0.63,
+        -0.217
+      ],
+      "moving": [
+        -1.567,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.578,
+          0.63,
+          -0.217
+        ],
+        [
+          -1.609,
+          0.68,
+          -0.19
+        ],
+        [
+          -1.609,
+          0.72,
+          -0.08
+        ],
+        [
+          -1.609,
+          0.64,
+          0.12
+        ],
+        [
+          -1.609,
+          0.48,
+          0.07
+        ],
+        [
+          -1.567,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A7_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A8_power",
+      "bay_id": "A8",
+      "component_key": "cables:A8",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.128,
+        0.545,
+        -0.217
+      ],
+      "moving": [
+        -1.117,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.128,
+          0.545,
+          -0.217
+        ],
+        [
+          -1.159,
+          0.68,
+          -0.19
+        ],
+        [
+          -1.159,
+          0.72,
+          -0.08
+        ],
+        [
+          -1.159,
+          0.64,
+          0.12
+        ],
+        [
+          -1.159,
+          0.48,
+          0.07
+        ],
+        [
+          -1.117,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A8_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A8_network",
+      "bay_id": "A8",
+      "component_key": "cables:A8",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -1.128,
+        0.63,
+        -0.217
+      ],
+      "moving": [
+        -1.117,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -1.128,
+          0.63,
+          -0.217
+        ],
+        [
+          -1.159,
+          0.68,
+          -0.19
+        ],
+        [
+          -1.159,
+          0.72,
+          -0.08
+        ],
+        [
+          -1.159,
+          0.64,
+          0.12
+        ],
+        [
+          -1.159,
+          0.48,
+          0.07
+        ],
+        [
+          -1.117,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A8_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A9_power",
+      "bay_id": "A9",
+      "component_key": "cables:A9",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -0.678,
+        0.545,
+        -0.217
+      ],
+      "moving": [
+        -0.667,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -0.678,
+          0.545,
+          -0.217
+        ],
+        [
+          -0.709,
+          0.68,
+          -0.19
+        ],
+        [
+          -0.709,
+          0.72,
+          -0.08
+        ],
+        [
+          -0.709,
+          0.64,
+          0.12
+        ],
+        [
+          -0.709,
+          0.48,
+          0.07
+        ],
+        [
+          -0.667,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A9_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_A9_network",
+      "bay_id": "A9",
+      "component_key": "cables:A9",
+      "space": "bay_local_gltf",
+      "fixed": [
+        -0.678,
+        0.63,
+        -0.217
+      ],
+      "moving": [
+        -0.667,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          -0.678,
+          0.63,
+          -0.217
+        ],
+        [
+          -0.709,
+          0.68,
+          -0.19
+        ],
+        [
+          -0.709,
+          0.72,
+          -0.08
+        ],
+        [
+          -0.709,
+          0.64,
+          0.12
+        ],
+        [
+          -0.709,
+          0.48,
+          0.07
+        ],
+        [
+          -0.667,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_A9_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B1_power",
+      "bay_id": "B1",
+      "component_key": "cables:B1",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.372,
+        1.445,
+        -0.217
+      ],
+      "moving": [
+        0.383,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.372,
+          1.445,
+          -0.217
+        ],
+        [
+          0.341,
+          1.58,
+          -0.19
+        ],
+        [
+          0.341,
+          1.62,
+          -0.08
+        ],
+        [
+          0.341,
+          1.54,
+          0.12
+        ],
+        [
+          0.341,
+          1.38,
+          0.07
+        ],
+        [
+          0.383,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B1_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B1_network",
+      "bay_id": "B1",
+      "component_key": "cables:B1",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.372,
+        1.53,
+        -0.217
+      ],
+      "moving": [
+        0.383,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.372,
+          1.53,
+          -0.217
+        ],
+        [
+          0.341,
+          1.58,
+          -0.19
+        ],
+        [
+          0.341,
+          1.62,
+          -0.08
+        ],
+        [
+          0.341,
+          1.54,
+          0.12
+        ],
+        [
+          0.341,
+          1.38,
+          0.07
+        ],
+        [
+          0.383,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B1_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B2_power",
+      "bay_id": "B2",
+      "component_key": "cables:B2",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.822,
+        1.445,
+        -0.217
+      ],
+      "moving": [
+        0.833,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.822,
+          1.445,
+          -0.217
+        ],
+        [
+          0.791,
+          1.58,
+          -0.19
+        ],
+        [
+          0.791,
+          1.62,
+          -0.08
+        ],
+        [
+          0.791,
+          1.54,
+          0.12
+        ],
+        [
+          0.791,
+          1.38,
+          0.07
+        ],
+        [
+          0.833,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B2_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B2_network",
+      "bay_id": "B2",
+      "component_key": "cables:B2",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.822,
+        1.53,
+        -0.217
+      ],
+      "moving": [
+        0.833,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.822,
+          1.53,
+          -0.217
+        ],
+        [
+          0.791,
+          1.58,
+          -0.19
+        ],
+        [
+          0.791,
+          1.62,
+          -0.08
+        ],
+        [
+          0.791,
+          1.54,
+          0.12
+        ],
+        [
+          0.791,
+          1.38,
+          0.07
+        ],
+        [
+          0.833,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B2_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B3_power",
+      "bay_id": "B3",
+      "component_key": "cables:B3",
+      "space": "bay_local_gltf",
+      "fixed": [
+        1.272,
+        1.445,
+        -0.217
+      ],
+      "moving": [
+        1.283,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          1.272,
+          1.445,
+          -0.217
+        ],
+        [
+          1.241,
+          1.58,
+          -0.19
+        ],
+        [
+          1.241,
+          1.62,
+          -0.08
+        ],
+        [
+          1.241,
+          1.54,
+          0.12
+        ],
+        [
+          1.241,
+          1.38,
+          0.07
+        ],
+        [
+          1.283,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B3_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B3_network",
+      "bay_id": "B3",
+      "component_key": "cables:B3",
+      "space": "bay_local_gltf",
+      "fixed": [
+        1.272,
+        1.53,
+        -0.217
+      ],
+      "moving": [
+        1.283,
+        1.276,
+        0.04
+      ],
+      "guide_points": [
+        [
+          1.272,
+          1.53,
+          -0.217
+        ],
+        [
+          1.241,
+          1.58,
+          -0.19
+        ],
+        [
+          1.241,
+          1.62,
+          -0.08
+        ],
+        [
+          1.241,
+          1.54,
+          0.12
+        ],
+        [
+          1.241,
+          1.38,
+          0.07
+        ],
+        [
+          1.283,
+          1.276,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B3_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B4_power",
+      "bay_id": "B4",
+      "component_key": "cables:B4",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.372,
+        0.995,
+        -0.217
+      ],
+      "moving": [
+        0.383,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.372,
+          0.995,
+          -0.217
+        ],
+        [
+          0.341,
+          1.13,
+          -0.19
+        ],
+        [
+          0.341,
+          1.17,
+          -0.08
+        ],
+        [
+          0.341,
+          1.09,
+          0.12
+        ],
+        [
+          0.341,
+          0.93,
+          0.07
+        ],
+        [
+          0.383,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B4_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B4_network",
+      "bay_id": "B4",
+      "component_key": "cables:B4",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.372,
+        1.08,
+        -0.217
+      ],
+      "moving": [
+        0.383,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.372,
+          1.08,
+          -0.217
+        ],
+        [
+          0.341,
+          1.13,
+          -0.19
+        ],
+        [
+          0.341,
+          1.17,
+          -0.08
+        ],
+        [
+          0.341,
+          1.09,
+          0.12
+        ],
+        [
+          0.341,
+          0.93,
+          0.07
+        ],
+        [
+          0.383,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B4_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B5_power",
+      "bay_id": "B5",
+      "component_key": "cables:B5",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.822,
+        0.995,
+        -0.217
+      ],
+      "moving": [
+        0.833,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.822,
+          0.995,
+          -0.217
+        ],
+        [
+          0.791,
+          1.13,
+          -0.19
+        ],
+        [
+          0.791,
+          1.17,
+          -0.08
+        ],
+        [
+          0.791,
+          1.09,
+          0.12
+        ],
+        [
+          0.791,
+          0.93,
+          0.07
+        ],
+        [
+          0.833,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B5_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B5_network",
+      "bay_id": "B5",
+      "component_key": "cables:B5",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.822,
+        1.08,
+        -0.217
+      ],
+      "moving": [
+        0.833,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.822,
+          1.08,
+          -0.217
+        ],
+        [
+          0.791,
+          1.13,
+          -0.19
+        ],
+        [
+          0.791,
+          1.17,
+          -0.08
+        ],
+        [
+          0.791,
+          1.09,
+          0.12
+        ],
+        [
+          0.791,
+          0.93,
+          0.07
+        ],
+        [
+          0.833,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B5_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B6_power",
+      "bay_id": "B6",
+      "component_key": "cables:B6",
+      "space": "bay_local_gltf",
+      "fixed": [
+        1.272,
+        0.995,
+        -0.217
+      ],
+      "moving": [
+        1.283,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          1.272,
+          0.995,
+          -0.217
+        ],
+        [
+          1.241,
+          1.13,
+          -0.19
+        ],
+        [
+          1.241,
+          1.17,
+          -0.08
+        ],
+        [
+          1.241,
+          1.09,
+          0.12
+        ],
+        [
+          1.241,
+          0.93,
+          0.07
+        ],
+        [
+          1.283,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B6_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B6_network",
+      "bay_id": "B6",
+      "component_key": "cables:B6",
+      "space": "bay_local_gltf",
+      "fixed": [
+        1.272,
+        1.08,
+        -0.217
+      ],
+      "moving": [
+        1.283,
+        0.826,
+        0.04
+      ],
+      "guide_points": [
+        [
+          1.272,
+          1.08,
+          -0.217
+        ],
+        [
+          1.241,
+          1.13,
+          -0.19
+        ],
+        [
+          1.241,
+          1.17,
+          -0.08
+        ],
+        [
+          1.241,
+          1.09,
+          0.12
+        ],
+        [
+          1.241,
+          0.93,
+          0.07
+        ],
+        [
+          1.283,
+          0.826,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B6_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B7_power",
+      "bay_id": "B7",
+      "component_key": "cables:B7",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.372,
+        0.545,
+        -0.217
+      ],
+      "moving": [
+        0.383,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.372,
+          0.545,
+          -0.217
+        ],
+        [
+          0.341,
+          0.68,
+          -0.19
+        ],
+        [
+          0.341,
+          0.72,
+          -0.08
+        ],
+        [
+          0.341,
+          0.64,
+          0.12
+        ],
+        [
+          0.341,
+          0.48,
+          0.07
+        ],
+        [
+          0.383,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B7_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B7_network",
+      "bay_id": "B7",
+      "component_key": "cables:B7",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.372,
+        0.63,
+        -0.217
+      ],
+      "moving": [
+        0.383,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.372,
+          0.63,
+          -0.217
+        ],
+        [
+          0.341,
+          0.68,
+          -0.19
+        ],
+        [
+          0.341,
+          0.72,
+          -0.08
+        ],
+        [
+          0.341,
+          0.64,
+          0.12
+        ],
+        [
+          0.341,
+          0.48,
+          0.07
+        ],
+        [
+          0.383,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B7_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B8_power",
+      "bay_id": "B8",
+      "component_key": "cables:B8",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.822,
+        0.545,
+        -0.217
+      ],
+      "moving": [
+        0.833,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.822,
+          0.545,
+          -0.217
+        ],
+        [
+          0.791,
+          0.68,
+          -0.19
+        ],
+        [
+          0.791,
+          0.72,
+          -0.08
+        ],
+        [
+          0.791,
+          0.64,
+          0.12
+        ],
+        [
+          0.791,
+          0.48,
+          0.07
+        ],
+        [
+          0.833,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B8_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B8_network",
+      "bay_id": "B8",
+      "component_key": "cables:B8",
+      "space": "bay_local_gltf",
+      "fixed": [
+        0.822,
+        0.63,
+        -0.217
+      ],
+      "moving": [
+        0.833,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          0.822,
+          0.63,
+          -0.217
+        ],
+        [
+          0.791,
+          0.68,
+          -0.19
+        ],
+        [
+          0.791,
+          0.72,
+          -0.08
+        ],
+        [
+          0.791,
+          0.64,
+          0.12
+        ],
+        [
+          0.791,
+          0.48,
+          0.07
+        ],
+        [
+          0.833,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B8_network_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B9_power",
+      "bay_id": "B9",
+      "component_key": "cables:B9",
+      "space": "bay_local_gltf",
+      "fixed": [
+        1.272,
+        0.545,
+        -0.217
+      ],
+      "moving": [
+        1.283,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          1.272,
+          0.545,
+          -0.217
+        ],
+        [
+          1.241,
+          0.68,
+          -0.19
+        ],
+        [
+          1.241,
+          0.72,
+          -0.08
+        ],
+        [
+          1.241,
+          0.64,
+          0.12
+        ],
+        [
+          1.241,
+          0.48,
+          0.07
+        ],
+        [
+          1.283,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#18212b",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B9_power_Mesh"
+      ]
+    },
+    {
+      "id": "cable_B9_network",
+      "bay_id": "B9",
+      "component_key": "cables:B9",
+      "space": "bay_local_gltf",
+      "fixed": [
+        1.272,
+        0.63,
+        -0.217
+      ],
+      "moving": [
+        1.283,
+        0.376,
+        0.04
+      ],
+      "guide_points": [
+        [
+          1.272,
+          0.63,
+          -0.217
+        ],
+        [
+          1.241,
+          0.68,
+          -0.19
+        ],
+        [
+          1.241,
+          0.72,
+          -0.08
+        ],
+        [
+          1.241,
+          0.64,
+          0.12
+        ],
+        [
+          1.241,
+          0.48,
+          0.07
+        ],
+        [
+          1.283,
+          0.376,
+          0.04
+        ]
+      ],
+      "radius_mm": 2.2,
+      "color": "#2680d9",
+      "rest_length_mm": 850,
+      "source_node_names": [
+        "DynamicCable_B9_network_Mesh"
+      ]
+    }
+  ]
+}
