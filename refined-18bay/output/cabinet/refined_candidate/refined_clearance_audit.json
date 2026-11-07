@@ -1,0 +1,2408 @@
+{
+  "model": "smart_cabinet_18bay.blend",
+  "model_sha256": "de6f86e8349cc32af1d6470660e29b0177efd5f196eb59c32029692200ab981d",
+  "method": "Evaluated polygon mesh triangle BVH surface intersections, epsilon 0; AABB broad phase; no .blend mutation is saved.",
+  "checked": [
+    "18 bays individually: moving tray sheet/folds and laptop vs fixed cabinet sheet/frame, service panel, adapter basket/adapter, own door and adjacent closed doors",
+    "Dynamic cables vs the same fixed structures, doors, and laptop/tray payload, except intentional connector engagement",
+    "Stowed empty-bay cables vs moving tray and the same fixed structures/doors",
+    "Moving door frame/glass vs selected fixed structures and adjacent closed doors"
+  ],
+  "excluded": [
+    "Fastener threads/heads, nested slide rails, hinge knuckles, rubber/seal compression and intentional plug/socket contacts",
+    "Cable-to-fixed-feed contact: fixed_cables groups excluded only from cable-vs-fixed checks. Stowed plugs/cables contacting ParkingDock/Parking supports are intentional; active cables remain checked against these parking mounts. All mounts remain checked against tray/laptop and door; small electrical contact internals excluded",
+    "Service/rear-door sweep, unsampled combinations, continuous swept solids, minimum clearance tolerances, full containment and manufacturing/load/thermal/electrical certification",
+    "BVH reports intersecting surfaces; it is not a robust solid-overlap or tolerance solver"
+  ],
+  "expected_counts": {
+    "bays": 18,
+    "trays": 18,
+    "front_bay_doors": 18,
+    "laptops": 15,
+    "empty_bays": [
+      "A3",
+      "B2",
+      "B6"
+    ]
+  },
+  "counts": {
+    "bays": 18,
+    "trays": 18,
+    "front_bay_doors": 18,
+    "laptops": 15,
+    "empty_bays": [
+      "A3",
+      "B2",
+      "B6"
+    ]
+  },
+  "selected_geometry": {
+    "fixed_count": 584,
+    "fixed_object_names": [
+      "A1_Ceiling",
+      "A1_PowerAdapter",
+      "A1_RearAirDuct",
+      "A1_RearServiceRail",
+      "A1_RearServiceRail.001",
+      "A1_Refined_ParkingDock_network",
+      "A1_Refined_ParkingDock_power",
+      "A1_Refined_fixed_ac_socket_body",
+      "A1_Refined_fixed_adapter_bracket_body",
+      "A1_Refined_fixed_cables_LEDWallFeed",
+      "A1_Refined_fixed_cables_body",
+      "A1_Refined_fixed_light_body",
+      "A1_Refined_fixed_network_body",
+      "A1_Refined_fixed_ports_body",
+      "A1_Refined_fixed_power_body",
+      "A1_Refined_fixed_supports_Adapter",
+      "A1_Refined_fixed_supports_Adapter.001",
+      "A1_Refined_fixed_supports_LEDClip",
+      "A1_Refined_fixed_supports_LEDClip.001",
+      "A1_Refined_fixed_supports_LEDWireGrommet",
+      "A1_Refined_fixed_supports_Panel",
+      "A1_Refined_fixed_supports_Panel.001",
+      "A1_Refined_fixed_supports_Panel.002",
+      "A1_Refined_fixed_supports_Panel.003",
+      "A1_Refined_fixed_supports_Parking",
+      "A1_Refined_fixed_supports_Parking.001",
+      "A1_Refined_fixed_supports_Raceway",
+      "A1_Refined_fixed_supports_Raceway.001",
+      "A1_Refined_fixed_supports_Raceway.002",
+      "A1_Refined_fixed_supports_Raceway.003",
+      "A1_Shelf",
+      "A2_Ceiling",
+      "A2_PowerAdapter",
+      "A2_RearAirDuct",
+      "A2_RearServiceRail",
+      "A2_RearServiceRail.001",
+      "A2_Refined_ParkingDock_network",
+      "A2_Refined_ParkingDock_power",
+      "A2_Refined_fixed_ac_socket_body",
+      "A2_Refined_fixed_adapter_bracket_body",
+      "A2_Refined_fixed_cables_LEDWallFeed",
+      "A2_Refined_fixed_cables_body",
+      "A2_Refined_fixed_light_body",
+      "A2_Refined_fixed_network_body",
+      "A2_Refined_fixed_ports_body",
+      "A2_Refined_fixed_power_body",
+      "A2_Refined_fixed_supports_Adapter",
+      "A2_Refined_fixed_supports_Adapter.001",
+      "A2_Refined_fixed_supports_LEDClip",
+      "A2_Refined_fixed_supports_LEDClip.001",
+      "A2_Refined_fixed_supports_LEDWireGrommet",
+      "A2_Refined_fixed_supports_Panel",
+      "A2_Refined_fixed_supports_Panel.001",
+      "A2_Refined_fixed_supports_Panel.002",
+      "A2_Refined_fixed_supports_Panel.003",
+      "A2_Refined_fixed_supports_Parking",
+      "A2_Refined_fixed_supports_Parking.001",
+      "A2_Refined_fixed_supports_Raceway",
+      "A2_Refined_fixed_supports_Raceway.001",
+      "A2_Refined_fixed_supports_Raceway.002",
+      "A2_Refined_fixed_supports_Raceway.003",
+      "A2_Shelf",
+      "A3_Ceiling",
+      "A3_PowerAdapter",
+      "A3_RearAirDuct",
+      "A3_RearServiceRail",
+      "A3_RearServiceRail.001",
+      "A3_Refined_ParkingDock_network",
+      "A3_Refined_ParkingDock_power",
+      "A3_Refined_fixed_ac_socket_body",
+      "A3_Refined_fixed_adapter_bracket_body",
+      "A3_Refined_fixed_cables_LEDWallFeed",
+      "A3_Refined_fixed_cables_body",
+      "A3_Refined_fixed_light_body",
+      "A3_Refined_fixed_network_body",
+      "A3_Refined_fixed_ports_body",
+      "A3_Refined_fixed_power_body",
+      "A3_Refined_fixed_supports_Adapter",
+      "A3_Refined_fixed_supports_Adapter.001",
+      "A3_Refined_fixed_supports_LEDClip",
+      "A3_Refined_fixed_supports_LEDClip.001",
+      "A3_Refined_fixed_supports_LEDWireGrommet",
+      "A3_Refined_fixed_supports_Panel",
+      "A3_Refined_fixed_supports_Panel.001",
+      "A3_Refined_fixed_supports_Panel.002",
+      "A3_Refined_fixed_supports_Panel.003",
+      "A3_Refined_fixed_supports_Parking",
+      "A3_Refined_fixed_supports_Parking.001",
+      "A3_Refined_fixed_supports_Raceway",
+      "A3_Refined_fixed_supports_Raceway.001",
+      "A3_Refined_fixed_supports_Raceway.002",
+      "A3_Refined_fixed_supports_Raceway.003",
+      "A3_Shelf",
+      "A4_PowerAdapter",
+      "A4_RearAirDuct",
+      "A4_RearServiceRail",
+      "A4_RearServiceRail.001",
+      "A4_Refined_ParkingDock_network",
+      "A4_Refined_ParkingDock_power",
+      "A4_Refined_fixed_ac_socket_body",
+      "A4_Refined_fixed_adapter_bracket_body",
+      "A4_Refined_fixed_cables_LEDWallFeed",
+      "A4_Refined_fixed_cables_body",
+      "A4_Refined_fixed_light_body",
+      "A4_Refined_fixed_network_body",
+      "A4_Refined_fixed_ports_body",
+      "A4_Refined_fixed_power_body",
+      "A4_Refined_fixed_supports_Adapter",
+      "A4_Refined_fixed_supports_Adapter.001",
+      "A4_Refined_fixed_supports_LEDClip",
+      "A4_Refined_fixed_supports_LEDClip.001",
+      "A4_Refined_fixed_supports_LEDWireGrommet",
+      "A4_Refined_fixed_supports_Panel",
+      "A4_Refined_fixed_supports_Panel.001",
+      "A4_Refined_fixed_supports_Panel.002",
+      "A4_Refined_fixed_supports_Panel.003",
+      "A4_Refined_fixed_supports_Parking",
+      "A4_Refined_fixed_supports_Parking.001",
+      "A4_Refined_fixed_supports_Raceway",
+      "A4_Refined_fixed_supports_Raceway.001",
+      "A4_Refined_fixed_supports_Raceway.002",
+      "A4_Refined_fixed_supports_Raceway.003",
+      "A4_Shelf",
+      "A5_PowerAdapter",
+      "A5_RearAirDuct",
+      "A5_RearServiceRail",
+      "A5_RearServiceRail.001",
+      "A5_Refined_ParkingDock_network",
+      "A5_Refined_ParkingDock_power",
+      "A5_Refined_fixed_ac_socket_body",
+      "A5_Refined_fixed_adapter_bracket_body",
+      "A5_Refined_fixed_cables_LEDWallFeed",
+      "A5_Refined_fixed_cables_body",
+      "A5_Refined_fixed_light_body",
+      "A5_Refined_fixed_network_body",
+      "A5_Refined_fixed_ports_body",
+      "A5_Refined_fixed_power_body",
+      "A5_Refined_fixed_supports_Adapter",
+      "A5_Refined_fixed_supports_Adapter.001",
+      "A5_Refined_fixed_supports_LEDClip",
+      "A5_Refined_fixed_supports_LEDClip.001",
+      "A5_Refined_fixed_supports_LEDWireGrommet",
+      "A5_Refined_fixed_supports_Panel",
+      "A5_Refined_fixed_supports_Panel.001",
+      "A5_Refined_fixed_supports_Panel.002",
+      "A5_Refined_fixed_supports_Panel.003",
+      "A5_Refined_fixed_supports_Parking",
+      "A5_Refined_fixed_supports_Parking.001",
+      "A5_Refined_fixed_supports_Raceway",
+      "A5_Refined_fixed_supports_Raceway.001",
+      "A5_Refined_fixed_supports_Raceway.002",
+      "A5_Refined_fixed_supports_Raceway.003",
+      "A5_Shelf",
+      "A6_PowerAdapter",
+      "A6_RearAirDuct",
+      "A6_RearServiceRail",
+      "A6_RearServiceRail.001",
+      "A6_Refined_ParkingDock_network",
+      "A6_Refined_ParkingDock_power",
+      "A6_Refined_fixed_ac_socket_body",
+      "A6_Refined_fixed_adapter_bracket_body",
+      "A6_Refined_fixed_cables_LEDWallFeed",
+      "A6_Refined_fixed_cables_body",
+      "A6_Refined_fixed_light_body",
+      "A6_Refined_fixed_network_body",
+      "A6_Refined_fixed_ports_body",
+      "A6_Refined_fixed_power_body",
+      "A6_Refined_fixed_supports_Adapter",
+      "A6_Refined_fixed_supports_Adapter.001",
+      "A6_Refined_fixed_supports_LEDClip",
+      "A6_Refined_fixed_supports_LEDClip.001",
+      "A6_Refined_fixed_supports_LEDWireGrommet",
+      "A6_Refined_fixed_supports_Panel",
+      "A6_Refined_fixed_supports_Panel.001",
+      "A6_Refined_fixed_supports_Panel.002",
+      "A6_Refined_fixed_supports_Panel.003",
+      "A6_Refined_fixed_supports_Parking",
+      "A6_Refined_fixed_supports_Parking.001",
+      "A6_Refined_fixed_supports_Raceway",
+      "A6_Refined_fixed_supports_Raceway.001",
+      "A6_Refined_fixed_supports_Raceway.002",
+      "A6_Refined_fixed_supports_Raceway.003",
+      "A6_Shelf",
+      "A7_PowerAdapter",
+      "A7_RearAirDuct",
+      "A7_RearServiceRail",
+      "A7_RearServiceRail.001",
+      "A7_Refined_ParkingDock_network",
+      "A7_Refined_ParkingDock_power",
+      "A7_Refined_fixed_ac_socket_body",
+      "A7_Refined_fixed_adapter_bracket_body",
+      "A7_Refined_fixed_cables_LEDWallFeed",
+      "A7_Refined_fixed_cables_body",
+      "A7_Refined_fixed_light_body",
+      "A7_Refined_fixed_network_body",
+      "A7_Refined_fixed_ports_body",
+      "A7_Refined_fixed_power_body",
+      "A7_Refined_fixed_supports_Adapter",
+      "A7_Refined_fixed_supports_Adapter.001",
+      "A7_Refined_fixed_supports_LEDClip",
+      "A7_Refined_fixed_supports_LEDClip.001",
+      "A7_Refined_fixed_supports_LEDWireGrommet",
+      "A7_Refined_fixed_supports_Panel",
+      "A7_Refined_fixed_supports_Panel.001",
+      "A7_Refined_fixed_supports_Panel.002",
+      "A7_Refined_fixed_supports_Panel.003",
+      "A7_Refined_fixed_supports_Parking",
+      "A7_Refined_fixed_supports_Parking.001",
+      "A7_Refined_fixed_supports_Raceway",
+      "A7_Refined_fixed_supports_Raceway.001",
+      "A7_Refined_fixed_supports_Raceway.002",
+      "A7_Refined_fixed_supports_Raceway.003",
+      "A7_Shelf",
+      "A8_PowerAdapter",
+      "A8_RearAirDuct",
+      "A8_RearServiceRail",
+      "A8_RearServiceRail.001",
+      "A8_Refined_ParkingDock_network",
+      "A8_Refined_ParkingDock_power",
+      "A8_Refined_fixed_ac_socket_body",
+      "A8_Refined_fixed_adapter_bracket_body",
+      "A8_Refined_fixed_cables_LEDWallFeed",
+      "A8_Refined_fixed_cables_body",
+      "A8_Refined_fixed_light_body",
+      "A8_Refined_fixed_network_body",
+      "A8_Refined_fixed_ports_body",
+      "A8_Refined_fixed_power_body",
+      "A8_Refined_fixed_supports_Adapter",
+      "A8_Refined_fixed_supports_Adapter.001",
+      "A8_Refined_fixed_supports_LEDClip",
+      "A8_Refined_fixed_supports_LEDClip.001",
+      "A8_Refined_fixed_supports_LEDWireGrommet",
+      "A8_Refined_fixed_supports_Panel",
+      "A8_Refined_fixed_supports_Panel.001",
+      "A8_Refined_fixed_supports_Panel.002",
+      "A8_Refined_fixed_supports_Panel.003",
+      "A8_Refined_fixed_supports_Parking",
+      "A8_Refined_fixed_supports_Parking.001",
+      "A8_Refined_fixed_supports_Raceway",
+      "A8_Refined_fixed_supports_Raceway.001",
+      "A8_Refined_fixed_supports_Raceway.002",
+      "A8_Refined_fixed_supports_Raceway.003",
+      "A8_Shelf",
+      "A9_PowerAdapter",
+      "A9_RearAirDuct",
+      "A9_RearServiceRail",
+      "A9_RearServiceRail.001",
+      "A9_Refined_ParkingDock_network",
+      "A9_Refined_ParkingDock_power",
+      "A9_Refined_fixed_ac_socket_body",
+      "A9_Refined_fixed_adapter_bracket_body",
+      "A9_Refined_fixed_cables_LEDWallFeed",
+      "A9_Refined_fixed_cables_body",
+      "A9_Refined_fixed_light_body",
+      "A9_Refined_fixed_network_body",
+      "A9_Refined_fixed_ports_body",
+      "A9_Refined_fixed_power_body",
+      "A9_Refined_fixed_supports_Adapter",
+      "A9_Refined_fixed_supports_Adapter.001",
+      "A9_Refined_fixed_supports_LEDClip",
+      "A9_Refined_fixed_supports_LEDClip.001",
+      "A9_Refined_fixed_supports_LEDWireGrommet",
+      "A9_Refined_fixed_supports_Panel",
+      "A9_Refined_fixed_supports_Panel.001",
+      "A9_Refined_fixed_supports_Panel.002",
+      "A9_Refined_fixed_supports_Panel.003",
+      "A9_Refined_fixed_supports_Parking",
+      "A9_Refined_fixed_supports_Parking.001",
+      "A9_Refined_fixed_supports_Raceway",
+      "A9_Refined_fixed_supports_Raceway.001",
+      "A9_Refined_fixed_supports_Raceway.002",
+      "A9_Refined_fixed_supports_Raceway.003",
+      "A9_Shelf",
+      "B1_Ceiling",
+      "B1_PowerAdapter",
+      "B1_RearAirDuct",
+      "B1_RearServiceRail",
+      "B1_RearServiceRail.001",
+      "B1_Refined_ParkingDock_network",
+      "B1_Refined_ParkingDock_power",
+      "B1_Refined_fixed_ac_socket_body",
+      "B1_Refined_fixed_adapter_bracket_body",
+      "B1_Refined_fixed_cables_LEDWallFeed",
+      "B1_Refined_fixed_cables_body",
+      "B1_Refined_fixed_light_body",
+      "B1_Refined_fixed_network_body",
+      "B1_Refined_fixed_ports_body",
+      "B1_Refined_fixed_power_body",
+      "B1_Refined_fixed_supports_Adapter",
+      "B1_Refined_fixed_supports_Adapter.001",
+      "B1_Refined_fixed_supports_LEDClip",
+      "B1_Refined_fixed_supports_LEDClip.001",
+      "B1_Refined_fixed_supports_LEDWireGrommet",
+      "B1_Refined_fixed_supports_Panel",
+      "B1_Refined_fixed_supports_Panel.001",
+      "B1_Refined_fixed_supports_Panel.002",
+      "B1_Refined_fixed_supports_Panel.003",
+      "B1_Refined_fixed_supports_Parking",
+      "B1_Refined_fixed_supports_Parking.001",
+      "B1_Refined_fixed_supports_Raceway",
+      "B1_Refined_fixed_supports_Raceway.001",
+      "B1_Refined_fixed_supports_Raceway.002",
+      "B1_Refined_fixed_supports_Raceway.003",
+      "B1_Shelf",
+      "B2_Ceiling",
+      "B2_PowerAdapter",
+      "B2_RearAirDuct",
+      "B2_RearServiceRail",
+      "B2_RearServiceRail.001",
+      "B2_Refined_ParkingDock_network",
+      "B2_Refined_ParkingDock_power",
+      "B2_Refined_fixed_ac_socket_body",
+      "B2_Refined_fixed_adapter_bracket_body",
+      "B2_Refined_fixed_cables_LEDWallFeed",
+      "B2_Refined_fixed_cables_body",
+      "B2_Refined_fixed_light_body",
+      "B2_Refined_fixed_network_body",
+      "B2_Refined_fixed_ports_body",
+      "B2_Refined_fixed_power_body",
+      "B2_Refined_fixed_supports_Adapter",
+      "B2_Refined_fixed_supports_Adapter.001",
+      "B2_Refined_fixed_supports_LEDClip",
+      "B2_Refined_fixed_supports_LEDClip.001",
+      "B2_Refined_fixed_supports_LEDWireGrommet",
+      "B2_Refined_fixed_supports_Panel",
+      "B2_Refined_fixed_supports_Panel.001",
+      "B2_Refined_fixed_supports_Panel.002",
+      "B2_Refined_fixed_supports_Panel.003",
+      "B2_Refined_fixed_supports_Parking",
+      "B2_Refined_fixed_supports_Parking.001",
+      "B2_Refined_fixed_supports_Raceway",
+      "B2_Refined_fixed_supports_Raceway.001",
+      "B2_Refined_fixed_supports_Raceway.002",
+      "B2_Refined_fixed_supports_Raceway.003",
+      "B2_Shelf",
+      "B3_Ceiling",
+      "B3_PowerAdapter",
+      "B3_RearAirDuct",
+      "B3_RearServiceRail",
+      "B3_RearServiceRail.001",
+      "B3_Refined_ParkingDock_network",
+      "B3_Refined_ParkingDock_power",
+      "B3_Refined_fixed_ac_socket_body",
+      "B3_Refined_fixed_adapter_bracket_body",
+      "B3_Refined_fixed_cables_LEDWallFeed",
+      "B3_Refined_fixed_cables_body",
+      "B3_Refined_fixed_light_body",
+      "B3_Refined_fixed_network_body",
+      "B3_Refined_fixed_ports_body",
+      "B3_Refined_fixed_power_body",
+      "B3_Refined_fixed_supports_Adapter",
+      "B3_Refined_fixed_supports_Adapter.001",
+      "B3_Refined_fixed_supports_LEDClip",
+      "B3_Refined_fixed_supports_LEDClip.001",
+      "B3_Refined_fixed_supports_LEDWireGrommet",
+      "B3_Refined_fixed_supports_Panel",
+      "B3_Refined_fixed_supports_Panel.001",
+      "B3_Refined_fixed_supports_Panel.002",
+      "B3_Refined_fixed_supports_Panel.003",
+      "B3_Refined_fixed_supports_Parking",
+      "B3_Refined_fixed_supports_Parking.001",
+      "B3_Refined_fixed_supports_Raceway",
+      "B3_Refined_fixed_supports_Raceway.001",
+      "B3_Refined_fixed_supports_Raceway.002",
+      "B3_Refined_fixed_supports_Raceway.003",
+      "B3_Shelf",
+      "B4_PowerAdapter",
+      "B4_RearAirDuct",
+      "B4_RearServiceRail",
+      "B4_RearServiceRail.001",
+      "B4_Refined_ParkingDock_network",
+      "B4_Refined_ParkingDock_power",
+      "B4_Refined_fixed_ac_socket_body",
+      "B4_Refined_fixed_adapter_bracket_body",
+      "B4_Refined_fixed_cables_LEDWallFeed",
+      "B4_Refined_fixed_cables_body",
+      "B4_Refined_fixed_light_body",
+      "B4_Refined_fixed_network_body",
+      "B4_Refined_fixed_ports_body",
+      "B4_Refined_fixed_power_body",
+      "B4_Refined_fixed_supports_Adapter",
+      "B4_Refined_fixed_supports_Adapter.001",
+      "B4_Refined_fixed_supports_LEDClip",
+      "B4_Refined_fixed_supports_LEDClip.001",
+      "B4_Refined_fixed_supports_LEDWireGrommet",
+      "B4_Refined_fixed_supports_Panel",
+      "B4_Refined_fixed_supports_Panel.001",
+      "B4_Refined_fixed_supports_Panel.002",
+      "B4_Refined_fixed_supports_Panel.003",
+      "B4_Refined_fixed_supports_Parking",
+      "B4_Refined_fixed_supports_Parking.001",
+      "B4_Refined_fixed_supports_Raceway",
+      "B4_Refined_fixed_supports_Raceway.001",
+      "B4_Refined_fixed_supports_Raceway.002",
+      "B4_Refined_fixed_supports_Raceway.003",
+      "B4_Shelf",
+      "B5_PowerAdapter",
+      "B5_RearAirDuct",
+      "B5_RearServiceRail",
+      "B5_RearServiceRail.001",
+      "B5_Refined_ParkingDock_network",
+      "B5_Refined_ParkingDock_power",
+      "B5_Refined_fixed_ac_socket_body",
+      "B5_Refined_fixed_adapter_bracket_body",
+      "B5_Refined_fixed_cables_LEDWallFeed",
+      "B5_Refined_fixed_cables_body",
+      "B5_Refined_fixed_light_body",
+      "B5_Refined_fixed_network_body",
+      "B5_Refined_fixed_ports_body",
+      "B5_Refined_fixed_power_body",
+      "B5_Refined_fixed_supports_Adapter",
+      "B5_Refined_fixed_supports_Adapter.001",
+      "B5_Refined_fixed_supports_LEDClip",
+      "B5_Refined_fixed_supports_LEDClip.001",
+      "B5_Refined_fixed_supports_LEDWireGrommet",
+      "B5_Refined_fixed_supports_Panel",
+      "B5_Refined_fixed_supports_Panel.001",
+      "B5_Refined_fixed_supports_Panel.002",
+      "B5_Refined_fixed_supports_Panel.003",
+      "B5_Refined_fixed_supports_Parking",
+      "B5_Refined_fixed_supports_Parking.001",
+      "B5_Refined_fixed_supports_Raceway",
+      "B5_Refined_fixed_supports_Raceway.001",
+      "B5_Refined_fixed_supports_Raceway.002",
+      "B5_Refined_fixed_supports_Raceway.003",
+      "B5_Shelf",
+      "B6_PowerAdapter",
+      "B6_RearAirDuct",
+      "B6_RearServiceRail",
+      "B6_RearServiceRail.001",
+      "B6_Refined_ParkingDock_network",
+      "B6_Refined_ParkingDock_power",
+      "B6_Refined_fixed_ac_socket_body",
+      "B6_Refined_fixed_adapter_bracket_body",
+      "B6_Refined_fixed_cables_LEDWallFeed",
+      "B6_Refined_fixed_cables_body",
+      "B6_Refined_fixed_light_body",
+      "B6_Refined_fixed_network_body",
+      "B6_Refined_fixed_ports_body",
+      "B6_Refined_fixed_power_body",
+      "B6_Refined_fixed_supports_Adapter",
+      "B6_Refined_fixed_supports_Adapter.001",
+      "B6_Refined_fixed_supports_LEDClip",
+      "B6_Refined_fixed_supports_LEDClip.001",
+      "B6_Refined_fixed_supports_LEDWireGrommet",
+      "B6_Refined_fixed_supports_Panel",
+      "B6_Refined_fixed_supports_Panel.001",
+      "B6_Refined_fixed_supports_Panel.002",
+      "B6_Refined_fixed_supports_Panel.003",
+      "B6_Refined_fixed_supports_Parking",
+      "B6_Refined_fixed_supports_Parking.001",
+      "B6_Refined_fixed_supports_Raceway",
+      "B6_Refined_fixed_supports_Raceway.001",
+      "B6_Refined_fixed_supports_Raceway.002",
+      "B6_Refined_fixed_supports_Raceway.003",
+      "B6_Shelf",
+      "B7_PowerAdapter",
+      "B7_RearAirDuct",
+      "B7_RearServiceRail",
+      "B7_RearServiceRail.001",
+      "B7_Refined_ParkingDock_network",
+      "B7_Refined_ParkingDock_power",
+      "B7_Refined_fixed_ac_socket_body",
+      "B7_Refined_fixed_adapter_bracket_body",
+      "B7_Refined_fixed_cables_LEDWallFeed",
+      "B7_Refined_fixed_cables_body",
+      "B7_Refined_fixed_light_body",
+      "B7_Refined_fixed_network_body",
+      "B7_Refined_fixed_ports_body",
+      "B7_Refined_fixed_power_body",
+      "B7_Refined_fixed_supports_Adapter",
+      "B7_Refined_fixed_supports_Adapter.001",
+      "B7_Refined_fixed_supports_LEDClip",
+      "B7_Refined_fixed_supports_LEDClip.001",
+      "B7_Refined_fixed_supports_LEDWireGrommet",
+      "B7_Refined_fixed_supports_Panel",
+      "B7_Refined_fixed_supports_Panel.001",
+      "B7_Refined_fixed_supports_Panel.002",
+      "B7_Refined_fixed_supports_Panel.003",
+      "B7_Refined_fixed_supports_Parking",
+      "B7_Refined_fixed_supports_Parking.001",
+      "B7_Refined_fixed_supports_Raceway",
+      "B7_Refined_fixed_supports_Raceway.001",
+      "B7_Refined_fixed_supports_Raceway.002",
+      "B7_Refined_fixed_supports_Raceway.003",
+      "B7_Shelf",
+      "B8_PowerAdapter",
+      "B8_RearAirDuct",
+      "B8_RearServiceRail",
+      "B8_RearServiceRail.001",
+      "B8_Refined_ParkingDock_network",
+      "B8_Refined_ParkingDock_power",
+      "B8_Refined_fixed_ac_socket_body",
+      "B8_Refined_fixed_adapter_bracket_body",
+      "B8_Refined_fixed_cables_LEDWallFeed",
+      "B8_Refined_fixed_cables_body",
+      "B8_Refined_fixed_light_body",
+      "B8_Refined_fixed_network_body",
+      "B8_Refined_fixed_ports_body",
+      "B8_Refined_fixed_power_body",
+      "B8_Refined_fixed_supports_Adapter",
+      "B8_Refined_fixed_supports_Adapter.001",
+      "B8_Refined_fixed_supports_LEDClip",
+      "B8_Refined_fixed_supports_LEDClip.001",
+      "B8_Refined_fixed_supports_LEDWireGrommet",
+      "B8_Refined_fixed_supports_Panel",
+      "B8_Refined_fixed_supports_Panel.001",
+      "B8_Refined_fixed_supports_Panel.002",
+      "B8_Refined_fixed_supports_Panel.003",
+      "B8_Refined_fixed_supports_Parking",
+      "B8_Refined_fixed_supports_Parking.001",
+      "B8_Refined_fixed_supports_Raceway",
+      "B8_Refined_fixed_supports_Raceway.001",
+      "B8_Refined_fixed_supports_Raceway.002",
+      "B8_Refined_fixed_supports_Raceway.003",
+      "B8_Shelf",
+      "B9_PowerAdapter",
+      "B9_RearAirDuct",
+      "B9_RearServiceRail",
+      "B9_RearServiceRail.001",
+      "B9_Refined_ParkingDock_network",
+      "B9_Refined_ParkingDock_power",
+      "B9_Refined_fixed_ac_socket_body",
+      "B9_Refined_fixed_adapter_bracket_body",
+      "B9_Refined_fixed_cables_LEDWallFeed",
+      "B9_Refined_fixed_cables_body",
+      "B9_Refined_fixed_light_body",
+      "B9_Refined_fixed_network_body",
+      "B9_Refined_fixed_ports_body",
+      "B9_Refined_fixed_power_body",
+      "B9_Refined_fixed_supports_Adapter",
+      "B9_Refined_fixed_supports_Adapter.001",
+      "B9_Refined_fixed_supports_LEDClip",
+      "B9_Refined_fixed_supports_LEDClip.001",
+      "B9_Refined_fixed_supports_LEDWireGrommet",
+      "B9_Refined_fixed_supports_Panel",
+      "B9_Refined_fixed_supports_Panel.001",
+      "B9_Refined_fixed_supports_Panel.002",
+      "B9_Refined_fixed_supports_Panel.003",
+      "B9_Refined_fixed_supports_Parking",
+      "B9_Refined_fixed_supports_Parking.001",
+      "B9_Refined_fixed_supports_Raceway",
+      "B9_Refined_fixed_supports_Raceway.001",
+      "B9_Refined_fixed_supports_Raceway.002",
+      "B9_Refined_fixed_supports_Raceway.003",
+      "B9_Shelf",
+      "Housing_Center_Bottom",
+      "Housing_Center_ScreenSurround",
+      "Housing_Center_Side",
+      "Housing_Center_Side.001",
+      "Housing_Center_Top",
+      "Housing_Center_UpperFascia",
+      "Housing_Left_BaseFascia",
+      "Housing_Left_Bottom",
+      "Housing_Left_Header",
+      "Housing_Left_Side",
+      "Housing_Left_Side.001",
+      "Housing_Left_Top",
+      "Housing_Right_BaseFascia",
+      "Housing_Right_Bottom",
+      "Housing_Right_Header",
+      "Housing_Right_Side",
+      "Housing_Right_Side.001",
+      "Housing_Right_Top",
+      "Left_CrossRail",
+      "Left_CrossRail.001",
+      "Left_CrossRail.002",
+      "Left_CrossRail.003",
+      "Left_FrontPost",
+      "Left_FrontPost.001",
+      "Left_FrontPost.002",
+      "Left_FrontPost.003",
+      "Left_Partition",
+      "Left_Partition.001",
+      "Right_CrossRail",
+      "Right_CrossRail.001",
+      "Right_CrossRail.002",
+      "Right_CrossRail.003",
+      "Right_FrontPost",
+      "Right_FrontPost.001",
+      "Right_FrontPost.002",
+      "Right_FrontPost.003",
+      "Right_Partition",
+      "Right_Partition.001"
+    ],
+    "bays": {
+      "A1": {
+        "payload": [
+          "A1_Refined_laptop_laptop_body",
+          "A1_Refined_laptop_network_body",
+          "A1_Refined_laptop_power_body",
+          "A1_Refined_tray_network_connector_network",
+          "A1_Refined_tray_power_connector_power",
+          "A1_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A1_network",
+          "DynamicCable_A1_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A1_DoorHorizontal",
+          "A1_DoorHorizontal.001",
+          "A1_DoorVertical",
+          "A1_DoorVertical.001",
+          "Glass_A1"
+        ]
+      },
+      "A2": {
+        "payload": [
+          "A2_Refined_laptop_laptop_body",
+          "A2_Refined_laptop_network_body",
+          "A2_Refined_laptop_power_body",
+          "A2_Refined_tray_network_connector_network",
+          "A2_Refined_tray_power_connector_power",
+          "A2_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A2_network",
+          "DynamicCable_A2_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A2_DoorHorizontal",
+          "A2_DoorHorizontal.001",
+          "A2_DoorVertical",
+          "A2_DoorVertical.001",
+          "Glass_A2"
+        ]
+      },
+      "A3": {
+        "payload": [
+          "A3_Refined_tray_tray_body"
+        ],
+        "cables": [],
+        "parked": [
+          "ParkingCable_A3_network",
+          "ParkingCable_A3_power",
+          "ParkingPlug_A3_network",
+          "ParkingPlug_A3_power"
+        ],
+        "door_parts": [
+          "A3_DoorHorizontal",
+          "A3_DoorHorizontal.001",
+          "A3_DoorVertical",
+          "A3_DoorVertical.001",
+          "Glass_A3"
+        ]
+      },
+      "A4": {
+        "payload": [
+          "A4_Refined_laptop_laptop_body",
+          "A4_Refined_laptop_network_body",
+          "A4_Refined_laptop_power_body",
+          "A4_Refined_tray_network_connector_network",
+          "A4_Refined_tray_power_connector_power",
+          "A4_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A4_network",
+          "DynamicCable_A4_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A4_DoorHorizontal",
+          "A4_DoorHorizontal.001",
+          "A4_DoorVertical",
+          "A4_DoorVertical.001",
+          "Glass_A4"
+        ]
+      },
+      "A5": {
+        "payload": [
+          "A5_Refined_laptop_laptop_body",
+          "A5_Refined_laptop_network_body",
+          "A5_Refined_laptop_power_body",
+          "A5_Refined_tray_network_connector_network",
+          "A5_Refined_tray_power_connector_power",
+          "A5_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A5_network",
+          "DynamicCable_A5_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A5_DoorHorizontal",
+          "A5_DoorHorizontal.001",
+          "A5_DoorVertical",
+          "A5_DoorVertical.001",
+          "Glass_A5"
+        ]
+      },
+      "A6": {
+        "payload": [
+          "A6_Refined_laptop_laptop_body",
+          "A6_Refined_laptop_network_body",
+          "A6_Refined_laptop_power_body",
+          "A6_Refined_tray_network_connector_network",
+          "A6_Refined_tray_power_connector_power",
+          "A6_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A6_network",
+          "DynamicCable_A6_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A6_DoorHorizontal",
+          "A6_DoorHorizontal.001",
+          "A6_DoorVertical",
+          "A6_DoorVertical.001",
+          "Glass_A6"
+        ]
+      },
+      "A7": {
+        "payload": [
+          "A7_Refined_laptop_laptop_body",
+          "A7_Refined_laptop_network_body",
+          "A7_Refined_laptop_power_body",
+          "A7_Refined_tray_network_connector_network",
+          "A7_Refined_tray_power_connector_power",
+          "A7_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A7_network",
+          "DynamicCable_A7_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A7_DoorHorizontal",
+          "A7_DoorHorizontal.001",
+          "A7_DoorVertical",
+          "A7_DoorVertical.001",
+          "Glass_A7"
+        ]
+      },
+      "A8": {
+        "payload": [
+          "A8_Refined_laptop_laptop_body",
+          "A8_Refined_laptop_network_body",
+          "A8_Refined_laptop_power_body",
+          "A8_Refined_tray_network_connector_network",
+          "A8_Refined_tray_power_connector_power",
+          "A8_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A8_network",
+          "DynamicCable_A8_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A8_DoorHorizontal",
+          "A8_DoorHorizontal.001",
+          "A8_DoorVertical",
+          "A8_DoorVertical.001",
+          "Glass_A8"
+        ]
+      },
+      "A9": {
+        "payload": [
+          "A9_Refined_laptop_laptop_body",
+          "A9_Refined_laptop_network_body",
+          "A9_Refined_laptop_power_body",
+          "A9_Refined_tray_network_connector_network",
+          "A9_Refined_tray_power_connector_power",
+          "A9_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_A9_network",
+          "DynamicCable_A9_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "A9_DoorHorizontal",
+          "A9_DoorHorizontal.001",
+          "A9_DoorVertical",
+          "A9_DoorVertical.001",
+          "Glass_A9"
+        ]
+      },
+      "B1": {
+        "payload": [
+          "B1_Refined_laptop_laptop_body",
+          "B1_Refined_laptop_network_body",
+          "B1_Refined_laptop_power_body",
+          "B1_Refined_tray_network_connector_network",
+          "B1_Refined_tray_power_connector_power",
+          "B1_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B1_network",
+          "DynamicCable_B1_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B1_DoorHorizontal",
+          "B1_DoorHorizontal.001",
+          "B1_DoorVertical",
+          "B1_DoorVertical.001",
+          "Glass_B1"
+        ]
+      },
+      "B2": {
+        "payload": [
+          "B2_Refined_tray_tray_body"
+        ],
+        "cables": [],
+        "parked": [
+          "ParkingCable_B2_network",
+          "ParkingCable_B2_power",
+          "ParkingPlug_B2_network",
+          "ParkingPlug_B2_power"
+        ],
+        "door_parts": [
+          "B2_DoorHorizontal",
+          "B2_DoorHorizontal.001",
+          "B2_DoorVertical",
+          "B2_DoorVertical.001",
+          "Glass_B2"
+        ]
+      },
+      "B3": {
+        "payload": [
+          "B3_Refined_laptop_laptop_body",
+          "B3_Refined_laptop_network_body",
+          "B3_Refined_laptop_power_body",
+          "B3_Refined_tray_network_connector_network",
+          "B3_Refined_tray_power_connector_power",
+          "B3_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B3_network",
+          "DynamicCable_B3_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B3_DoorHorizontal",
+          "B3_DoorHorizontal.001",
+          "B3_DoorVertical",
+          "B3_DoorVertical.001",
+          "Glass_B3"
+        ]
+      },
+      "B4": {
+        "payload": [
+          "B4_Refined_laptop_laptop_body",
+          "B4_Refined_laptop_network_body",
+          "B4_Refined_laptop_power_body",
+          "B4_Refined_tray_network_connector_network",
+          "B4_Refined_tray_power_connector_power",
+          "B4_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B4_network",
+          "DynamicCable_B4_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B4_DoorHorizontal",
+          "B4_DoorHorizontal.001",
+          "B4_DoorVertical",
+          "B4_DoorVertical.001",
+          "Glass_B4"
+        ]
+      },
+      "B5": {
+        "payload": [
+          "B5_Refined_laptop_laptop_body",
+          "B5_Refined_laptop_network_body",
+          "B5_Refined_laptop_power_body",
+          "B5_Refined_tray_network_connector_network",
+          "B5_Refined_tray_power_connector_power",
+          "B5_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B5_network",
+          "DynamicCable_B5_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B5_DoorHorizontal",
+          "B5_DoorHorizontal.001",
+          "B5_DoorVertical",
+          "B5_DoorVertical.001",
+          "Glass_B5"
+        ]
+      },
+      "B6": {
+        "payload": [
+          "B6_Refined_tray_tray_body"
+        ],
+        "cables": [],
+        "parked": [
+          "ParkingCable_B6_network",
+          "ParkingCable_B6_power",
+          "ParkingPlug_B6_network",
+          "ParkingPlug_B6_power"
+        ],
+        "door_parts": [
+          "B6_DoorHorizontal",
+          "B6_DoorHorizontal.001",
+          "B6_DoorVertical",
+          "B6_DoorVertical.001",
+          "Glass_B6"
+        ]
+      },
+      "B7": {
+        "payload": [
+          "B7_Refined_laptop_laptop_body",
+          "B7_Refined_laptop_network_body",
+          "B7_Refined_laptop_power_body",
+          "B7_Refined_tray_network_connector_network",
+          "B7_Refined_tray_power_connector_power",
+          "B7_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B7_network",
+          "DynamicCable_B7_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B7_DoorHorizontal",
+          "B7_DoorHorizontal.001",
+          "B7_DoorVertical",
+          "B7_DoorVertical.001",
+          "Glass_B7"
+        ]
+      },
+      "B8": {
+        "payload": [
+          "B8_Refined_laptop_laptop_body",
+          "B8_Refined_laptop_network_body",
+          "B8_Refined_laptop_power_body",
+          "B8_Refined_tray_network_connector_network",
+          "B8_Refined_tray_power_connector_power",
+          "B8_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B8_network",
+          "DynamicCable_B8_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B8_DoorHorizontal",
+          "B8_DoorHorizontal.001",
+          "B8_DoorVertical",
+          "B8_DoorVertical.001",
+          "Glass_B8"
+        ]
+      },
+      "B9": {
+        "payload": [
+          "B9_Refined_laptop_laptop_body",
+          "B9_Refined_laptop_network_body",
+          "B9_Refined_laptop_power_body",
+          "B9_Refined_tray_network_connector_network",
+          "B9_Refined_tray_power_connector_power",
+          "B9_Refined_tray_tray_body"
+        ],
+        "cables": [
+          "DynamicCable_B9_network",
+          "DynamicCable_B9_power"
+        ],
+        "parked": [],
+        "door_parts": [
+          "B9_DoorHorizontal",
+          "B9_DoorHorizontal.001",
+          "B9_DoorVertical",
+          "B9_DoorVertical.001",
+          "Glass_B9"
+        ]
+      }
+    }
+  },
+  "native_morph_validation": {
+    "expected_active_cables": 30,
+    "actual_active_cables": 30,
+    "mismatches": []
+  },
+  "door_limits_degrees": {
+    "A1": 95.0,
+    "A2": 95.0,
+    "A3": 95.0,
+    "A4": 95.0,
+    "A5": 95.0,
+    "A6": 95.0,
+    "A7": 95.0,
+    "A8": 95.0,
+    "A9": 95.0,
+    "B1": 95.0,
+    "B2": 95.0,
+    "B3": 95.0,
+    "B4": 95.0,
+    "B5": 95.0,
+    "B6": 95.0,
+    "B7": 95.0,
+    "B8": 95.0,
+    "B9": 95.0
+  },
+  "poses": [
+    {
+      "bay_id": "A1",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A1",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A2",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A3",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A4",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A5",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A6",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A7",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A8",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "A9",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B1",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B2",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B3",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B4",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B5",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B6",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B7",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B8",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 25,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 50,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 75,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 95.0,
+      "tray_mm": 0,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 95.0,
+      "tray_mm": 80,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 95.0,
+      "tray_mm": 160,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 95.0,
+      "tray_mm": 240,
+      "intersections": []
+    },
+    {
+      "bay_id": "B9",
+      "door_degrees": 95.0,
+      "tray_mm": 320,
+      "intersections": []
+    }
+  ],
+  "combined_poses": [
+    {
+      "scenario": "all_doors_open_trays_home",
+      "door_limits_used": true,
+      "open_bays": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9"
+      ],
+      "tray_mm": {
+        "A1": 0,
+        "A2": 0,
+        "A3": 0,
+        "A4": 0,
+        "A5": 0,
+        "A6": 0,
+        "A7": 0,
+        "A8": 0,
+        "A9": 0,
+        "B1": 0,
+        "B2": 0,
+        "B3": 0,
+        "B4": 0,
+        "B5": 0,
+        "B6": 0,
+        "B7": 0,
+        "B8": 0,
+        "B9": 0
+      },
+      "intersections": []
+    },
+    {
+      "scenario": "all_doors_open_all_trays_160",
+      "door_limits_used": true,
+      "open_bays": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9"
+      ],
+      "tray_mm": {
+        "A1": 160,
+        "A2": 160,
+        "A3": 160,
+        "A4": 160,
+        "A5": 160,
+        "A6": 160,
+        "A7": 160,
+        "A8": 160,
+        "A9": 160,
+        "B1": 160,
+        "B2": 160,
+        "B3": 160,
+        "B4": 160,
+        "B5": 160,
+        "B6": 160,
+        "B7": 160,
+        "B8": 160,
+        "B9": 160
+      },
+      "intersections": []
+    },
+    {
+      "scenario": "all_doors_open_all_trays_320",
+      "door_limits_used": true,
+      "open_bays": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9"
+      ],
+      "tray_mm": {
+        "A1": 320,
+        "A2": 320,
+        "A3": 320,
+        "A4": 320,
+        "A5": 320,
+        "A6": 320,
+        "A7": 320,
+        "A8": 320,
+        "A9": 320,
+        "B1": 320,
+        "B2": 320,
+        "B3": 320,
+        "B4": 320,
+        "B5": 320,
+        "B6": 320,
+        "B7": 320,
+        "B8": 320,
+        "B9": 320
+      },
+      "intersections": []
+    },
+    {
+      "scenario": "alternating_open_and_extended",
+      "door_limits_used": true,
+      "open_bays": [
+        "A1",
+        "A3",
+        "A5",
+        "A7",
+        "A9",
+        "B1",
+        "B3",
+        "B5",
+        "B7",
+        "B9"
+      ],
+      "tray_mm": {
+        "A1": 320,
+        "A2": 0,
+        "A3": 320,
+        "A4": 0,
+        "A5": 320,
+        "A6": 0,
+        "A7": 320,
+        "A8": 0,
+        "A9": 320,
+        "B1": 320,
+        "B2": 0,
+        "B3": 320,
+        "B4": 0,
+        "B5": 320,
+        "B6": 0,
+        "B7": 320,
+        "B8": 0,
+        "B9": 320
+      },
+      "intersections": []
+    },
+    {
+      "scenario": "mixed_neighboring_travel",
+      "door_limits_used": true,
+      "open_bays": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9"
+      ],
+      "tray_mm": {
+        "A1": 0,
+        "A2": 160,
+        "A3": 320,
+        "A4": 0,
+        "A5": 160,
+        "A6": 320,
+        "A7": 0,
+        "A8": 160,
+        "A9": 320,
+        "B1": 0,
+        "B2": 160,
+        "B3": 320,
+        "B4": 0,
+        "B5": 160,
+        "B6": 320,
+        "B7": 0,
+        "B8": 160,
+        "B9": 320
+      },
+      "intersections": []
+    }
+  ],
+  "fixed_body_shell_audit": {
+    "method": "Fixed major interface/light/adapter bodies vs actual shelf, ceiling, partition and exterior side sheets; attachment pillars, clips, rail supports and shims excluded as intended mounting contacts.",
+    "intersections": [],
+    "body_names": [
+      "A1_PowerAdapter",
+      "A1_Refined_fixed_ac_socket_body",
+      "A1_Refined_fixed_adapter_bracket_body",
+      "A1_Refined_fixed_light_body",
+      "A1_Refined_fixed_network_body",
+      "A1_Refined_fixed_ports_body",
+      "A1_Refined_fixed_power_body",
+      "A2_PowerAdapter",
+      "A2_Refined_fixed_ac_socket_body",
+      "A2_Refined_fixed_adapter_bracket_body",
+      "A2_Refined_fixed_light_body",
+      "A2_Refined_fixed_network_body",
+      "A2_Refined_fixed_ports_body",
+      "A2_Refined_fixed_power_body",
+      "A3_PowerAdapter",
+      "A3_Refined_fixed_ac_socket_body",
+      "A3_Refined_fixed_adapter_bracket_body",
+      "A3_Refined_fixed_light_body",
+      "A3_Refined_fixed_network_body",
+      "A3_Refined_fixed_ports_body",
+      "A3_Refined_fixed_power_body",
+      "A4_PowerAdapter",
+      "A4_Refined_fixed_ac_socket_body",
+      "A4_Refined_fixed_adapter_bracket_body",
+      "A4_Refined_fixed_light_body",
+      "A4_Refined_fixed_network_body",
+      "A4_Refined_fixed_ports_body",
+      "A4_Refined_fixed_power_body",
+      "A5_PowerAdapter",
+      "A5_Refined_fixed_ac_socket_body",
+      "A5_Refined_fixed_adapter_bracket_body",
+      "A5_Refined_fixed_light_body",
+      "A5_Refined_fixed_network_body",
+      "A5_Refined_fixed_ports_body",
+      "A5_Refined_fixed_power_body",
+      "A6_PowerAdapter",
+      "A6_Refined_fixed_ac_socket_body",
+      "A6_Refined_fixed_adapter_bracket_body",
+      "A6_Refined_fixed_light_body",
+      "A6_Refined_fixed_network_body",
+      "A6_Refined_fixed_ports_body",
+      "A6_Refined_fixed_power_body",
+      "A7_PowerAdapter",
+      "A7_Refined_fixed_ac_socket_body",
+      "A7_Refined_fixed_adapter_bracket_body",
+      "A7_Refined_fixed_light_body",
+      "A7_Refined_fixed_network_body",
+      "A7_Refined_fixed_ports_body",
+      "A7_Refined_fixed_power_body",
+      "A8_PowerAdapter",
+      "A8_Refined_fixed_ac_socket_body",
+      "A8_Refined_fixed_adapter_bracket_body",
+      "A8_Refined_fixed_light_body",
+      "A8_Refined_fixed_network_body",
+      "A8_Refined_fixed_ports_body",
+      "A8_Refined_fixed_power_body",
+      "A9_PowerAdapter",
+      "A9_Refined_fixed_ac_socket_body",
+      "A9_Refined_fixed_adapter_bracket_body",
+      "A9_Refined_fixed_light_body",
+      "A9_Refined_fixed_network_body",
+      "A9_Refined_fixed_ports_body",
+      "A9_Refined_fixed_power_body",
+      "B1_PowerAdapter",
+      "B1_Refined_fixed_ac_socket_body",
+      "B1_Refined_fixed_adapter_bracket_body",
+      "B1_Refined_fixed_light_body",
+      "B1_Refined_fixed_network_body",
+      "B1_Refined_fixed_ports_body",
+      "B1_Refined_fixed_power_body",
+      "B2_PowerAdapter",
+      "B2_Refined_fixed_ac_socket_body",
+      "B2_Refined_fixed_adapter_bracket_body",
+      "B2_Refined_fixed_light_body",
+      "B2_Refined_fixed_network_body",
+      "B2_Refined_fixed_ports_body",
+      "B2_Refined_fixed_power_body",
+      "B3_PowerAdapter",
+      "B3_Refined_fixed_ac_socket_body",
+      "B3_Refined_fixed_adapter_bracket_body",
+      "B3_Refined_fixed_light_body",
+      "B3_Refined_fixed_network_body",
+      "B3_Refined_fixed_ports_body",
+      "B3_Refined_fixed_power_body",
+      "B4_PowerAdapter",
+      "B4_Refined_fixed_ac_socket_body",
+      "B4_Refined_fixed_adapter_bracket_body",
+      "B4_Refined_fixed_light_body",
+      "B4_Refined_fixed_network_body",
+      "B4_Refined_fixed_ports_body",
+      "B4_Refined_fixed_power_body",
+      "B5_PowerAdapter",
+      "B5_Refined_fixed_ac_socket_body",
+      "B5_Refined_fixed_adapter_bracket_body",
+      "B5_Refined_fixed_light_body",
+      "B5_Refined_fixed_network_body",
+      "B5_Refined_fixed_ports_body",
+      "B5_Refined_fixed_power_body",
+      "B6_PowerAdapter",
+      "B6_Refined_fixed_ac_socket_body",
+      "B6_Refined_fixed_adapter_bracket_body",
+      "B6_Refined_fixed_light_body",
+      "B6_Refined_fixed_network_body",
+      "B6_Refined_fixed_ports_body",
+      "B6_Refined_fixed_power_body",
+      "B7_PowerAdapter",
+      "B7_Refined_fixed_ac_socket_body",
+      "B7_Refined_fixed_adapter_bracket_body",
+      "B7_Refined_fixed_light_body",
+      "B7_Refined_fixed_network_body",
+      "B7_Refined_fixed_ports_body",
+      "B7_Refined_fixed_power_body",
+      "B8_PowerAdapter",
+      "B8_Refined_fixed_ac_socket_body",
+      "B8_Refined_fixed_adapter_bracket_body",
+      "B8_Refined_fixed_light_body",
+      "B8_Refined_fixed_network_body",
+      "B8_Refined_fixed_ports_body",
+      "B8_Refined_fixed_power_body",
+      "B9_PowerAdapter",
+      "B9_Refined_fixed_ac_socket_body",
+      "B9_Refined_fixed_adapter_bracket_body",
+      "B9_Refined_fixed_light_body",
+      "B9_Refined_fixed_network_body",
+      "B9_Refined_fixed_ports_body",
+      "B9_Refined_fixed_power_body"
+    ],
+    "sheet_names": [
+      "A1_Ceiling",
+      "A1_Shelf",
+      "A2_Ceiling",
+      "A2_Shelf",
+      "A3_Ceiling",
+      "A3_Shelf",
+      "A4_Shelf",
+      "A5_Shelf",
+      "A6_Shelf",
+      "A7_Shelf",
+      "A8_Shelf",
+      "A9_Shelf",
+      "B1_Ceiling",
+      "B1_Shelf",
+      "B2_Ceiling",
+      "B2_Shelf",
+      "B3_Ceiling",
+      "B3_Shelf",
+      "B4_Shelf",
+      "B5_Shelf",
+      "B6_Shelf",
+      "B7_Shelf",
+      "B8_Shelf",
+      "B9_Shelf",
+      "Housing_Center_Side",
+      "Housing_Center_Side.001",
+      "Housing_Left_Side",
+      "Housing_Left_Side.001",
+      "Housing_Right_Side",
+      "Housing_Right_Side.001",
+      "Left_Partition",
+      "Left_Partition.001",
+      "Right_Partition",
+      "Right_Partition.001"
+    ]
+  },
+  "counts_match": true,
+  "sample_count": 167,
+  "intersection_occurrences": 0,
+  "unique_intersecting_pairs": [],
+  "passed_within_scope": true
+}

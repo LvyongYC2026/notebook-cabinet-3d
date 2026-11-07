@@ -1,0 +1,55 @@
+{
+  "method": "Evaluated mesh triangle BVH, all 18 bays in nine simultaneous poses",
+  "fixed_objects": 497,
+  "bay_count": 18,
+  "poses": [
+    {
+      "front_door_degrees": 0,
+      "all_trays_mm": 0,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 25,
+      "all_trays_mm": 0,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 50,
+      "all_trays_mm": 0,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 75,
+      "all_trays_mm": 0,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 95,
+      "all_trays_mm": 0,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 95,
+      "all_trays_mm": 80,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 95,
+      "all_trays_mm": 160,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 95,
+      "all_trays_mm": 240,
+      "intersections": []
+    },
+    {
+      "front_door_degrees": 95,
+      "all_trays_mm": 320,
+      "intersections": []
+    }
+  ],
+  "intersecting_pairs": 0,
+  "exclusions": "Nested slide assemblies, fasteners, hinge hardware, intended connector/clip engagement; static-static pairs.",
+  "limits": "Sampling only, not continuous swept solids, containment, tolerance, strength or stability certification."
+}

@@ -1,0 +1,7 @@
+{
+  "method": "Evaluated mesh coordinates rounded to1e-7m and polygon indices of30 existing text objects before/after subset embedding",
+  "all_30_geometry_hashes_identical": true,
+  "preserved_original_font_head_bounds": true,
+  "subset_includes": "all existing model characters plus ASCII",
+  "new_characters_require_full_font": true
+}

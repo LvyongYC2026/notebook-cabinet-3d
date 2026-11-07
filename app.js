@@ -25,6 +25,7 @@ let selectionMeshes = [], screenTexture, demoTimer = 0, demoIndex = -1;
 let viewport = { width:1, height:1 };
 let fitBox = new THREE.Box3(new THREE.Vector3(-1.65,0,-.325),new THREE.Vector3(1.65,1.85,.325));
 let lastFrame = 0, resized = false, orbitMotion = null;
+let renderDiagnosticsLogged=false;
 
 const icon = {
   doorOpen:'<path d="M4 21V3h12v18M4 3l10 3v15L4 18zM18 7l3 3-3 3m-2-3h5M11 11v2"/>',
@@ -38,10 +39,21 @@ function isVisible(object){for(let node=object;node;node=node.parent)if(!node.vi
 function setPressed(id,pressed){const button=$(id);button.setAttribute('aria-pressed',String(pressed));button.classList.toggle('active',pressed);}
 function saveOrigin(node){if(node&&!originals.has(node))originals.set(node,{position:node.position.clone(),rotation:node.rotation.clone(),visible:node.visible});}
 function cancelTween(object){for(let i=tweens.length-1;i>=0;i--)if(tweens[i].object===object)tweens.splice(i,1);}
-function tween(object,property,to,duration=.75,delay=0){
+function tween(object,property,to,duration=.75,delay=0,gate=null){
   for(let i=tweens.length-1;i>=0;i--)if(tweens[i].object===object&&tweens[i].property===property)tweens.splice(i,1);
   if(reducedMotion){object[property]=to;return;}
-  tweens.push({object,property,from:object[property],to,start:performance.now()+delay*1000,duration:duration*1000});
+  tweens.push({object,property,from:object[property],to,start:performance.now()+delay*1000,duration:duration*1000,gate});
+}
+function updateTweens(time){
+  let moving=false;
+  for(let i=tweens.length-1;i>=0;i--){
+    const motion=tweens[i];if(time<motion.start)continue;
+    if(motion.gate){if(!motion.gate())continue;motion.gate=null;motion.start=time;motion.from=motion.object[motion.property];}
+    const p=Math.min((time-motion.start)/motion.duration,1),ease=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
+    motion.object[motion.property]=motion.from+(motion.to-motion.from)*ease;if(p===1)tweens.splice(i,1);
+    if(motion.object!==camera.position&&motion.object!==controls.target)moving=true;
+  }
+  return moving;
 }
 function tweenVector(object,to,duration=.9){for(const k of ['x','y','z'])tween(object,k,to[k],duration);}
 function pauseRotation(){state.autoRotate=false;if(controls)controls.autoRotate=false;setPressed('autoRotate',false);}
@@ -127,7 +139,7 @@ function describeMesh(mesh){
   const bay=inferBay(mesh),door=doorAncestor(mesh),module=inferModule(mesh);
   const key=String(inherited(mesh,'component_key')||fallbackKey(mesh,bay,door));
   const action=inherited(mesh,'action')||inherited(mesh,'interaction')||'';
-  return {key,bay,module,doorName:door?.name||'',action,name:mesh.name,housing:housingName(mesh.name)||key==='single:housing',glass:key==='single:glass'||mesh.name.startsWith('Glass_')||String(mesh.material?.name||'').startsWith('Glass'),status:mesh.name.includes('_StatusLED')};
+  return {key,bay,module,doorName:door?.name||'',action,name:mesh.name,housing:housingName(mesh.name)||key==='single:housing',glass:/^(single:glass$|glass:)/.test(key)||mesh.name.startsWith('Glass_')||String(mesh.material?.name||'').startsWith('Glass'),status:mesh.name.includes('_StatusLED')};
 }
 function normalizeMetadata(data){
   metadataDocument=data||{};const source=data?.components||data?.items||data||{};
@@ -169,7 +181,7 @@ function optimizeMeshes(root){
   root.traverse(mesh=>{
     if(!mesh.isMesh)return;
     const descriptor=describeMesh(mesh);meshDescriptors.set(mesh,descriptor);
-    if(Array.isArray(mesh.material)||mesh.isSkinnedMesh||mesh.morphTargetInfluences?.length||mesh.userData.dynamicCable||!isVisible(mesh)||mesh.name.startsWith('TouchDisplay_')||/^[AB][1-9]_PowerAdapter$/.test(mesh.name))return;
+    if(Array.isArray(mesh.material)||mesh.isSkinnedMesh||mesh.morphTargetInfluences?.length||mesh.userData.dynamicCable||mesh.userData.preserveCable||!isVisible(mesh)||mesh.name.startsWith('TouchDisplay_')||/^[AB][1-9]_PowerAdapter$/.test(mesh.name))return;
     const anchor=movingAnchor(mesh);if(!anchor)return;
     const attributes=Object.keys(mesh.geometry.attributes).sort().join(',');
     const key=[anchor.uuid,descriptor.key,descriptor.bay,descriptor.doorName,descriptor.action,descriptor.housing,descriptor.glass,descriptor.status,mesh.material.uuid,attributes,Boolean(mesh.geometry.index)].join('|');
@@ -205,19 +217,26 @@ function relatedDoor(descriptor){
   }
   return null;
 }
+function trayIsClosed(tray){return Math.abs(tray.node.position.z-originals.get(tray.node).position.z)<=1e-6;}
+function doorClearsTray(door){
+  const actual=Math.abs(THREE.MathUtils.radToDeg(door.node.rotation.y-originals.get(door.node).rotation.y));
+  const required=Math.min(Math.abs(door.swing),Math.max(0,Number(door.node.userData.min_open_degrees??95)));
+  return door.open&&actual+.02>=required;
+}
 function setDoor(doorOrName,open,delay=0){
   const door=typeof doorOrName==='string'?refs.doors.get(doorOrName):doorOrName;if(!door)return;
-  if(!open&&door.bay){const tray=refs.trays.get(door.bay);if(tray&&(tray.open||Math.abs(tray.node.position.z-originals.get(tray.node).position.z)>1e-7)){setTray(door.bay,false);delay=Math.max(delay,.82);}}
+  const tray=door.bay&&refs.trays.get(door.bay);
+  if(!open&&tray&&(tray.open||!trayIsClosed(tray)))setTray(door.bay,false);
   door.open=Boolean(open);const original=originals.get(door.node);
-  tween(door.node.rotation,'y',original.rotation.y+(open?THREE.MathUtils.degToRad(door.swing):0),.85,delay);
+  tween(door.node.rotation,'y',original.rotation.y+(open?THREE.MathUtils.degToRad(door.swing):0),.85,delay,!open&&tray?()=>trayIsClosed(tray):null);
   if(renderer)renderer.shadowMap.needsUpdate=true;updatePanelActions();
   announce(`${door.title}${open?'已打开':'已关闭'}`);
 }
 function setTray(bay,open){
   const tray=refs.trays.get(bay);if(!tray)return;
-  const door=refs.doors.get(state.mode==='single'?'SingleDoorPivot':`DoorPivot_${bay}`);let delay=0;
-  if(open&&door&&!door.open){setDoor(door,true);delay=.5;}
-  tray.open=Boolean(open);tween(tray.node.position,'z',originals.get(tray.node).position.z+(open?tray.travel:0),.8,delay);
+  const door=refs.doors.get(state.mode==='single'?'SingleDoorPivot':`DoorPivot_${bay}`);
+  if(open&&door&&!door.open)setDoor(door,true);
+  tray.open=Boolean(open);tween(tray.node.position,'z',originals.get(tray.node).position.z+(open?tray.travel:0),.8,0,open&&door?()=>doorClearsTray(door):null);
   if(renderer)renderer.shadowMap.needsUpdate=true;updatePanelActions();
   if(!state.demo&&state.selection?.bay===bay&&$('componentPanel').classList.contains('is-focused'))focusComponent({trayBay:bay});
 }
@@ -236,9 +255,16 @@ function setStructure(on){
   fitView(viewingDirection().z<0?Math.PI+Math.PI/9:Math.PI/9,.12,false,mechanismTargetBounds());
 }
 function restoreOccupancy(){
-  for(const id of refs.laptops.keys())for(const node of [refs.laptops.get(id),refs.adapters.get(id)]){
-    if(!node)continue;cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=!emptyBays.has(id);node.userData.demoHideAt=0;
+  for(const [id,node]of refs.laptops){cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=!emptyBays.has(id);node.userData.demoHideAt=0;node.userData.reconnectAt=0;setBayCablesParked(id,false);}
+  for(const node of refs.adapters.values()){cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=originals.get(node).visible;node.userData.demoHideAt=0;}
+}
+function updateDemoOccupancy(time){
+  let moving=false;
+  for(const [bay,node]of refs.laptops){
+    if(node.userData.demoHideAt&&time>=node.userData.demoHideAt){node.visible=false;node.userData.demoHideAt=0;moving=true;}
+    if(node.userData.reconnectAt&&time>=node.userData.reconnectAt){node.userData.reconnectAt=0;setBayCablesParked(bay,false);}
   }
+  return moving;
 }
 function resetView(){
   if(!state.loaded)return;stopDemo();pauseRotation();closePanel();state.structure=false;setPressed('structureView',false);
@@ -384,13 +410,13 @@ function startDemo(){
     [2200,()=>drawDemoScreen('身份核验','核验借用权限',id)],
     [1800,()=>drawDemoScreen('选择设备','定位可借用设备',id)],
     [1400,()=>{drawDemoScreen('授权开门','请找到亮灯仓位',id);setDoor(`DoorPivot_${id}`,true);}],
-    [1500,()=>{drawDemoScreen('抽出托盘','取用电脑与适配器',id);setTray(id,true);}],
-    [1800,()=>{drawDemoScreen('取走设备','先解除电源、网络与检测连接',id);for(const node of [refs.laptops.get(id),refs.adapters.get(id)])if(node){tween(node.position,'y',originals.get(node).position.y+.2,.8);tween(node.position,'z',originals.get(node).position.z+.1,.8);node.userData.demoHideAt=performance.now()+850;}}],
+    [1700,()=>{drawDemoScreen('抽出托盘','固定适配器留在独立托架',id);setTray(id,true);}],
+    [1800,()=>{drawDemoScreen('取走设备','线头归入固定停车卡座',id);setBayCablesParked(id,true);for(const node of [refs.laptops.get(id)])if(node){tween(node.position,'y',originals.get(node).position.y+.2,.8);tween(node.position,'z',originals.get(node).position.z+.1,.8);node.userData.demoHideAt=performance.now()+850;}}],
     [1700,()=>{drawDemoScreen('关闭锁定','分别确认门位与锁位',id);setTray(id,false);setDoor(`DoorPivot_${id}`,false,.6);}],
     [2500,()=>drawDemoScreen('借用完成','电子借用记录',id,true)],
     [1800,()=>drawDemoScreen('归还电脑','再次核验身份与设备',id)],
-    [1700,()=>{drawDemoScreen('打开归还仓','将设备放回所选仓位',id);setDoor(`DoorPivot_${id}`,true);setTray(id,true);}],
-    [2100,()=>{drawDemoScreen('放置与接线','电源、网络、检测接口逐项确认',id);for(const node of [refs.laptops.get(id),refs.adapters.get(id)])if(node){node.visible=true;node.userData.demoHideAt=0;node.position.copy(originals.get(node).position).add(new THREE.Vector3(0,.2,.1));tweenVector(node.position,originals.get(node).position,.9);}}],
+    [1900,()=>{drawDemoScreen('打开归还仓','将设备放回所选仓位',id);setDoor(`DoorPivot_${id}`,true);setTray(id,true);}],
+    [2100,()=>{drawDemoScreen('放置与接线','电源、网络、检测接口逐项确认',id);for(const node of [refs.laptops.get(id)])if(node){node.visible=true;node.userData.demoHideAt=0;node.position.copy(originals.get(node).position).add(new THREE.Vector3(0,.2,.1));tweenVector(node.position,originals.get(node).position,.9);node.userData.reconnectAt=performance.now()+950;}}],
     [1700,()=>{drawDemoScreen('关闭锁定','门位与锁位分别确认',id);setTray(id,false);setDoor(`DoorPivot_${id}`,false,.6);}],
     [3000,()=>drawDemoScreen('设备已接收','电子回执 · 待检测',id,true)]
   ];
@@ -433,52 +459,70 @@ function cableCurve(cable,delta){
   }
   return curve;
 }
+function hasControlledPath(spec){return Array.isArray(spec.guide_points)&&Array.isArray(spec.guide_points_extended)&&spec.guide_points.length>1&&spec.guide_points.length===spec.guide_points_extended.length&&spec.guide_points.every(validPoint)&&spec.guide_points_extended.every(validPoint);}
+function cablePathPoints(cable,delta){
+  const amount=cable.kind==='stowed'?0:THREE.MathUtils.clamp(delta/cable.tray.travel,0,1);
+  return (cable.spec.guide_points||[]).map((point,index)=>{const result=new THREE.Vector3(...point);return hasControlledPath(cable.spec)?result.lerp(new THREE.Vector3(...cable.spec.guide_points_extended[index]),amount):result;});
+}
+function pathLength(points){return points.slice(1).reduce((sum,point,index)=>sum+point.distanceTo(points[index]),0);}
 function rebuildCable(cable,delta){
+  if(cable.kind==='stowed'){cable.lastDelta=0;cable.length=cable.spec.guide_points?.length>1?pathLength(cablePathPoints(cable,0)):Number(cable.spec.rest_length_mm)/1000;return;}
   if(cable.kind==='morph'){
     const amount=THREE.MathUtils.clamp(delta/cable.tray.travel,0,1);
     for(const {mesh,index} of cable.targets)mesh.morphTargetInfluences[index]=amount;
-    cable.lastDelta=delta;
-    const closed=cable.spec.guide_points,extended=cable.spec.guide_points_extended;
-    if(closed?.length===extended?.length&&closed.length>1){const points=closed.map((point,index)=>new THREE.Vector3(...point).lerp(new THREE.Vector3(...extended[index]),amount));cable.length=points.slice(1).reduce((sum,point,index)=>sum+point.distanceTo(points[index]),0);}else cable.length=Number(cable.spec.rest_length_mm)/1000;
-    return;
+    cable.lastDelta=delta;cable.length=hasControlledPath(cable.spec)?pathLength(cablePathPoints(cable,delta)):Number(cable.spec.rest_length_mm)/1000;return;
   }
   let curve;
   if(cable.kind==='controlled'){
-    const amount=THREE.MathUtils.clamp(delta/cable.tray.travel,0,1),points=cable.spec.guide_points.map((point,index)=>new THREE.Vector3(...point).lerp(new THREE.Vector3(...cable.spec.guide_points_extended[index]),amount));
-    curve=new THREE.CurvePath();for(let i=1;i<points.length;i++)curve.add(new THREE.LineCurve3(points[i-1],points[i]));
+    const points=cablePathPoints(cable,delta);curve=new THREE.CurvePath();for(let i=1;i<points.length;i++)curve.add(new THREE.LineCurve3(points[i-1],points[i]));
   }else curve=cableCurve(cable,delta);
   const geometry=new THREE.TubeGeometry(curve,cable.kind==='controlled'?Math.max(120,cable.spec.guide_points.length*2):80,Number(cable.spec.radius_mm||2.2)/1000,cable.kind==='controlled'?10:7,false);
-  const previous=cable.mesh.geometry;cable.mesh.geometry=geometry;if(previous)previous.dispose();
-  cable.lastDelta=delta;cable.length=curve.getLength();
+  const previous=cable.mesh.geometry;cable.mesh.geometry=geometry;if(previous)previous.dispose();cable.lastDelta=delta;cable.length=curve.getLength();
+}
+function setBayCablesParked(bay,parked){
+  for(const cable of refs.cables){
+    if(cable.bay!==bay||cable.kind==='stowed')continue;cable.parked=Boolean(parked);
+    cable.meshes.forEach(mesh=>mesh.visible=!parked);cable.connectorMeshes.forEach(mesh=>mesh.visible=!parked);cable.parkingMeshes.forEach(mesh=>mesh.visible=Boolean(parked));
+  }
 }
 function prepareDynamicCables(){
-  const paths=Array.isArray(metadataDocument.cable_paths)?metadataDocument.cable_paths:[],materials=new Map();
+  const paths=Array.isArray(metadataDocument.cable_paths)?metadataDocument.cable_paths:[],materials=new Map(),nodeIndex=new Map();
   const canonical=name=>String(name).replace(/[.\[\]/:]/g,'').replace(/_Mesh$/,'');
+  model.traverse(node=>{const name=canonical(node.name);if(!nodeIndex.has(name))nodeIndex.set(name,[]);nodeIndex.get(name).push(node);});
+  const namedMeshes=names=>{const result=new Set();for(const name of names||[])for(const node of nodeIndex.get(canonical(name))||[])node.traverse(child=>{if(child.isMesh)result.add(child);});return [...result];};
   for(const spec of paths){
-    if(!['bay_local_gltf','single_local_gltf'].includes(spec.space)||!validPoint(spec.fixed)||!validPoint(spec.moving)){console.warn('Invalid cable path metadata',spec.id);continue;}
-    const bay=state.mode==='single'?'S1':String(spec.bay_id||''),tray=refs.trays.get(bay),parent=model.getObjectByName(spec.parent_node||(state.mode==='single'?'SingleCabinetRoot':`Bay_${bay}`));if(!tray||!parent){console.warn('Cable bay/tray missing',spec.id);continue;}
-    const sourceNames=new Set((spec.source_node_names||[]).map(canonical)),sources=[];
-    model.traverse(node=>{if(node.isMesh&&sourceNames.has(canonical(node.name)))sources.push(node);});
+    const bay=state.mode==='single'?'S1':String(spec.bay_id||''),stowed=spec.stowed===true||spec.motion==='stowed'||(state.mode==='cabinet'&&emptyBays.has(bay));
+    if(!['bay_local_gltf','single_local_gltf'].includes(spec.space)||!validPoint(spec.fixed)||(!stowed&&!validPoint(spec.moving)))throw new Error(`线缆路径参数不完整：${spec.id}`);
+    const tray=refs.trays.get(bay),parent=model.getObjectByName(spec.parent_node||(state.mode==='single'?'SingleCabinetRoot':`Bay_${bay}`));
+    if(!tray||!parent)throw new Error(`线缆所属仓位或托盘缺失：${spec.id}`);
+    const sources=namedMeshes(spec.source_node_names),parkingMeshes=namedMeshes(spec.parking_node_names),connectorMeshes=namedMeshes(spec.moving_connector_node_names);
+    for(const mesh of [...sources,...parkingMeshes,...connectorMeshes])mesh.userData.preserveCable=true;
+    const cable={spec,bay,tray,parent,meshes:sources,parkingMeshes,connectorMeshes,parked:stowed,lastDelta:NaN,length:0};
+    if(stowed){
+      if(!sources.length)throw new Error(`固定收纳线缆网格缺失：${spec.id}`);
+      cable.kind='stowed';sources.forEach(mesh=>{mesh.visible=true;if(mesh.morphTargetInfluences)mesh.morphTargetInfluences.fill(0);});refs.cables.push(cable);rebuildCable(cable,0);continue;
+    }
+    parkingMeshes.forEach(mesh=>mesh.visible=false);connectorMeshes.forEach(mesh=>mesh.visible=true);
     const targets=spec.morph_target?sources.map(mesh=>({mesh,index:mesh.morphTargetDictionary?.[spec.morph_target]})).filter(target=>Number.isInteger(target.index)):[];
     if(targets.length){
-      targets.forEach(({mesh})=>{mesh.userData.dynamicCable=true;mesh.userData.component_key=spec.component_key||'single:cables';mesh.castShadow=false;});
-      const cable={kind:'morph',spec,targets,tray,lastDelta:NaN,length:0};refs.cables.push(cable);rebuildCable(cable,tray.node.position.z-originals.get(tray.node).position.z);continue;
+      targets.forEach(({mesh})=>{mesh.userData.dynamicCable=true;mesh.userData.component_key=spec.component_key||(state.mode==='single'?'single:cables':`cables:${bay}`);mesh.castShadow=false;});
+      Object.assign(cable,{kind:'morph',targets});refs.cables.push(cable);rebuildCable(cable,tray.node.position.z-originals.get(tray.node).position.z);continue;
     }
+    const controlled=hasControlledPath(spec);
+    if(!controlled&&(state.mode==='single'||spec.morph_target||metadataDocument.cable_system==='controlled_native_v2'))throw new Error(`受控活动线缆缺少形态键或同拓扑路径：${spec.id}`);
     sources.forEach(node=>node.removeFromParent());
     const color=spec.color||'#18212b';if(!materials.has(color))materials.set(color,new THREE.MeshStandardMaterial({color,roughness:.45,metalness:.08}));
     const mesh=new THREE.Mesh(new THREE.BufferGeometry(),materials.get(color));mesh.name=`LiveCable_${spec.id}`;
     mesh.userData={component_key:spec.component_key||`cables:${bay}`,bay_id:bay,dynamicCable:true,cable_id:spec.id};mesh.castShadow=false;mesh.receiveShadow=true;parent.add(mesh);
     let guides=(spec.guide_points||[]).filter(validPoint).map(point=>new THREE.Vector3(...point));
     if(guides.length<2){const fixed=new THREE.Vector3(...spec.fixed),moving=new THREE.Vector3(...spec.moving);guides=[fixed.clone().add(new THREE.Vector3(0,.04,-.035)),fixed.clone().lerp(moving,.5).add(new THREE.Vector3(0,.06,-.11)),moving.clone().add(new THREE.Vector3(0,.035,-.035))];}
-    const controlled=state.mode==='single'&&Array.isArray(spec.guide_points)&&Array.isArray(spec.guide_points_extended)&&spec.guide_points.length>1&&spec.guide_points.length===spec.guide_points_extended.length&&spec.guide_points.every(validPoint)&&spec.guide_points_extended.every(validPoint);
-    if(state.mode==='single'&&!controlled)throw new Error('精细单仓活动线缆路径不完整');
-    const cable={kind:controlled?'controlled':'curve',spec,mesh,guides,tray,lastDelta:NaN,length:0};refs.cables.push(cable);
+    Object.assign(cable,{kind:controlled?'controlled':'curve',mesh,meshes:[mesh],guides});refs.cables.push(cable);
     const descriptor={key:mesh.userData.component_key,bay,module:bay.startsWith('A')?'Left':'Right',doorName:'',action:'component',name:mesh.name,housing:false,glass:false,status:false};meshDescriptors.set(mesh,descriptor);
     rebuildCable(cable,tray.node.position.z-originals.get(tray.node).position.z);
   }
 }
 function updateDynamicCables(){
-  for(const cable of refs.cables){const delta=cable.tray.node.position.z-originals.get(cable.tray.node).position.z;if(Math.abs(delta-cable.lastDelta)>1e-7)rebuildCable(cable,delta);}
+  for(const cable of refs.cables){if(cable.kind==='stowed')continue;const delta=cable.tray.node.position.z-originals.get(cable.tray.node).position.z;if(Math.abs(delta-cable.lastDelta)>1e-7)rebuildCable(cable,delta);}
 }
 
 function setupModel(){
@@ -493,7 +537,7 @@ function setupModel(){
       saveOrigin(node);refs.doors.set(node.name,{node,bay,kind,swing,open:false,title});
     }
     if(node.isMesh){
-      if(node.name.startsWith('Glass_')||String(node.material?.name||'').startsWith('Glass'))node.material=refs.glassMaterial;
+      if(describeMesh(node).glass)node.material=refs.glassMaterial;if(inherited(node,'initial_hidden')===true)node.visible=false;
       node.castShadow=node.material!==refs.glassMaterial;node.receiveShadow=true;
       const materials=Array.isArray(node.material)?node.material:[node.material];for(const material of materials)if(material&&!visitedMaterials.has(material)){visitedMaterials.add(material);if(material.emissiveIntensity>1.5)material.emissiveIntensity=1.5;}
       if(node.name.startsWith('TouchDisplay_'))screenMesh=node;
@@ -583,7 +627,7 @@ function setStageScale(single){
 }
 function createStage(){
   scene=new THREE.Scene();scene.background=new THREE.Color(0x000000);scene.fog=new THREE.Fog(0x000000,13,30);
-  const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();scene.environment=pmrem.fromScene(room,.06).texture;scene.environmentIntensity=.22;room.dispose();pmrem.dispose();
+  const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();scene.environment=pmrem.fromScene(room,.035).texture;scene.environmentIntensity=.22;room.dispose();pmrem.dispose();
   scene.add(new THREE.HemisphereLight(0xd9eaf7,0x111319,.36));
   const key=new THREE.DirectionalLight(0xfff2e2,2.35);key.position.set(-3.6,5,4.5);key.target.position.set(0,.8,0);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.near=.5;key.shadow.camera.far=14;key.shadow.bias=-.00012;key.shadow.normalBias=.003;key.shadow.radius=3.5;scene.add(key,key.target);
   const front=new THREE.DirectionalLight(0xdcefff,.56);front.position.set(1.7,1.8,4.5);scene.add(front,front.target);
@@ -617,7 +661,7 @@ async function init(){
     normalizeMetadata(meta);createFallbackMetadata();model=gltf.scene;scene.add(model);setupModel();
     state.loaded=true;document.querySelectorAll('.toolbar button:disabled').forEach(button=>button.disabled=false);
     modelContexts.set('cabinet',captureContext());setStageScale(false);setupPicking();fitView(Math.PI/8,.12,true);controls.update();$('loading').hidden=true;renderer.shadowMap.needsUpdate=true;
-    window.cabinetShowcase={state,scene,renderer,camera,controls,get refs(){return refs;},get model(){return model;},get metadata(){return metadata;},setDoor,setTray,setMode,resetView,setStructure,focusComponent,selectSingleComponent,showComponent,getDiagnostics:()=>({loaded:state.loaded,mode:state.mode,cachedModes:[...modelContexts.keys()],doors:refs.doors.size,rearDoors:[...refs.doors.values()].filter(d=>d.kind==='rear').length,trays:refs.trays.size,emptyBays:[...emptyBays],components:refs.components.size,dynamicCables:refs.cables.length,cableLengths:refs.cables.map(cable=>({id:cable.spec.id,length_mm:Math.round(cable.length*1000),rest_length_mm:cable.spec.rest_length_mm})),metadataEntries:Object.keys(metadata).length,meshes:(()=>{let n=0;model.traverse(o=>{if(o.isMesh)n++;});return n;})(),drawCalls:renderer.info.render.calls})};
+    window.cabinetShowcase={state,scene,renderer,camera,controls,get refs(){return refs;},get model(){return model;},get metadata(){return metadata;},setDoor,setTray,setMode,resetView,setStructure,focusComponent,selectSingleComponent,showComponent,getDiagnostics:()=>({loaded:state.loaded,mode:state.mode,cachedModes:[...modelContexts.keys()],doors:refs.doors.size,rearDoors:[...refs.doors.values()].filter(d=>d.kind==='rear').length,trays:refs.trays.size,emptyBays:[...emptyBays],components:refs.components.size,dynamicCables:refs.cables.filter(cable=>cable.kind!=='stowed').length,stowedCables:refs.cables.filter(cable=>cable.kind==='stowed').length,cablesTotal:refs.cables.length,cableLengths:refs.cables.map(cable=>({id:cable.spec.id,length_mm:Math.round(cable.length*1000),rest_length_mm:cable.spec.rest_length_mm})),metadataEntries:Object.keys(metadata).length,meshes:(()=>{let n=0;model.traverse(o=>{if(o.isMesh)n++;});return n;})(),drawCalls:renderer.info.render.calls})};
     announce('机柜已就绪。可直接点击仓门、维护门与内部部件。');
     if(requestedInitialMode(location.search)==='single')await setMode('single');
   }catch(error){console.error('Cabinet initialization failed:',error);$('loading').hidden=true;const message=location.protocol==='file:'?'请双击启动演示.command，经本地HTTP地址打开页面':`${error.message||'模型未能载入'}，请确认本地服务和assets文件完整后重试`;$('loadError').title=message;$('loadError').setAttribute('aria-label',message);$('loadError').hidden=false;announce(message);}
@@ -630,8 +674,7 @@ function animate(time){
   requestAnimationFrame(animate);if(!renderer||!scene||!camera||!controls)return;
   const delta=Math.min((time-lastFrame)/1000,.05);lastFrame=time;
   if(resized){resized=false;const d=viewingDirection();fitView(Math.atan2(d.x,d.z),Math.asin(d.y));}
-  let moving=false;
-  for(let i=tweens.length-1;i>=0;i--){const motion=tweens[i];if(time<motion.start)continue;const p=Math.min((time-motion.start)/motion.duration,1),ease=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;motion.object[motion.property]=motion.from+(motion.to-motion.from)*ease;if(p===1)tweens.splice(i,1);if(motion.object!==camera.position&&motion.object!==controls.target)moving=true;}
+  let moving=updateTweens(time);
   if(orbitMotion){
     const m=orbitMotion,p=Math.min((time-m.start)/m.duration,1),e=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
     const angle=THREE.MathUtils.lerp(m.fromAngle,m.toAngle,e),elevation=THREE.MathUtils.lerp(m.fromElevation,m.elevation,e),radius=THREE.MathUtils.lerp(m.fromRadius,m.radius,e);
@@ -640,10 +683,13 @@ function animate(time){
   }
   if(state.loaded){
     updateDynamicCables();updateInteriorLights(delta);
-    for(const node of [...refs.laptops.values(),...refs.adapters.values()])if(node.userData.demoHideAt&&time>=node.userData.demoHideAt){node.visible=false;node.userData.demoHideAt=0;moving=true;}
+    moving=updateDemoOccupancy(time)||moving;
     for(const [id,material]of refs.statuses){const active=state.demo&&state.demoBay===id;material.emissiveIntensity=active?1.1+Math.sin(time*.006)*.45:.9;}
   }
   if(moving)renderer.shadowMap.needsUpdate=true;controls.update(delta);renderer.render(scene,camera);
+  if(state.loaded&&!renderDiagnosticsLogged&&['127.0.0.1','localhost'].includes(location.hostname)){
+    renderDiagnosticsLogged=true;console.info('[Cabinet WebGL] '+JSON.stringify({mode:state.mode,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,morphCables:refs.cables.filter(c=>c.kind==='morph').length,stowedCables:refs.cables.filter(c=>c.kind==='stowed').length}));
+  }
 }
 
 $('zoomIn').addEventListener('click',()=>zoom(.82));$('zoomOut').addEventListener('click',()=>zoom(1.22));
