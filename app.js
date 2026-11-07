@@ -7,8 +7,13 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 const $ = id => document.getElementById(id);
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const bayIds = ['A','B'].flatMap(side=>Array.from({length:9},(_,index)=>`${side}${index+1}`));
-const state = { loaded:false, autoRotate:false, structure:false, glass:true, selection:null, demo:false };
-const refs = { doors:new Map(), trays:new Map(), laptops:new Map(), adapters:new Map(), modules:new Map(), housings:[], statuses:new Map(), components:new Map(), cables:[] };
+const singleDefaultAngle=THREE.MathUtils.degToRad(4.5);
+const state = { loaded:false, autoRotate:false, structure:false, glass:true, selection:null, demo:false, mode:'cabinet', switching:false };
+function makeRefs(){return {doors:new Map(),trays:new Map(),laptops:new Map(),adapters:new Map(),modules:new Map(),housings:[],statuses:new Map(),components:new Map(),cables:[],interiorLights:[]};}
+let refs = makeRefs();
+const modelContexts=new Map();
+let singleAssetPromise=null,stageLights,groundPool;
+let loadErrorAction=()=>location.reload();
 const originals = new Map();
 const tweens = [];
 const emptyBays = new Set(['A3','B2','B6']);
@@ -42,6 +47,10 @@ function tweenVector(object,to,duration=.9){for(const k of ['x','y','z'])tween(o
 function pauseRotation(){state.autoRotate=false;if(controls)controls.autoRotate=false;setPressed('autoRotate',false);}
 function moveCamera(position,target,duration=.9){orbitMotion=null;pauseRotation();tweenVector(camera.position,position,duration);tweenVector(controls.target,target,duration);}
 function viewingDirection(){return camera.position.clone().sub(controls.target).normalize();}
+function intendedViewingDirection(){
+  if(orbitMotion)return new THREE.Vector3(Math.sin(orbitMotion.toAngle)*Math.cos(orbitMotion.elevation),Math.sin(orbitMotion.elevation),Math.cos(orbitMotion.toAngle)*Math.cos(orbitMotion.elevation));
+  const position=camera.position.clone(),target=controls.target.clone();for(const motion of tweens){if(motion.object===camera.position)position[motion.property]=motion.to;else if(motion.object===controls.target)target[motion.property]=motion.to;}return position.sub(target).normalize();
+}
 function fitDistanceForBox(box,angle,elevation,aspect,fov){
   const center=box.getCenter(new THREE.Vector3());
   const direction=new THREE.Vector3(Math.sin(angle)*Math.cos(elevation),Math.sin(elevation),Math.cos(angle)*Math.cos(elevation));
@@ -56,11 +65,15 @@ function fitDistanceForBox(box,angle,elevation,aspect,fov){
 }
 function currentBounds(){
   if(!model)return fitBox.clone();model.updateMatrixWorld(true);const bounds=new THREE.Box3();
-  model.traverse(mesh=>{if(mesh.isMesh&&isVisible(mesh))bounds.expandByObject(mesh);});
+  model.traverse(mesh=>{if(mesh.isMesh&&isVisible(mesh))bounds.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));});
   return bounds.isEmpty()?fitBox.clone():bounds;
 }
-function fitView(angle=Math.PI/8,elevation=.12,immediate=false){
-  const {center,distance}=fitDistanceForBox(currentBounds(),angle,elevation,camera.aspect,camera.fov);
+function mechanismTargetBounds(measure=currentBounds){
+  const saved=[];for(const motion of tweens){if(motion.object===camera.position||motion.object===controls.target)continue;saved.push([motion.object,motion.property,motion.object[motion.property]]);motion.object[motion.property]=motion.to;}
+  updateDynamicCables();model.updateMatrixWorld(true);const bounds=measure();for(let i=saved.length-1;i>=0;i--){const [object,key,value]=saved[i];object[key]=value;}updateDynamicCables();model.updateMatrixWorld(true);return bounds;
+}
+function fitView(angle=Math.PI/8,elevation=.12,immediate=false,bounds=currentBounds()){
+  const {center,distance}=fitDistanceForBox(bounds,angle,elevation,camera.aspect,camera.fov);
   controls.maxDistance=Math.max(16,distance*1.25);
   orbitTo(angle,elevation,distance,center,immediate?0:.9);
 }
@@ -75,6 +88,7 @@ function orbitTo(angle,elevation,radius,target,duration=.9){
 function rotate(amount){stopDemo();const offset=camera.position.clone().sub(controls.target);orbitTo(Math.atan2(offset.x,offset.z)+amount,Math.asin(offset.y/offset.length()),offset.length(),controls.target.clone(),.65);} 
 
 function inferBay(object){
+  if(state.mode==='single')return 'S1';
   for(let node=object;node;node=node.parent){
     const data=node.userData||{};if(data.bay_id||data.bayId)return String(data.bay_id||data.bayId);
     const match=node.name.match(/(?:^|_)([AB][1-9])(?:_|$)/);if(match)return match[1];
@@ -83,7 +97,7 @@ function inferBay(object){
 }
 function inferModule(object){for(let node=object;node;node=node.parent){const match=node.name.match(/^Module_(Left|Center|Right)/);if(match)return match[1];}return '';}
 function inherited(object,key){for(let node=object;node;node=node.parent)if(node.userData?.[key]!==undefined)return node.userData[key];return undefined;}
-function isDoorPivot(node){return /^(DoorPivot_|RearDoorPivot_|EquipmentDoorPivot)/.test(node.name)||(!node.isMesh&&node.userData?.interaction==='door');}
+function isDoorPivot(node){return /^(DoorPivot_|RearDoorPivot_|EquipmentDoorPivot|SingleDoorPivot)/.test(node.name)||(!node.isMesh&&node.userData?.interaction==='door');}
 function doorAncestor(object){for(let node=object;node;node=node.parent)if(isDoorPivot(node))return node;return null;}
 function movingAnchor(object){
   for(let node=object.parent;node;node=node.parent)if(isDoorPivot(node)||/^(Tray_|Laptop_|Bay_|Module_)/.test(node.name)||node.userData?.interaction==='tray')return node;
@@ -113,7 +127,7 @@ function describeMesh(mesh){
   const bay=inferBay(mesh),door=doorAncestor(mesh),module=inferModule(mesh);
   const key=String(inherited(mesh,'component_key')||fallbackKey(mesh,bay,door));
   const action=inherited(mesh,'action')||inherited(mesh,'interaction')||'';
-  return {key,bay,module,doorName:door?.name||'',action,name:mesh.name,housing:housingName(mesh.name),glass:mesh.name.startsWith('Glass_')||String(mesh.material?.name||'').startsWith('Glass'),status:mesh.name.includes('_StatusLED')};
+  return {key,bay,module,doorName:door?.name||'',action,name:mesh.name,housing:housingName(mesh.name)||key==='single:housing',glass:key==='single:glass'||mesh.name.startsWith('Glass_')||String(mesh.material?.name||'').startsWith('Glass'),status:mesh.name.includes('_StatusLED')};
 }
 function normalizeMetadata(data){
   metadataDocument=data||{};const source=data?.components||data?.items||data||{};
@@ -144,6 +158,10 @@ function getMeta(descriptor){
 function registerComponents(){
   refs.components.clear();refs.housings.length=0;
   model.traverse(mesh=>{if(!mesh.isMesh)return;const descriptor=meshDescriptors.get(mesh)||describeMesh(mesh);meshDescriptors.set(mesh,descriptor);if(!refs.components.has(descriptor.key))refs.components.set(descriptor.key,[]);refs.components.get(descriptor.key).push(mesh);if(descriptor.housing)refs.housings.push(mesh);});
+  if(state.mode==='single'){
+    const keys=['single:interface_panel','single:network','single:ac_socket','single:adapter','single:adapter_bracket'];if(!refs.components.has('single:interface_panel'))keys.push('single:power');
+    refs.components.set('single:interfaces',[...new Set(keys.flatMap(key=>refs.components.get(key)||[]))]);
+  }
 }
 
 function optimizeMeshes(root){
@@ -151,7 +169,7 @@ function optimizeMeshes(root){
   root.traverse(mesh=>{
     if(!mesh.isMesh)return;
     const descriptor=describeMesh(mesh);meshDescriptors.set(mesh,descriptor);
-    if(Array.isArray(mesh.material)||mesh.isSkinnedMesh||mesh.userData.dynamicCable||!isVisible(mesh)||mesh.name.startsWith('TouchDisplay_')||/^[AB][1-9]_PowerAdapter$/.test(mesh.name))return;
+    if(Array.isArray(mesh.material)||mesh.isSkinnedMesh||mesh.morphTargetInfluences?.length||mesh.userData.dynamicCable||!isVisible(mesh)||mesh.name.startsWith('TouchDisplay_')||/^[AB][1-9]_PowerAdapter$/.test(mesh.name))return;
     const anchor=movingAnchor(mesh);if(!anchor)return;
     const attributes=Object.keys(mesh.geometry.attributes).sort().join(',');
     const key=[anchor.uuid,descriptor.key,descriptor.bay,descriptor.doorName,descriptor.action,descriptor.housing,descriptor.glass,descriptor.status,mesh.material.uuid,attributes,Boolean(mesh.geometry.index)].join('|');
@@ -174,6 +192,7 @@ function optimizeMeshes(root){
 }
 
 function relatedDoor(descriptor){
+  if(state.mode==='single')return refs.doors.get('SingleDoorPivot');
   if(descriptor.doorName)return refs.doors.get(descriptor.doorName);
   const rear= viewingDirection().z < -.12;
   if(descriptor.bay){
@@ -196,29 +215,39 @@ function setDoor(doorOrName,open,delay=0){
 }
 function setTray(bay,open){
   const tray=refs.trays.get(bay);if(!tray)return;
-  const door=refs.doors.get(`DoorPivot_${bay}`);let delay=0;
+  const door=refs.doors.get(state.mode==='single'?'SingleDoorPivot':`DoorPivot_${bay}`);let delay=0;
   if(open&&door&&!door.open){setDoor(door,true);delay=.5;}
   tray.open=Boolean(open);tween(tray.node.position,'z',originals.get(tray.node).position.z+(open?tray.travel:0),.8,delay);
   if(renderer)renderer.shadowMap.needsUpdate=true;updatePanelActions();
+  if(!state.demo&&state.selection?.bay===bay&&$('componentPanel').classList.contains('is-focused'))focusComponent({trayBay:bay});
 }
-function setGlass(transparent){state.glass=transparent;refs.glassMaterial.opacity=transparent?.13:.9;refs.glassMaterial.color.set(transparent?0xbedde8:0xa5bdcb);setPressed('glassView',transparent);}
+function setGlass(transparent){if(!refs.glassMaterial)return;state.glass=transparent;refs.glassMaterial.opacity=transparent?.09:.78;refs.glassMaterial.color.set(transparent?0xd5e9ed:0xa5bdcb);setPressed('glassView',transparent);}
+function toggleAllDoors(){
+  stopDemo();closePanel();const direction=intendedViewingDirection(),rear=direction.z<-.12;
+  const doors=[...refs.doors.values()].filter(door=>state.mode==='single'||(rear?door.kind==='rear':door.kind!=='rear'));
+  const open=doors.some(door=>!door.open);doors.forEach((door,index)=>setDoor(door,open,reducedMotion?0:index*.025));
+  fitView(Math.atan2(direction.x,direction.z),Math.asin(direction.y),false,mechanismTargetBounds());
+}
 function setStructure(on){
   stopDemo();closePanel();state.structure=on;setPressed('structureView',on);
   refs.housings.forEach(mesh=>mesh.visible=!on);
   for(const [name,node]of refs.modules){const offset=on?(name==='Left'?-.16:name==='Right'?.16:0):0;tween(node.position,'x',originals.get(node).position.x+offset);}
   for(const door of refs.doors.values())if(door.kind==='equipment'||door.kind==='rear')setDoor(door,on);
-  fitView(viewingDirection().z<0?Math.PI+Math.PI/9:Math.PI/9,.12);
+  fitView(viewingDirection().z<0?Math.PI+Math.PI/9:Math.PI/9,.12,false,mechanismTargetBounds());
 }
 function restoreOccupancy(){
-  for(const id of bayIds)for(const node of [refs.laptops.get(id),refs.adapters.get(id)]){
+  for(const id of refs.laptops.keys())for(const node of [refs.laptops.get(id),refs.adapters.get(id)]){
     if(!node)continue;cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=!emptyBays.has(id);node.userData.demoHideAt=0;
   }
 }
 function resetView(){
   if(!state.loaded)return;stopDemo();pauseRotation();closePanel();state.structure=false;setPressed('structureView',false);
   refs.housings.forEach(mesh=>mesh.visible=true);for(const [name,node]of refs.modules)tweenVector(node.position,originals.get(node).position,.6);
+  if(state.mode==='single'){
+    setTray('S1',false);setDoor('SingleDoorPivot',true);setGlass(true);fitView(singleDefaultAngle,.2,false,mechanismTargetBounds());return;
+  }
   for(const door of refs.doors.values())setDoor(door,false);for(const id of refs.trays.keys())if(!refs.doors.has(`DoorPivot_${id}`))setTray(id,false);
-  restoreOccupancy();setGlass(true);fitView();
+  restoreOccupancy();setGlass(true);fitView(Math.PI/8,.12,false,fitBox);
 }
 function closePanel(){state.selection=null;selectionMeshes=[];$('componentPanel').hidden=true;$('componentPanel').classList.remove('is-focused');}
 function number(value){return Number.isFinite(Number(value))?new Intl.NumberFormat('zh-CN',{maximumFractionDigits:2}).format(Number(value)):'—';}
@@ -233,7 +262,7 @@ function showComponent(descriptor){
   const dimensions=data.dimensions_mm||data.dimensions;const list=$('componentDimensions');list.replaceChildren();list.classList.toggle('empty',!Array.isArray(dimensions));
   if(Array.isArray(dimensions))['宽','深','高'].forEach((label,index)=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=dimensions[index]==null?'—':number(dimensions[index]);const unit=document.createElement('small');unit.textContent='mm';dd.append(unit);div.append(dt,dd);list.append(div);});
   $('componentFacts').replaceChildren();
-  if(descriptor.bay){
+  if(descriptor.bay&&state.mode==='cabinet'){
     const support=1250-Math.floor((Number(descriptor.bay[1])-1)/3)*450;
     addFact('仓内建议净空','≥420 × 420 × 420 mm','document');addFact('承托面离地',`${support} mm`,'document');
     if(emptyBays.has(descriptor.bay))addFact('当前模型','空仓');
@@ -253,15 +282,18 @@ function updatePanelActions(){
   if(door){const label=`${door.open?'关闭':'打开'}${door.title}`;doorButton.title=label;doorButton.setAttribute('aria-label',label);doorButton.setAttribute('aria-pressed',String(door.open));doorButton.querySelector('svg').innerHTML=door.open?icon.doorClose:icon.doorOpen;}
   const tray=refs.trays.get(descriptor.bay),trayButton=$('toggleComponentTray');trayButton.hidden=!tray;
   if(tray){const label=`${tray.open?'收回':'抽出'} ${descriptor.bay} 托盘`;trayButton.title=label;trayButton.setAttribute('aria-label',label);trayButton.setAttribute('aria-pressed',String(tray.open));trayButton.querySelector('svg').innerHTML=tray.open?icon.trayIn:icon.trayOut;}
+  $('inspectSingle').hidden=state.mode==='single'||!descriptor.bay;
+  $('focusSinglePorts').hidden=state.mode!=='single';$('focusSingleTray').hidden=state.mode!=='single';
 }
 function componentBox(descriptor){
   const box=new THREE.Box3();
   // A bay-level inspection must keep its opened door, tray and contents together.
   // Dedicated device/port/lock selections continue to use only their component.
   const bayLevel=/^(glass|door|tray|bay):[AB][1-9]$/.test(descriptor.key);
-  const bayNode=bayLevel&&descriptor.bay?model.getObjectByName(`Bay_${descriptor.bay}`):null;
-  if(bayNode){model.updateMatrixWorld(true);bayNode.traverse(mesh=>{if(mesh.isMesh&&isVisible(mesh))box.expandByObject(mesh);});}
-  else for(const mesh of refs.components.get(descriptor.key)||[])if(isVisible(mesh))box.expandByObject(mesh);
+  const bayNode=state.mode==='single'&&descriptor.key==='single:tray'?model.getObjectByName('SingleTray'):state.mode==='single'&&/^single:(door|glass)$/.test(descriptor.key)?model:bayLevel&&descriptor.bay?model.getObjectByName(`Bay_${descriptor.bay}`):null;
+  if(bayNode){model.updateMatrixWorld(true);bayNode.traverse(mesh=>{if(mesh.isMesh&&isVisible(mesh))box.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));});}
+  else for(const mesh of refs.components.get(descriptor.key)||[])if(isVisible(mesh))box.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));
+  if(state.mode==='single'&&descriptor.key==='single:tray')for(const key of ['single:tray','single:cables'])for(const mesh of refs.components.get(key)||[])if(isVisible(mesh))box.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));
   if(!box.isEmpty())return box;
   const data=getMeta(descriptor);const anchor=data.anchor;
   if(Array.isArray(anchor)&&anchor.length===3){const point=new THREE.Vector3(...anchor);return new THREE.Box3(point.clone().addScalar(-.1),point.clone().addScalar(.1));}
@@ -279,9 +311,10 @@ function focusPoseForBox(box,direction,aspect,fov,region){
   const target=center.clone().addScaledVector(right,-cx*distance*tx).addScaledVector(up,-cy*distance*ty);
   return {target,position:target.clone().addScaledVector(direction,distance),distance};
 }
-function focusComponent(){
+function focusComponent(options={}){
   const descriptor=state.selection;if(!descriptor)return;stopDemo();$('componentPanel').classList.add('is-focused');
-  const box=componentBox(descriptor),direction=viewingDirection();direction.y=THREE.MathUtils.clamp(direction.y,.1,.36);direction.normalize();
+  const focusDescriptor=options.trayBay?{...descriptor,key:state.mode==='single'?'single:tray':`bay:${options.trayBay}`,bay:options.trayBay}:descriptor;
+  const box=mechanismTargetBounds(()=>componentBox(focusDescriptor)),direction=viewingDirection();if(state.mode==='single'&&!/^single:(housing|door|glass|hinges|ventilation)$/.test(focusDescriptor.key))direction.set(/^single:(interfaces|interface_panel|network|power|ac_socket|adapter|adapter_bracket|cables)$/.test(focusDescriptor.key)?.4:Math.tan(singleDefaultAngle),.2,1);direction.y=THREE.MathUtils.clamp(direction.y,.1,.36);direction.normalize();
   const panel=$('componentPanel').getBoundingClientRect(),view=$('viewer').getBoundingClientRect();
   let left=24,right=viewport.width-24,top=viewport.height*.06,bottom=viewport.height*.94;
   if(viewport.width>620)right=Math.max(viewport.width*.25,panel.left-view.left-24);
@@ -303,6 +336,7 @@ function setupPicking(){
   let start=null,hoverAt=0;
   renderer.domElement.addEventListener('pointerdown',event=>{start={x:event.clientX,y:event.clientY,time:performance.now()};});
   renderer.domElement.addEventListener('pointerup',event=>{
+    if(state.switching)return;
     if(!start||Math.hypot(event.clientX-start.x,event.clientY-start.y)>6||performance.now()-start.time>800)return;
     const result=hitTest(event.clientX,event.clientY);if(!result){closePanel();return;}stopDemo();pauseRotation();const descriptor=result.descriptor;
     if(descriptor.doorName){const door=refs.doors.get(descriptor.doorName);if(door)setDoor(door,!door.open);}
@@ -342,6 +376,7 @@ function stopDemo(){
   const id=state.demoBay;if(id){if(refs.doors.has(`DoorPivot_${id}`))setDoor(`DoorPivot_${id}`,false);else setTray(id,false);}restoreOccupancy();if(screenMesh)screenMesh.material=screenMaterial;
 }
 function startDemo(){
+  if(state.mode!=='cabinet'||state.switching)return;
   if(state.demo){stopDemo();return;}resetView();
   const id=bayIds.find(bay=>refs.laptops.has(bay)&&!emptyBays.has(bay));if(!id)return;
   state.demo=true;state.demoBay=id;demoIndex=-1;closePanel();setPressed('demoToggle',true);$('demoToggle').title='停止借还演示';$('demoToggle').setAttribute('aria-label','停止借还演示');fitView(.12,.08);
@@ -399,7 +434,20 @@ function cableCurve(cable,delta){
   return curve;
 }
 function rebuildCable(cable,delta){
-  const curve=cableCurve(cable,delta),geometry=new THREE.TubeGeometry(curve,80,Number(cable.spec.radius_mm||2.2)/1000,7,false);
+  if(cable.kind==='morph'){
+    const amount=THREE.MathUtils.clamp(delta/cable.tray.travel,0,1);
+    for(const {mesh,index} of cable.targets)mesh.morphTargetInfluences[index]=amount;
+    cable.lastDelta=delta;
+    const closed=cable.spec.guide_points,extended=cable.spec.guide_points_extended;
+    if(closed?.length===extended?.length&&closed.length>1){const points=closed.map((point,index)=>new THREE.Vector3(...point).lerp(new THREE.Vector3(...extended[index]),amount));cable.length=points.slice(1).reduce((sum,point,index)=>sum+point.distanceTo(points[index]),0);}else cable.length=Number(cable.spec.rest_length_mm)/1000;
+    return;
+  }
+  let curve;
+  if(cable.kind==='controlled'){
+    const amount=THREE.MathUtils.clamp(delta/cable.tray.travel,0,1),points=cable.spec.guide_points.map((point,index)=>new THREE.Vector3(...point).lerp(new THREE.Vector3(...cable.spec.guide_points_extended[index]),amount));
+    curve=new THREE.CurvePath();for(let i=1;i<points.length;i++)curve.add(new THREE.LineCurve3(points[i-1],points[i]));
+  }else curve=cableCurve(cable,delta);
+  const geometry=new THREE.TubeGeometry(curve,cable.kind==='controlled'?Math.max(120,cable.spec.guide_points.length*2):80,Number(cable.spec.radius_mm||2.2)/1000,cable.kind==='controlled'?10:7,false);
   const previous=cable.mesh.geometry;cable.mesh.geometry=geometry;if(previous)previous.dispose();
   cable.lastDelta=delta;cable.length=curve.getLength();
 }
@@ -407,16 +455,24 @@ function prepareDynamicCables(){
   const paths=Array.isArray(metadataDocument.cable_paths)?metadataDocument.cable_paths:[],materials=new Map();
   const canonical=name=>String(name).replace(/[.\[\]/:]/g,'').replace(/_Mesh$/,'');
   for(const spec of paths){
-    if(spec.space!=='bay_local_gltf'||!validPoint(spec.fixed)||!validPoint(spec.moving)){console.warn('Invalid cable path metadata',spec.id);continue;}
-    const bay=String(spec.bay_id||''),tray=refs.trays.get(bay),parent=model.getObjectByName(`Bay_${bay}`);if(!tray||!parent){console.warn('Cable bay/tray missing',spec.id);continue;}
+    if(!['bay_local_gltf','single_local_gltf'].includes(spec.space)||!validPoint(spec.fixed)||!validPoint(spec.moving)){console.warn('Invalid cable path metadata',spec.id);continue;}
+    const bay=state.mode==='single'?'S1':String(spec.bay_id||''),tray=refs.trays.get(bay),parent=model.getObjectByName(spec.parent_node||(state.mode==='single'?'SingleCabinetRoot':`Bay_${bay}`));if(!tray||!parent){console.warn('Cable bay/tray missing',spec.id);continue;}
     const sourceNames=new Set((spec.source_node_names||[]).map(canonical)),sources=[];
-    model.traverse(node=>{if(node.isMesh&&sourceNames.has(canonical(node.name)))sources.push(node);});sources.forEach(node=>node.removeFromParent());
+    model.traverse(node=>{if(node.isMesh&&sourceNames.has(canonical(node.name)))sources.push(node);});
+    const targets=spec.morph_target?sources.map(mesh=>({mesh,index:mesh.morphTargetDictionary?.[spec.morph_target]})).filter(target=>Number.isInteger(target.index)):[];
+    if(targets.length){
+      targets.forEach(({mesh})=>{mesh.userData.dynamicCable=true;mesh.userData.component_key=spec.component_key||'single:cables';mesh.castShadow=false;});
+      const cable={kind:'morph',spec,targets,tray,lastDelta:NaN,length:0};refs.cables.push(cable);rebuildCable(cable,tray.node.position.z-originals.get(tray.node).position.z);continue;
+    }
+    sources.forEach(node=>node.removeFromParent());
     const color=spec.color||'#18212b';if(!materials.has(color))materials.set(color,new THREE.MeshStandardMaterial({color,roughness:.45,metalness:.08}));
     const mesh=new THREE.Mesh(new THREE.BufferGeometry(),materials.get(color));mesh.name=`LiveCable_${spec.id}`;
     mesh.userData={component_key:spec.component_key||`cables:${bay}`,bay_id:bay,dynamicCable:true,cable_id:spec.id};mesh.castShadow=false;mesh.receiveShadow=true;parent.add(mesh);
     let guides=(spec.guide_points||[]).filter(validPoint).map(point=>new THREE.Vector3(...point));
     if(guides.length<2){const fixed=new THREE.Vector3(...spec.fixed),moving=new THREE.Vector3(...spec.moving);guides=[fixed.clone().add(new THREE.Vector3(0,.04,-.035)),fixed.clone().lerp(moving,.5).add(new THREE.Vector3(0,.06,-.11)),moving.clone().add(new THREE.Vector3(0,.035,-.035))];}
-    const cable={spec,mesh,guides,tray,lastDelta:NaN,length:0};refs.cables.push(cable);
+    const controlled=state.mode==='single'&&Array.isArray(spec.guide_points)&&Array.isArray(spec.guide_points_extended)&&spec.guide_points.length>1&&spec.guide_points.length===spec.guide_points_extended.length&&spec.guide_points.every(validPoint)&&spec.guide_points_extended.every(validPoint);
+    if(state.mode==='single'&&!controlled)throw new Error('精细单仓活动线缆路径不完整');
+    const cable={kind:controlled?'controlled':'curve',spec,mesh,guides,tray,lastDelta:NaN,length:0};refs.cables.push(cable);
     const descriptor={key:mesh.userData.component_key,bay,module:bay.startsWith('A')?'Left':'Right',doorName:'',action:'component',name:mesh.name,housing:false,glass:false,status:false};meshDescriptors.set(mesh,descriptor);
     rebuildCable(cable,tray.node.position.z-originals.get(tray.node).position.z);
   }
@@ -427,7 +483,7 @@ function updateDynamicCables(){
 
 function setupModel(){
   model.updateMatrixWorld(true);
-  refs.glassMaterial=new THREE.MeshPhysicalMaterial({color:0xbedde8,roughness:.09,metalness:.02,transparent:true,opacity:.13,depthWrite:false,side:THREE.DoubleSide,clearcoat:1,clearcoatRoughness:.1,envMapIntensity:.65});
+  refs.glassMaterial=new THREE.MeshPhysicalMaterial({color:0xd5e9ed,roughness:.07,metalness:0,transparent:true,opacity:.09,depthWrite:false,side:THREE.DoubleSide,clearcoat:1,clearcoatRoughness:.09,envMapIntensity:.75});
   const visitedMaterials=new Set();
   model.traverse(node=>{
     if(isDoorPivot(node)){
@@ -451,23 +507,103 @@ function setupModel(){
   }
   for(const name of ['Left','Center','Right']){const node=model.getObjectByName(`Module_${name}`);if(node){saveOrigin(node);refs.modules.set(name,node);}}
   if(screenMesh)screenMaterial=screenMesh.material;
-  restoreOccupancy();prepareDynamicCables();optimizeMeshes(model);fitBox=new THREE.Box3(new THREE.Vector3(-1.65,0,-.325),new THREE.Vector3(1.65,1.85,.325));
+  restoreOccupancy();prepareDynamicCables();optimizeMeshes(model);fitBox=currentBounds();addInteriorLights();
+}
+function addInteriorLights(){
+  const add=(position,doors,intensity,distance)=>{const closedIntensity=state.mode==='single'?intensity*.38:0,light=new THREE.PointLight(0xffeed5,closedIntensity,distance,2);light.position.copy(position);model.add(light);refs.interiorLights.push({light,doors,intensity,closedIntensity});};
+  if(state.mode==='single'){
+    const box=currentBounds(),center=box.getCenter(new THREE.Vector3());add(new THREE.Vector3(center.x,box.max.y-.045,box.max.z-.055),['SingleDoorPivot'],.095,.85);
+  }else{
+    for(const side of ['A','B'])for(let row=0;row<3;row++)add(new THREE.Vector3(side==='A'?-.975:.975,1.25-row*.45+.32,.22),[...[1,2,3].map(n=>`DoorPivot_${side}${row*3+n}`),`RearDoorPivot_${side==='A'?'Left':'Right'}`],.16,1.16);
+    add(new THREE.Vector3(0,.55,.17),['EquipmentDoorPivot','RearDoorPivot_Center'],.14,.88);
+  }
+}
+function updateInteriorLights(delta){
+  for(const item of refs.interiorLights){const open=item.doors.some(name=>refs.doors.get(name)?.open),goal=open||state.structure?item.intensity:item.closedIntensity;item.light.intensity=THREE.MathUtils.damp(item.light.intensity,goal,6,delta);}
+}
+function captureContext(){return {model,refs,metadata,metadataDocument,fitBox:fitBox.clone(),screenMesh,screenMaterial,structure:state.structure,glass:state.glass};}
+function applyContext(context){({model,refs,metadata,metadataDocument,fitBox,screenMesh,screenMaterial}=context);state.structure=context.structure;state.glass=context.glass;}
+function normalizeSingleMetadata(source){
+  const document={...source,components:{},cable_paths:[]};
+  const components=source?.components||{};
+  if(!Object.keys(components).length)throw new Error('精细单仓组件参数不完整');
+  for(const [key,value] of Object.entries(components))document.components[key]={...value,title:value.title||value.name||key,dimensions_mm:value.dimensions_mm||value.dimensions,basis:value.basis||'model'};
+  document.components['single:interfaces']={title:'左侧电源与网络接口',basis:'model',notes:'整体查看接口面板、RJ45、AC插座及独立适配器托架。点击具体部件可查看各自尺寸。'};
+  document.cable_paths=(source.cable_paths||[]).map(spec=>({...spec,bay_id:'S1',space:'single_local_gltf',parent_node:spec.parent_node||'SingleCabinetRoot',component_key:spec.component_key||'single:cables'}));
+  return document;
+}
+function setupSingleModel(){
+  model.updateMatrixWorld(true);
+  refs.glassMaterial=new THREE.MeshPhysicalMaterial({color:0xd5e9ed,roughness:.07,metalness:0,transparent:true,opacity:.09,depthWrite:false,side:THREE.DoubleSide,clearcoat:1,clearcoatRoughness:.09,envMapIntensity:.75});
+  const materials=new Set();
+  model.traverse(node=>{
+    if(node.name==='SingleDoorPivot'){saveOrigin(node);refs.doors.set(node.name,{node,bay:'S1',kind:'bay',swing:Number(node.userData.swing_degrees??node.userData.open_degrees??metadataDocument.interactions?.door?.angle_degrees??-100),open:false,title:'精细单仓玻璃门'});}
+    if(node.name==='SingleTray'){saveOrigin(node);refs.trays.set('S1',{node,open:false,travel:Number(node.userData.travel_mm??320)/1000});}
+    if(node.isMesh){const descriptor=describeMesh(node);if(descriptor.glass)node.material=refs.glassMaterial;node.castShadow=!descriptor.glass;node.receiveShadow=true;for(const material of Array.isArray(node.material)?node.material:[node.material])if(material&&!materials.has(material)){materials.add(material);if(material.emissiveIntensity>1.2)material.emissiveIntensity=1.2;}}
+  });
+  if(!refs.doors.size||!refs.trays.size)throw new Error('精细单仓门或托盘节点缺失');
+  prepareDynamicCables();optimizeMeshes(model);fitBox=currentBounds();addInteriorLights();
+}
+async function setMode(mode){
+  if(state.switching||mode===state.mode||!state.loaded)return;
+  state.switching=true;stopDemo();pauseRotation();closePanel();$('loadError').hidden=true;document.querySelectorAll('.toolbar button:not(#fullscreen)').forEach(button=>button.disabled=true);
+  try{
+    let asset;
+    if(mode==='single'&&!modelContexts.has('single')){
+      $('loading').hidden=false;$('loading').setAttribute('aria-label','正在加载精细单仓');
+      singleAssetPromise??=Promise.all([new GLTFLoader().loadAsync('./assets/smart_cabinet_single_compartment.glb'),fetch('./assets/single_compartment.json').then(response=>{if(!response.ok)throw new Error('精细单仓参数无法读取');return response.json();})]).catch(error=>{singleAssetPromise=null;throw error;});
+      asset=await singleAssetPromise;
+    }
+    // Complete in-flight mechanisms before suspending their context.
+    for(const motion of tweens)motion.object[motion.property]=motion.to;tweens.length=0;orbitMotion=null;updateDynamicCables();
+    modelContexts.set(state.mode,captureContext());model.visible=false;
+    const previousMode=state.mode;state.mode=mode;
+    try{
+      if(modelContexts.has(mode))applyContext(modelContexts.get(mode));
+      else{refs=makeRefs();metadataDocument=normalizeSingleMetadata(asset[1]);metadata=metadataDocument.components;model=asset[0].scene;screenMesh=null;screenMaterial=null;state.structure=false;state.glass=true;scene.add(model);setupSingleModel();setDoor('SingleDoorPivot',true);modelContexts.set(mode,captureContext());}
+    }catch(error){model?.removeFromParent();state.mode=previousMode;applyContext(modelContexts.get(previousMode));throw error;}
+    model.visible=true;controls.minDistance=mode==='single'?.18:.35;
+    setPressed('singleView',mode==='single');setPressed('structureView',state.structure);setGlass(state.glass);
+    $('singleView').title=mode==='single'?'返回18仓整柜':'单仓精细展示';$('singleView').setAttribute('aria-label',$('singleView').title);
+    $('demoToggle').disabled=mode==='single';$('viewer').setAttribute('aria-label',mode==='single'?'精细单仓三维展示，可点击玻璃门、托盘和接口':'智能柜三维展示，可旋转、缩放并点击柜门和内部部件');
+    setStageScale(mode==='single');fitView(mode==='single'?singleDefaultAngle:Math.PI/8,mode==='single'?.2:.12,true,mechanismTargetBounds());controls.update();renderer.shadowMap.needsUpdate=true;announce(mode==='single'?'精细单仓已就绪。可开关玻璃门，点击内部部件查看参数。':'已返回18仓整柜。');
+  }catch(error){if(mode==='single'&&!modelContexts.has('single'))singleAssetPromise=null;model.visible=true;console.error('Model switch failed:',error);const message=`${error.message}，点击重试。整柜仍可操作。`;announce(message);$('singleView').title=message;$('singleView').setAttribute('aria-label',message);$('loadError').title=message;$('loadError').setAttribute('aria-label',message);$('loadError').hidden=false;loadErrorAction=()=>setMode(mode);}
+  finally{state.switching=false;$('loading').hidden=true;document.querySelectorAll('.toolbar button:not(#fullscreen)').forEach(button=>button.disabled=false);$('demoToggle').disabled=state.mode==='single';}
+}
+function selectSingleComponent(key){
+  const meshes=refs.components.get(key);if(!meshes?.length)return;const door=refs.doors.get('SingleDoorPivot');if(door&&!door.open)setDoor(door,true);const descriptor={...(meshDescriptors.get(meshes[0])||describeMesh(meshes[0])),key};if(key==='single:interfaces')descriptor.doorName='';showComponent(descriptor);focusComponent();
+}
+function setStageScale(single){
+  const scale=single?.26:1;groundPool.scale.set(scale,scale,scale);groundPool.position.y=fitBox.min.y-.008;
+  groundPool.children[0].scale.set(single?.5:1,single?2.8:1,1);
+  const center=fitBox.getCenter(new THREE.Vector3());stageLights.key.target.position.copy(center);stageLights.front.target.position.copy(center);stageLights.back.target.position.copy(center);
+  stageLights.left.target.position.set(single?-.16:-1.05,center.y,0);stageLights.right.target.position.set(single?.16:1.05,center.y,0);
+  stageLights.left.intensity=single?32:55;stageLights.right.intensity=single?29:50;
+  stageLights.key.shadow.camera.left=single?-.85:-3.1;stageLights.key.shadow.camera.right=single?.85:3.1;stageLights.key.shadow.camera.top=single?.85:2.7;stageLights.key.shadow.camera.bottom=single?-.85:-2.7;stageLights.key.shadow.camera.updateProjectionMatrix();
 }
 function createStage(){
   scene=new THREE.Scene();scene.background=new THREE.Color(0x000000);scene.fog=new THREE.Fog(0x000000,13,30);
-  const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();scene.environment=pmrem.fromScene(room,.06).texture;scene.environmentIntensity=.30;room.dispose();pmrem.dispose();
-  scene.add(new THREE.HemisphereLight(0xd9eaf7,0x10151b,.68));
-  const key=new THREE.DirectionalLight(0xfff4e8,2.8);key.position.set(-3.6,5,4.5);key.target.position.set(0,.8,0);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.left=-3.5;key.shadow.camera.right=3.5;key.shadow.camera.top=3;key.shadow.camera.bottom=-3;key.shadow.camera.near=.5;key.shadow.camera.far=14;key.shadow.bias=-.0002;key.shadow.normalBias=.008;key.shadow.radius=4;scene.add(key,key.target);
-  const frontFill=new THREE.DirectionalLight(0xdfefff,1.35);frontFill.position.set(1.7,1.8,4.5);scene.add(frontFill);
-  const leftRim=new THREE.SpotLight(0x66bedc,44,16,.48,.72,2);leftRim.position.set(-4.1,3.2,-2.5);leftRim.target.position.set(-1.05,.9,0);scene.add(leftRim,leftRim.target);
-  const rightRim=new THREE.SpotLight(0xffc39b,40,16,.48,.72,2);rightRim.position.set(4.2,3.5,-2.8);rightRim.target.position.set(1.05,.9,0);scene.add(rightRim,rightRim.target);
-  const backFill=new THREE.DirectionalLight(0xd9e8f4,1.1);backFill.position.set(-1.5,2,-5);scene.add(backFill);
-  const poolCanvas=document.createElement('canvas');poolCanvas.width=256;poolCanvas.height=256;const ctx=poolCanvas.getContext('2d');const gradient=ctx.createRadialGradient(128,128,8,128,128,126);gradient.addColorStop(0,'rgba(65,102,126,.09)');gradient.addColorStop(.48,'rgba(35,73,98,.05)');gradient.addColorStop(.8,'rgba(19,39,55,.015)');gradient.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,256,256);
-  const pool=new THREE.Mesh(new THREE.PlaneGeometry(7.2,4.2),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(poolCanvas),transparent:true,depthWrite:false}));pool.rotation.x=-Math.PI/2;pool.position.y=-.015;scene.add(pool);
+  const pmrem=new THREE.PMREMGenerator(renderer),room=new RoomEnvironment();scene.environment=pmrem.fromScene(room,.06).texture;scene.environmentIntensity=.22;room.dispose();pmrem.dispose();
+  scene.add(new THREE.HemisphereLight(0xd9eaf7,0x111319,.36));
+  const key=new THREE.DirectionalLight(0xfff2e2,2.35);key.position.set(-3.6,5,4.5);key.target.position.set(0,.8,0);key.castShadow=true;key.shadow.mapSize.set(2048,2048);key.shadow.camera.near=.5;key.shadow.camera.far=14;key.shadow.bias=-.00012;key.shadow.normalBias=.003;key.shadow.radius=3.5;scene.add(key,key.target);
+  const front=new THREE.DirectionalLight(0xdcefff,.56);front.position.set(1.7,1.8,4.5);scene.add(front,front.target);
+  const left=new THREE.SpotLight(0x64c4ed,55,16,.46,.8,2);left.position.set(-4.1,3.2,-2.5);left.target.position.set(-1.05,.9,0);scene.add(left,left.target);
+  const right=new THREE.SpotLight(0xffbd85,50,16,.46,.8,2);right.position.set(4.2,3.5,-2.8);right.target.position.set(1.05,.9,0);scene.add(right,right.target);
+  const back=new THREE.DirectionalLight(0xd9e8f4,.68);back.position.set(-1.5,2,-5);scene.add(back,back.target);stageLights={key,front,left,right,back};
+  // A feathered receiving surface catches real model shadows without a horizon.
+  const canvas=document.createElement('canvas');canvas.width=512;canvas.height=512;const ctx=canvas.getContext('2d'),gradient=ctx.createRadialGradient(256,256,16,256,256,252);
+  gradient.addColorStop(0,'rgba(129,151,171,.54)');gradient.addColorStop(.35,'rgba(105,132,155,.4)');gradient.addColorStop(.7,'rgba(66,94,120,.12)');gradient.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,512,512);
+  const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;
+  groundPool=new THREE.Mesh(new THREE.PlaneGeometry(6.8,4.5),new THREE.MeshStandardMaterial({color:0x394b5d,map:texture,transparent:true,roughness:.96,metalness:0,depthWrite:false}));groundPool.rotation.x=-Math.PI/2;groundPool.position.y=-.008;groundPool.receiveShadow=true;scene.add(groundPool);
+  // Subtle contact occlusion stays attached to the footprint as the camera orbits.
+  const contactCanvas=document.createElement('canvas');contactCanvas.width=256;contactCanvas.height=256;const c=contactCanvas.getContext('2d'),g=c.createRadialGradient(128,128,10,128,128,126);g.addColorStop(0,'rgba(0,0,0,.7)');g.addColorStop(.5,'rgba(0,0,0,.38)');g.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=g;c.fillRect(0,0,256,256);
+  const contact=new THREE.Mesh(new THREE.PlaneGeometry(3.65,1.08),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(contactCanvas),transparent:true,depthWrite:false}));contact.position.set(0,0,.002);groundPool.add(contact);
 }
+function requestedInitialMode(search){return new URLSearchParams(search).get('view')==='single'?'single':'cabinet';}
+
 async function init(){
   try{
-    renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.02;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
+    renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.98;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;renderer.shadowMap.autoUpdate=false;
     $('viewer').append(renderer.domElement);createStage();
     camera=new THREE.PerspectiveCamera(35,1,.025,60);camera.position.set(1.3,1.6,4.2);
     controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,.925,0);controls.enableDamping=true;controls.dampingFactor=.08;controls.minDistance=.35;controls.maxDistance=16;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=Math.PI*.1;controls.enablePan=true;controls.autoRotateSpeed=.65;
@@ -480,9 +616,10 @@ async function init(){
     if(!meta?.components||typeof meta.components!=='object'||!Array.isArray(meta.cable_paths))throw new Error('组件或动态线缆参数不完整');
     normalizeMetadata(meta);createFallbackMetadata();model=gltf.scene;scene.add(model);setupModel();
     state.loaded=true;document.querySelectorAll('.toolbar button:disabled').forEach(button=>button.disabled=false);
-    setupPicking();fitView(Math.PI/8,.12,true);controls.update();$('loading').hidden=true;renderer.shadowMap.needsUpdate=true;
-    window.cabinetShowcase={state,refs,scene,renderer,camera,controls,model,metadata,setDoor,setTray,resetView,setStructure,focusComponent,getDiagnostics:()=>({loaded:state.loaded,doors:refs.doors.size,rearDoors:[...refs.doors.values()].filter(d=>d.kind==='rear').length,trays:refs.trays.size,emptyBays:[...emptyBays],components:refs.components.size,dynamicCables:refs.cables.length,cableLengths:refs.cables.map(cable=>({id:cable.spec.id,length_mm:Math.round(cable.length*1000),rest_length_mm:cable.spec.rest_length_mm})),metadataEntries:Object.keys(metadata).length,meshes:(()=>{let n=0;model.traverse(o=>{if(o.isMesh)n++;});return n;})(),drawCalls:renderer.info.render.calls})};
+    modelContexts.set('cabinet',captureContext());setStageScale(false);setupPicking();fitView(Math.PI/8,.12,true);controls.update();$('loading').hidden=true;renderer.shadowMap.needsUpdate=true;
+    window.cabinetShowcase={state,scene,renderer,camera,controls,get refs(){return refs;},get model(){return model;},get metadata(){return metadata;},setDoor,setTray,setMode,resetView,setStructure,focusComponent,selectSingleComponent,showComponent,getDiagnostics:()=>({loaded:state.loaded,mode:state.mode,cachedModes:[...modelContexts.keys()],doors:refs.doors.size,rearDoors:[...refs.doors.values()].filter(d=>d.kind==='rear').length,trays:refs.trays.size,emptyBays:[...emptyBays],components:refs.components.size,dynamicCables:refs.cables.length,cableLengths:refs.cables.map(cable=>({id:cable.spec.id,length_mm:Math.round(cable.length*1000),rest_length_mm:cable.spec.rest_length_mm})),metadataEntries:Object.keys(metadata).length,meshes:(()=>{let n=0;model.traverse(o=>{if(o.isMesh)n++;});return n;})(),drawCalls:renderer.info.render.calls})};
     announce('机柜已就绪。可直接点击仓门、维护门与内部部件。');
+    if(requestedInitialMode(location.search)==='single')await setMode('single');
   }catch(error){console.error('Cabinet initialization failed:',error);$('loading').hidden=true;const message=location.protocol==='file:'?'请双击启动演示.command，经本地HTTP地址打开页面':`${error.message||'模型未能载入'}，请确认本地服务和assets文件完整后重试`;$('loadError').title=message;$('loadError').setAttribute('aria-label',message);$('loadError').hidden=false;announce(message);}
 }
 function resize(){
@@ -502,7 +639,7 @@ function animate(time){
     if(p===1)orbitMotion=null;
   }
   if(state.loaded){
-    updateDynamicCables();
+    updateDynamicCables();updateInteriorLights(delta);
     for(const node of [...refs.laptops.values(),...refs.adapters.values()])if(node.userData.demoHideAt&&time>=node.userData.demoHideAt){node.visible=false;node.userData.demoHideAt=0;moving=true;}
     for(const [id,material]of refs.statuses){const active=state.demo&&state.demoBay===id;material.emissiveIntensity=active?1.1+Math.sin(time*.006)*.45:.9;}
   }
@@ -514,12 +651,14 @@ $('rotateLeft').addEventListener('click',()=>rotate(-Math.PI/8));$('rotateRight'
 $('autoRotate').addEventListener('click',()=>{stopDemo();closePanel();state.autoRotate=!state.autoRotate;controls.autoRotate=state.autoRotate;setPressed('autoRotate',state.autoRotate);});
 $('resetView').addEventListener('click',resetView);
 $('frontView').addEventListener('click',()=>{stopDemo();closePanel();fitView(0,.07);});$('backView').addEventListener('click',()=>{stopDemo();closePanel();fitView(Math.PI,.07);});
+$('allDoors').addEventListener('click',toggleAllDoors);$('singleView').addEventListener('click',()=>setMode(state.mode==='single'?'cabinet':'single'));
+$('inspectSingle').addEventListener('click',()=>setMode('single'));$('focusSinglePorts').addEventListener('click',()=>selectSingleComponent('single:interfaces'));$('focusSingleTray').addEventListener('click',()=>selectSingleComponent('single:tray'));
 $('glassView').addEventListener('click',()=>setGlass(!state.glass));$('structureView').addEventListener('click',()=>setStructure(!state.structure));$('demoToggle').addEventListener('click',startDemo);
 $('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('stage').requestFullscreen();}catch{announce('当前浏览器不支持全屏。');}});
 $('panelClose').addEventListener('click',closePanel);$('focusComponent').addEventListener('click',focusComponent);
 $('toggleComponentDoor').addEventListener('click',()=>{const door=state.selection&&relatedDoor(state.selection);if(door){stopDemo();setDoor(door,!door.open);}});
 $('toggleComponentTray').addEventListener('click',()=>{const bay=state.selection?.bay,tray=refs.trays.get(bay);if(tray){stopDemo();setTray(bay,!tray.open);}});
-$('loadError').addEventListener('click',()=>location.reload());
-window.addEventListener('keydown',event=>{if(event.key==='Escape'){closePanel();stopDemo();}if(!state.loaded||event.target.closest('button'))return;if(event.key==='+'||event.key==='=')zoom(.82);if(event.key==='-')zoom(1.22);if(event.key==='ArrowLeft'){event.preventDefault();rotate(-Math.PI/8);}if(event.key==='ArrowRight'){event.preventDefault();rotate(Math.PI/8);}});
+$('loadError').addEventListener('click',()=>loadErrorAction());
+window.addEventListener('keydown',event=>{if(event.key==='Escape'){closePanel();stopDemo();}if(!state.loaded||state.switching||event.target.closest('button'))return;if(event.key==='+'||event.key==='=')zoom(.82);if(event.key==='-')zoom(1.22);if(event.key==='ArrowLeft'){event.preventDefault();rotate(-Math.PI/8);}if(event.key==='ArrowRight'){event.preventDefault();rotate(Math.PI/8);}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){stopDemo();pauseRotation();}});
 requestAnimationFrame(animate);init();
