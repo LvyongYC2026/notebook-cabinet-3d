@@ -16,6 +16,14 @@ https://lvyongyc2026.github.io/notebook-cabinet-3d/
 
 模型用于产品展示和方案验证；托盘承载、稳定性、温升、断电保持、应急开启以及具体机型包络仍需按实机试验确认。尺寸以页面部件参数和确认后的工程图为准。
 
+## 18 仓精细内构整合版
+
+精细单仓的托盘、接口面板、适配器篮、门锁及分色线路已适配到整柜全部 18 仓。整柜在关门、托盘收回状态下的外包络为 **水平总宽 3300 × 前后深 650 × 总高 1850 mm**。A3、B2、B6 留空，其余 15 仓放置开盖笔电；每仓托盘行程为 320 mm，前门限位为 95°。固定适配器与停车线路留在仓内，活动线路随托盘形变。
+
+[整柜工程与重建说明](refined-18bay/output/cabinet/refined_candidate/README.md)提供最终 Blender 工程、GLB、不可变基线、整合脚本和检查报告。下载仓库后，以 `refined-18bay/` 为项目根目录运行，保留其中的相对目录结构。
+
+[有设备仓预览](refined-18bay/output/cabinet/refined_candidate/previews/refined_A1_detail.png) · [空仓预览](refined-18bay/output/cabinet/refined_candidate/previews/refined_A3_detail.png) · [整柜开门预览](refined-18bay/output/cabinet/refined_candidate/previews/refined_full_open.png)。
+
 ## 单仓精细展示与数字资产
 
 [直接打开单仓 3D 展示](https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=single)。单仓设计包络为 **宽 450 × 深 650 × 高 450 mm**；整柜与单仓模型可在页面中切换。
@@ -40,7 +48,7 @@ python3 -m http.server 8765
 
 本仓库为无构建步骤的静态站点，使用相对资源路径。GitHub Pages 设置为从 `main` 分支的根目录发布。`.nojekyll` 禁用 Jekyll 处理。
 
-所有模型与脚本均从本站加载，Three.js 本地依赖位于 `vendor/three/`。原始参考 PDF、整柜原始 Blender 工程、临时文件与本地服务脚本不发布；本次单仓工程位于 `single-compartment/`。
+所有模型与脚本均从本站加载，Three.js 本地依赖位于 `vendor/three/`。原始参考 PDF、临时日志与本地服务脚本不发布。独立单仓工程位于 `single-compartment/`；精细整柜工程及重建所需的压缩基线位于 `refined-18bay/`。
 
 ## 第三方依赖
 
