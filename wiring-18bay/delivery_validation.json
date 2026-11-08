@@ -1,0 +1,46 @@
+{
+  "status": "passed_scoped_geometry_checks",
+  "verified_at": "2026-11-08T01:53:15.899186+00:00",
+  "checks": {
+    "cabinet": {
+      "blend_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+      "metadata_sha256": "e6be65ca256cd920d4bc5628efad1d823ff895c32bd8693d590ffbf23eda38c2",
+      "fixed_route_count": 50,
+      "unresolved_fixed_route_hits": 0,
+      "intended_endpoint_engagements": 39,
+      "tray_motion_poses": 17,
+      "tray_motion_intersections": 0,
+      "new_static_objects": 883,
+      "new_static_mesh_issues": 0
+    },
+    "single": {
+      "blend_sha256": "a7592162a0ef1011e794cca4532908b3b04ecae269ee7506a65ee655bf62f84e",
+      "metadata_sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c",
+      "fixed_route_count": 2,
+      "unresolved_fixed_route_hits": 0,
+      "intended_endpoint_engagements": 0,
+      "tray_motion_poses": 17,
+      "tray_motion_intersections": 0,
+      "new_static_objects": 32,
+      "new_static_mesh_issues": 0
+    },
+    "fixed_cable_separation": {
+      "pairs": 1225,
+      "outer_envelope_overlaps": 0,
+      "shared_terminal_join_pairs": 5,
+      "shared_terminal_exclusion_radius_mm": 20
+    },
+    "rear_door_motion": {
+      "poses": 22,
+      "intersections": 0
+    }
+  },
+  "limits": "Geometry and display checks only; no electrical, EMC, thermal, load, durability or actual file-transfer certification. Refer to the individual reports for exclusions and sampling.",
+  "frontend_reports": [
+    "wiring_frontend_validation.json",
+    "wiring_release_delta_validation.json",
+    "wiring_final_cm_validation.json",
+    "dimensions_stability_validation.json"
+  ],
+  "release_version": "20261108-wiring-v1"
+}

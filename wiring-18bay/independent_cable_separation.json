@@ -1,0 +1,333 @@
+{
+  "method": "Exact minimum distances between every pair of polyline segments; endpoint-to-segment and interior line-line solutions",
+  "metadata_sha256": "e6be65ca256cd920d4bc5628efad1d823ff895c32bd8693d590ffbf23eda38c2",
+  "route_count": 50,
+  "pair_count": 1225,
+  "overlaps": [],
+  "closest_different_signal_classes": [
+    {
+      "routes": [
+        "FixedNetwork_PDUManagement",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 5.90858,
+      "outer_surface_clearance_mm": 1.00858,
+      "points_blender_m": [
+        [
+          0.217,
+          0.2344,
+          0.7
+        ],
+        [
+          0.2165364,
+          0.2402904,
+          0.7
+        ]
+      ],
+      "segments": [
+        66,
+        34
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_LockController",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 7.5,
+      "outer_surface_clearance_mm": 2.6,
+      "points_blender_m": [
+        [
+          0.247,
+          0.233,
+          0.6898156
+        ],
+        [
+          0.247,
+          0.2405,
+          0.6898156
+        ]
+      ],
+      "segments": [
+        66,
+        28
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_UPSManagement",
+        "FixedAC_DistributionToPDU"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 9.99999,
+      "outer_surface_clearance_mm": 5.09999,
+      "points_blender_m": [
+        [
+          0.252,
+          0.225,
+          0.49
+        ],
+        [
+          0.252,
+          0.235,
+          0.49
+        ]
+      ],
+      "segments": [
+        66,
+        44
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_Server",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 10.50001,
+      "outer_surface_clearance_mm": 5.60001,
+      "points_blender_m": [
+        [
+          0.223,
+          0.23,
+          0.6998268
+        ],
+        [
+          0.223,
+          0.2405,
+          0.6998268
+        ]
+      ],
+      "segments": [
+        66,
+        32
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_LockController",
+        "FixedAC_DistributionToPDU"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 11.00002,
+      "outer_surface_clearance_mm": 6.10002,
+      "points_blender_m": [
+        [
+          0.247,
+          0.246,
+          0.49
+        ],
+        [
+          0.247,
+          0.235,
+          0.49
+        ]
+      ],
+      "segments": [
+        88,
+        44
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_B3",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 14.0,
+      "outer_surface_clearance_mm": 9.1,
+      "points_blender_m": [
+        [
+          0.274,
+          0.2405,
+          0.594
+        ],
+        [
+          0.26,
+          0.2405,
+          0.594
+        ]
+      ],
+      "segments": [
+        33,
+        22
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_B6",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 14.0,
+      "outer_surface_clearance_mm": 9.1,
+      "points_blender_m": [
+        [
+          0.274,
+          0.2405,
+          0.58
+        ],
+        [
+          0.26,
+          0.2405,
+          0.58
+        ]
+      ],
+      "segments": [
+        33,
+        22
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_B9",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 14.0,
+      "outer_surface_clearance_mm": 9.1,
+      "points_blender_m": [
+        [
+          0.274,
+          0.2405,
+          0.587
+        ],
+        [
+          0.26,
+          0.2405,
+          0.587
+        ]
+      ],
+      "segments": [
+        33,
+        22
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_B6",
+        "FixedAC_DistributionToPDU"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 14.62888,
+      "outer_surface_clearance_mm": 9.72888,
+      "points_blender_m": [
+        [
+          0.274,
+          0.275,
+          0.3
+        ],
+        [
+          0.267548,
+          0.2618708,
+          0.3
+        ]
+      ],
+      "segments": [
+        44,
+        5
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_B6",
+        "FixedAC_CriticalToControlPower_ACInput"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 15.00002,
+      "outer_surface_clearance_mm": 10.10002,
+      "points_blender_m": [
+        [
+          0.274,
+          0.275,
+          0.3976285
+        ],
+        [
+          0.274,
+          0.26,
+          0.3976285
+        ]
+      ],
+      "segments": [
+        44,
+        31
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_UPSManagement",
+        "FixedAC_CriticalToSwitch"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 15.50001,
+      "outer_surface_clearance_mm": 10.60001,
+      "points_blender_m": [
+        [
+          0.252,
+          0.225,
+          0.3660663
+        ],
+        [
+          0.252,
+          0.2405,
+          0.3660663
+        ]
+      ],
+      "segments": [
+        66,
+        17
+      ]
+    },
+    {
+      "routes": [
+        "FixedNetwork_B5",
+        "FixedAC_CriticalToControlPower_ACInput"
+      ],
+      "different_signal_class": true,
+      "centerline_distance_mm": 15.8114,
+      "outer_surface_clearance_mm": 10.9114,
+      "points_blender_m": [
+        [
+          0.28,
+          0.275,
+          0.406
+        ],
+        [
+          0.275,
+          0.26,
+          0.406
+        ]
+      ],
+      "segments": [
+        44,
+        33
+      ]
+    }
+  ],
+  "common_terminal_pairs": [
+    [
+      "FixedAC_MainsToInput",
+      "FixedAC_InputToDistribution"
+    ],
+    [
+      "FixedAC_InputToDistribution",
+      "FixedAC_DistributionToPDU"
+    ],
+    [
+      "FixedAC_InputToDistribution",
+      "FixedAC_DistributionToUPS"
+    ],
+    [
+      "FixedAC_DistributionToPDU",
+      "FixedAC_DistributionToUPS"
+    ],
+    [
+      "FixedAC_UPSToCritical",
+      "FixedAC_CriticalToSwitch"
+    ]
+  ],
+  "common_terminal_exclusion_radius_mm": 20,
+  "limits": "Geometric tube envelopes with 0.05mm numeric tolerance, not insulation/EMC clearance, real connector detail or manufacturing certification. Common power terminal joins within 20mm are separately excluded."
+}

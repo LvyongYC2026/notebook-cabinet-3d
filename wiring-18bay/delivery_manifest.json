@@ -1,0 +1,133 @@
+{
+  "version": "20261108-wiring-v1",
+  "files": {
+    "README.md": {
+      "bytes": 6257,
+      "sha256": "5bf74b6bcff9932f5a70f8702f73525229e245c924f206c403dd40d764f41b08"
+    },
+    "components.json": {
+      "bytes": 1556712,
+      "sha256": "e6be65ca256cd920d4bc5628efad1d823ff895c32bd8693d590ffbf23eda38c2"
+    },
+    "delivery_validation.json": {
+      "bytes": 1721,
+      "sha256": "bfb727587c78c98619b2f5da9eb548e2687f14a76e155153c3f81edacb6617ff"
+    },
+    "dimensions_stability_validation.json": {
+      "bytes": 3973,
+      "sha256": "6fbec780ce9d7cdaa0145aa4076f81ccf01062deb27dcc18d018110d9ae5e3ba"
+    },
+    "independent_cable_separation.json": {
+      "bytes": 6599,
+      "sha256": "50a9002798f8dbf63a94f83bfa32ce55ae0572e2baf6b975cbc41f0f69ff856b"
+    },
+    "independent_fixed_route_audit.json": {
+      "bytes": 16139,
+      "sha256": "4a507da24e0b07edf7a88512cc66b29111ac8391c74858c11d68d27f82d6089f"
+    },
+    "independent_new_wiring_motion.json": {
+      "bytes": 1670,
+      "sha256": "b4d464dc098f53ffa4186d1545b12e66b7a50234ba0439f3c786ae1c8ce9eaa1"
+    },
+    "independent_rear_wiring_motion.json": {
+      "bytes": 1897,
+      "sha256": "846d1f9b2fc29e6d729adc8637fc0f789749d69a20dc1e57c1edc6b597de3b76"
+    },
+    "independent_wiring_mesh_audit.json": {
+      "bytes": 407,
+      "sha256": "078b52bb1071fd5bad35066bcc30052cacc1940ca2b2def7e024dc409f96b692"
+    },
+    "preview_fixed_rear_inspection.png": {
+      "bytes": 3377633,
+      "sha256": "3d0d92bb20b989effbc6e749bad87d3e0c279f5c85357812f439b887c5d09cc9"
+    },
+    "scripts/audit_rear_wiring_motion.py": {
+      "bytes": 2473,
+      "sha256": "454f70ca5bb5d78be42226e52b19969acc40f06207d2306c630408d1cfc0c507"
+    },
+    "scripts/audit_wiring_meshes.py": {
+      "bytes": 1541,
+      "sha256": "7176c09f6cf2bd9c6d3e2b600060ee408885609794119d06b18082ce51643e01"
+    },
+    "scripts/audit_wiring_motion.py": {
+      "bytes": 5825,
+      "sha256": "127a783ef31b264f91f0377605f3a0d01f0ef9e52176e4995aa2e7ced5e7ec84"
+    },
+    "scripts/audit_wiring_routes.py": {
+      "bytes": 4943,
+      "sha256": "42e013abfacf34fc5a31d4cb1a0dfc98aa16f0519561acd20beb9a38f714efb5"
+    },
+    "scripts/audit_wiring_separation.py": {
+      "bytes": 4361,
+      "sha256": "858733bc831d02e4e74c49fbbb258b6c0c3d052e79eb6bd68bbb8e92c1a34059"
+    },
+    "scripts/integrate_wiring_visuals.py": {
+      "bytes": 43104,
+      "sha256": "53634b763d26ab5615a745a9d1c4f51ca7180c97b03ca4923e215c581f1fd2b4"
+    },
+    "scripts/render_wiring_detail.py": {
+      "bytes": 756,
+      "sha256": "3371500fc4b83fdd9b0b01152140e84e8aeafcdb56734d55fbb58207cb61024f"
+    },
+    "showcase_wiring_release_manifest.json": {
+      "bytes": 1704,
+      "sha256": "61bda3cc8525a1029bbca732e98316d979cefe35f9ee9ce548e4e926b726b690"
+    },
+    "single/independent_fixed_route_audit.json": {
+      "bytes": 678,
+      "sha256": "15ebddb5ef408c28aa9055ffb346e3ef5e74b959bd7beb9f64f5b4e45fabec68"
+    },
+    "single/independent_new_wiring_motion.json": {
+      "bytes": 1665,
+      "sha256": "838990aa04ed73e39ef1557d99f6a9dcbdfe15050b45c08e38433870d07eda38"
+    },
+    "single/independent_wiring_mesh_audit.json": {
+      "bytes": 405,
+      "sha256": "052144b0e3d505af907d8e830e74cf0701509c43bdb1bfe7093ce84c520399b0"
+    },
+    "single/model_metadata.json": {
+      "bytes": 66924,
+      "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+    },
+    "single/preview_usb_wiring_2560.png": {
+      "bytes": 4048978,
+      "sha256": "14e5d8f4cf8813e122886e5db6159ad2653c40e291d4588a3aa86cf1c6487803"
+    },
+    "single/smart_cabinet_single_compartment.blend": {
+      "bytes": 1012624,
+      "sha256": "a7592162a0ef1011e794cca4532908b3b04ecae269ee7506a65ee655bf62f84e"
+    },
+    "single/smart_cabinet_single_compartment.glb": {
+      "bytes": 4743476,
+      "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+    },
+    "single/wiring_model_report.json": {
+      "bytes": 1595,
+      "sha256": "9f172d9c63a80fe850eb91e8c3795ee06a771eca2f88e1465f30763ac49d2551"
+    },
+    "smart_cabinet.glb": {
+      "bytes": 21291100,
+      "sha256": "dcd48436b660bc7ce0b71e670ff89777989e3ac4de478eb3c30691ef9be67cf6"
+    },
+    "smart_cabinet_18bay.blend": {
+      "bytes": 4107942,
+      "sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0"
+    },
+    "wiring_final_cm_validation.json": {
+      "bytes": 2652,
+      "sha256": "b89d5fa84387cd52ce83684db557425ed7c1298c95b104221a870b847e480e7b"
+    },
+    "wiring_frontend_validation.json": {
+      "bytes": 506174,
+      "sha256": "83a79ef6722d47e000c817947ab9de1f7b5d5b609fcc5b11deeaf78fdc6b9528"
+    },
+    "wiring_model_report.json": {
+      "bytes": 33450,
+      "sha256": "36d6cf5106f485947b09c474789e63bf6bec57a28524fab6fd8919109fe7db6e"
+    },
+    "wiring_release_delta_validation.json": {
+      "bytes": 413650,
+      "sha256": "3696eaa7e36ed6485f63496559d59803433a6c42151302d5eb0828f193206119"
+    }
+  }
+}
