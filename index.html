@@ -6,13 +6,16 @@
   <meta name="theme-color" content="#000000">
   <meta name="description" content="中技安全科技有限公司-笔记本智能管理存储柜">
   <title>中技安全科技有限公司-笔记本智能管理存储柜</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261108-wiring-v1">
+  <link rel="stylesheet" href="panel-hud.css?v=20261108-wiring-v1">
+  <link rel="stylesheet" href="wiring.css?v=20261108-wiring-v1">
   <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
 </head>
 <body>
   <main id="stage">
     <header class="product-header"><h1>中技安全科技有限公司-笔记本智能管理存储柜</h1></header>
-    <div id="viewer" aria-label="智能柜三维展示，可旋转、缩放并点击柜门和内部部件" tabindex="0"></div>
+    <div id="viewer" aria-label="智能柜三维展示，可旋转、缩放并点击柜门和内部部件" tabindex="0"><div id="dimensionLabels" class="dimension-labels" aria-hidden="true" hidden></div></div>
+    <p id="dimensionNote" class="dimension-note" hidden></p>
     <div id="loading" role="status" aria-label="正在加载三维机柜"><div class="loading-ring"></div></div>
     <button id="loadError" class="load-error icon-button" title="模型未能载入，点击重新加载" aria-label="模型未能载入，点击重新加载" hidden><svg viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1 0 7M4 4v5h5"/></svg></button>
     <aside id="componentPanel" class="component-panel" role="dialog" aria-labelledby="componentTitle" hidden>
@@ -30,6 +33,7 @@
         <button id="focusSingleTray" class="panel-icon" aria-label="聚焦单仓托盘" title="聚焦单仓托盘" hidden><svg viewBox="0 0 24 24"><path d="M4 6h16v7H4zM4 13l-2 6h20l-2-6M8 3H3v5m13-5h5v5"/></svg></button>
       </div>
     </aside>
+    <section id="wiringPanel" class="wiring-panel" role="dialog" aria-labelledby="wiringTitle" hidden></section>
     <nav class="toolbar" aria-label="三维展示控制">
       <button id="zoomIn" class="icon-button" aria-label="放大" title="放大" disabled><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M7.5 10.5h6m-3-3v6"/></svg></button>
       <button id="zoomOut" class="icon-button" aria-label="缩小" title="缩小" disabled><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M7.5 10.5h6"/></svg></button>
@@ -41,6 +45,8 @@
       <button id="backView" class="icon-button" aria-label="背面视图" title="背面视图" disabled><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M10 3v18M14 3v18M7 6h1m-1 2h1m8-2h1m-1 2h1m-5 9h1m-1 2h1"/></svg></button>
       <button id="glassView" class="icon-button active" aria-label="切换玻璃透明显示" title="切换玻璃透明显示" aria-pressed="true" disabled><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
       <button id="structureView" class="icon-button" aria-label="切换结构剖视" title="切换结构剖视" aria-pressed="false" disabled><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></button>
+      <button id="dimensionsView" class="icon-button" aria-label="显示尺寸标注（cm）" title="显示尺寸标注（cm）" aria-pressed="false" disabled><svg viewBox="0 0 24 24"><path d="m3 16 13-13 5 5-13 13zM6 13l3 3m0-6 2 2m1-5 3 3m0-6 2 2"/></svg></button>
+      <button id="wiringView" class="icon-button" aria-label="查看布线方案" title="查看布线方案" aria-pressed="false" disabled><svg viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M6 8v9a2 2 0 0 0 2 2h7M9 5h7a2 2 0 0 1 2 2v9M12 3v4m-2 5h4"/></svg></button>
       <button id="allDoors" class="icon-button" aria-label="开关当前侧全部柜门" title="开关当前侧全部柜门" disabled><svg viewBox="0 0 24 24"><path d="M3 20V4h7v16M3 4l5 2v16l-5-2M14 20V4h7v16M14 4l5 2v16l-5-2M6 11v2m11-2v2"/></svg></button>
       <button id="singleView" class="icon-button" aria-label="单仓精细展示" title="单仓精细展示" aria-pressed="false" disabled><svg viewBox="0 0 24 24"><path d="m4 6 8-4 8 4v12l-8 4-8-4zM4 6l8 4 8-4M12 10v12M8 12v4m8-4v4"/></svg></button>
       <button id="demoToggle" class="icon-button" aria-label="播放借还演示" title="播放借还演示" aria-pressed="false" disabled><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg></button>
@@ -48,6 +54,6 @@
     </nav>
   </main>
   <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
-  <script type="module" src="app.js"></script>
+  <script type="module" src="app.js?v=20261108-wiring-v1"></script>
 </body>
 </html>
