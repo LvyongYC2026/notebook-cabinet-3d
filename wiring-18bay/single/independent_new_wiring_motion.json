@@ -1,0 +1,82 @@
+{
+  "method": "Evaluated mesh triangle BVH, candidate new active NIC/USB and blue cable, 17 tray positions at 20mm intervals, front doors fully open",
+  "blend_sha256": "a7592162a0ef1011e794cca4532908b3b04ecae269ee7506a65ee655bf62f84e",
+  "mode": "single",
+  "new_moving_objects": 12,
+  "fixed_objects": 24,
+  "door_objects": 37,
+  "laptop_bodies": 5,
+  "parking_supports_checked": 2,
+  "poses": [
+    {
+      "travel_mm": 0,
+      "intersections": []
+    },
+    {
+      "travel_mm": 20,
+      "intersections": []
+    },
+    {
+      "travel_mm": 40,
+      "intersections": []
+    },
+    {
+      "travel_mm": 60,
+      "intersections": []
+    },
+    {
+      "travel_mm": 80,
+      "intersections": []
+    },
+    {
+      "travel_mm": 100,
+      "intersections": []
+    },
+    {
+      "travel_mm": 120,
+      "intersections": []
+    },
+    {
+      "travel_mm": 140,
+      "intersections": []
+    },
+    {
+      "travel_mm": 160,
+      "intersections": []
+    },
+    {
+      "travel_mm": 180,
+      "intersections": []
+    },
+    {
+      "travel_mm": 200,
+      "intersections": []
+    },
+    {
+      "travel_mm": 220,
+      "intersections": []
+    },
+    {
+      "travel_mm": 240,
+      "intersections": []
+    },
+    {
+      "travel_mm": 260,
+      "intersections": []
+    },
+    {
+      "travel_mm": 280,
+      "intersections": []
+    },
+    {
+      "travel_mm": 300,
+      "intersections": []
+    },
+    {
+      "travel_mm": 320,
+      "intersections": []
+    }
+  ],
+  "intersecting_pairs": 0,
+  "limits": "Sampled surface intersections only. Excludes intentional connector/clip engagement, nested slides, new fixed-trunk audit. Not tolerances or certification."
+}
