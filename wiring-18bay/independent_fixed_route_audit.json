@@ -1,0 +1,755 @@
+{
+  "method": "Evaluated mesh BVH against fixed structural and service parts; within 15mm of route endpoint classified separately for connector review",
+  "mode": "cabinet",
+  "input_sha256": {
+    "smart_cabinet_18bay.blend": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+    "components.json": "e6be65ca256cd920d4bc5628efad1d823ff895c32bd8693d590ffbf23eda38c2"
+  },
+  "route_count": 50,
+  "target_count": 1040,
+  "review_hits": [],
+  "endpoint_engagements": [
+    {
+      "route": "FixedAC_A1",
+      "part": "A1_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -1.617001,
+          -0.0825,
+          1.443
+        ],
+        [
+          -1.617001,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A2",
+      "part": "A2_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -1.167001,
+          -0.0825,
+          1.443
+        ],
+        [
+          -1.167001,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A3",
+      "part": "A3_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.717001,
+          -0.0825,
+          1.443
+        ],
+        [
+          -0.717001,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A4",
+      "part": "A4_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -1.61701,
+          -0.0825,
+          0.993
+        ],
+        [
+          -1.61701,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A5",
+      "part": "A5_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -1.16701,
+          -0.0825,
+          0.993
+        ],
+        [
+          -1.16701,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A6",
+      "part": "A6_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.71701,
+          -0.0825,
+          0.993
+        ],
+        [
+          -0.71701,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A7",
+      "part": "A7_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -1.617017,
+          -0.0825,
+          0.543
+        ],
+        [
+          -1.617017,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A8",
+      "part": "A8_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -1.167017,
+          -0.0825,
+          0.543
+        ],
+        [
+          -1.167017,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_A9",
+      "part": "A9_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.717017,
+          -0.0825,
+          0.543
+        ],
+        [
+          -0.717017,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B1",
+      "part": "B1_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.332982,
+          -0.0825,
+          1.443
+        ],
+        [
+          0.332982,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B2",
+      "part": "B2_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.782982,
+          -0.0825,
+          1.443
+        ],
+        [
+          0.782982,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B3",
+      "part": "B3_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          1.232982,
+          -0.0825,
+          1.443
+        ],
+        [
+          1.232982,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B4",
+      "part": "B4_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.33299,
+          -0.0825,
+          0.993
+        ],
+        [
+          0.33299,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B5",
+      "part": "B5_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.78299,
+          -0.0825,
+          0.993
+        ],
+        [
+          0.78299,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B6",
+      "part": "B6_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          1.23299,
+          -0.0825,
+          0.993
+        ],
+        [
+          1.23299,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B7",
+      "part": "B7_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.332999,
+          -0.0825,
+          0.543
+        ],
+        [
+          0.332999,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B8",
+      "part": "B8_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.782999,
+          -0.0825,
+          0.543
+        ],
+        [
+          0.782999,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedAC_B9",
+      "part": "B9_Refined_fixed_ac_socket_body",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          1.232999,
+          -0.0825,
+          0.543
+        ],
+        [
+          1.232999,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 0.5
+    },
+    {
+      "route": "FixedNetwork_Server",
+      "part": "Wiring_Server_DataConnector",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.012,
+          0.118,
+          0.514
+        ],
+        [
+          0.012,
+          0.118,
+          0.514
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 7.0
+    },
+    {
+      "route": "FixedNetwork_LockController",
+      "part": "Wiring_LockController_DataConnector",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.202,
+          0.082,
+          0.466
+        ],
+        [
+          0.202,
+          0.082,
+          0.466
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 7.0
+    },
+    {
+      "route": "FixedNetwork_PDUManagement",
+      "part": "Wiring_PDUManagement_DataConnector",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.000634,
+          0.219,
+          0.605
+        ],
+        [
+          0.000634,
+          0.219,
+          0.605
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 7.029
+    },
+    {
+      "route": "FixedNetwork_UPSManagement",
+      "part": "Wiring_UPSManagement_DataConnector",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.15,
+          0.183,
+          0.32
+        ],
+        [
+          -0.15,
+          0.183,
+          0.32
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 7.0
+    },
+    {
+      "route": "FixedNetwork_ExternalManagement",
+      "part": "Wiring_ExternalManagement_DataConnector",
+      "surface_pairs": 10,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.228,
+          0.283904,
+          0.803288
+        ],
+        [
+          0.228,
+          0.283904,
+          0.803288
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 8.718
+    },
+    {
+      "route": "FixedAC_MainsToInput",
+      "part": "Wiring_Input_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.256,
+          0.135
+        ],
+        [
+          0.2,
+          0.256,
+          0.135
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 10.0
+    },
+    {
+      "route": "FixedAC_InputToDistribution",
+      "part": "Wiring_Input_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.246,
+          0.147
+        ],
+        [
+          0.2,
+          0.246,
+          0.147
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 12.0
+    },
+    {
+      "route": "FixedAC_InputToDistribution",
+      "part": "Wiring_NonBackup_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.246,
+          0.288
+        ],
+        [
+          0.2,
+          0.246,
+          0.288
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 12.0
+    },
+    {
+      "route": "FixedAC_DistributionToPDU",
+      "part": "Wiring_NonBackup_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.212,
+          0.251867,
+          0.3
+        ],
+        [
+          0.212,
+          0.251867,
+          0.3
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 13.357
+    },
+    {
+      "route": "FixedAC_DistributionToUPS",
+      "part": "Wiring_NonBackup_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.212,
+          0.2412,
+          0.29891
+        ],
+        [
+          0.212,
+          0.2412,
+          0.29891
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 12.97
+    },
+    {
+      "route": "FixedAC_DistributionToUPS",
+      "part": "Wiring_UPS_InputSocket",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.15,
+          0.178,
+          0.22
+        ],
+        [
+          -0.15,
+          0.178,
+          0.22
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 4.0
+    },
+    {
+      "route": "FixedAC_UPSToCritical",
+      "part": "Wiring_Critical_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.051064,
+          0.2421,
+          0.288
+        ],
+        [
+          -0.051064,
+          0.2421,
+          0.288
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 12.663
+    },
+    {
+      "route": "FixedAC_UPSToCritical",
+      "part": "Wiring_UPS_OutputSocket",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.15,
+          0.178,
+          0.26
+        ],
+        [
+          -0.15,
+          0.178,
+          0.26
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 4.0
+    },
+    {
+      "route": "FixedAC_CriticalToHost",
+      "part": "Wiring_Critical_Terminal",
+      "surface_pairs": 14,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.058,
+          0.2544,
+          0.312
+        ],
+        [
+          -0.058,
+          0.2544,
+          0.312
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 14.648
+    },
+    {
+      "route": "FixedAC_CriticalToHost",
+      "part": "Wiring_Host_PowerInlet",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.18,
+          0.11,
+          0.53
+        ],
+        [
+          -0.18,
+          0.11,
+          0.53
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 4.0
+    },
+    {
+      "route": "FixedAC_CriticalToSwitch",
+      "part": "Wiring_Critical_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.049861,
+          0.24468,
+          0.312
+        ],
+        [
+          -0.049861,
+          0.24468,
+          0.312
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 12.073
+    },
+    {
+      "route": "FixedAC_CriticalToSwitch",
+      "part": "Wiring_Switch_PowerInlet",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.18,
+          0.13,
+          0.7
+        ],
+        [
+          0.18,
+          0.13,
+          0.7
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 4.0
+    },
+    {
+      "route": "FixedAC_CriticalToControlPower_ACInput",
+      "part": "Wiring_Critical_Terminal",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          -0.038,
+          0.247037,
+          0.3
+        ],
+        [
+          -0.038,
+          0.247037,
+          0.3
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 4.132
+    },
+    {
+      "route": "FixedAC_CriticalToControlPower_ACInput",
+      "part": "Wiring_ControlPower_ACInput_PowerInlet",
+      "surface_pairs": 10,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.129,
+          0.009419,
+          0.56
+        ],
+        [
+          0.129,
+          0.009419,
+          0.56
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 9.019
+    },
+    {
+      "route": "FixedDC_ControlPowerToController",
+      "part": "Wiring_ControlPower_24VDC_Output",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.195,
+          0.008972,
+          0.543456
+        ],
+        [
+          0.195,
+          0.008972,
+          0.543456
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 8.019
+    },
+    {
+      "route": "FixedDC_ControlPowerToController",
+      "part": "Wiring_Controller_24VDC_Input",
+      "surface_pairs": 8,
+      "centerline_contacts": 2,
+      "contact_positions_blender_m": [
+        [
+          0.205,
+          0.005007,
+          0.465139
+        ],
+        [
+          0.205,
+          0.005007,
+          0.465139
+        ]
+      ],
+      "farthest_from_route_endpoint_mm": 3.003
+    }
+  ],
+  "limits": "Sampled polygon surface overlaps, not containment or full cable-cable analysis. Endpoint classification is a review aid, not automatic proof of a valid connector."
+}

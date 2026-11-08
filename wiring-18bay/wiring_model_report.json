@@ -1,0 +1,1432 @@
+{
+  "mode": "cabinet",
+  "status": "geometry_checked_design_proposal",
+  "base_blend": "output/cabinet/smart_cabinet_18bay.blend",
+  "base_sha256": "de6f86e8349cc32af1d6470660e29b0177efd5f196eb59c32029692200ab981d",
+  "parameters": {
+    "nic_wdh_mm": [
+      28,
+      40,
+      18
+    ],
+    "nic_shift_from_blue_end_mm": 14,
+    "usb_radius_mm": 1.6,
+    "tray_travel_mm": 320,
+    "data_radius_mm": 2.1,
+    "ac_radius_mm": 2.8,
+    "fixed_trunk_y_mm": 282,
+    "data_bus_height_mm": 205,
+    "ac_bus_height_mm": 155,
+    "duct_sheet_mm": 1.0,
+    "single_mode": false
+  },
+  "created_objects": 989,
+  "usb_connections": 18,
+  "network_native_count": 18,
+  "fixed_routes": 50,
+  "real_apertures": [
+    {
+      "object": "Housing_Center_Side",
+      "center_world_blender_m": [
+        -0.3,
+        0.283,
+        0.211
+      ],
+      "diameter_mm": 38.0,
+      "axis": "X",
+      "purpose": "Module network bus opening"
+    },
+    {
+      "object": "Housing_Left_Side.001",
+      "center_world_blender_m": [
+        -0.3,
+        0.283,
+        0.211
+      ],
+      "diameter_mm": 38.0,
+      "axis": "X",
+      "purpose": "Module network bus opening"
+    },
+    {
+      "object": "Housing_Center_Side",
+      "center_world_blender_m": [
+        -0.3,
+        0.281,
+        0.161
+      ],
+      "rect_dimensions_mm": [
+        14.0,
+        40.0,
+        26.0
+      ],
+      "purpose": "Module AC rectangular bus opening"
+    },
+    {
+      "object": "Housing_Left_Side.001",
+      "center_world_blender_m": [
+        -0.3,
+        0.281,
+        0.161
+      ],
+      "rect_dimensions_mm": [
+        14.0,
+        40.0,
+        26.0
+      ],
+      "purpose": "Module AC rectangular bus opening"
+    },
+    {
+      "object": "Housing_Center_Side.001",
+      "center_world_blender_m": [
+        0.3,
+        0.283,
+        0.211
+      ],
+      "diameter_mm": 38.0,
+      "axis": "X",
+      "purpose": "Module network bus opening"
+    },
+    {
+      "object": "Housing_Right_Side",
+      "center_world_blender_m": [
+        0.3,
+        0.283,
+        0.211
+      ],
+      "diameter_mm": 38.0,
+      "axis": "X",
+      "purpose": "Module network bus opening"
+    },
+    {
+      "object": "Housing_Center_Side.001",
+      "center_world_blender_m": [
+        0.3,
+        0.281,
+        0.161
+      ],
+      "rect_dimensions_mm": [
+        14.0,
+        40.0,
+        26.0
+      ],
+      "purpose": "Module AC rectangular bus opening"
+    },
+    {
+      "object": "Housing_Right_Side",
+      "center_world_blender_m": [
+        0.3,
+        0.281,
+        0.161
+      ],
+      "rect_dimensions_mm": [
+        14.0,
+        40.0,
+        26.0
+      ],
+      "purpose": "Module AC rectangular bus opening"
+    },
+    {
+      "object": "Wiring_A_DataBase_Fold.001",
+      "center_world_blender_m": [
+        -1.589,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        76.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Data T branch A0"
+    },
+    {
+      "object": "Wiring_A_DataBase_Fold.001",
+      "center_world_blender_m": [
+        -1.139,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        76.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Data T branch A1"
+    },
+    {
+      "object": "Wiring_A_DataBase_Fold.001",
+      "center_world_blender_m": [
+        -0.689,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        76.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Data T branch A2"
+    },
+    {
+      "object": "Wiring_B_DataBase_Fold.001",
+      "center_world_blender_m": [
+        0.3609999999999999,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        76.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Data T branch B0"
+    },
+    {
+      "object": "Wiring_B_DataBase_Fold.001",
+      "center_world_blender_m": [
+        0.8109999999999999,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        76.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Data T branch B1"
+    },
+    {
+      "object": "Wiring_B_DataBase_Fold.001",
+      "center_world_blender_m": [
+        1.2610000000000001,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        76.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Data T branch B2"
+    },
+    {
+      "object": "Wiring_A_DataBase_Fold.001",
+      "center_world_blender_m": [
+        -0.3,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        70.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Central data bus T entry A"
+    },
+    {
+      "object": "Wiring_B_DataBase_Fold.001",
+      "center_world_blender_m": [
+        0.3,
+        0.283,
+        0.226
+      ],
+      "rect_dimensions_mm": [
+        70.0,
+        38.0,
+        12.0
+      ],
+      "purpose": "Central data bus T entry B"
+    },
+    {
+      "object": "Wiring_A1_EntryPlate",
+      "center_world_blender_m": [
+        -1.5966161230077691,
+        0.261,
+        1.5023793122028146
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A1 network actual route entry"
+    },
+    {
+      "object": "Wiring_A0_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -1.5964607272715199,
+        0.2635,
+        1.5017779716776125
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A1 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A1_EntryPlate",
+      "center_world_blender_m": [
+        -1.6179635360575333,
+        0.261,
+        1.43238120347037
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A1 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A0_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -1.6179705061430996,
+        0.2635,
+        1.4298608987672072
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A1 ac actual riser branch"
+    },
+    {
+      "object": "A1_RearServiceRail",
+      "center_world_blender_m": [
+        -1.617913038353216,
+        0.243,
+        1.4418491193899219
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A1 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A2_EntryPlate",
+      "center_world_blender_m": [
+        -1.1466161945333428,
+        0.261,
+        1.5023793122028146
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A2 network actual route entry"
+    },
+    {
+      "object": "Wiring_A1_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -1.1464607987970936,
+        0.2635,
+        1.5017779716776125
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A2 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A2_EntryPlate",
+      "center_world_blender_m": [
+        -1.167963607583107,
+        0.261,
+        1.43238120347037
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A2 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A1_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -1.1679705776686733,
+        0.2635,
+        1.4298608987672072
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A2 ac actual riser branch"
+    },
+    {
+      "object": "A2_RearServiceRail",
+      "center_world_blender_m": [
+        -1.1679131098787898,
+        0.243,
+        1.4418491193899219
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A2 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A3_EntryPlate",
+      "center_world_blender_m": [
+        -0.6966162064542719,
+        0.261,
+        1.5023794083669637
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A3 network actual route entry"
+    },
+    {
+      "object": "Wiring_A2_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -0.6964608107180227,
+        0.2635,
+        1.5017780066864148
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A3 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A3_EntryPlate",
+      "center_world_blender_m": [
+        -0.7179635598993912,
+        0.261,
+        1.43238120347037
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A3 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A2_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -0.7179705655364254,
+        0.2635,
+        1.4298608987672072
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A3 ac actual riser branch"
+    },
+    {
+      "object": "A3_RearServiceRail",
+      "center_world_blender_m": [
+        -0.7179131485829758,
+        0.243,
+        1.4418491193899219
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A3 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A4_EntryPlate",
+      "center_world_blender_m": [
+        -1.5905933829551537,
+        0.261,
+        1.0505854774137797
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A4 network actual route entry"
+    },
+    {
+      "object": "Wiring_A0_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -1.5903941846461804,
+        0.2635,
+        1.0495466946436924
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A4 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A4_EntryPlate",
+      "center_world_blender_m": [
+        -1.6235972142176598,
+        0.261,
+        0.9881276309159406
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A4 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A0_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -1.623645169303628,
+        0.2635,
+        0.9865953517404784
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A4 ac actual riser branch"
+    },
+    {
+      "object": "A4_RearServiceRail",
+      "center_world_blender_m": [
+        -1.6232519884630074,
+        0.243,
+        0.9929218956419331
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A4 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A5_EntryPlate",
+      "center_world_blender_m": [
+        -1.1405934544807275,
+        0.261,
+        1.0505854774137797
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A5 network actual route entry"
+    },
+    {
+      "object": "Wiring_A1_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -1.1403942561717542,
+        0.2635,
+        1.0495466946436924
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A5 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A5_EntryPlate",
+      "center_world_blender_m": [
+        -1.1735972857432335,
+        0.261,
+        0.9881276309159406
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A5 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A1_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -1.1736452408292017,
+        0.2635,
+        0.9865953517404784
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A5 ac actual riser branch"
+    },
+    {
+      "object": "A5_RearServiceRail",
+      "center_world_blender_m": [
+        -1.1732520599885812,
+        0.243,
+        0.9929218956419331
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A5 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A6_EntryPlate",
+      "center_world_blender_m": [
+        -0.6905933745549669,
+        0.261,
+        1.0505854828807375
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A6 network actual route entry"
+    },
+    {
+      "object": "Wiring_A2_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -0.6903942097518118,
+        0.2635,
+        1.0495467068050026
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A6 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A6_EntryPlate",
+      "center_world_blender_m": [
+        -0.7235972380595178,
+        0.261,
+        0.9881276309159406
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A6 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A2_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -0.723645193145486,
+        0.2635,
+        0.9865953517404784
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A6 ac actual riser branch"
+    },
+    {
+      "object": "A6_RearServiceRail",
+      "center_world_blender_m": [
+        -0.7232520217620034,
+        0.243,
+        0.9929218956419331
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A6 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A7_EntryPlate",
+      "center_world_blender_m": [
+        -1.5843686810549837,
+        0.261,
+        0.5974252868045278
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A7 network actual route entry"
+    },
+    {
+      "object": "Wiring_A0_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -1.5841242612331952,
+        0.2635,
+        0.5954912290774568
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A7 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A7_EntryPlate",
+      "center_world_blender_m": [
+        -1.6289892620024855,
+        0.261,
+        0.5413731137701308
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A7 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A0_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -1.6290763995067046,
+        0.2635,
+        0.5405769454531971
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A7 ac actual riser branch"
+    },
+    {
+      "object": "A7_RearServiceRail",
+      "center_world_blender_m": [
+        -1.6283619814903456,
+        0.243,
+        0.5429999828338623
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A7 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A8_EntryPlate",
+      "center_world_blender_m": [
+        -1.1343687525805575,
+        0.261,
+        0.5974252868045278
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A8 network actual route entry"
+    },
+    {
+      "object": "Wiring_A1_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -1.134124332758769,
+        0.2635,
+        0.5954912290774568
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A8 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A8_EntryPlate",
+      "center_world_blender_m": [
+        -1.1789893335280592,
+        0.261,
+        0.5413731137701308
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A8 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A1_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -1.1790764710322783,
+        0.2635,
+        0.5405769454531971
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A8 ac actual riser branch"
+    },
+    {
+      "object": "A8_RearServiceRail",
+      "center_world_blender_m": [
+        -1.1783620530159193,
+        0.243,
+        0.5429999828338623
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A8 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A9_EntryPlate",
+      "center_world_blender_m": [
+        -0.6843686574859501,
+        0.261,
+        0.5974252868045278
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A9 network actual route entry"
+    },
+    {
+      "object": "Wiring_A2_DataRiser_Backplate",
+      "center_world_blender_m": [
+        -0.6841242510093678,
+        0.2635,
+        0.5954912290774568
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A9 network actual riser branch"
+    },
+    {
+      "object": "Wiring_A9_EntryPlate",
+      "center_world_blender_m": [
+        -0.7289892262396988,
+        0.261,
+        0.5413731137701308
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A9 ac actual route entry"
+    },
+    {
+      "object": "Wiring_A2_ACRiser_Backplate",
+      "center_world_blender_m": [
+        -0.7290763521986383,
+        0.2635,
+        0.5405769454531971
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "A9 ac actual riser branch"
+    },
+    {
+      "object": "A9_RearServiceRail",
+      "center_world_blender_m": [
+        -0.7283618873801151,
+        0.243,
+        0.5429999828338623
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "A9 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B1_EntryPlate",
+      "center_world_blender_m": [
+        0.35338375162329744,
+        0.261,
+        1.5023794083669637
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B1 network actual route entry"
+    },
+    {
+      "object": "Wiring_B0_DataRiser_Backplate",
+      "center_world_blender_m": [
+        0.35353916264838336,
+        0.2635,
+        1.5017780066864148
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B1 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B1_EntryPlate",
+      "center_world_blender_m": [
+        0.32047333413510243,
+        0.261,
+        1.4323885198604343
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B1 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B0_ACRiser_Backplate",
+      "center_world_blender_m": [
+        0.32038230227410686,
+        0.2635,
+        1.429869005186998
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B1 ac actual riser branch"
+    },
+    {
+      "object": "B1_RearServiceRail",
+      "center_world_blender_m": [
+        0.3211287975188737,
+        0.243,
+        1.4418540239485458
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B1 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B2_EntryPlate",
+      "center_world_blender_m": [
+        0.8033837935457281,
+        0.261,
+        1.5023794083669637
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B2 network actual route entry"
+    },
+    {
+      "object": "Wiring_B1_DataRiser_Backplate",
+      "center_world_blender_m": [
+        0.8035391892819773,
+        0.2635,
+        1.5017780066864148
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B2 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B2_EntryPlate",
+      "center_world_blender_m": [
+        0.7704734414234631,
+        0.261,
+        1.4323885198604343
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B2 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B1_ACRiser_Backplate",
+      "center_world_blender_m": [
+        0.7703824007252176,
+        0.2635,
+        1.429869005186998
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B2 ac actual riser branch"
+    },
+    {
+      "object": "B2_RearServiceRail",
+      "center_world_blender_m": [
+        0.7711288782234954,
+        0.243,
+        1.4418540239485458
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B2 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B3_EntryPlate",
+      "center_world_blender_m": [
+        1.2533837816247992,
+        0.261,
+        1.5023793122028146
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B3 network actual route entry"
+    },
+    {
+      "object": "Wiring_B2_DataRiser_Backplate",
+      "center_world_blender_m": [
+        1.2535391773610485,
+        0.2635,
+        1.5017779716776125
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B3 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B3_EntryPlate",
+      "center_world_blender_m": [
+        1.2204733698978893,
+        0.261,
+        1.4323885198604343
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B3 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B2_ACRiser_Backplate",
+      "center_world_blender_m": [
+        1.220382311525144,
+        0.2635,
+        1.429869005186998
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B3 ac actual riser branch"
+    },
+    {
+      "object": "B3_RearServiceRail",
+      "center_world_blender_m": [
+        1.2211288332816606,
+        0.243,
+        1.4418540239485458
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B3 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B4_EntryPlate",
+      "center_world_blender_m": [
+        0.3598658947779837,
+        0.261,
+        1.0474125346446266
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B4 network actual route entry"
+    },
+    {
+      "object": "Wiring_B0_DataRiser_Backplate",
+      "center_world_blender_m": [
+        0.3600684121283639,
+        0.2635,
+        1.0454766437500764
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B4 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B4_EntryPlate",
+      "center_world_blender_m": [
+        0.32640271891506545,
+        0.261,
+        0.9881276309159406
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B4 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B0_ACRiser_Backplate",
+      "center_world_blender_m": [
+        0.32635477775333815,
+        0.2635,
+        0.9865953517404784
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B4 ac actual riser branch"
+    },
+    {
+      "object": "B4_RearServiceRail",
+      "center_world_blender_m": [
+        0.3267479305542807,
+        0.243,
+        0.9929218956419331
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B4 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B5_EntryPlate",
+      "center_world_blender_m": [
+        0.8098659484131828,
+        0.261,
+        1.0474125346446266
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B5 network actual route entry"
+    },
+    {
+      "object": "Wiring_B1_DataRiser_Backplate",
+      "center_world_blender_m": [
+        0.8100684727155205,
+        0.2635,
+        1.0454766437500764
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B5 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B5_EntryPlate",
+      "center_world_blender_m": [
+        0.7764027619404822,
+        0.261,
+        0.9881276309159406
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B5 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B1_ACRiser_Backplate",
+      "center_world_blender_m": [
+        0.776354806854514,
+        0.2635,
+        0.9865953517404784
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B5 ac actual riser branch"
+    },
+    {
+      "object": "B5_RearServiceRail",
+      "center_world_blender_m": [
+        0.7767479782379966,
+        0.243,
+        0.9929218956419331
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B5 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B6_EntryPlate",
+      "center_world_blender_m": [
+        1.2598658649846424,
+        0.261,
+        1.0474125346446266
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B6 network actual route entry"
+    },
+    {
+      "object": "Wiring_B2_DataRiser_Backplate",
+      "center_world_blender_m": [
+        1.260068375383065,
+        0.2635,
+        1.0454766437500764
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B6 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B6_EntryPlate",
+      "center_world_blender_m": [
+        1.2264026904149086,
+        0.261,
+        0.9881276309159406
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B6 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B2_ACRiser_Backplate",
+      "center_world_blender_m": [
+        1.2263547353289403,
+        0.2635,
+        0.9865953517404784
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B6 ac actual riser branch"
+    },
+    {
+      "object": "B6_RearServiceRail",
+      "center_world_blender_m": [
+        1.226747916169561,
+        0.243,
+        0.9929218956419331
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B6 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B7_EntryPlate",
+      "center_world_blender_m": [
+        0.36507692650291396,
+        0.261,
+        0.6005973652379278
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B7 network actual route entry"
+    },
+    {
+      "object": "Wiring_B0_DataRiser_Backplate",
+      "center_world_blender_m": [
+        0.36531731204912593,
+        0.2635,
+        0.5995570552004316
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B7 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B7_EntryPlate",
+      "center_world_blender_m": [
+        0.3320777237977552,
+        0.261,
+        0.5413689081329187
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B7 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B0_ACRiser_Backplate",
+      "center_world_blender_m": [
+        0.33207102552920575,
+        0.2635,
+        0.540570326352117
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B7 ac actual riser branch"
+    },
+    {
+      "object": "B7_RearServiceRail",
+      "center_world_blender_m": [
+        0.33212598312527164,
+        0.243,
+        0.5429999828338623
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B7 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B8_EntryPlate",
+      "center_world_blender_m": [
+        0.8150769612149382,
+        0.261,
+        0.6005973652379278
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B8 network actual route entry"
+    },
+    {
+      "object": "Wiring_B1_DataRiser_Backplate",
+      "center_world_blender_m": [
+        0.8153173306268092,
+        0.2635,
+        0.5995570552004316
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B8 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B8_EntryPlate",
+      "center_world_blender_m": [
+        0.7820777483237032,
+        0.261,
+        0.5413689081329187
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B8 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B1_ACRiser_Backplate",
+      "center_world_blender_m": [
+        0.7820710375556893,
+        0.2635,
+        0.540570326352117
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B8 ac actual riser branch"
+    },
+    {
+      "object": "B8_RearServiceRail",
+      "center_world_blender_m": [
+        0.7821260022596365,
+        0.243,
+        0.5429999828338623
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B8 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_B9_EntryPlate",
+      "center_world_blender_m": [
+        1.2650768637459813,
+        0.261,
+        0.6005973988991894
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B9 network actual route entry"
+    },
+    {
+      "object": "Wiring_B2_DataRiser_Backplate",
+      "center_world_blender_m": [
+        1.2653172008891704,
+        0.2635,
+        0.5995570565930113
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B9 network actual riser branch"
+    },
+    {
+      "object": "Wiring_B9_EntryPlate",
+      "center_world_blender_m": [
+        1.2320777827183098,
+        0.261,
+        0.5413689081329187
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B9 ac actual route entry"
+    },
+    {
+      "object": "Wiring_B2_ACRiser_Backplate",
+      "center_world_blender_m": [
+        1.2320710735295852,
+        0.2635,
+        0.540570326352117
+      ],
+      "diameter_mm": 15.0,
+      "axis": "Y",
+      "purpose": "B9 ac actual riser branch"
+    },
+    {
+      "object": "B9_RearServiceRail",
+      "center_world_blender_m": [
+        1.232126046184438,
+        0.243,
+        0.5429999828338623
+      ],
+      "diameter_mm": 14.0,
+      "axis": "Y",
+      "purpose": "B9 AC rear rail service bore"
+    },
+    {
+      "object": "Wiring_A_ACBase_Backplate",
+      "center_world_blender_m": [
+        -1.6018201112747192,
+        0.261,
+        0.16699999570846558
+      ],
+      "rect_dimensions_mm": [
+        63.64032363891603,
+        18.0,
+        14.000000000000012
+      ],
+      "purpose": "Shared AC column exit A0"
+    },
+    {
+      "object": "Wiring_A_ACBase_Backplate",
+      "center_world_blender_m": [
+        -1.151820182800293,
+        0.261,
+        0.16099999845027924
+      ],
+      "rect_dimensions_mm": [
+        63.64032363891603,
+        18.0,
+        14.000000000000012
+      ],
+      "purpose": "Shared AC column exit A1"
+    },
+    {
+      "object": "Wiring_A_ACBase_Backplate",
+      "center_world_blender_m": [
+        -0.7018200755119324,
+        0.261,
+        0.1550000011920929
+      ],
+      "rect_dimensions_mm": [
+        63.64020442962648,
+        18.0,
+        14.000000000000012
+      ],
+      "purpose": "Shared AC column exit A2"
+    },
+    {
+      "object": "Wiring_B_ACBase_Backplate",
+      "center_world_blender_m": [
+        0.323820099234581,
+        0.261,
+        0.1550000011920929
+      ],
+      "rect_dimensions_mm": [
+        32.35977625846864,
+        18.0,
+        14.000000000000012
+      ],
+      "purpose": "Shared AC column exit B0"
+    },
+    {
+      "object": "Wiring_B_ACBase_Backplate",
+      "center_world_blender_m": [
+        0.7738201022148132,
+        0.261,
+        0.16099999845027924
+      ],
+      "rect_dimensions_mm": [
+        32.35968685150148,
+        18.0,
+        14.000000000000012
+      ],
+      "purpose": "Shared AC column exit B1"
+    },
+    {
+      "object": "Wiring_B_ACBase_Backplate",
+      "center_world_blender_m": [
+        1.2238200902938843,
+        0.261,
+        0.16699999570846558
+      ],
+      "rect_dimensions_mm": [
+        32.35980606079103,
+        18.0,
+        14.000000000000012
+      ],
+      "purpose": "Shared AC column exit B2"
+    }
+  ],
+  "static_normals": {
+    "meshes": 883,
+    "negative_signed_volume": 0,
+    "non_manifold": []
+  },
+  "usb_radius_samples": [
+    {
+      "bay_id": "A1",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A2",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A3",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A4",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A5",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A6",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A7",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A8",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "A9",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B1",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B2",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B3",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B4",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B5",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B6",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B7",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B8",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    },
+    {
+      "bay_id": "B9",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.637,
+      "parked_min_sampled_radius_mm": 54.308
+    }
+  ],
+  "builder_status": "candidate_pending_validation",
+  "delivery_validation": "delivery_validation.json"
+}

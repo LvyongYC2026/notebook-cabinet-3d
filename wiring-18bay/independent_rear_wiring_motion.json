@@ -1,0 +1,97 @@
+{
+  "method": "Evaluated mesh BVH, three rear doors at 22 simultaneous angles in 5 degree intervals",
+  "blend_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+  "fixed_wiring_parts": 634,
+  "poses": [
+    {
+      "rear_door_degrees": 0,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 5,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 10,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 15,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 20,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 25,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 30,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 35,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 40,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 45,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 50,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 55,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 60,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 65,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 70,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 75,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 80,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 85,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 90,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 95,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 100,
+      "intersections": []
+    },
+    {
+      "rear_door_degrees": 105,
+      "intersections": []
+    }
+  ],
+  "intersecting_pairs": 0,
+  "limits": "Sampled mesh surfaces; not continuous swept solids or manufacturing tolerances."
+}

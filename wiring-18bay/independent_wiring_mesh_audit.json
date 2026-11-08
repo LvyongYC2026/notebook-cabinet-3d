@@ -1,0 +1,8 @@
+{
+  "method": "bmesh signed volume, edge manifoldness, finite coordinates and face area; newly added static MESH data only",
+  "blend_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+  "static_objects": 883,
+  "unique_meshes": 201,
+  "issues": [],
+  "limits": "Excludes font outlines, original source meshes, native morph meshes and full self-intersection/tolerance analysis."
+}

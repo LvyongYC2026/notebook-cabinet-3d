@@ -7,3 +7,19 @@
 .panel-actions{flex-wrap:wrap}
 @media(max-width:620px){.toolbar{grid-template-columns:repeat(7,40px);gap:1px 3px;padding:7px 8px}.toolbar>.icon-button{width:40px}.component-panel{grid-template-columns:minmax(0,1fr) 152px}.panel-actions{gap:3px}.panel-actions .panel-icon{width:28px}.panel-actions:has(#focusSinglePorts:not([hidden])){grid-column:1/-1;grid-row:auto;justify-content:flex-start;margin-top:8px}}
 @media(min-width:621px) and (max-width:700px){.toolbar{grid-template-columns:repeat(14,36px)}.toolbar>.icon-button{width:36px}}
+/* Dimension lines live in world space; labels retain a readable screen size. */
+.dimension-labels{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.dimension-label{position:absolute;top:0;left:0;max-width:210px;padding:5px 8px;color:#c2e3e9;background:#061117e8;border:1px solid #7bb4c33b;border-radius:5px;box-shadow:0 2px 10px #0008;white-space:nowrap;font-variant-numeric:tabular-nums;will-change:transform}
+.dimension-label strong{display:block;font-size:13px;line-height:1.5;font-weight:500;letter-spacing:.01em}
+.dimension-label small{display:block;font-size:11px;line-height:1.5;color:#7f9fae}
+.dimension-label-tray{border-color:#ba98634d;color:#efd1a9}.dimension-label-tray small{color:#ae987c}
+.dimension-label[data-dimension="stroke"]{width:152px}.dimension-label[data-dimension="extension"]{width:184px}
+.dimension-leader{position:absolute;left:0;top:0;height:1px;background:#8aaab45c;transform-origin:0 50%;pointer-events:none}
+.dimension-note{position:absolute;z-index:3;bottom:91px;left:12px;right:12px;margin:0;text-align:center;white-space:pre-line;font-size:10px;line-height:1.7;color:#7f929f;pointer-events:none;letter-spacing:.015em}
+.dimensions-on #viewer{bottom:128px}.dimensions-on .component-panel{max-height:calc(100% - 249px)}
+.toolbar{grid-template-columns:repeat(15,40px)}
+@media(min-width:621px) and (max-width:760px){.toolbar{grid-template-columns:repeat(15,36px)}.toolbar>.icon-button{width:36px}}
+@media(max-width:620px){.toolbar{grid-template-columns:repeat(8,36px);gap:1px 3px}.toolbar>.icon-button{width:36px}.dimension-label{padding:4px 6px;max-width:180px}.dimension-label strong{font-size:11px}.dimension-label small{font-size:9px}.dimension-note{bottom:116px;font-size:9px;line-height:1.65;letter-spacing:0}.dimensions-on #viewer{bottom:153px}.dimensions-on .component-panel{bottom:153px;max-height:calc(100% - 253px)}.dimensions-on .component-panel.is-focused{max-height:min(250px,36dvh)}}
+@media(max-width:359px){.toolbar{grid-template-columns:repeat(8,32px);gap:1px 2px}.toolbar>.icon-button{width:32px}.dimension-note{font-size:8px}}
+@media(max-height:540px) and (min-width:621px){.dimensions-on #viewer{bottom:98px}.dimension-note{bottom:61px;font-size:8px}.dimensions-on .component-panel{max-height:calc(100% - 174px)}}
+@media(max-width:620px){.dimension-label[data-dimension="stroke"]{width:128px}.dimension-label[data-dimension="extension"]{width:166px}}

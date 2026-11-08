@@ -1,0 +1,13 @@
+{
+  "method": "Evaluated mesh BVH against fixed structural and service parts; within 15mm of route endpoint classified separately for connector review",
+  "mode": "single",
+  "input_sha256": {
+    "smart_cabinet_single_compartment.blend": "a7592162a0ef1011e794cca4532908b3b04ecae269ee7506a65ee655bf62f84e",
+    "model_metadata.json": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+  },
+  "route_count": 2,
+  "target_count": 31,
+  "review_hits": [],
+  "endpoint_engagements": [],
+  "limits": "Sampled polygon surface overlaps, not containment or full cable-cable analysis. Endpoint classification is a review aid, not automatic proof of a valid connector."
+}

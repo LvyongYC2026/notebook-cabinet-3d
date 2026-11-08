@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "release_version": "20261108-wiring-v1",
+  "verified_at": "2026-11-08T01:12:23.663496+00:00",
+  "scope": "60fps camera rotation plus selected tray travel; layout correction separated from real projection. Browser checks separately confirmed by root.",
+  "artifacts": {
+    "index.html": {
+      "bytes": 7760,
+      "sha256": "3d0ff1e5f742a08f8cad679fd666bcbd34c23a3c650c8f9d4453c4b80c3b85b6"
+    },
+    "app.js": {
+      "bytes": 77821,
+      "sha256": "5b2801fbf92ab01397ffb4fa8b73b8b93ce2e63536ecd306bb0cfd2060d483e5"
+    },
+    "styles.css": {
+      "bytes": 10702,
+      "sha256": "daa72a4c28e6be39d1840787929d2dd875728d48076dd21b0790559006868ee8"
+    },
+    "panel-hud.css": {
+      "bytes": 6632,
+      "sha256": "1df3c48e2fda1503b5d4e8d305e2f046bdc2a611e505a34970715c3d78e109d4"
+    },
+    "dimensions.js": {
+      "bytes": 15030,
+      "sha256": "8d7a719cc307c503809ab71b9ee1768bc5d75fc26c86e9bda7a3274373102970"
+    },
+    "length-format.js": {
+      "bytes": 3128,
+      "sha256": "3c5caf3d7ee3275205a36512cb5720c8bba6bad3ccf048bac761a9b74243485a"
+    },
+    "wiring.js": {
+      "bytes": 14834,
+      "sha256": "11aea1c5b744c157cb2274239b3050130ba1c739321ecd3266127b7f0bd225cf"
+    },
+    "wiring.css": {
+      "bytes": 8529,
+      "sha256": "8c816bcd02e4533b26c21a42f08effcf6f5aab9002c4449145dcf9f90b6931c2"
+    },
+    "README.txt": {
+      "bytes": 11911,
+      "sha256": "119e35bfc2770fac386259c04608d1da98ac879064a4c0b9d17cc21e9bf9cddd"
+    },
+    "assets/smart_cabinet.glb": {
+      "bytes": 20730600,
+      "sha256": "b625bc40ffdcafda0c7944ef2b435670cbff10e83fd659ebf7aebb16c90bffeb"
+    },
+    "assets/components.json": {
+      "bytes": 1457378,
+      "sha256": "e0de34725c9981dffa35ca4804472c9d547d87c0ccbcaca185bdd3a9f74e565f"
+    },
+    "assets/smart_cabinet_single_compartment.glb": {
+      "bytes": 4743476,
+      "sha256": "78712ef092f49d332bfb94a3072e94af0f411885bd3bb5cbaf46f64e607393ca"
+    },
+    "assets/single_compartment.json": {
+      "bytes": 66924,
+      "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+    }
+  },
+  "dimension_stability": {
+    "cases": [
+      {
+        "mode": "cabinet",
+        "width": 1305,
+        "frames": 361,
+        "camera_or_tray_dom_rebuilds": 0,
+        "layout_slot_selections": 1,
+        "max_screen_step_px": 5.874020663175575,
+        "max_projected_anchor_step_px": 5.873981693233657,
+        "max_nonprojection_step_px": 0.48513004931180603
+      },
+      {
+        "mode": "cabinet",
+        "width": 390,
+        "frames": 361,
+        "camera_or_tray_dom_rebuilds": 0,
+        "layout_slot_selections": 1,
+        "max_screen_step_px": 10.613959927902243,
+        "max_projected_anchor_step_px": 5.202669499721182,
+        "max_nonprojection_step_px": 6.999999999999758
+      },
+      {
+        "mode": "single",
+        "width": 1305,
+        "frames": 361,
+        "camera_or_tray_dom_rebuilds": 0,
+        "layout_slot_selections": 1,
+        "max_screen_step_px": 12.818167613829685,
+        "max_projected_anchor_step_px": 6.2568757320094806,
+        "max_nonprojection_step_px": 7.00000000000053
+      },
+      {
+        "mode": "single",
+        "width": 390,
+        "frames": 361,
+        "camera_or_tray_dom_rebuilds": 0,
+        "layout_slot_selections": 1,
+        "max_screen_step_px": 11.850167384688048,
+        "max_projected_anchor_step_px": 5.541804219779798,
+        "max_nonprojection_step_px": 7.000000000000539
+      }
+    ],
+    "world_sides_fixed": true,
+    "context_only_slot_selection": true,
+    "continuous_overlap_separation": true,
+    "max_smooth_correction_px_per_second": 420
+  },
+  "dimensions": {
+    "default_hidden": true,
+    "mode_persistence": true,
+    "reset_preserves_toggle": true,
+    "disable_disposes_geometry": true,
+    "actual_asset_measurement_configurations": 95,
+    "mechanical_protrusion_cm": 24.75,
+    "stroke_cm": 32,
+    "total_depth_cm": 89.75,
+    "cm_presentation": true
+  }
+}

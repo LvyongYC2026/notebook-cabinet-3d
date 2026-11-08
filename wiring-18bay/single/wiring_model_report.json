@@ -1,0 +1,66 @@
+{
+  "mode": "single",
+  "status": "geometry_checked_design_proposal",
+  "base_blend": "single_compartment/smart_cabinet_single_compartment.blend",
+  "base_sha256": "176bf5b027504611248fca125709d49bc88788f3faac7d0bbaf8b3bcbbee34d8",
+  "parameters": {
+    "nic_wdh_mm": [
+      28,
+      40,
+      18
+    ],
+    "nic_shift_from_blue_end_mm": 14,
+    "usb_radius_mm": 1.6,
+    "tray_travel_mm": 320,
+    "data_radius_mm": 2.1,
+    "ac_radius_mm": 2.8,
+    "fixed_trunk_y_mm": 282,
+    "data_bus_height_mm": 205,
+    "ac_bus_height_mm": 155,
+    "duct_sheet_mm": 1.0,
+    "single_mode": true
+  },
+  "created_objects": 38,
+  "usb_connections": 1,
+  "network_native_count": 1,
+  "fixed_routes": 2,
+  "real_apertures": [
+    {
+      "object": "Rear_Ventilation_24_Actual_Apertures",
+      "center_world_blender_m": [
+        -0.193,
+        0.32425,
+        0.3
+      ],
+      "diameter_mm": 12.0,
+      "axis": "Y",
+      "purpose": "network rear bulkhead"
+    },
+    {
+      "object": "Rear_Ventilation_24_Actual_Apertures",
+      "center_world_blender_m": [
+        -0.193,
+        0.32425,
+        0.24
+      ],
+      "diameter_mm": 12.0,
+      "axis": "Y",
+      "purpose": "ac rear bulkhead"
+    }
+  ],
+  "static_normals": {
+    "meshes": 32,
+    "negative_signed_volume": 0,
+    "non_manifold": []
+  },
+  "usb_radius_samples": [
+    {
+      "bay_id": "S1",
+      "radius_mm": 1.6,
+      "connected_min_sampled_radius_mm": 25.599,
+      "parked_min_sampled_radius_mm": 54.334
+    }
+  ],
+  "builder_status": "candidate_pending_validation",
+  "delivery_validation": "../delivery_validation.json"
+}
