@@ -1,0 +1,2342 @@
+{
+  "status": "modeled_candidate",
+  "units": "metres",
+  "dimensions_cm": [
+    509.99999999999994,
+    300.0,
+    280.0
+  ],
+  "dimensions_mm": [
+    5100.0,
+    3000.0,
+    2800.0
+  ],
+  "basis": "model",
+  "root_node": "RoomEnvironmentRoot",
+  "glb_file": "room_environment.glb",
+  "coordinate_space": "cabinet_local_gltf",
+  "interior_bounds_m": {
+    "min": [
+      -2.55,
+      0.0,
+      -0.425
+    ],
+    "max": [
+      2.55,
+      2.8,
+      2.575
+    ]
+  },
+  "bounds_m": {
+    "min": [
+      -2.55,
+      0.0,
+      -0.425
+    ],
+    "max": [
+      2.55,
+      2.8,
+      2.575
+    ]
+  },
+  "cutaway_node_names": [
+    "RoomWall_Front",
+    "RoomWall_Right",
+    "RoomRoof"
+  ],
+  "rear_clearance_mm": 100,
+  "operation_zone_mm": 1200,
+  "rear_maintenance_available": false,
+  "rear_maintenance_note": "后距仅100 mm，无法开启当前后维护门；房间模式禁用后门，布线检查回到整柜模式。实际检修需先移柜。",
+  "operation_zone_bounds_m": {
+    "min": [
+      -1.65,
+      0.0,
+      0.325
+    ],
+    "max": [
+      1.65,
+      1.85,
+      1.525
+    ]
+  },
+  "components": {
+    "room:layout": {
+      "title": "机要室空间布局",
+      "dimensions_mm": [
+        5100,
+        3000,
+        2800
+      ],
+      "basis": "model",
+      "notes": "5100×3000×2800 mm为参考图设计假设；坐标按室内左前角。非施工图或规范验收。"
+    },
+    "room:walls": {
+      "title": "灰白墙体",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "墙厚120 mm向净空间外侧建模；前/右墙可剖切展示。"
+    },
+    "room:floor": {
+      "title": "模块化灰色地面",
+      "dimensions_mm": [
+        5100,
+        3000,
+        80
+      ],
+      "basis": "model",
+      "notes": "净地坪Z0；地材和防护性能未选型认证。"
+    },
+    "room:ceiling": {
+      "title": "模块化吊顶与照明",
+      "dimensions_mm": [
+        5100,
+        3000,
+        30
+      ],
+      "basis": "model",
+      "notes": "吊顶下表面高2800 mm，展示可剖切。"
+    },
+    "room:security_door": {
+      "title": "右前侧门禁门",
+      "dimensions_mm": [
+        45,
+        900,
+        2100
+      ],
+      "basis": "model",
+      "notes": "右墙门洞900×2100 mm；门叶向室内左侧开启。图示门扫掠与操作区有50 mm名义间隔，非疏散合规结论。"
+    },
+    "room:workstation": {
+      "title": "管理工作台与座椅",
+      "dimensions_mm": [
+        600,
+        1200,
+        750
+      ],
+      "basis": "model",
+      "notes": "台面600×1200 mm，高750 mm。椅子停放于前方区域，不进入柜前1200 mm操作区。"
+    },
+    "room:security": {
+      "title": "门禁与监控示意",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "安装位置为设计假设；不代表设备实际覆盖率或安全认证。"
+    },
+    "room:signs": {
+      "title": "室内标识",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "机要室 / 涉密设备管理区 / 保密管理要求；仅短标识，不编造政策文本。"
+    },
+    "room:plants": {
+      "title": "室内绿植",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "作为少量环境陈设，不侵入柜前操作区与侧边300 mm预留带。"
+    }
+  },
+  "cabinet_source": "output/cabinet/wiring_release/smart_cabinet_18bay.blend",
+  "source_immutable": true,
+  "collision_roles": [
+    "wall",
+    "furniture",
+    "door",
+    "security_fixture",
+    "plant"
+  ],
+  "non_collision_roles": [
+    "floor",
+    "sign",
+    "lighting",
+    "display_helper"
+  ],
+  "notes": [
+    "只导出房间环境，不包含柜子副本、摄影棚、相机或灯光对象。",
+    "原参考图1200−320=880 mm属于行程示意；真实托盘外伸与门扫掠将单独取现有几何核验。"
+  ],
+  "source_script": "scripts/room/build_room.py",
+  "coordinate_mapping": {
+    "blender_room_origin": "interior left-front floor corner",
+    "blender_room_to_cabinet_translation_m": [
+      -2.55,
+      -2.575,
+      -0.0
+    ],
+    "blender_xyz_to_gltf": "[x,z,-y]",
+    "cabinet_room_position_blender_m": [
+      2.55,
+      2.575,
+      0.0
+    ],
+    "cabinet_web_position_gltf_m": [
+      0,
+      0,
+      0
+    ],
+    "cabinet_scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "camera": {
+    "overview": {
+      "position": [
+        1.25,
+        6.2,
+        10.975
+      ],
+      "target": [
+        0.0,
+        1.15,
+        1.025
+      ],
+      "projection": "perspective",
+      "lens_mm": 45,
+      "cutaway_node_names": [
+        "RoomWall_Front",
+        "RoomWall_Right",
+        "RoomRoof"
+      ]
+    },
+    "interior": {
+      "position": [
+        1.35,
+        1.62,
+        2.125
+      ],
+      "target": [
+        0.0,
+        1.15,
+        0.125
+      ],
+      "projection": "perspective",
+      "lens_mm": 26,
+      "cutaway_node_names": []
+    },
+    "front": {
+      "position": [
+        0.0,
+        1.4,
+        8.575
+      ],
+      "target": [
+        0.0,
+        1.4,
+        1.075
+      ],
+      "projection": "orthographic",
+      "ortho_scale_m": 6.2,
+      "cutaway_node_names": [
+        "RoomWall_Front",
+        "RoomWall_Right",
+        "RoomRoof"
+      ]
+    },
+    "side": {
+      "position": [
+        -8.55,
+        1.4,
+        1.075
+      ],
+      "target": [
+        0.0,
+        1.4,
+        1.075
+      ],
+      "projection": "orthographic",
+      "ortho_scale_m": 5.8,
+      "cutaway_node_names": [
+        "RoomWall_Left",
+        "RoomWall_Front",
+        "RoomRoof",
+        "RoomWorkstation",
+        "RoomSigns",
+        "RoomPlants",
+        "RoomSecurity"
+      ]
+    },
+    "top": {
+      "position": [
+        0.0,
+        9.0,
+        1.075
+      ],
+      "target": [
+        0.0,
+        0.0,
+        1.075
+      ],
+      "projection": "orthographic",
+      "ortho_scale_m": 6.2,
+      "up": [
+        0,
+        0,
+        -1
+      ],
+      "cutaway_node_names": [
+        "RoomRoof"
+      ]
+    }
+  },
+  "room_parameters": {
+    "interior_wdh_m": [
+      5.1,
+      3.0,
+      2.8
+    ],
+    "wall_thickness_m": 0.12,
+    "cabinet_installation_m": [
+      2.55,
+      2.575,
+      0.0
+    ],
+    "cabinet_dimensions_m": [
+      3.3,
+      0.65,
+      1.85
+    ],
+    "cabinet_bounds_m": {
+      "min": [
+        0.9,
+        2.25,
+        0
+      ],
+      "max": [
+        4.2,
+        2.9,
+        1.85
+      ]
+    },
+    "operation_zone_m": {
+      "min": [
+        0.9,
+        1.05,
+        0
+      ],
+      "max": [
+        4.2,
+        2.25,
+        1.85
+      ]
+    },
+    "rear_clearance_m": 0.1,
+    "side_wall_clearance_m": 0.9,
+    "reserved_side_service_band_m": 0.3,
+    "floor_thickness_m": 0.08,
+    "door_opening_y_m": [
+      0.1,
+      1.0
+    ],
+    "door_height_m": 2.1,
+    "door_pivot_m": [
+      5.08,
+      0.105,
+      0
+    ],
+    "door_leaf_wdh_m": [
+      0.045,
+      0.88,
+      2.08
+    ],
+    "door_display_angle_degrees": 90,
+    "desk_bounds_m": {
+      "min": [
+        0.1,
+        0.1,
+        0
+      ],
+      "max": [
+        0.7,
+        1.3,
+        0.75
+      ]
+    },
+    "chair_center_m": [
+      1.02,
+      0.54,
+      0
+    ],
+    "display_mode": "ROOM",
+    "default_cutaway": [
+      "RoomWall_Front",
+      "RoomWall_Right",
+      "RoomRoof"
+    ]
+  },
+  "cabinet_source_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+  "cabinet_mesh_signature": "0fc9bfc9d79aa1f326b0afeb8fe0441fe06e6835b2bfbd3b74befd808e3020ae",
+  "cabinet_geometry_unchanged": true,
+  "environment_nodes": [
+    {
+      "name": "Room_Floor_Slab",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_0_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_0_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_0_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_0_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_0_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_1_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_1_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_1_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_1_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_1_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_2_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_2_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_2_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_2_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_2_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_3_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_3_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_3_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_3_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_3_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_4_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_4_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_4_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_4_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_4_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_5_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_5_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_5_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_5_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_5_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_6_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_6_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_6_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_6_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_6_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_7_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_7_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_7_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_7_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_7_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_8_0",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_8_1",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_8_2",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_8_3",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_FloorTile_8_4",
+      "room_role": "floor",
+      "room_collision": false,
+      "component_key": "room:floor"
+    },
+    {
+      "name": "Room_BackWall",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_LeftWall",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_FrontWall",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_RightWallSegment",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_RightWallSegment.001",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_DoorHeaderWall",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_Back_Skirting",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_Left_Skirting",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_Front_Skirting",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_Right_Skirting",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_Right_Skirting.001",
+      "room_role": "wall",
+      "room_collision": true,
+      "component_key": "room:walls"
+    },
+    {
+      "name": "Room_Roof_Slab",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_0_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_0_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_0_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_0_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_0_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_1_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_1_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_1_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_1_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_1_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_2_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_2_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_2_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_3_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_3_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_3_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_3_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_3_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_4_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_4_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_4_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_4_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_4_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_5_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_5_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_5_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_5_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_5_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_6_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_6_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_6_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_7_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_7_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_7_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_7_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_7_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_8_0",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_8_1",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_8_2",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_8_3",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_CeilingTile_8_4",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.001",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.002",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.003",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.004",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.005",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.006",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.007",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.008",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridX.009",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridY",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridY.001",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridY.002",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridY.003",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridY.004",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_Ceiling_GridY.005",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.001",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.002",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.003",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Diffuser",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.004",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.005",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.006",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.007",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Diffuser.001",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.008",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.009",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.010",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.011",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Diffuser.002",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.012",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.013",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.014",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Frame.015",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_LEDPanel_Diffuser.003",
+      "room_role": "ceiling",
+      "room_collision": true,
+      "component_key": "room:ceiling"
+    },
+    {
+      "name": "Room_SecurityDoor_Jamb",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Jamb.001",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Header",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Leaf",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Inset",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Hinge",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Hinge.001",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Hinge.002",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_LockEscutcheon",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_Handle",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_HandleStand",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_SecurityDoor_HandleStand.001",
+      "room_role": "door",
+      "room_collision": true,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_Door_Authorized",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:security_door"
+    },
+    {
+      "name": "Room_Desk_Top",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Desk_Leg",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Desk_Leg.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Desk_Leg.002",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Desk_Leg.003",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Desk_RearRail",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Desk_CableTray",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Computer_Tower",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Computer_FrontPanel",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Computer_Status",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Monitor_Base",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Monitor_Stand",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Monitor_Frame",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Monitor_Screen",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Monitor_StatusLine",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Base",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.002",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.003",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.004",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.005",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.006",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.007",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.008",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.009",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.010",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.011",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.012",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.013",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.014",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.015",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.016",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.017",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.018",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.019",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.020",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.021",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.022",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.023",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.024",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.025",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.026",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.027",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.028",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.029",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.030",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.031",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.032",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.033",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.034",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.035",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.036",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.037",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.038",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.039",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.040",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.041",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.042",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.043",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.044",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.045",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.046",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Keyboard_Key.047",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Mouse_Pad",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Mouse",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Seat",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Back",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_BackSupport",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_GasLift",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_StarLeg",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Caster",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_CasterStem",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_StarLeg.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Caster.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_CasterStem.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_StarLeg.002",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Caster.002",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_CasterStem.002",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_StarLeg.003",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Caster.003",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_CasterStem.003",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_StarLeg.004",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_Caster.004",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_CasterStem.004",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_ArmPost",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_ArmRest",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_ArmPost.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Chair_ArmRest.001",
+      "room_role": "furniture",
+      "room_collision": true,
+      "component_key": "room:workstation"
+    },
+    {
+      "name": "Room_Back_SignPanel",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Back_ChineseSign",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Door_SignPanel",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Door_Title",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Door_Subtitle",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_PolicyBoard_Frame",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_PolicyBoard_Paper",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Policy_保密管理要求",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Policy_授权进入",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Policy_规范使用",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_Policy_离开检查",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:signs"
+    },
+    {
+      "name": "Room_AccessReader_Mount",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Body",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Display",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.001",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.002",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.003",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.004",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.005",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.006",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.007",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Button.008",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_AccessReader_Label",
+      "room_role": "sign",
+      "room_collision": false,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Mount_0",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Arm_0",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Housing_0",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Lens_0",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Glass_0",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Mount_1",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Arm_1",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Housing_1",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Lens_1",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_CCTV_Glass_1",
+      "room_role": "security_fixture",
+      "room_collision": true,
+      "component_key": "room:security"
+    },
+    {
+      "name": "Room_FloorPlant_Pot",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Soil",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.001",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.001",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.002",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.002",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.003",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.003",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.004",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.004",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.005",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.005",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.006",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.006",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.007",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.007",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.008",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.008",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.009",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.009",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Stem.010",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_FloorPlant_Leaf.010",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Pot",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Soil",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.001",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.001",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.002",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.002",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.003",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.003",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.004",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.004",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.005",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.005",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.006",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.006",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.007",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.007",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.008",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.008",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.009",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.009",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Stem.010",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    },
+    {
+      "name": "Room_DeskPlant_Leaf.010",
+      "room_role": "plant",
+      "room_collision": true,
+      "component_key": "room:plants"
+    }
+  ],
+  "geometry_bounds_m": {
+    "min": [
+      -2.6700000762939453,
+      -0.07999999821186066,
+      -0.5449999570846558
+    ],
+    "max": [
+      2.6700000762939453,
+      2.8600001335144043,
+      2.695000171661377
+    ]
+  },
+  "reference_layout": {
+    "door_wall": "right",
+    "door_opening_y_mm": [
+      100,
+      1000
+    ],
+    "door_opening_height_mm": 2100,
+    "nominal_door_to_operation_zone_gap_mm": 50,
+    "desk_global_blender_bounds_m": {
+      "min": [
+        0.1,
+        0.1,
+        0
+      ],
+      "max": [
+        0.7,
+        1.3,
+        0.75
+      ]
+    },
+    "chair_center_global_blender_m": [
+      1.02,
+      0.54,
+      0
+    ]
+  },
+  "font": {
+    "path": "scripts/room/assets/room_signage_subset.ttf",
+    "license": "SIL OFL 1.1",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+    "texts": [
+      "机要室",
+      "涉密设备管理区",
+      "保密管理要求",
+      "授权进入",
+      "规范使用",
+      "离开检查",
+      "管理工作台",
+      "门禁",
+      "CCTV",
+      "ACCESS CONTROL"
+    ]
+  }
+}

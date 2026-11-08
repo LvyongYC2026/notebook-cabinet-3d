@@ -1,0 +1,79 @@
+{
+  "status": "passed_with_documented_limits",
+  "blender_version": "5.2.3 LTS",
+  "asset_hashes": {
+    "blend": "b675489723e516baaff241c562fe4fbaaa937b3270db8072cb20916e7d6dfca5",
+    "glb": "4551a01314efc90ae119f9b36d7156e3c74c05b99b78cdbf63ee62a7a9ddde62",
+    "metadata": "695188af64fb2239a240f8d40d3e2d9a9a84e762e580d2cdcaca7b6a01f3cdb9",
+    "immutable_cabinet_source": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0"
+  },
+  "independent_reports": [
+    {
+      "file": "independent_room_installation_audit.json",
+      "sha256": "665a1d5e41031f4b1904b32350e28388922eb2f2adae9f3214873a3dbc965403",
+      "status": "passed"
+    },
+    {
+      "file": "independent_room_export_audit.json",
+      "sha256": "b3e91cde3df6f002bdb44e397f82b4136c15654aaaa986fc230fac6ca3c477f5",
+      "status": "passed"
+    }
+  ],
+  "installation": {
+    "cabinet_instances": 1,
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "original_objects_preserved": 2949,
+    "original_geometry_hierarchy_shape_key_changes": 0,
+    "door_sample_count": 21,
+    "tray_sample_count": 17,
+    "environment_collision_entities": 260,
+    "sampled_surface_intersections": 0,
+    "door_sweep_remaining_depth_cm": 65.39234638214111,
+    "tray_assembly_remaining_depth_cm": 95.2500057220459,
+    "rear_clearance_cm": 10,
+    "rear_maintenance_available_in_place": false
+  },
+  "export": {
+    "root": "RoomEnvironmentRoot",
+    "space": "cabinet_local_gltf",
+    "mesh_nodes": 319,
+    "cabinet_or_studio_nodes": 0,
+    "cameras": 0,
+    "lights": 0,
+    "exterior_bounds_match": true
+  },
+  "reproducibility": {
+    "report": "reproducibility_check.json",
+    "fresh_output_full_metadata": true,
+    "syntax_compile": "passed"
+  },
+  "renders": {
+    "count": 5,
+    "dimensions_px": [
+      2560,
+      1440
+    ],
+    "engine": "Cycles",
+    "samples": 64,
+    "manifest": "renders/render_manifest.json",
+    "visually_reviewed": true,
+    "operation_pose": {
+      "front_bay_doors_degrees": 95,
+      "tray_travel_mm": 320,
+      "equipment_door_degrees": 0,
+      "operation_boundary_mm": 1200,
+      "temporary_pose_saved_to_blend": false
+    }
+  },
+  "limits": [
+    "Room dimensions and furniture/security layout are design assumptions from the reference.",
+    "Collision checking samples 21 front-door fractions and 17 tray positions; it is not continuous-motion or fabrication verification.",
+    "The 65.392 cm minimum includes the equipment door 105-degree sweep; the operation render shows 18 bay doors open with the equipment door closed.",
+    "Rear doors cannot be used with the 10 cm rear clearance; actual rear service requires moving the cabinet.",
+    "No structural, thermal, electrical, fire, egress or classified-facility certification is asserted."
+  ]
+}

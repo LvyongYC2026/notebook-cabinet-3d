@@ -1,0 +1,21 @@
+{
+  "source_blend": "output/cabinet/wiring_release/smart_cabinet_18bay.blend",
+  "source_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+  "cabinet_object_count": 2949,
+  "cabinet_mesh_signature_before_after": "0fc9bfc9d79aa1f326b0afeb8fe0441fe06e6835b2bfbd3b74befd808e3020ae",
+  "cabinet_instances": 1,
+  "cabinet_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "cabinet_room_position": [
+    2.549999952316284,
+    2.575000047683716,
+    0.0
+  ],
+  "room_mesh_count": 319,
+  "glb_contains_cabinet": false,
+  "font_license": "SIL OFL 1.1",
+  "status": "awaiting_independent_installation_audit"
+}
