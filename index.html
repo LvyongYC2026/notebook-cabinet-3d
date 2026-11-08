@@ -6,14 +6,27 @@
   <meta name="theme-color" content="#000000">
   <meta name="description" content="中技安全科技有限公司-笔记本智能管理存储柜">
   <title>中技安全科技有限公司-笔记本智能管理存储柜</title>
-  <link rel="stylesheet" href="styles.css?v=20261108-wiring-v1">
-  <link rel="stylesheet" href="panel-hud.css?v=20261108-wiring-v1">
-  <link rel="stylesheet" href="wiring.css?v=20261108-wiring-v1">
+  <link rel="stylesheet" href="styles.css?v=20261108-room-v1">
+  <link rel="stylesheet" href="panel-hud.css?v=20261108-room-v1">
+  <link rel="stylesheet" href="wiring.css?v=20261108-room-v1">
+  <link rel="stylesheet" href="room.css?v=20261108-room-v1">
   <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
 </head>
 <body>
   <main id="stage">
     <header class="product-header"><h1>中技安全科技有限公司-笔记本智能管理存储柜</h1></header>
+    <nav class="scene-tabs" role="tablist" aria-label="展示视图">
+      <button id="viewRoom" class="scene-tab" role="tab" data-scene-mode="room" aria-selected="false" disabled>机要室</button>
+      <button id="viewCabinet" class="scene-tab active" role="tab" data-scene-mode="cabinet" aria-selected="true" disabled>整柜</button>
+      <button id="viewSingle" class="scene-tab" role="tab" data-scene-mode="single" aria-selected="false" disabled>单仓</button>
+    </nav>
+    <nav id="roomControls" class="room-controls" aria-label="机要室视角与布局" hidden>
+      <button id="roomOverview" aria-pressed="true" title="机要室整体概览">概览</button>
+      <button id="roomInterior" aria-pressed="false" title="从室内查看智能柜">室内</button>
+      <button id="roomTop" aria-pressed="false" title="俯视机要室布局">俯视</button>
+      <button id="roomCutaway" aria-pressed="true" title="剖切前墙、右墙和屋顶">剖切</button>
+      <button id="roomInfo" title="查看机要室布局参数（cm）">布局</button>
+    </nav>
     <div id="viewer" aria-label="智能柜三维展示，可旋转、缩放并点击柜门和内部部件" tabindex="0"><div id="dimensionLabels" class="dimension-labels" aria-hidden="true" hidden></div></div>
     <p id="dimensionNote" class="dimension-note" hidden></p>
     <div id="loading" role="status" aria-label="正在加载三维机柜"><div class="loading-ring"></div></div>
@@ -54,6 +67,6 @@
     </nav>
   </main>
   <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
-  <script type="module" src="app.js?v=20261108-wiring-v1"></script>
+  <script type="module" src="app.js?v=20261108-room-v1"></script>
 </body>
 </html>

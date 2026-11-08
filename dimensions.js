@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { formatLengthCm } from './length-format.js?v=20261108-wiring-v1';
+import { formatLengthCm } from './length-format.js?v=20261108-room-v1';
 
 const point=(x,y,z)=>new THREE.Vector3(x,y,z);
 const cm=metres=>`${formatLengthCm(metres*1000)} cm`;
@@ -36,6 +36,7 @@ export class CabinetDimensions{
   clear(){this.group.traverse(child=>{child.geometry?.dispose();child.material?.dispose();});this.group.clear();this.labels=[];this.host?.replaceChildren();this.signature='';this.layoutKey='';this.pairDirections.clear();this.bounds.makeEmpty();this.trayBounds.makeEmpty();this.trayGroup=null;this.drawingGroup=null;}
   sync(context){
     this.context=context;if(!this.enabled||!context.model)return;
+    if(context.sceneMode==='room'&&(!context.selection||context.selection.key.startsWith('room:'))){this.syncRoom(context);return;}
     const {model,metadata,refs,originals,mode,selection,focused=false,direction}=context;
     const dimensions=metadata.cabinet_dimensions_mm;if(!Array.isArray(dimensions)||dimensions.length!==3)return;
     const [width,depth,height]=dimensions.map(value=>Number(value)/1000),bay=mode==='single'?'S1':refs.trays.has(selection?.bay)?selection.bay:'A7',tray=refs.trays.get(bay);if(!tray)return;
@@ -44,7 +45,7 @@ export class CabinetDimensions{
     this.summary={mode,bay,closedDimensionsMm:[...dimensions],...data};
     // Fixed world-side dimensions do not flip when the camera crosses an axis.
     // Parent/module translation moves the tray group, never rebuilds its DOM.
-    const signature=[model.uuid,bay,focused,width,depth,height].join('|');
+    const signature=[model.uuid,bay,focused,width,depth,height,context.sceneMode].join('|');
     if(signature!==this.signature){this.clear();this.signature=signature;this.build(width,depth,height,data,1,1,focused);this.layoutStats.domBuilds++;}
     const shift=data.closed.min.clone().sub(this.builtTrayClosed.min);this.trayGroup.position.copy(shift);
     for(const item of this.labels)if(item.tray)item.anchor.copy(item.baseAnchor).add(shift);
@@ -52,6 +53,20 @@ export class CabinetDimensions{
     const label=this.labels.find(item=>item.id==='stroke');
     if(label){const detail=`当前 ${progressCm(data.progress)}`;if(label.detail!==detail){label.detail=detail;if(label.secondary)label.secondary.textContent=detail;}}
     if(this.progressLine){const base=this.builtTrayClosed,a=this.progressLine.geometry.attributes.position;a.setXYZ(0,base.min.x,base.max.y+.009,base.max.z+data.progress);a.setXYZ(1,base.max.x,base.max.y+.009,base.max.z+data.progress);a.needsUpdate=true;this.progressLine.geometry.computeBoundingSphere();}
+  }
+  syncRoom(context){
+    const metadata=context.roomMetadata||{},b=metadata.interior_bounds_m||{min:[-2.55,0,-.425],max:[2.55,2.8,2.575]},min=point(...b.min),max=point(...b.max),size=max.clone().sub(min),operation=Number(metadata.operation_zone_mm||1200)/1000,rear=Number(metadata.rear_clearance_mm||100)/1000;
+    this.summary={mode:'room',bay:null,closedDimensionsMm:[size.x*1000,size.z*1000,size.y*1000],operation,rear};
+    const signature=['room',context.model.uuid,...b.min,...b.max,operation,rear].join('|');if(signature===this.signature)return;
+    this.clear();this.signature=signature;this.layoutStats.domBuilds++;
+    const y=max.y+.12,z=max.z+.1,x=min.x-.12;
+    this.dimension('room-width',point(min.x,y,z),point(max.x,y,z),`室内宽 ${cm(size.x)}`,'净尺寸',point(0,1,0));
+    this.dimension('room-depth',point(max.x+.12,.06,min.z),point(max.x+.12,.06,max.z),`室内深 ${cm(size.z)}`,'净尺寸',point(1,0,0));
+    this.dimension('room-height',point(x,0,min.z),point(x,max.y,min.z),`室内高 ${cm(size.y)}`,'净尺寸',point(1,0,0));
+    this.dimension('room-operation',point(-1.9,.04,.325),point(-1.9,.04,.325+operation),`柜前操作区 ${cm(operation)}`,'从闭合柜面起算',point(1,0,0),palette.tray);
+    this.dimension('room-rear',point(.5,1.96,min.z),point(.5,1.96,-.325),`后距 ${cm(rear)}`,'后门不可开启',point(1,0,0),palette.tray);
+    this.bodyBounds.copy(this.bounds);this.trayBounds.copy(this.bounds);
+    if(this.note)this.note.textContent='机要室净尺寸 · 布置设计示意\n柜前120 cm为建议操作区；后距10 cm不具备背面检修空间';
   }
   line(segments,color=palette.body,dashed=false,opacity=.72){
     const geometry=new THREE.BufferGeometry().setFromPoints(segments),material=dashed?new THREE.LineDashedMaterial({color,dashSize:.035,gapSize:.025,transparent:true,opacity,depthTest:false,depthWrite:false}):new THREE.LineBasicMaterial({color,transparent:true,opacity,depthTest:false,depthWrite:false});
