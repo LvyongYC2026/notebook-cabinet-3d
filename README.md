@@ -6,6 +6,16 @@
 
 https://lvyongyc2026.github.io/notebook-cabinet-3d/
 
+## 机要室 / 整柜 / 单仓
+
+[查看机要室](https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=room) · [独立整柜](https://lvyongyc2026.github.io/notebook-cabinet-3d/) · [精细单仓](https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=single)
+
+顶部三个选项切换展示视图。机要室按参考三视图布置，净尺寸 **510 × 300 × 280 cm** 为设计假设，采用左前工作台、右前门禁门和后墙机柜的布局，配备座椅、管理电脑、监控、吊顶照明和中文标识。房间与整柜共用同一个机柜实例和同一套门、托盘及线缆数据；整柜尺寸及左右各9仓不变。
+
+房间可切换空间概览、室内视角和正交俯视图，支持墙顶剖切、厘米尺寸标注与部件参数。柜前闭合状态预留 **120 cm** 操作区；参考布局的柜后距只有 **10 cm**，不能直接开启后维护门。房间中允许正面开门和抽盘；后部布线查看自动切回整柜，实际背面检修需先移柜。
+
+[机要室 Blender 工程、脚本与验证说明](room-scene/README.md)。本场景为布局与产品展示，不是施工图或工程合规验收。
+
 ## 功能
 
 - 左右各 9 个电脑仓，共 18 仓；部分仓留空展示承托面与配套结构。
@@ -60,7 +70,7 @@ python3 -m http.server 8765
 
 本仓库为无构建步骤的静态站点，使用相对资源路径。GitHub Pages 设置为从 `main` 分支的根目录发布。`.nojekyll` 禁用 Jekyll 处理。
 
-所有模型与脚本均从本站加载，Three.js 本地依赖位于 `vendor/three/`。原始参考 PDF、临时日志与本地服务脚本不发布。历史单仓工程位于 `single-compartment/`；历史整柜工程及压缩基线位于 `refined-18bay/`；本次增量工程位于 `wiring-18bay/`。
+所有模型与脚本均从本站加载，Three.js 本地依赖位于 `vendor/three/`。原始参考 PDF、临时日志与本地服务脚本不发布。历史单仓工程位于 `single-compartment/`；历史整柜工程及压缩基线位于 `refined-18bay/`；布线工程位于 `wiring-18bay/`；机要室增量工程位于 `room-scene/`。
 
 ## 第三方依赖
 

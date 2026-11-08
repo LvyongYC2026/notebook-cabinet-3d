@@ -1,0 +1,157 @@
+{
+  "status": "complete_with_documented_limits",
+  "blender_version": "5.2.3 LTS",
+  "source_cabinet_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+  "records": [
+    {
+      "path": "scripts/room/build_room.py",
+      "bytes": 23898,
+      "sha256": "26025c0e48cf29f3adb9c9df58662b385df8868e39fe63f9e95b446cc21ab742"
+    },
+    {
+      "path": "scripts/room/config.py",
+      "bytes": 1589,
+      "sha256": "8aae375a84492aa9fa6ae446191db2dc91b34f56f5ee6b78baceeba26c4c2eaa"
+    },
+    {
+      "path": "scripts/room/metadata.py",
+      "bytes": 1758,
+      "sha256": "95b09ab35f8ce63589390dacaa9174a037dda9ed5ef50e167004b48c2c00afff"
+    },
+    {
+      "path": "scripts/room/metadata_template.json",
+      "bytes": 3887,
+      "sha256": "1ecc572abd4abacb4d58da43f4c2eed6a1bc8739c60af770b8ed8d3434140baa"
+    },
+    {
+      "path": "scripts/room/setup_display_modes.py",
+      "bytes": 3306,
+      "sha256": "ea994ef5d774d0cacac4651a81a13b11b79864a72105915decf7a708a09547a0"
+    },
+    {
+      "path": "scripts/room/render_views.py",
+      "bytes": 1832,
+      "sha256": "a01e4c7c2b8e5f1498b661b10d50e9e09f7bdb42f01114579f1bc5266605de8e"
+    },
+    {
+      "path": "scripts/room/assets/room_signage_subset.ttf",
+      "bytes": 24988,
+      "sha256": "48062b0b90d995ac7dd93e894f3eb074d9adc9a233e6a4c1a96eb09a50c6b2fb"
+    },
+    {
+      "path": "scripts/room/assets/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "smart_cabinet_room_and_product.blend",
+      "bytes": 4086206,
+      "sha256": "b675489723e516baaff241c562fe4fbaaa937b3270db8072cb20916e7d6dfca5"
+    },
+    {
+      "path": "room_environment.glb",
+      "bytes": 5635392,
+      "sha256": "4551a01314efc90ae119f9b36d7156e3c74c05b99b78cdbf63ee62a7a9ddde62"
+    },
+    {
+      "path": "room_metadata.json",
+      "bytes": 56889,
+      "sha256": "695188af64fb2239a240f8d40d3e2d9a9a84e762e580d2cdcaca7b6a01f3cdb9"
+    },
+    {
+      "path": "room_build_report.json",
+      "bytes": 621,
+      "sha256": "01b099c5cc0c1c6e92a8248d142340c6173b3407188d0b7ce641a65630c39000"
+    },
+    {
+      "path": "reproducibility_check.json",
+      "bytes": 657,
+      "sha256": "7fbc1427eedc82596b6df82aa61ce19df8abefde68ec7b171fbd78a52d3988bb"
+    },
+    {
+      "path": "independent_room_installation_audit.json",
+      "bytes": 3869,
+      "sha256": "665a1d5e41031f4b1904b32350e28388922eb2f2adae9f3214873a3dbc965403"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12919,
+      "sha256": "7e7e0e25f2764d915edd0089fcf235fa82954c5e8c5d3f5eeb2fe57e2bde9d28"
+    },
+    {
+      "path": "renders/render_manifest.json",
+      "bytes": 1024,
+      "sha256": "909e3e7cf9cf83d8dc51ca71b54ee9b7058333de0ab079aa08bcb3f4ab9d18f1"
+    },
+    {
+      "path": "renders/room_overview.png",
+      "bytes": 3838802,
+      "sha256": "4b531188de41bff07bc639c4a29c46a5aac99e27e4728655f4e7863bfd0bab30",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "path": "renders/room_front.png",
+      "bytes": 3802408,
+      "sha256": "a2164349f97e2195befba1cf1f481775cfd0e28ce4511fbedad23431b111a327",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "path": "renders/room_side.png",
+      "bytes": 3369858,
+      "sha256": "bcb01705f992e4571f403f76410bd14aad72df5febe058e92f42cfe80803941c",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "path": "renders/room_top.png",
+      "bytes": 3660551,
+      "sha256": "41b1019fd00986a8389cafd0de366fc2a02e4a31322a335fb5bba32f6b893cb4",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "path": "renders/room_operation.png",
+      "bytes": 3691907,
+      "sha256": "e32394cf979619a746d8ce5316614530620e99d6137135200a577e897f00d751",
+      "width": 2560,
+      "height": 1440
+    },
+    {
+      "path": "independent_room_export_audit.json",
+      "bytes": 850,
+      "sha256": "b3e91cde3df6f002bdb44e397f82b4136c15654aaaa986fc230fac6ca3c477f5"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 2770,
+      "sha256": "ac13524e6d09a7401dd8e6e9899fac33caef07086378318af2f5eb3bf8de5f5c"
+    },
+    {
+      "path": "scripts/audit_room_installation.py",
+      "bytes": 7967,
+      "sha256": "08b0215d14211a248f3945a500fa4060ee889e68ed07d40291a03629fa27a405"
+    },
+    {
+      "path": "scripts/audit_room_export.py",
+      "bytes": 3523,
+      "sha256": "ed5318e2677a71ae47c7ddbf26dbf17cd097a932392a69a11fdfbd97f9cc6d22"
+    }
+  ],
+  "excluded": [
+    "*.blend1",
+    "__pycache__",
+    "*.preview.png",
+    "temporary files"
+  ],
+  "limits": "Room net dimensions and furniture/security layout are design assumptions. Geometric sample checks are not continuous-motion, manufacturing, electrical, thermal or regulatory certification. Rear maintenance requires moving the cabinet.",
+  "path_base": "room-scene publish root",
+  "requires_external_baseline": "../wiring-18bay/smart_cabinet_18bay.blend",
+  "manifest_records": 25,
+  "readme_publication_edits": [
+    "List setup_display_modes.py dependency",
+    "Use room-scene paths for published assets and validation",
+    "Include baseline, installation and GLB export re-audit commands"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": {
+    "fresh_empty_output_full_metadata": true,
+    "full_component_count": 9,
+    "camera_count": 5,
+    "environment_glb_unique_root": "RoomEnvironmentRoot",
+    "environment_glb_cabinet_nodes": 0,
+    "external_resources": 0
+  },
+  "fresh_output_evidence": "Rebuild executed into an initially absent tmp directory; complete metadata generated from source template, without existing output JSON.",
+  "final_environment_sha256": "4551a01314efc90ae119f9b36d7156e3c74c05b99b78cdbf63ee62a7a9ddde62",
+  "limits": "Checks metadata completeness and isolated environment export; installation and motion checks are separate."
+}

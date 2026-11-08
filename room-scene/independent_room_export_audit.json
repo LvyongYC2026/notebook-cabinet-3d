@@ -1,0 +1,27 @@
+{
+  "glb_sha256": "4551a01314efc90ae119f9b36d7156e3c74c05b99b78cdbf63ee62a7a9ddde62",
+  "metadata_sha256": "695188af64fb2239a240f8d40d3e2d9a9a84e762e580d2cdcaca7b6a01f3cdb9",
+  "node_count": 332,
+  "mesh_node_count": 319,
+  "bounds_gltf_m": {
+    "min": [
+      -2.6700000762939453,
+      -0.07999999821186066,
+      -0.5449999570846558
+    ],
+    "max": [
+      2.6700000762939453,
+      2.8600001335144043,
+      2.695000171661377
+    ]
+  },
+  "expected_exterior_bounds_match": true,
+  "environment_root_count": 1,
+  "coordinate_space": "cabinet_local_gltf",
+  "forbidden_product_or_studio_nodes": [],
+  "missing_required_environment_groups": [],
+  "cameras_exported": 0,
+  "lights_exported": 0,
+  "limits": "Checks exported accessor bounding envelopes and scene graph, not rendered appearance or manufacturing tolerances.",
+  "status": "passed"
+}
