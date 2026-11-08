@@ -1,0 +1,37 @@
+[
+  {
+    "view": "overview",
+    "camera": "Camera_Room_overview",
+    "projection": "PERSP",
+    "file": "room_overview.png",
+    "sha256": "4b531188de41bff07bc639c4a29c46a5aac99e27e4728655f4e7863bfd0bab30"
+  },
+  {
+    "view": "front",
+    "camera": "Camera_Room_front",
+    "projection": "ORTHO",
+    "file": "room_front.png",
+    "sha256": "a2164349f97e2195befba1cf1f481775cfd0e28ce4511fbedad23431b111a327"
+  },
+  {
+    "view": "side",
+    "camera": "Camera_Room_side",
+    "projection": "ORTHO",
+    "file": "room_side.png",
+    "sha256": "bcb01705f992e4571f403f76410bd14aad72df5febe058e92f42cfe80803941c"
+  },
+  {
+    "view": "top",
+    "camera": "Camera_Room_top",
+    "projection": "ORTHO",
+    "file": "room_top.png",
+    "sha256": "41b1019fd00986a8389cafd0de366fc2a02e4a31322a335fb5bba32f6b893cb4"
+  },
+  {
+    "view": "operation",
+    "camera": "Camera_Room_top",
+    "projection": "ORTHO",
+    "file": "room_operation.png",
+    "sha256": "e32394cf979619a746d8ce5316614530620e99d6137135200a577e897f00d751"
+  }
+]
