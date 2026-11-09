@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T15:13:50.905Z",
+  "scope": "Native DecompressionStream + WebCrypto through actual same-origin HTTP files under a project subdirectory; GLTFLoader.parseAsync handoff verifies GLB header, byte count and SHA. Real node/interaction regression is recorded separately.",
+  "decoded": [
+    {
+      "filename": "smart_cabinet_33bay.blend",
+      "compression": "none",
+      "parts": 11,
+      "bytes": 5426474,
+      "sha256": "968aa7c60fc905d7ff2983d499a843e67cbcea88def32d6fb6eab174cdd44e03"
+    },
+    {
+      "filename": "smart_cabinet_drawer.blend",
+      "compression": "none",
+      "parts": 1,
+      "bytes": 348204,
+      "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7"
+    },
+    {
+      "filename": "smart_cabinet_room_and_product.blend",
+      "compression": "none",
+      "parts": 11,
+      "bytes": 5672810,
+      "sha256": "7d5b422710f5ddd401c96ca423d9a374c8abc74b3e50ab020d03ba9d871b5ff1"
+    },
+    {
+      "filename": "smart_cabinet.glb",
+      "compression": "gzip",
+      "parts": 11,
+      "bytes": 24702236,
+      "sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc"
+    },
+    {
+      "filename": "components.json",
+      "compression": "gzip",
+      "parts": 1,
+      "bytes": 3384089,
+      "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57"
+    },
+    {
+      "filename": "smart_cabinet_drawer.glb",
+      "compression": "gzip",
+      "parts": 1,
+      "bytes": 1129328,
+      "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc"
+    },
+    {
+      "filename": "drawer_compartment.json",
+      "compression": "gzip",
+      "parts": 1,
+      "bytes": 111838,
+      "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d"
+    },
+    {
+      "filename": "room_environment.glb",
+      "compression": "gzip",
+      "parts": 2,
+      "bytes": 5633932,
+      "sha256": "78eb457b7cbb1975f70067f3de4d5bc45c0b3ecd4a8e6b58a52c5e9462aa9fdd"
+    },
+    {
+      "filename": "room_metadata.json",
+      "compression": "gzip",
+      "parts": 1,
+      "bytes": 57384,
+      "sha256": "a14eda0e646eb0e344fbb9a8d51e67b7eb428acd524eaab21d0a77f533400ebf"
+    },
+    {
+      "filename": "render_cabinet_styled.png",
+      "compression": "none",
+      "parts": 11,
+      "bytes": 5721567,
+      "sha256": "056aee3c7ec2459f57ada6ff6684e94385f8f365d8e4dba9063f1889dd3d7cfa"
+    },
+    {
+      "filename": "render_drawer_styled.png",
+      "compression": "none",
+      "parts": 10,
+      "bytes": 4985988,
+      "sha256": "7f992088ffa01464044a545a1530a7caa48d6f1ae4ac2791593568195270829d"
+    },
+    {
+      "filename": "render_laptop_perspective.png",
+      "compression": "none",
+      "parts": 10,
+      "bytes": 4837620,
+      "sha256": "40a57d4d2d7c45d8a06281baa3e7d57079fbc86c2b70a9922529e5c56a6d3d88"
+    },
+    {
+      "filename": "room_overview.png",
+      "compression": "none",
+      "parts": 8,
+      "bytes": 3855588,
+      "sha256": "9946ada5c3521e0136f4a9ea1f725f0f7b24a7cbb2a8551265eaa841834f1778"
+    }
+  ],
+  "failures": [
+    "schema",
+    "compression",
+    "part-size",
+    "part-hash",
+    "decoded-size",
+    "decoded-hash",
+    "missing-part",
+    "cross-origin-part",
+    "decompression",
+    "unsupported-native-decompression",
+    "unavailable-secure-hash",
+    "network-failure",
+    "invalid-decoded-json"
+  ],
+  "retry_after_failure": true,
+  "concurrent_inflight_deduplicated": true,
+  "six_mapped_runtime_files": true,
+  "two_unchanged_raw_left_assets": true,
+  "actual_gltf_handoffs": 3,
+  "project_subdirectory_and_query_mapping": true,
+  "source_sha256": {
+    "asset-loader.js": "306341fb04da8080c398910b6115f7143de3a53483d58c40f1498d43a14e5ffd",
+    "app.js": "a224a3489d26c346078493b6ab09860d339e1aee7d93faff6a238d2b86cdae85",
+    "room-scene.js": "84a6b3c23a0bf08bfe839133b93474f89f35c148b27cb2199089c38fd9f426eb",
+    "downloads.js": "2eb756337da33c591ba6722fe609bbb809d06121a7cfcc1daa6576121ed4b65b",
+    "downloads.html": "13905417f133ba0c529813b29c252486e9c4746aab82e5cf6c8526be8c2c70af",
+    "download-assets.json": "a5113b545598d4b6af52135a99f05adbad1d1e5d98a108965d1614bfddb8de88"
+  }
+}

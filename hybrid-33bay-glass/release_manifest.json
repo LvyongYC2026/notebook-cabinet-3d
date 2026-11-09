@@ -1,0 +1,923 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5614,
+      "sha256": "f46aa47892e8bb9331524e2d23d59852a6cc232bbd1a184e73b98877031b35eb"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 16906,
+      "sha256": "1603b22b9a3bfac0abd10828186bd0f1bfa37c9ddeea71a86675a053f5c8213c"
+    },
+    {
+      "path": "app.js",
+      "bytes": 104979,
+      "sha256": "a224a3489d26c346078493b6ab09860d339e1aee7d93faff6a238d2b86cdae85"
+    },
+    {
+      "path": "asset-loader.js",
+      "bytes": 4944,
+      "sha256": "306341fb04da8080c398910b6115f7143de3a53483d58c40f1498d43a14e5ffd"
+    },
+    {
+      "path": "assets/chunks/4ae5d185d2ffcbf9c43c/part-000.bin",
+      "bytes": 4979,
+      "sha256": "4ae5d185d2ffcbf9c43cb71b7254f42236490f3361960870cfe80813fff98f3c"
+    },
+    {
+      "path": "assets/chunks/54af59c9bdb064f320af/part-000.bin",
+      "bytes": 16096,
+      "sha256": "54af59c9bdb064f320af7a8fa6c52b0e3fe26185407ed7b5e1869dcecb19e227"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-000.bin",
+      "bytes": 524288,
+      "sha256": "e5f2c62a511483d6201d7b015500cae988a26a9298a590b55b2ec2b5ff6edf4e"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-001.bin",
+      "bytes": 524288,
+      "sha256": "a417b6297c299e3a2034f3fa52280b0dc52ac18af1d9d4206dce8878bb87a5f8"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-002.bin",
+      "bytes": 524288,
+      "sha256": "aac0a6688110bb2cb3aa7219c394ca5f74ac7640cf950c65b20b58030bc3a8ad"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-003.bin",
+      "bytes": 524288,
+      "sha256": "ebf891da894f86617bcaeb2945be266705eb906a12355543076a3a1bc3064eac"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-004.bin",
+      "bytes": 524288,
+      "sha256": "754aec04fb6dee79ad22ef7c3e132e7f3b81f590753958ff8466ddc103c6da6e"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-005.bin",
+      "bytes": 524288,
+      "sha256": "b3bd0fe910b23a476264e17846de7698af1e91ed4c148ad52c1ff7d552dc49e2"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-006.bin",
+      "bytes": 524288,
+      "sha256": "7595438cc2f0e4c82b2ee7d182dfc884df23ad30ecb755b037741c7d99818c40"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-007.bin",
+      "bytes": 524288,
+      "sha256": "b625c40aecf3a621365fb302a2dfa630a963a408547fa7eb5ecc003504647527"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-008.bin",
+      "bytes": 524288,
+      "sha256": "80594da31a9992061054c8c5051886e35abed8357f78181991f3504b49740cf5"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-009.bin",
+      "bytes": 524288,
+      "sha256": "a86ba829dc628de9d78f4e9b0431effbde5e9be635081c6dbcb17e4540668c1b"
+    },
+    {
+      "path": "assets/chunks/59851759aa450a8b2d80/part-010.bin",
+      "bytes": 188460,
+      "sha256": "7bf434152736aa00064a9e588181be9bed53c65a3f8366e243ac6f71d1aa9aee"
+    },
+    {
+      "path": "assets/chunks/e275f5fad2e462ff2402/part-000.bin",
+      "bytes": 524288,
+      "sha256": "3bd6dd35620c8f562eb339dd71954a5a2a126098ebcd1ff7813f283d5a98fecb"
+    },
+    {
+      "path": "assets/chunks/e275f5fad2e462ff2402/part-001.bin",
+      "bytes": 515178,
+      "sha256": "e0524ef45b3fd5c837eba8ffeaa3ec0f200a4397d290be0e0e9f27d92a571a89"
+    },
+    {
+      "path": "assets/chunks/e55fa74632575c12deb0/part-000.bin",
+      "bytes": 385249,
+      "sha256": "e55fa74632575c12deb08a23d072c63f10cdf1b54c4e17447ba1f849c5566c6f"
+    },
+    {
+      "path": "assets/chunks/fb40f3d06046c546fa6d/part-000.bin",
+      "bytes": 222478,
+      "sha256": "fb40f3d06046c546fa6d0f39b6c67945ac6dc192323a23b72923d839021ed57d"
+    },
+    {
+      "path": "assets/components.json.manifest.json",
+      "bytes": 395,
+      "sha256": "c305ed28e2d81a385640c16eb2d45f260c3a8578f5c71cb5a2251d8dd52b6e8a"
+    },
+    {
+      "path": "assets/drawer_compartment.json.manifest.json",
+      "bytes": 400,
+      "sha256": "3fe0d79b073578e2ec12c0e8d3ce445ab15d974e2281126ee17c85b33e4cae80"
+    },
+    {
+      "path": "assets/room_environment.glb.manifest.json",
+      "bytes": 577,
+      "sha256": "784ee2bda0f6d8e31a50964f51b420c8a5d0ebc69f1cc10207a6beeb14ea9f81"
+    },
+    {
+      "path": "assets/room_metadata.json.manifest.json",
+      "bytes": 392,
+      "sha256": "f6ec0c51dc393284ec1d81919cd1db4b6ea65c586118d49beae8990984209e66"
+    },
+    {
+      "path": "assets/smart_cabinet.glb.manifest.json",
+      "bytes": 2159,
+      "sha256": "07fcaaf68877e71648ccde4973bbcae0390cf74dece500f088ac0ef8f007667d"
+    },
+    {
+      "path": "assets/smart_cabinet_drawer.glb.manifest.json",
+      "bytes": 404,
+      "sha256": "d6889834e67fe24ca72e1904e8a41afd1f3af8566bf3d5d08f1ca65dedd9a2f0"
+    },
+    {
+      "path": "dimensions.js",
+      "bytes": 17082,
+      "sha256": "18dc95fa5b41ab439162621eca11512db195b82648ea014822eae69f22858af1"
+    },
+    {
+      "path": "download-assets.json",
+      "bytes": 2743,
+      "sha256": "a5113b545598d4b6af52135a99f05adbad1d1e5d98a108965d1614bfddb8de88"
+    },
+    {
+      "path": "downloads.html",
+      "bytes": 2908,
+      "sha256": "13905417f133ba0c529813b29c252486e9c4746aab82e5cf6c8526be8c2c70af"
+    },
+    {
+      "path": "downloads.js",
+      "bytes": 3847,
+      "sha256": "2eb756337da33c591ba6722fe609bbb809d06121a7cfcc1daa6576121ed4b65b"
+    },
+    {
+      "path": "front-variants.css",
+      "bytes": 1473,
+      "sha256": "8125035712d2cd1520c53a7e2a46a2c96301bd46fd164a5c9782b473a10bd515"
+    },
+    {
+      "path": "front-variants.js",
+      "bytes": 1459,
+      "sha256": "ce12b25aac4078bc4715ff0d11615a8b7349a19a8054244331f202225185b383"
+    },
+    {
+      "path": "hybrid-33bay-glass/README.md",
+      "bytes": 8685,
+      "sha256": "c2673681af9312e42e6c5055e744f166b70e51db0b596394d7787ef242d8e190"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-000.bin",
+      "bytes": 524288,
+      "sha256": "762c324d1ff4c37189996443d2d621b97523262638c746683e645a528001861d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-001.bin",
+      "bytes": 524288,
+      "sha256": "a917970473a881d8aef0cfd1a015b24ac7c979abaac286d623f326e2fcaa5cbd"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-002.bin",
+      "bytes": 524288,
+      "sha256": "95d1416355d14bb69721ad2858ffee87f93fd1419955131f3e7fd924d02b91a7"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-003.bin",
+      "bytes": 524288,
+      "sha256": "4a89dbe33b61ecf531a90aa11ffab8620cc3a3ae4f6a2691708f0e1a2af6c3c4"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-004.bin",
+      "bytes": 524288,
+      "sha256": "d4feb6e9cfcc1bf5aa3a8b084a3add0de213f63e2843f4f1c9ea9aa6af6bdad4"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-005.bin",
+      "bytes": 524288,
+      "sha256": "54f57751a0eadd6bb78ee7925b6c2bd9ec641d4618eab8fe8f6b684ab77d86d5"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-006.bin",
+      "bytes": 524288,
+      "sha256": "1aa6f4e270f9b88d888a04b5b86825d9e4f208158accb2902576c2eb71669d62"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-007.bin",
+      "bytes": 524288,
+      "sha256": "39977bc6ef0db0d03f7920d592c391ee5547abe094f3010bfab70ede8073e1e1"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-008.bin",
+      "bytes": 524288,
+      "sha256": "7001ddca9d05e809ba2d8742e6efbfe2f54bc26c3bfcba940629c4c04ae163fc"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-009.bin",
+      "bytes": 524288,
+      "sha256": "b8ed797a95a16c0a95dfdb6ab29bb1f15d48df66e2b92960b6a2af349bb4e567"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/056aee3c7ec2459f57ad/part-010.bin",
+      "bytes": 478687,
+      "sha256": "8552ec38b07d5c3616075ecd4896862aaf990908fe79c4af0d47aab438a166e0"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-000.bin",
+      "bytes": 524288,
+      "sha256": "1a7de7e6610cc8e3f417aa5e6404c262247a1b4059f21979bd91e06f49d9b9c5"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-001.bin",
+      "bytes": 524288,
+      "sha256": "4dede5007fbde0e9544c0af345fce7670c430a317ebe147de556e65bb3737ccb"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-002.bin",
+      "bytes": 524288,
+      "sha256": "23de9358b77619dd62ace0eb18ca4f26c47c548922a102175ff2b2e77aa2d8a1"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-003.bin",
+      "bytes": 524288,
+      "sha256": "5fb7cf17df9819e53dc6b849567882b014f1b80ac4b48d1d2c10ee6ca4d646d2"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-004.bin",
+      "bytes": 524288,
+      "sha256": "b1aef14555ace54e409da1e725008524b02092226cbf778a93741a7ee5e36a7e"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-005.bin",
+      "bytes": 524288,
+      "sha256": "2ef6b020a8bf3b652fbaab8406168505210a727dcdaffd533f075c5e759ecc6b"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-006.bin",
+      "bytes": 524288,
+      "sha256": "b8c0b6ec17434e867b3b8c433f5883939df79573868c58e2089e5b616b60d54d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-007.bin",
+      "bytes": 524288,
+      "sha256": "8e0c7d61b3512e791f5c1f3f7c410e097ab5596122833a98fdd93d1414c32d39"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-008.bin",
+      "bytes": 524288,
+      "sha256": "b9502838a3b6c43e9940d33039728302bbea322430d18c58d78fa9c6c15737d3"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/40a57d4d2d7c45d8a062/part-009.bin",
+      "bytes": 119028,
+      "sha256": "3296cb59b6ae51df687dcc8e5f570ccd6939e938a7e1e3d43ff38fb261e254b0"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/6f0198a72d60563388ae/part-000.bin",
+      "bytes": 348204,
+      "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-000.bin",
+      "bytes": 524288,
+      "sha256": "cc16c73b042e05565415a9727040926bdb2cca75fd87c7f9c2afabe71a1b1d47"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-001.bin",
+      "bytes": 524288,
+      "sha256": "f758567f7587eff18f5c4c548b835d37afe77d24438af5693acfdf9de21f3987"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-002.bin",
+      "bytes": 524288,
+      "sha256": "9067f12f23865a3927b81236f1410825a5d931b58c422dc6317ee17b6640d432"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-003.bin",
+      "bytes": 524288,
+      "sha256": "846b6da2ff9b910668953191b1282eae4fdadcd864a9d4af56cd9590b1ad1659"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-004.bin",
+      "bytes": 524288,
+      "sha256": "2542d6d3ed3f24d35a2864fa287588de1de12bfb26d428764f26fb751a63665d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-005.bin",
+      "bytes": 524288,
+      "sha256": "9220ab402ea4ef7cbbd8a2e42239f8fa96515de69e2962f8047c9000240949a1"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-006.bin",
+      "bytes": 524288,
+      "sha256": "d1ba699de2947d89455143fecb8f795e6487f91c7f57e0884f8a3bc4bea1c8bc"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-007.bin",
+      "bytes": 524288,
+      "sha256": "80136da98510f28e305706d9150845e57e3a07475aae60e3d99dd7516748ff43"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-008.bin",
+      "bytes": 524288,
+      "sha256": "6c4a4d9b7550ceb65e63ce1ed614a47cea14068f7a51c0e3703e3e5beb5e7506"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-009.bin",
+      "bytes": 524288,
+      "sha256": "0fb4b9377480c8f643b2ec68c6495082a17e7f1d6615a3c21a4ee7db05c6da78"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7d5b422710f5ddd401c9/part-010.bin",
+      "bytes": 429930,
+      "sha256": "67eb2c40f8331885f3cabacd0c432ccbc13e47547e6914a1fc22c34e2df9322f"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-000.bin",
+      "bytes": 524288,
+      "sha256": "361ed794e4c20cbc42e4ca93dd759213da90147b497c32378e9b6d928abe6265"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-001.bin",
+      "bytes": 524288,
+      "sha256": "9c63714dc3ab85ffdaeae567613f28da28cbb62c9efc314443a79c128e367a50"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-002.bin",
+      "bytes": 524288,
+      "sha256": "b1b8f299413fe01ea3a05445960999c4a048031618a02da630004a0f93e64a8a"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-003.bin",
+      "bytes": 524288,
+      "sha256": "51105d55480a4a4f69591c6effb80e53648b54674620b214e55a3d03d66e1ff7"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-004.bin",
+      "bytes": 524288,
+      "sha256": "9cef2e17ea361c5972fafcba312ac3d6f5b57c3eb580f5dc5b12373a6996f63a"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-005.bin",
+      "bytes": 524288,
+      "sha256": "f10e3002175dd2b137b9afe45078609c59e4b3c3ece700d312fc23e482b9a13e"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-006.bin",
+      "bytes": 524288,
+      "sha256": "5f0bc0320f00b77d6d577884baf5dfbb9713bccc6b928a3d34c646718b617b0e"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-007.bin",
+      "bytes": 524288,
+      "sha256": "0dfd2b9a363fb20fef28358f7568037dd8e703276390704eeff72e3c1d75efd8"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-008.bin",
+      "bytes": 524288,
+      "sha256": "700f8afbd19a7d02ab49973c53061f61c02f6909aa6f9762f5061e8204357576"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/7f992088ffa01464044a/part-009.bin",
+      "bytes": 267396,
+      "sha256": "ef369777014d3af9574ad136fb05d737e3e07132b9e0b5e6bbcafaca255fbfab"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-000.bin",
+      "bytes": 524288,
+      "sha256": "b3253e2d1220603b6a2a93f9f721f0e8eb6c853eb82b9ac3ec865ec8a1e90c3b"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-001.bin",
+      "bytes": 524288,
+      "sha256": "d775ab9b13f957797638a865092f75e3eac89257b3e6087107f9cabb10e1be7d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-002.bin",
+      "bytes": 524288,
+      "sha256": "d5f416e00ae83790b6aff1d9ba0dec8ecde9f29e03816ef611ea27120cdef6ef"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-003.bin",
+      "bytes": 524288,
+      "sha256": "c1a75f6203f6f81639517ea7135f165b14c1d3bc4b7519e8d28a81261ff97622"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-004.bin",
+      "bytes": 524288,
+      "sha256": "699b8eb11c281fe0ca339939c1f1d6f4ff648edf953483ac3a097c49fc33b7e4"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-005.bin",
+      "bytes": 524288,
+      "sha256": "544677a8272400295e9210a0671c6d898ea56bbbe6bc8e78cac7546b4651110d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-006.bin",
+      "bytes": 524288,
+      "sha256": "0e9193afef636251809cb72425c35deb91897139a2deceb872527090cdb9e455"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-007.bin",
+      "bytes": 524288,
+      "sha256": "7437336b0d8b568b47e0a6ac85d84de428f6fde790fe0a34486e703b1b0ca1b1"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-008.bin",
+      "bytes": 524288,
+      "sha256": "fd12cb218cd4c3efc19c09dabb8707f07f421fbd29e6b092afbbed9a416e8eb7"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-009.bin",
+      "bytes": 524288,
+      "sha256": "a66dea03dedde632c1c1168d8aac38903fe2be99786c8cf924f464de9a5f6df3"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/968aa7c60fc905d7ff29/part-010.bin",
+      "bytes": 183594,
+      "sha256": "7d5351919739df623bef8af87cfb839d195fd0a76506802a9fb27216205c063b"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-000.bin",
+      "bytes": 524288,
+      "sha256": "9fef16b7b2eec8af66989f7012aad2afaa9a5477b51c046425026b43532e3246"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-001.bin",
+      "bytes": 524288,
+      "sha256": "b91b560d0a1837e0adcb27d99f541bac359a3d8d53f36ced21ccf9936a7b59e3"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-002.bin",
+      "bytes": 524288,
+      "sha256": "4e8b13306bbe37dc6f8d458512359af6c00cacda3f8a2a8a3e33172cd141d82b"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-003.bin",
+      "bytes": 524288,
+      "sha256": "3dd65d0f820493148e2d479d5eafdcb4a1d07ddf94058ea967684956741b6892"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-004.bin",
+      "bytes": 524288,
+      "sha256": "56226b867442d1d4b7261dc22b47ceacf21c967f63498862ea7662dd0d720554"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-005.bin",
+      "bytes": 524288,
+      "sha256": "aa5235375f5d6b230924bd137658021f94572c0e91a55496b1ecc1952fb876c2"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-006.bin",
+      "bytes": 524288,
+      "sha256": "1d11225d5dff349baf249ae1fe23ff6de6235c42a292eeafe3cdb4cce5892a4d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/chunks/9946ada5c3521e0136f4/part-007.bin",
+      "bytes": 185572,
+      "sha256": "34ac35b2bc89a4c5f44ef6708065290bdaa87390b90b20930dceebbe3509b244"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/render_cabinet_styled.png.manifest.json",
+      "bytes": 2166,
+      "sha256": "98918e700529ff0c72f5146a2cdf7207d1960d96ec252d9b1bbc1f2e072ee708"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/render_drawer_styled.png.manifest.json",
+      "bytes": 1989,
+      "sha256": "43fec43f9840856804342e1f824c340ef6f3ffed50a69e383a57e7074eccc92d"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/render_laptop_perspective.png.manifest.json",
+      "bytes": 1994,
+      "sha256": "64d6c209b4af088c96e664d42dfe5a72f655dbb9cef553f0fb49c567062f4267"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/room_overview.png.manifest.json",
+      "bytes": 1630,
+      "sha256": "680dedbef3ac67ddcae8c3e10b595686602a0d212c1371a29b1e742033c09045"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/smart_cabinet_33bay.blend.manifest.json",
+      "bytes": 2166,
+      "sha256": "14aad2bc6f20d1a5d435ce86d28db092d24ab4bd29ee2d3e7a8fda3145302d0a"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/smart_cabinet_drawer.blend.manifest.json",
+      "bytes": 405,
+      "sha256": "ada87de29555987b1a81b1bd0e0878cdac5d971a4879025a66fbfa713dcb1dda"
+    },
+    {
+      "path": "hybrid-33bay-glass/downloads/smart_cabinet_room_and_product.blend.manifest.json",
+      "bytes": 2177,
+      "sha256": "611496f2f96810f564eb0d81589da501d19ed4b32d79d9576fab5fbbaa070f14"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/glass_assets.json",
+      "bytes": 11659,
+      "sha256": "d558fb91bb94e699f775acfdeb240768defe6c237f93669ecaa73de79e88f7fa"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/glass_build.json",
+      "bytes": 2674,
+      "sha256": "f1900eda2b4c7c7275d65824fc7111c7ffdec7963a372322de38300fd7e97eb7"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/glass_motion_cabinet.json",
+      "bytes": 966764,
+      "sha256": "977122fad672f549511c2da9eef7cb0a7754a6412897065204c35fb2d7125184"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/glass_motion_drawer.json",
+      "bytes": 42914,
+      "sha256": "a74b037ce37f2c4ef9f9201a35f03f8dee286239247fd79efbe75a5b38a966bb"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/laptop_apertures.json",
+      "bytes": 3298,
+      "sha256": "69a2637062fe0c15d4d1aead4e1d79186f6493893343ab647ee5e958e5c484e9"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/laptop_assets.json",
+      "bytes": 19714,
+      "sha256": "b6ea8e60855b86346445ebfbb5b438d1588ebfbf77ca9657e4cb956fda8fba42"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/laptop_build.json",
+      "bytes": 28482,
+      "sha256": "a612ba1bc92b72b184a79a8365f7b44d707dc6cf2c89bb9aaf4fbf9a88d1f20b"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/room_build.json",
+      "bytes": 618,
+      "sha256": "cbac39a2c499452fab73ba54887570c83cd7b64e90a5aa1dd17b7b7798b0299d"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/room_installation.json",
+      "bytes": 3982,
+      "sha256": "28ce7e9f5beecad01c20ab6edfef533f651847bec5735b474bdc8aedd4fa38fa"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/showcase_transfer_runtime_manifest.json",
+      "bytes": 18796,
+      "sha256": "ebd34cff46ded5e927858c664a1e968436b3d8f60c618e861d85c12dd9df0de7"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/transfer_downloads_validation.json",
+      "bytes": 432,
+      "sha256": "e1c539e7046378f08851d1acd43aaa50c58c7857f85c487936d7b4d1cc5e0362"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/transfer_final_validation.json",
+      "bytes": 5035,
+      "sha256": "a4bb48a2e8063375ac4da9c55617ee63395417c7da1539768e6d33a83d3d811d"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/transfer_loader_validation.json",
+      "bytes": 4204,
+      "sha256": "fb83cc1c483d7e2b4f1a19fa44fd963675a1bb68e7c4fbc5a79825bdf9d18cba"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/transfer_product_validation.json",
+      "bytes": 3898,
+      "sha256": "aa6a27e4bf177fbfa67f1a3201a64079bf8fdf0d8a4e953d3cee37feb5eb1a89"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/transfer_room_validation.json",
+      "bytes": 3028,
+      "sha256": "8907e08771549aae7f4943c34d353c57a7022d4b7edd1bc46af13319eacf32d2"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/transfer_urls_validation.json",
+      "bytes": 244,
+      "sha256": "2f43072387efead3743e18546f918403ba337db6455df4d92ba4231ace1fc110"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/web_centimeters.json",
+      "bytes": 2340,
+      "sha256": "cfc6e07e7e349d7fa7d0cacdfe708953485a0735016307f8fecda0c032ecb0ed"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/web_files.json",
+      "bytes": 2788,
+      "sha256": "c38fc4512bdc73dea1e20172ce995bf0f94035d40233fc37fc853328c9154b16"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/web_front_variants.json",
+      "bytes": 3898,
+      "sha256": "01bd36a84607a4a8eade8ca7c486e305155a99d00ef489f2a9fb520297ec37c3"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/web_product.json",
+      "bytes": 5223,
+      "sha256": "688ac910e25da2e8e781f9c724106f635c2028253ed99e21233f3cdc4386b0cb"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/web_room.json",
+      "bytes": 3028,
+      "sha256": "19c144f5a601316446869213a81a5b5412667fcaf3a718d1955b261f0da7a1e9"
+    },
+    {
+      "path": "hybrid-33bay-glass/reports/web_urls.json",
+      "bytes": 244,
+      "sha256": "4fd5c546aad5ed87c692162994c461c521c1532c1b91ab19d95d45e2bce5e7f5"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/audit_hybrid_assets.py",
+      "bytes": 29190,
+      "sha256": "42f760f22ecbd4e8fb28ebe9ea86738e9e288551d7b38dd4f823030a25f8af5b"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/audit_hybrid_glass_assets.py",
+      "bytes": 11350,
+      "sha256": "7c551b8953c375b540ebfbd3ab446136751dcadb6f1ddc1c234344a53e3a5fd8"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/audit_hybrid_room.py",
+      "bytes": 8135,
+      "sha256": "c2ac312eff90d8e598c4a79a6c1bb284bc52d16c670c9d1244389b0e3f5a60f9"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/audit_laptop_style_assets.py",
+      "bytes": 9032,
+      "sha256": "d68fd74c5ecfa6185f2622e3a4d0b1b9d369484ecfaa77efbace60f776499f2e"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass/audit_front_motion.py",
+      "bytes": 9390,
+      "sha256": "3865b57eb1e5df4b8fd4ce98107217d2502b1f6fc7e3005210c92114cb7798b7"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass/build_glass_fronts.py",
+      "bytes": 19875,
+      "sha256": "deefe92a2c45ee7ea1e7188e7610466d761d5e78018ff81c1fb8a07de138f749"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass/config.py",
+      "bytes": 525,
+      "sha256": "a77f803bd3b38a2d7744c1f87bd3d973c7665ac883b7b4be0f740debb9869df1"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass/geometry.py",
+      "bytes": 3700,
+      "sha256": "8b18b67c3d5307e53ed5e17ec1288909d68847ac113f96fefce456c23368ddb5"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass/render_preview.py",
+      "bytes": 2722,
+      "sha256": "e81e0fe469eef37129ce83deed1b810b7896d500235c92bca14f9d7b891fe901"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/assets/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/assets/room_signage_subset.ttf",
+      "bytes": 24988,
+      "sha256": "48062b0b90d995ac7dd93e894f3eb074d9adc9a233e6a4c1a96eb09a50c6b2fb"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/build_room.py",
+      "bytes": 23991,
+      "sha256": "f4c631267780ff2dc31b49a92e36776c26f91ed572db57caa9ff2ca52258db53"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/config.py",
+      "bytes": 1589,
+      "sha256": "8aae375a84492aa9fa6ae446191db2dc91b34f56f5ee6b78baceeba26c4c2eaa"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/metadata.py",
+      "bytes": 1758,
+      "sha256": "95b09ab35f8ce63589390dacaa9174a037dda9ed5ef50e167004b48c2c00afff"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/metadata_template.json",
+      "bytes": 4369,
+      "sha256": "677a04618cd224bdedb13e5fb04ce6eb42381c7678c6a6b58215185beff0586f"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/render_views.py",
+      "bytes": 1977,
+      "sha256": "67485bc7c0cbecf2ae6c034e0593d91677ec6aac1771417f99ebdd733af68991"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/hybrid_glass_room/setup_display_modes.py",
+      "bytes": 3305,
+      "sha256": "4c39962b72cd4998824a349f02b46dedfde20593f61eb2ef1a5ee5fcedf3c8c3"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/README.txt",
+      "bytes": 3877,
+      "sha256": "9831dd80f3477ad0708446a8ae6d34c23f3cd82d538bc64638d807f34f0a0ed0"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/assets/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/assets/brand_subset.ttf",
+      "bytes": 3320,
+      "sha256": "9a4b7b0a4ea90b1015a62d8cb00de7aa03e2c0704d45e456e72cb198a30f20e5"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/assets/brushed_metallic.png",
+      "bytes": 8202,
+      "sha256": "560e9bb9e0b9d863ca9ca2e22460815c420a255946d0aab9e27f37fbff3b3669"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/assets/brushed_orm.png",
+      "bytes": 8923,
+      "sha256": "30f6fc3744c351e7c6852eec157ef572a212412264fe6ec7c53e6814f0c4ff2e"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/assets/brushed_roughness.png",
+      "bytes": 6836,
+      "sha256": "f0ea2a9d3f2275a35611455f94321a328dbebdff803c6300e4b78543ffda95b6"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/assets/brushed_silver.png",
+      "bytes": 13975,
+      "sha256": "c6e8fdeaaf3221b5d4e07a78e29d1cb9cf6fe79445400728478f6215c87bad90"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/audit_apertures.py",
+      "bytes": 2431,
+      "sha256": "aa5c6d56f47176dbfb7298117577cab83829291dd77d02ddb43f960ceb3a55ea"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/build_style.py",
+      "bytes": 20426,
+      "sha256": "7c8f883a0cdabf014979b34d170634c1955aa149ebae16f9de119ef46aa998e4"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/generate_texture.py",
+      "bytes": 2103,
+      "sha256": "b0597abae27f662ef5118601633acf2af2cdbc8c77a0a6e9a9257a01bb1be01b"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/input_manifest.json",
+      "bytes": 869,
+      "sha256": "bd36cdf5f01a95827ad80b82c9597fed9abcb2b94eb1074d5962862b095f1f15"
+    },
+    {
+      "path": "hybrid-33bay-glass/scripts/laptop_style/render_preview.py",
+      "bytes": 3889,
+      "sha256": "d77b2519d541d67c4f35e11cd0af32d23b74afdf7fd511fedf339f1e56da9b04"
+    },
+    {
+      "path": "hybrid-33bay-glass/smart_cabinet_drawer.blend",
+      "bytes": 348204,
+      "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7"
+    },
+    {
+      "path": "hybrid-33bay-glass/source_metadata/components.json",
+      "bytes": 3343931,
+      "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+    },
+    {
+      "path": "hybrid-33bay-glass/source_metadata/drawer_compartment.json",
+      "bytes": 108188,
+      "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10085,
+      "sha256": "190a7145baa3eae0099d5d8310da7363fcb551e8840e9e63b59c8b295f345b90"
+    },
+    {
+      "path": "length-format.js",
+      "bytes": 3438,
+      "sha256": "2933548c72ac479a6403c7ce30e6b72af396c0c63338b2c3babed0ce18073bf4"
+    },
+    {
+      "path": "panel-hud.css",
+      "bytes": 6632,
+      "sha256": "1df3c48e2fda1503b5d4e8d305e2f046bdc2a611e505a34970715c3d78e109d4"
+    },
+    {
+      "path": "room-scene.js",
+      "bytes": 4125,
+      "sha256": "84a6b3c23a0bf08bfe839133b93474f89f35c148b27cb2199089c38fd9f426eb"
+    },
+    {
+      "path": "room.css",
+      "bytes": 3364,
+      "sha256": "41ae2877175a4c38e8e29d4f085edc3aa056eec88b2181d7623f94117f627c4e"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 10702,
+      "sha256": "daa72a4c28e6be39d1840787929d2dd875728d48076dd21b0790559006868ee8"
+    },
+    {
+      "path": "wiring.css",
+      "bytes": 8529,
+      "sha256": "8c816bcd02e4533b26c21a42f08effcf6f5aab9002c4449145dcf9f90b6931c2"
+    },
+    {
+      "path": "wiring.js",
+      "bytes": 16533,
+      "sha256": "862a1b4ddc2882fc29c323d2fce872e2607c1e15add97ec0e93bac95886d9b61"
+    }
+  ],
+  "decoded_assets": [
+    {
+      "source": "assets/smart_cabinet.glb",
+      "manifest": "assets/smart_cabinet.glb.manifest.json",
+      "filename": "smart_cabinet.glb",
+      "bytes": 24702236,
+      "sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc"
+    },
+    {
+      "source": "assets/components.json",
+      "manifest": "assets/components.json.manifest.json",
+      "filename": "components.json",
+      "bytes": 3384089,
+      "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57"
+    },
+    {
+      "source": "assets/smart_cabinet_drawer.glb",
+      "manifest": "assets/smart_cabinet_drawer.glb.manifest.json",
+      "filename": "smart_cabinet_drawer.glb",
+      "bytes": 1129328,
+      "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc"
+    },
+    {
+      "source": "assets/drawer_compartment.json",
+      "manifest": "assets/drawer_compartment.json.manifest.json",
+      "filename": "drawer_compartment.json",
+      "bytes": 111838,
+      "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d"
+    },
+    {
+      "source": "assets/room_environment.glb",
+      "manifest": "assets/room_environment.glb.manifest.json",
+      "filename": "room_environment.glb",
+      "bytes": 5633932,
+      "sha256": "78eb457b7cbb1975f70067f3de4d5bc45c0b3ecd4a8e6b58a52c5e9462aa9fdd"
+    },
+    {
+      "source": "assets/room_metadata.json",
+      "manifest": "assets/room_metadata.json.manifest.json",
+      "filename": "room_metadata.json",
+      "bytes": 57384,
+      "sha256": "a14eda0e646eb0e344fbb9a8d51e67b7eb428acd524eaab21d0a77f533400ebf"
+    },
+    {
+      "source": "hybrid-33bay-glass/smart_cabinet_33bay.blend",
+      "manifest": "hybrid-33bay-glass/downloads/smart_cabinet_33bay.blend.manifest.json",
+      "filename": "smart_cabinet_33bay.blend",
+      "bytes": 5426474,
+      "sha256": "968aa7c60fc905d7ff2983d499a843e67cbcea88def32d6fb6eab174cdd44e03"
+    },
+    {
+      "source": "hybrid-33bay-glass/smart_cabinet_drawer.blend",
+      "manifest": "hybrid-33bay-glass/downloads/smart_cabinet_drawer.blend.manifest.json",
+      "filename": "smart_cabinet_drawer.blend",
+      "bytes": 348204,
+      "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7"
+    },
+    {
+      "source": "hybrid-33bay-glass/smart_cabinet_room_and_product.blend",
+      "manifest": "hybrid-33bay-glass/downloads/smart_cabinet_room_and_product.blend.manifest.json",
+      "filename": "smart_cabinet_room_and_product.blend",
+      "bytes": 5672810,
+      "sha256": "7d5b422710f5ddd401c96ca423d9a374c8abc74b3e50ab020d03ba9d871b5ff1"
+    },
+    {
+      "source": "hybrid-33bay-glass/renders/cabinet.png",
+      "manifest": "hybrid-33bay-glass/downloads/render_cabinet_styled.png.manifest.json",
+      "filename": "render_cabinet_styled.png",
+      "bytes": 5721567,
+      "sha256": "056aee3c7ec2459f57ada6ff6684e94385f8f365d8e4dba9063f1889dd3d7cfa"
+    },
+    {
+      "source": "hybrid-33bay-glass/renders/drawer.png",
+      "manifest": "hybrid-33bay-glass/downloads/render_drawer_styled.png.manifest.json",
+      "filename": "render_drawer_styled.png",
+      "bytes": 4985988,
+      "sha256": "7f992088ffa01464044a545a1530a7caa48d6f1ae4ac2791593568195270829d"
+    },
+    {
+      "source": "hybrid-33bay-glass/renders/laptop.png",
+      "manifest": "hybrid-33bay-glass/downloads/render_laptop_perspective.png.manifest.json",
+      "filename": "render_laptop_perspective.png",
+      "bytes": 4837620,
+      "sha256": "40a57d4d2d7c45d8a06281baa3e7d57079fbc86c2b70a9922529e5c56a6d3d88"
+    },
+    {
+      "source": "hybrid-33bay-glass/renders/room_overview.png",
+      "manifest": "hybrid-33bay-glass/downloads/room_overview.png.manifest.json",
+      "filename": "room_overview.png",
+      "bytes": 3855588,
+      "sha256": "9946ada5c3521e0136f4a9ea1f725f0f7b24a7cbb2a8551265eaa841834f1778"
+    }
+  ],
+  "transfer_note": "Lossless transport only; source model/render hashes are unchanged."
+}

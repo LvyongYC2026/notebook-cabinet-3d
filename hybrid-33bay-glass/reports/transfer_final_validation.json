@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T15:17:19.776101+00:00",
+  "version": "20261109-front-variants-v2",
+  "scope": "Transport-only recovery. New loader and downloads page; original model bytes, mechanisms, materials, scene transforms and UI layout preserved. Actual browser rendering remains root QA.",
+  "frozen_baseline": {
+    "runtime_manifest": {
+      "path": "tmp/iterations/showcase_front_variants_release_manifest.json",
+      "bytes": 2788,
+      "sha256": "c38fc4512bdc73dea1e20172ce995bf0f94035d40233fc37fc853328c9154b16"
+    },
+    "prior_final_validation": {
+      "path": "tmp/iterations/front_variants_final_validation.json",
+      "bytes": 4507,
+      "sha256": "bc7526822ada6af138912567644e190f601df428639ea5853a7bf5ce22069eee"
+    },
+    "app_sha256": "0030be2181b7d92f51397697493e17fe8d0c5a4f19d456b09019a93046564ac7"
+  },
+  "recovery_sources": {
+    "app.js": {
+      "bytes": 104979,
+      "sha256": "a224a3489d26c346078493b6ab09860d339e1aee7d93faff6a238d2b86cdae85"
+    },
+    "room-scene.js": {
+      "bytes": 4125,
+      "sha256": "84a6b3c23a0bf08bfe839133b93474f89f35c148b27cb2199089c38fd9f426eb"
+    },
+    "asset-loader.js": {
+      "bytes": 4944,
+      "sha256": "306341fb04da8080c398910b6115f7143de3a53483d58c40f1498d43a14e5ffd"
+    },
+    "downloads.js": {
+      "bytes": 3847,
+      "sha256": "2eb756337da33c591ba6722fe609bbb809d06121a7cfcc1daa6576121ed4b65b"
+    },
+    "downloads.html": {
+      "bytes": 2908,
+      "sha256": "13905417f133ba0c529813b29c252486e9c4746aab82e5cf6c8526be8c2c70af"
+    },
+    "index.html": {
+      "bytes": 10085,
+      "sha256": "190a7145baa3eae0099d5d8310da7363fcb551e8840e9e63b59c8b295f345b90"
+    },
+    "dimensions.js": {
+      "bytes": 17082,
+      "sha256": "18dc95fa5b41ab439162621eca11512db195b82648ea014822eae69f22858af1"
+    },
+    "README.txt": {
+      "bytes": 16906,
+      "sha256": "1603b22b9a3bfac0abd10828186bd0f1bfa37c9ddeea71a86675a053f5c8213c"
+    },
+    "download-assets.json": {
+      "bytes": 2743,
+      "sha256": "a5113b545598d4b6af52135a99f05adbad1d1e5d98a108965d1614bfddb8de88"
+    }
+  },
+  "decoded_original_assets_unchanged": {
+    "assets/smart_cabinet.glb": {
+      "bytes": 24702236,
+      "sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc"
+    },
+    "assets/components.json": {
+      "bytes": 3384089,
+      "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57"
+    },
+    "assets/smart_cabinet_single_compartment.glb": {
+      "bytes": 4743476,
+      "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+    },
+    "assets/single_compartment.json": {
+      "bytes": 66924,
+      "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+    },
+    "assets/smart_cabinet_drawer.glb": {
+      "bytes": 1129328,
+      "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc"
+    },
+    "assets/drawer_compartment.json": {
+      "bytes": 111838,
+      "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d"
+    },
+    "assets/room_environment.glb": {
+      "bytes": 5633932,
+      "sha256": "78eb457b7cbb1975f70067f3de4d5bc45c0b3ecd4a8e6b58a52c5e9462aa9fdd"
+    },
+    "assets/room_metadata.json": {
+      "bytes": 57384,
+      "sha256": "a14eda0e646eb0e344fbb9a8d51e67b7eb428acd524eaab21d0a77f533400ebf"
+    }
+  },
+  "strict_diff_assertions": {
+    "app_only_load_calls_and_version": true,
+    "room_only_load_calls_and_version": true,
+    "index_and_dimensions_only_version": true,
+    "all_other_existing_frontend_bytes_unchanged": true
+  },
+  "reports": {
+    "transfer_loader_validation.json": {
+      "bytes": 4204,
+      "sha256": "fb83cc1c483d7e2b4f1a19fa44fd963675a1bb68e7c4fbc5a79825bdf9d18cba"
+    },
+    "transfer_product_validation.json": {
+      "bytes": 3898,
+      "sha256": "aa6a27e4bf177fbfa67f1a3201a64079bf8fdf0d8a4e953d3cee37feb5eb1a89"
+    },
+    "transfer_room_validation.json": {
+      "bytes": 3028,
+      "sha256": "8907e08771549aae7f4943c34d353c57a7022d4b7edd1bc46af13319eacf32d2"
+    },
+    "transfer_downloads_validation.json": {
+      "bytes": 432,
+      "sha256": "e1c539e7046378f08851d1acd43aaa50c58c7857f85c487936d7b4d1cc5e0362"
+    },
+    "transfer_urls_validation.json": {
+      "bytes": 244,
+      "sha256": "2f43072387efead3743e18546f918403ba337db6455df4d92ba4231ace1fc110"
+    }
+  },
+  "runtime_transfer_manifest": {
+    "files": 111,
+    "path": "tmp/iterations/showcase_transfer_runtime_manifest.json",
+    "bytes": 18796,
+    "sha256": "ebd34cff46ded5e927858c664a1e968436b3d8f60c618e861d85c12dd9df0de7"
+  },
+  "limitations": [
+    "GLTF parse handoff unit test validates decoded GLB bytes/header; visual texture and WebGL checks are real browser QA.",
+    "Prior geometry collision/rendering reports keep their original source hash attribution; this change does not rebuild geometry.",
+    "Native DecompressionStream and secure-context WebCrypto required for the six encoded resources and downloads. Missing support produces a readable error."
+  ]
+}

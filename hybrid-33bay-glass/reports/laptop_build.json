@@ -1,0 +1,963 @@
+{
+  "status": "built_pending_visual_and_independent_audit",
+  "source_manifest_sha256": "bd36cdf5f01a95827ad80b82c9597fed9abcb2b94eb1074d5962862b095f1f15",
+  "export_note": "Blender glTF exporter may issue a sampler warning because roughness and metallic are two sockets; both read the same prepacked ORM image with identical UV and sampler. Actual GLB embeds one ORM texture.",
+  "appearance_parameters_mm": {
+    "nominal_body": [
+      300,
+      210,
+      30
+    ],
+    "lower_edge_radius": 2.5,
+    "upper_edge_radius": 0.4,
+    "lid_plan_corner_radius": 7,
+    "hinge_cover": [
+      25,
+      7.4,
+      7.4
+    ]
+  },
+  "scenes": [
+    {
+      "role": "whole",
+      "styled_laptops": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B11",
+        "B12",
+        "B13",
+        "B14",
+        "B15",
+        "B16",
+        "B17",
+        "B18",
+        "B19",
+        "B20",
+        "B21",
+        "B22",
+        "B23",
+        "B24"
+      ],
+      "replaced_original_meshes": [
+        "B1_LaptopBase",
+        "B1_LaptopClosedLid",
+        "B1_LaptopHinge",
+        "B1_LaptopHinge.001",
+        "B2_LaptopBase",
+        "B2_LaptopClosedLid",
+        "B2_LaptopHinge",
+        "B2_LaptopHinge.001",
+        "B3_LaptopBase",
+        "B3_LaptopClosedLid",
+        "B3_LaptopHinge",
+        "B3_LaptopHinge.001",
+        "B4_LaptopBase",
+        "B4_LaptopClosedLid",
+        "B4_LaptopHinge",
+        "B4_LaptopHinge.001",
+        "B5_LaptopBase",
+        "B5_LaptopClosedLid",
+        "B5_LaptopHinge",
+        "B5_LaptopHinge.001",
+        "B6_LaptopBase",
+        "B6_LaptopClosedLid",
+        "B6_LaptopHinge",
+        "B6_LaptopHinge.001",
+        "B7_LaptopBase",
+        "B7_LaptopClosedLid",
+        "B7_LaptopHinge",
+        "B7_LaptopHinge.001",
+        "B8_LaptopBase",
+        "B8_LaptopClosedLid",
+        "B8_LaptopHinge",
+        "B8_LaptopHinge.001",
+        "B9_LaptopBase",
+        "B9_LaptopClosedLid",
+        "B9_LaptopHinge",
+        "B9_LaptopHinge.001",
+        "B10_LaptopBase",
+        "B10_LaptopClosedLid",
+        "B10_LaptopHinge",
+        "B10_LaptopHinge.001",
+        "B11_LaptopBase",
+        "B11_LaptopClosedLid",
+        "B11_LaptopHinge",
+        "B11_LaptopHinge.001",
+        "B12_LaptopBase",
+        "B12_LaptopClosedLid",
+        "B12_LaptopHinge",
+        "B12_LaptopHinge.001",
+        "B13_LaptopBase",
+        "B13_LaptopClosedLid",
+        "B13_LaptopHinge",
+        "B13_LaptopHinge.001",
+        "B14_LaptopBase",
+        "B14_LaptopClosedLid",
+        "B14_LaptopHinge",
+        "B14_LaptopHinge.001",
+        "B15_LaptopBase",
+        "B15_LaptopClosedLid",
+        "B15_LaptopHinge",
+        "B15_LaptopHinge.001",
+        "B16_LaptopBase",
+        "B16_LaptopClosedLid",
+        "B16_LaptopHinge",
+        "B16_LaptopHinge.001",
+        "B17_LaptopBase",
+        "B17_LaptopClosedLid",
+        "B17_LaptopHinge",
+        "B17_LaptopHinge.001",
+        "B18_LaptopBase",
+        "B18_LaptopClosedLid",
+        "B18_LaptopHinge",
+        "B18_LaptopHinge.001",
+        "B19_LaptopBase",
+        "B19_LaptopClosedLid",
+        "B19_LaptopHinge",
+        "B19_LaptopHinge.001",
+        "B20_LaptopBase",
+        "B20_LaptopClosedLid",
+        "B20_LaptopHinge",
+        "B20_LaptopHinge.001",
+        "B21_LaptopBase",
+        "B21_LaptopClosedLid",
+        "B21_LaptopHinge",
+        "B21_LaptopHinge.001",
+        "B22_LaptopBase",
+        "B22_LaptopClosedLid",
+        "B22_LaptopHinge",
+        "B22_LaptopHinge.001",
+        "B23_LaptopBase",
+        "B23_LaptopClosedLid",
+        "B23_LaptopHinge",
+        "B23_LaptopHinge.001",
+        "B24_LaptopBase",
+        "B24_LaptopClosedLid",
+        "B24_LaptopHinge",
+        "B24_LaptopHinge.001"
+      ],
+      "new_objects": 312,
+      "new_object_prefix": "<bay>_Style_",
+      "new_object_names": [
+        "B1_Style_VentInterior",
+        "B1_Style_SpareUSBBack",
+        "B1_Style_SpareUSBTongue",
+        "B1_Style_SpareUSBSide-0.191",
+        "B1_Style_SpareUSBSide-0.179",
+        "B1_Style_SpareUSBEdge0.0112",
+        "B1_Style_SpareUSBEdge0.0168",
+        "B1_Style_AudioWell",
+        "B1_Style_RearHingeRecess",
+        "B1_Style_UndersideScrew0",
+        "B1_Style_UndersideScrew1",
+        "B1_Style_UndersideScrew2",
+        "B1_Style_UndersideScrew3",
+        "B2_Style_VentInterior",
+        "B2_Style_SpareUSBBack",
+        "B2_Style_SpareUSBTongue",
+        "B2_Style_SpareUSBSide-0.191",
+        "B2_Style_SpareUSBSide-0.179",
+        "B2_Style_SpareUSBEdge0.0112",
+        "B2_Style_SpareUSBEdge0.0168",
+        "B2_Style_AudioWell",
+        "B2_Style_RearHingeRecess",
+        "B2_Style_UndersideScrew0",
+        "B2_Style_UndersideScrew1",
+        "B2_Style_UndersideScrew2",
+        "B2_Style_UndersideScrew3",
+        "B3_Style_VentInterior",
+        "B3_Style_SpareUSBBack",
+        "B3_Style_SpareUSBTongue",
+        "B3_Style_SpareUSBSide-0.191",
+        "B3_Style_SpareUSBSide-0.179",
+        "B3_Style_SpareUSBEdge0.0112",
+        "B3_Style_SpareUSBEdge0.0168",
+        "B3_Style_AudioWell",
+        "B3_Style_RearHingeRecess",
+        "B3_Style_UndersideScrew0",
+        "B3_Style_UndersideScrew1",
+        "B3_Style_UndersideScrew2",
+        "B3_Style_UndersideScrew3",
+        "B4_Style_VentInterior",
+        "B4_Style_SpareUSBBack",
+        "B4_Style_SpareUSBTongue",
+        "B4_Style_SpareUSBSide-0.191",
+        "B4_Style_SpareUSBSide-0.179",
+        "B4_Style_SpareUSBEdge0.0112",
+        "B4_Style_SpareUSBEdge0.0168",
+        "B4_Style_AudioWell",
+        "B4_Style_RearHingeRecess",
+        "B4_Style_UndersideScrew0",
+        "B4_Style_UndersideScrew1",
+        "B4_Style_UndersideScrew2",
+        "B4_Style_UndersideScrew3",
+        "B5_Style_VentInterior",
+        "B5_Style_SpareUSBBack",
+        "B5_Style_SpareUSBTongue",
+        "B5_Style_SpareUSBSide-0.191",
+        "B5_Style_SpareUSBSide-0.179",
+        "B5_Style_SpareUSBEdge0.0112",
+        "B5_Style_SpareUSBEdge0.0168",
+        "B5_Style_AudioWell",
+        "B5_Style_RearHingeRecess",
+        "B5_Style_UndersideScrew0",
+        "B5_Style_UndersideScrew1",
+        "B5_Style_UndersideScrew2",
+        "B5_Style_UndersideScrew3",
+        "B6_Style_VentInterior",
+        "B6_Style_SpareUSBBack",
+        "B6_Style_SpareUSBTongue",
+        "B6_Style_SpareUSBSide-0.191",
+        "B6_Style_SpareUSBSide-0.179",
+        "B6_Style_SpareUSBEdge0.0112",
+        "B6_Style_SpareUSBEdge0.0168",
+        "B6_Style_AudioWell",
+        "B6_Style_RearHingeRecess",
+        "B6_Style_UndersideScrew0",
+        "B6_Style_UndersideScrew1",
+        "B6_Style_UndersideScrew2",
+        "B6_Style_UndersideScrew3",
+        "B7_Style_VentInterior",
+        "B7_Style_SpareUSBBack",
+        "B7_Style_SpareUSBTongue",
+        "B7_Style_SpareUSBSide-0.191",
+        "B7_Style_SpareUSBSide-0.179",
+        "B7_Style_SpareUSBEdge0.0112",
+        "B7_Style_SpareUSBEdge0.0168",
+        "B7_Style_AudioWell",
+        "B7_Style_RearHingeRecess",
+        "B7_Style_UndersideScrew0",
+        "B7_Style_UndersideScrew1",
+        "B7_Style_UndersideScrew2",
+        "B7_Style_UndersideScrew3",
+        "B8_Style_VentInterior",
+        "B8_Style_SpareUSBBack",
+        "B8_Style_SpareUSBTongue",
+        "B8_Style_SpareUSBSide-0.191",
+        "B8_Style_SpareUSBSide-0.179",
+        "B8_Style_SpareUSBEdge0.0112",
+        "B8_Style_SpareUSBEdge0.0168",
+        "B8_Style_AudioWell",
+        "B8_Style_RearHingeRecess",
+        "B8_Style_UndersideScrew0",
+        "B8_Style_UndersideScrew1",
+        "B8_Style_UndersideScrew2",
+        "B8_Style_UndersideScrew3",
+        "B9_Style_VentInterior",
+        "B9_Style_SpareUSBBack",
+        "B9_Style_SpareUSBTongue",
+        "B9_Style_SpareUSBSide-0.191",
+        "B9_Style_SpareUSBSide-0.179",
+        "B9_Style_SpareUSBEdge0.0112",
+        "B9_Style_SpareUSBEdge0.0168",
+        "B9_Style_AudioWell",
+        "B9_Style_RearHingeRecess",
+        "B9_Style_UndersideScrew0",
+        "B9_Style_UndersideScrew1",
+        "B9_Style_UndersideScrew2",
+        "B9_Style_UndersideScrew3",
+        "B10_Style_VentInterior",
+        "B10_Style_SpareUSBBack",
+        "B10_Style_SpareUSBTongue",
+        "B10_Style_SpareUSBSide-0.191",
+        "B10_Style_SpareUSBSide-0.179",
+        "B10_Style_SpareUSBEdge0.0112",
+        "B10_Style_SpareUSBEdge0.0168",
+        "B10_Style_AudioWell",
+        "B10_Style_RearHingeRecess",
+        "B10_Style_UndersideScrew0",
+        "B10_Style_UndersideScrew1",
+        "B10_Style_UndersideScrew2",
+        "B10_Style_UndersideScrew3",
+        "B11_Style_VentInterior",
+        "B11_Style_SpareUSBBack",
+        "B11_Style_SpareUSBTongue",
+        "B11_Style_SpareUSBSide-0.191",
+        "B11_Style_SpareUSBSide-0.179",
+        "B11_Style_SpareUSBEdge0.0112",
+        "B11_Style_SpareUSBEdge0.0168",
+        "B11_Style_AudioWell",
+        "B11_Style_RearHingeRecess",
+        "B11_Style_UndersideScrew0",
+        "B11_Style_UndersideScrew1",
+        "B11_Style_UndersideScrew2",
+        "B11_Style_UndersideScrew3",
+        "B12_Style_VentInterior",
+        "B12_Style_SpareUSBBack",
+        "B12_Style_SpareUSBTongue",
+        "B12_Style_SpareUSBSide-0.191",
+        "B12_Style_SpareUSBSide-0.179",
+        "B12_Style_SpareUSBEdge0.0112",
+        "B12_Style_SpareUSBEdge0.0168",
+        "B12_Style_AudioWell",
+        "B12_Style_RearHingeRecess",
+        "B12_Style_UndersideScrew0",
+        "B12_Style_UndersideScrew1",
+        "B12_Style_UndersideScrew2",
+        "B12_Style_UndersideScrew3",
+        "B13_Style_VentInterior",
+        "B13_Style_SpareUSBBack",
+        "B13_Style_SpareUSBTongue",
+        "B13_Style_SpareUSBSide-0.191",
+        "B13_Style_SpareUSBSide-0.179",
+        "B13_Style_SpareUSBEdge0.0112",
+        "B13_Style_SpareUSBEdge0.0168",
+        "B13_Style_AudioWell",
+        "B13_Style_RearHingeRecess",
+        "B13_Style_UndersideScrew0",
+        "B13_Style_UndersideScrew1",
+        "B13_Style_UndersideScrew2",
+        "B13_Style_UndersideScrew3",
+        "B14_Style_VentInterior",
+        "B14_Style_SpareUSBBack",
+        "B14_Style_SpareUSBTongue",
+        "B14_Style_SpareUSBSide-0.191",
+        "B14_Style_SpareUSBSide-0.179",
+        "B14_Style_SpareUSBEdge0.0112",
+        "B14_Style_SpareUSBEdge0.0168",
+        "B14_Style_AudioWell",
+        "B14_Style_RearHingeRecess",
+        "B14_Style_UndersideScrew0",
+        "B14_Style_UndersideScrew1",
+        "B14_Style_UndersideScrew2",
+        "B14_Style_UndersideScrew3",
+        "B15_Style_VentInterior",
+        "B15_Style_SpareUSBBack",
+        "B15_Style_SpareUSBTongue",
+        "B15_Style_SpareUSBSide-0.191",
+        "B15_Style_SpareUSBSide-0.179",
+        "B15_Style_SpareUSBEdge0.0112",
+        "B15_Style_SpareUSBEdge0.0168",
+        "B15_Style_AudioWell",
+        "B15_Style_RearHingeRecess",
+        "B15_Style_UndersideScrew0",
+        "B15_Style_UndersideScrew1",
+        "B15_Style_UndersideScrew2",
+        "B15_Style_UndersideScrew3",
+        "B16_Style_VentInterior",
+        "B16_Style_SpareUSBBack",
+        "B16_Style_SpareUSBTongue",
+        "B16_Style_SpareUSBSide-0.191",
+        "B16_Style_SpareUSBSide-0.179",
+        "B16_Style_SpareUSBEdge0.0112",
+        "B16_Style_SpareUSBEdge0.0168",
+        "B16_Style_AudioWell",
+        "B16_Style_RearHingeRecess",
+        "B16_Style_UndersideScrew0",
+        "B16_Style_UndersideScrew1",
+        "B16_Style_UndersideScrew2",
+        "B16_Style_UndersideScrew3",
+        "B17_Style_VentInterior",
+        "B17_Style_SpareUSBBack",
+        "B17_Style_SpareUSBTongue",
+        "B17_Style_SpareUSBSide-0.191",
+        "B17_Style_SpareUSBSide-0.179",
+        "B17_Style_SpareUSBEdge0.0112",
+        "B17_Style_SpareUSBEdge0.0168",
+        "B17_Style_AudioWell",
+        "B17_Style_RearHingeRecess",
+        "B17_Style_UndersideScrew0",
+        "B17_Style_UndersideScrew1",
+        "B17_Style_UndersideScrew2",
+        "B17_Style_UndersideScrew3",
+        "B18_Style_VentInterior",
+        "B18_Style_SpareUSBBack",
+        "B18_Style_SpareUSBTongue",
+        "B18_Style_SpareUSBSide-0.191",
+        "B18_Style_SpareUSBSide-0.179",
+        "B18_Style_SpareUSBEdge0.0112",
+        "B18_Style_SpareUSBEdge0.0168",
+        "B18_Style_AudioWell",
+        "B18_Style_RearHingeRecess",
+        "B18_Style_UndersideScrew0",
+        "B18_Style_UndersideScrew1",
+        "B18_Style_UndersideScrew2",
+        "B18_Style_UndersideScrew3",
+        "B19_Style_VentInterior",
+        "B19_Style_SpareUSBBack",
+        "B19_Style_SpareUSBTongue",
+        "B19_Style_SpareUSBSide-0.191",
+        "B19_Style_SpareUSBSide-0.179",
+        "B19_Style_SpareUSBEdge0.0112",
+        "B19_Style_SpareUSBEdge0.0168",
+        "B19_Style_AudioWell",
+        "B19_Style_RearHingeRecess",
+        "B19_Style_UndersideScrew0",
+        "B19_Style_UndersideScrew1",
+        "B19_Style_UndersideScrew2",
+        "B19_Style_UndersideScrew3",
+        "B20_Style_VentInterior",
+        "B20_Style_SpareUSBBack",
+        "B20_Style_SpareUSBTongue",
+        "B20_Style_SpareUSBSide-0.191",
+        "B20_Style_SpareUSBSide-0.179",
+        "B20_Style_SpareUSBEdge0.0112",
+        "B20_Style_SpareUSBEdge0.0168",
+        "B20_Style_AudioWell",
+        "B20_Style_RearHingeRecess",
+        "B20_Style_UndersideScrew0",
+        "B20_Style_UndersideScrew1",
+        "B20_Style_UndersideScrew2",
+        "B20_Style_UndersideScrew3",
+        "B21_Style_VentInterior",
+        "B21_Style_SpareUSBBack",
+        "B21_Style_SpareUSBTongue",
+        "B21_Style_SpareUSBSide-0.191",
+        "B21_Style_SpareUSBSide-0.179",
+        "B21_Style_SpareUSBEdge0.0112",
+        "B21_Style_SpareUSBEdge0.0168",
+        "B21_Style_AudioWell",
+        "B21_Style_RearHingeRecess",
+        "B21_Style_UndersideScrew0",
+        "B21_Style_UndersideScrew1",
+        "B21_Style_UndersideScrew2",
+        "B21_Style_UndersideScrew3",
+        "B22_Style_VentInterior",
+        "B22_Style_SpareUSBBack",
+        "B22_Style_SpareUSBTongue",
+        "B22_Style_SpareUSBSide-0.191",
+        "B22_Style_SpareUSBSide-0.179",
+        "B22_Style_SpareUSBEdge0.0112",
+        "B22_Style_SpareUSBEdge0.0168",
+        "B22_Style_AudioWell",
+        "B22_Style_RearHingeRecess",
+        "B22_Style_UndersideScrew0",
+        "B22_Style_UndersideScrew1",
+        "B22_Style_UndersideScrew2",
+        "B22_Style_UndersideScrew3",
+        "B23_Style_VentInterior",
+        "B23_Style_SpareUSBBack",
+        "B23_Style_SpareUSBTongue",
+        "B23_Style_SpareUSBSide-0.191",
+        "B23_Style_SpareUSBSide-0.179",
+        "B23_Style_SpareUSBEdge0.0112",
+        "B23_Style_SpareUSBEdge0.0168",
+        "B23_Style_AudioWell",
+        "B23_Style_RearHingeRecess",
+        "B23_Style_UndersideScrew0",
+        "B23_Style_UndersideScrew1",
+        "B23_Style_UndersideScrew2",
+        "B23_Style_UndersideScrew3",
+        "B24_Style_VentInterior",
+        "B24_Style_SpareUSBBack",
+        "B24_Style_SpareUSBTongue",
+        "B24_Style_SpareUSBSide-0.191",
+        "B24_Style_SpareUSBSide-0.179",
+        "B24_Style_SpareUSBEdge0.0112",
+        "B24_Style_SpareUSBEdge0.0168",
+        "B24_Style_AudioWell",
+        "B24_Style_RearHingeRecess",
+        "B24_Style_UndersideScrew0",
+        "B24_Style_UndersideScrew1",
+        "B24_Style_UndersideScrew2",
+        "B24_Style_UndersideScrew3"
+      ],
+      "existing_port_nodes": [
+        "B1_LaptopDCIn",
+        "B1_LaptopUSBIn",
+        "B2_LaptopDCIn",
+        "B2_LaptopUSBIn",
+        "B3_LaptopDCIn",
+        "B3_LaptopUSBIn",
+        "B4_LaptopDCIn",
+        "B4_LaptopUSBIn",
+        "B5_LaptopDCIn",
+        "B5_LaptopUSBIn",
+        "B6_LaptopDCIn",
+        "B6_LaptopUSBIn",
+        "B7_LaptopDCIn",
+        "B7_LaptopUSBIn",
+        "B8_LaptopDCIn",
+        "B8_LaptopUSBIn",
+        "B9_LaptopDCIn",
+        "B9_LaptopUSBIn",
+        "B10_LaptopDCIn",
+        "B10_LaptopUSBIn",
+        "B11_LaptopDCIn",
+        "B11_LaptopUSBIn",
+        "B12_LaptopDCIn",
+        "B12_LaptopUSBIn",
+        "B13_LaptopDCIn",
+        "B13_LaptopUSBIn",
+        "B14_LaptopDCIn",
+        "B14_LaptopUSBIn",
+        "B15_LaptopDCIn",
+        "B15_LaptopUSBIn",
+        "B16_LaptopDCIn",
+        "B16_LaptopUSBIn",
+        "B17_LaptopDCIn",
+        "B17_LaptopUSBIn",
+        "B18_LaptopDCIn",
+        "B18_LaptopUSBIn",
+        "B19_LaptopDCIn",
+        "B19_LaptopUSBIn",
+        "B20_LaptopDCIn",
+        "B20_LaptopUSBIn",
+        "B21_LaptopDCIn",
+        "B21_LaptopUSBIn",
+        "B22_LaptopDCIn",
+        "B22_LaptopUSBIn",
+        "B23_LaptopDCIn",
+        "B23_LaptopUSBIn",
+        "B24_LaptopDCIn",
+        "B24_LaptopUSBIn"
+      ],
+      "preserved_original_objects": 7137,
+      "preserved_original_sha256": "66639885cd032b1dfcfdb6b3a25d5e0f28b9be6431d313fbb5b8df5eda8a4cc7",
+      "existing_port_fingerprint_sha256": "60795189c4e94d44e66935d8cb94bf596155dc5177d7c73970d9f009672f5639",
+      "existing_ports_preserved": true,
+      "bounds": [
+        {
+          "bay_id": "B1",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B2",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B3",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B4",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B5",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B6",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B7",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B8",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B9",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B10",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B11",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B12",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              3.319291863590479e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B13",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B14",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B15",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B16",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B17",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B18",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B19",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B20",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B21",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -2.6411726139485836e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.029999997466802597
+            ]
+          ]
+        },
+        {
+          "bay_id": "B22",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -1.210719347000122e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.030000004917383194
+            ]
+          ]
+        },
+        {
+          "bay_id": "B23",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -1.210719347000122e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.030000004917383194
+            ]
+          ]
+        },
+        {
+          "bay_id": "B24",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000003457069397,
+              -0.2549999952316284,
+              -1.210719347000122e-08
+            ],
+            [
+              0.17999997735023499,
+              -0.044999998062849045,
+              0.030000004917383194
+            ]
+          ]
+        }
+      ],
+      "files": {
+        "smart_cabinet_33bay.blend": {
+          "bytes": 5426474,
+          "sha256": "968aa7c60fc905d7ff2983d499a843e67cbcea88def32d6fb6eab174cdd44e03"
+        },
+        "smart_cabinet.glb": {
+          "bytes": 24702236,
+          "sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc"
+        },
+        "components.json": {
+          "bytes": 3384089,
+          "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57"
+        }
+      }
+    },
+    {
+      "role": "single",
+      "styled_laptops": [
+        "S1"
+      ],
+      "replaced_original_meshes": [
+        "S1_LaptopBase",
+        "S1_LaptopClosedLid",
+        "S1_LaptopHinge",
+        "S1_LaptopHinge.001"
+      ],
+      "new_objects": 13,
+      "new_object_prefix": "<bay>_Style_",
+      "new_object_names": [
+        "S1_Style_VentInterior",
+        "S1_Style_SpareUSBBack",
+        "S1_Style_SpareUSBTongue",
+        "S1_Style_SpareUSBSide-0.191",
+        "S1_Style_SpareUSBSide-0.179",
+        "S1_Style_SpareUSBEdge0.0112",
+        "S1_Style_SpareUSBEdge0.0168",
+        "S1_Style_AudioWell",
+        "S1_Style_RearHingeRecess",
+        "S1_Style_UndersideScrew0",
+        "S1_Style_UndersideScrew1",
+        "S1_Style_UndersideScrew2",
+        "S1_Style_UndersideScrew3"
+      ],
+      "existing_port_nodes": [
+        "S1_LaptopDCIn",
+        "S1_LaptopUSBIn"
+      ],
+      "preserved_original_objects": 187,
+      "preserved_original_sha256": "6fe85b287b1a5163d6436fc86d443261214a5f6622bc4cfd92401790a4579890",
+      "existing_port_fingerprint_sha256": "8789b877ad39e6934d1388273e322b242234fd345766ad9f0bb731e63e57f710",
+      "existing_ports_preserved": true,
+      "bounds": [
+        {
+          "bay_id": "S1",
+          "styled_geometry_bounds_m": [
+            [
+              -0.12000000476837158,
+              -0.2549999952316284,
+              -3.346940502524376e-10
+            ],
+            [
+              0.18000000715255737,
+              -0.044999998062849045,
+              0.030000001192092896
+            ]
+          ]
+        }
+      ],
+      "files": {
+        "smart_cabinet_drawer.blend": {
+          "bytes": 348204,
+          "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7"
+        },
+        "smart_cabinet_drawer.glb": {
+          "bytes": 1129328,
+          "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc"
+        },
+        "drawer_compartment.json": {
+          "bytes": 111838,
+          "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "groups": [
+    {
+      "title": "Blender工程",
+      "items": [
+        {
+          "label": "整柜Blender工程",
+          "filename": "smart_cabinet_33bay.blend",
+          "manifest": "./hybrid-33bay-glass/downloads/smart_cabinet_33bay.blend.manifest.json"
+        },
+        {
+          "label": "抽屉单仓Blender工程",
+          "filename": "smart_cabinet_drawer.blend",
+          "manifest": "./hybrid-33bay-glass/downloads/smart_cabinet_drawer.blend.manifest.json"
+        },
+        {
+          "label": "机要室Blender工程",
+          "filename": "smart_cabinet_room_and_product.blend",
+          "manifest": "./hybrid-33bay-glass/downloads/smart_cabinet_room_and_product.blend.manifest.json"
+        }
+      ]
+    },
+    {
+      "title": "网页模型与参数",
+      "items": [
+        {
+          "label": "整柜GLB",
+          "filename": "smart_cabinet.glb",
+          "manifest": "./assets/smart_cabinet.glb.manifest.json"
+        },
+        {
+          "label": "整柜交互参数",
+          "filename": "components.json",
+          "manifest": "./assets/components.json.manifest.json"
+        },
+        {
+          "label": "抽屉单仓GLB",
+          "filename": "smart_cabinet_drawer.glb",
+          "manifest": "./assets/smart_cabinet_drawer.glb.manifest.json"
+        },
+        {
+          "label": "抽屉交互参数",
+          "filename": "drawer_compartment.json",
+          "manifest": "./assets/drawer_compartment.json.manifest.json"
+        },
+        {
+          "label": "机要室环境GLB",
+          "filename": "room_environment.glb",
+          "manifest": "./assets/room_environment.glb.manifest.json"
+        },
+        {
+          "label": "机要室参数",
+          "filename": "room_metadata.json",
+          "manifest": "./assets/room_metadata.json.manifest.json"
+        }
+      ]
+    },
+    {
+      "title": "产品渲染",
+      "items": [
+        {
+          "label": "整柜主视觉",
+          "filename": "render_cabinet_styled.png",
+          "manifest": "./hybrid-33bay-glass/downloads/render_cabinet_styled.png.manifest.json"
+        },
+        {
+          "label": "抽屉内部结构",
+          "filename": "render_drawer_styled.png",
+          "manifest": "./hybrid-33bay-glass/downloads/render_drawer_styled.png.manifest.json"
+        },
+        {
+          "label": "闭合笔记本",
+          "filename": "render_laptop_perspective.png",
+          "manifest": "./hybrid-33bay-glass/downloads/render_laptop_perspective.png.manifest.json"
+        },
+        {
+          "label": "机要室概览",
+          "filename": "room_overview.png",
+          "manifest": "./hybrid-33bay-glass/downloads/room_overview.png.manifest.json"
+        }
+      ]
+    }
+  ]
+}

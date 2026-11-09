@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "compression": "gzip",
+  "filename": "drawer_compartment.json",
+  "bytes": 111838,
+  "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d",
+  "encodedBytes": 16096,
+  "parts": [
+    {
+      "url": "chunks/54af59c9bdb064f320af/part-000.bin",
+      "bytes": 16096,
+      "sha256": "54af59c9bdb064f320af7a8fa6c52b0e3fe26185407ed7b5e1869dcecb19e227"
+    }
+  ]
+}

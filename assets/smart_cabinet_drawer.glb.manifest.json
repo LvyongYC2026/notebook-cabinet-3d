@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "compression": "gzip",
+  "filename": "smart_cabinet_drawer.glb",
+  "bytes": 1129328,
+  "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc",
+  "encodedBytes": 222478,
+  "parts": [
+    {
+      "url": "chunks/fb40f3d06046c546fa6d/part-000.bin",
+      "bytes": 222478,
+      "sha256": "fb40f3d06046c546fa6d0f39b6c67945ac6dc192323a23b72923d839021ed57d"
+    }
+  ]
+}

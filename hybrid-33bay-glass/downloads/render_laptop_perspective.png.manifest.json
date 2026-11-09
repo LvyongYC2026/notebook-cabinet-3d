@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "compression": "none",
+  "filename": "render_laptop_perspective.png",
+  "bytes": 4837620,
+  "sha256": "40a57d4d2d7c45d8a06281baa3e7d57079fbc86c2b70a9922529e5c56a6d3d88",
+  "encodedBytes": 4837620,
+  "parts": [
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-000.bin",
+      "bytes": 524288,
+      "sha256": "1a7de7e6610cc8e3f417aa5e6404c262247a1b4059f21979bd91e06f49d9b9c5"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-001.bin",
+      "bytes": 524288,
+      "sha256": "4dede5007fbde0e9544c0af345fce7670c430a317ebe147de556e65bb3737ccb"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-002.bin",
+      "bytes": 524288,
+      "sha256": "23de9358b77619dd62ace0eb18ca4f26c47c548922a102175ff2b2e77aa2d8a1"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-003.bin",
+      "bytes": 524288,
+      "sha256": "5fb7cf17df9819e53dc6b849567882b014f1b80ac4b48d1d2c10ee6ca4d646d2"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-004.bin",
+      "bytes": 524288,
+      "sha256": "b1aef14555ace54e409da1e725008524b02092226cbf778a93741a7ee5e36a7e"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-005.bin",
+      "bytes": 524288,
+      "sha256": "2ef6b020a8bf3b652fbaab8406168505210a727dcdaffd533f075c5e759ecc6b"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-006.bin",
+      "bytes": 524288,
+      "sha256": "b8c0b6ec17434e867b3b8c433f5883939df79573868c58e2089e5b616b60d54d"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-007.bin",
+      "bytes": 524288,
+      "sha256": "8e0c7d61b3512e791f5c1f3f7c410e097ab5596122833a98fdd93d1414c32d39"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-008.bin",
+      "bytes": 524288,
+      "sha256": "b9502838a3b6c43e9940d33039728302bbea322430d18c58d78fa9c6c15737d3"
+    },
+    {
+      "url": "chunks/40a57d4d2d7c45d8a062/part-009.bin",
+      "bytes": 119028,
+      "sha256": "3296cb59b6ae51df687dcc8e5f570ccd6939e938a7e1e3d43ff38fb261e254b0"
+    }
+  ]
+}

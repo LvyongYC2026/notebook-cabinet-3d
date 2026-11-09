@@ -1,0 +1,43 @@
+{
+  "numericCases": 21,
+  "syntheticCases": 39,
+  "metadataStrings": 1281,
+  "convertedStrings": 194,
+  "examples": [
+    {
+      "path": "components.json.components.cabinet.notes",
+      "before": "3300×650×1850 mm；左9开盖存储仓，右24闭盖抽屉；35 cm为外观分缝，中央高设备舱保留。",
+      "after": "330×65×185 cm；左9开盖存储仓，右24闭盖抽屉；35 cm为外观分缝，中央高设备舱保留。"
+    },
+    {
+      "path": "components.json.components.screen.title",
+      "before": "32英寸竖向触摸屏",
+      "after": "对角线81.28 cm竖向触摸屏"
+    },
+    {
+      "path": "components.json.components.screen.notes",
+      "before": "32英寸为用户修改；可视区398.5×708.4 mm。外框435×50×750 mm为选型示意，中心离地1285 mm。",
+      "after": "对角线81.28 cm为用户修改；可视区39.85×70.84 cm。外框43.5×5×75 cm为选型示意，中心离地128.5 cm。"
+    },
+    {
+      "path": "components.json.components.equipment_bay.notes",
+      "before": "文档参考净高650–700 mm，本模型取680 mm；交换机上部、主机中层、UPS低位、控制配电右侧。",
+      "after": "文档参考净高65–70 cm，本模型取68 cm；交换机上部、主机中层、UPS低位、控制配电右侧。"
+    },
+    {
+      "path": "components.json.components.fan.notes",
+      "before": "110 mm风机芯外形示意；含保护网，风量和热性能需实测。",
+      "after": "11 cm风机芯外形示意；含保护网，风量和热性能需实测。"
+    },
+    {
+      "path": "components.json.components.rear:Left.notes",
+      "before": "225个贯通散热孔，单孔约48.0×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+      "after": "225个贯通散热孔，单孔约4.8×0.9 cm；0.15 cm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥60 cm。"
+    },
+    {
+      "path": "components.json.components.rear:Center.notes",
+      "before": "150个贯通散热孔，单孔约54.7×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+      "after": "150个贯通散热孔，单孔约5.47×0.9 cm；0.15 cm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥60 cm。"
+    }
+  ]
+}

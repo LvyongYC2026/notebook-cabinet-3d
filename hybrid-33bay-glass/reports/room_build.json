@@ -1,0 +1,21 @@
+{
+  "source_blend": "output/hybrid_glass_styled/smart_cabinet_33bay.blend",
+  "source_sha256": "968aa7c60fc905d7ff2983d499a843e67cbcea88def32d6fb6eab174cdd44e03",
+  "cabinet_object_count": 7545,
+  "cabinet_mesh_signature_before_after": "cb3c57a99bf1656d8d4f7a76b083b569c8459ba6ca23c4fb40f56eebc91c1ef9",
+  "cabinet_instances": 1,
+  "cabinet_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "cabinet_room_position": [
+    2.549999952316284,
+    2.575000047683716,
+    0.0
+  ],
+  "room_mesh_count": 319,
+  "glb_contains_cabinet": false,
+  "font_license": "SIL OFL 1.1",
+  "status": "awaiting_independent_installation_audit"
+}

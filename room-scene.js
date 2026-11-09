@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { loadModel, loadJSON } from './asset-loader.js?v=20261109-front-variants-v2';
 
 // Environment only: the cabinet is never reparented, cloned, scaled or moved.
 export class CabinetRoom {
@@ -7,8 +7,8 @@ export class CabinetRoom {
   async load(){
     if(this.model)return this;
     this.promise??=Promise.all([
-      new GLTFLoader().loadAsync('./assets/room_environment.glb?v=20261109-hybrid33-v1'),
-      fetch('./assets/room_metadata.json?v=20261109-hybrid33-v1').then(response=>{if(!response.ok)throw new Error('机要室布局参数无法读取');return response.json();})
+      loadModel('./assets/room_environment.glb?v=20261109-front-variants-v2'),
+      loadJSON('./assets/room_metadata.json?v=20261109-front-variants-v2')
     ]).then(([gltf,metadata])=>{
       if(!gltf.scene.getObjectByName('RoomEnvironmentRoot')||!metadata.components||!metadata.interior_bounds_m)throw new Error('机要室环境或布局参数不完整');
       if(gltf.scene.getObjectByName('CabinetRoot')||gltf.scene.getObjectByName('DoorPivot_A1'))throw new Error('机要室环境不能包含重复机柜');

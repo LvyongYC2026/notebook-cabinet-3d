@@ -1,0 +1,370 @@
+{
+  "status": "passed_within_scope",
+  "source_commit": "41035f03eb458b92dbde771714ab69f25013c9c5",
+  "assets": [
+    {
+      "role": "cabinet",
+      "glb": "smart_cabinet.glb",
+      "metadata": "components.json",
+      "glb_sha256": "f1ac7ddebaa1ee471de2481a3d669d24a10f2858f455f1f3640c32a1027f8f2f",
+      "metadata_sha256": "dcfcf7f408e2a77a3d857029ed7a468a2921f7429c63237743da8b4c4e690332",
+      "baseline_glb_sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a",
+      "baseline_metadata_sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e",
+      "statistics": {
+        "unique_meshes": 1374,
+        "primitives": 1402,
+        "vertices_in_unique_primitives": 691518
+      },
+      "published_nodes_compared": 5577,
+      "published_node_deltas": [],
+      "added_nodes": 1656,
+      "shared_attachment_nodes": 264,
+      "preserved_metadata_sections": [
+        "bay_ids",
+        "empty_bays",
+        "cabinet_dimensions_mm",
+        "cable_paths",
+        "cable_system",
+        "usb_connections",
+        "switch_port_plan",
+        "power_branch_plan",
+        "control_channel_budget",
+        "control_power_topology",
+        "rear_doors"
+      ],
+      "glass_panes": [
+        {
+          "node": "GlassFront_B1_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B2_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B3_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B4_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B5_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B6_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B7_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B8_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B9_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B10_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B11_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B12_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B13_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B14_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B15_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B16_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B17_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B18_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B19_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B20_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B21_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B22_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B23_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        },
+        {
+          "node": "GlassFront_B24_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        }
+      ],
+      "check_counts": {
+        "browser_upload_size": 1,
+        "nonzero_nodes": 1,
+        "gltf_version": 1,
+        "embedded_single_buffer": 1,
+        "buffer_bounds": 1,
+        "buffer_view_bounds": 4055,
+        "no_exported_cameras": 1,
+        "no_exported_lights": 1,
+        "embedded_images": 1,
+        "all_nodes_reachable": 1,
+        "nonzero_mesh_primitives": 1374,
+        "unique_morph_names": 1374,
+        "finite_nonzero_position_accessor": 1402,
+        "valid_mesh_indices": 1402,
+        "closed_mesh_morph_weights": 1374,
+        "morph_names_match_primitive": 65,
+        "morph_topology_and_finite": 65,
+        "closed_node_morph_weights": 7233,
+        "nonzero_geometry": 1,
+        "unique_node_names": 1,
+        "all_published_nodes_geometry_material_transform_morph_preserved": 1,
+        "metadata_node_resolves_uniquely": 192,
+        "new_glass_geometry_present": 1,
+        "only_declared_glass_and_shared_attachment_nodes_added": 1,
+        "published_metadata_preserved": 11,
+        "default_glass": 1,
+        "exact_two_front_options": 1,
+        "exact_variant_assembly_coverage": 1,
+        "capacity_unchanged": 1,
+        "own_tray_binding": 24,
+        "nonempty_unique_variant_binding": 48,
+        "variant_root_bound": 48,
+        "front_root_direct_tray_child": 48,
+        "complete_variant_subtree_binding": 48,
+        "no_cross_bay_or_variant_shared_nodes": 48,
+        "variant_extras_match": 1824,
+        "default_visibility_contract": 1824,
+        "all_front_parts_follow_own_tray": 1824,
+        "mutually_exclusive_node_sets": 24,
+        "shared_attachment_own_bay_name": 264,
+        "shared_attachment_follows_own_tray": 264,
+        "shared_attachment_visible_in_both_variants": 264,
+        "shared_attachment_outside_variant_subtrees": 264,
+        "physical_glass_mesh": 24,
+        "same_glass_material_as_left_A1": 24,
+        "glass_physical_size_metres_y_up": 24,
+        "recessed_handle_parts_present": 24
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "role": "drawer",
+      "glb": "smart_cabinet_drawer.glb",
+      "metadata": "drawer_compartment.json",
+      "glb_sha256": "5d7de54b1efa9101bd4d3c935475e20b260206977514295abb1e44358b35f320",
+      "metadata_sha256": "2c6d0fc624448fedaabdab505d976cde01f704f5f1706275994d67a084baec10",
+      "baseline_glb_sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78",
+      "baseline_metadata_sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34",
+      "statistics": {
+        "unique_meshes": 108,
+        "primitives": 108,
+        "vertices_in_unique_primitives": 25164
+      },
+      "published_nodes_compared": 122,
+      "published_node_deltas": [],
+      "added_nodes": 69,
+      "shared_attachment_nodes": 11,
+      "preserved_metadata_sections": [
+        "bay_ids",
+        "empty_bays",
+        "cabinet_dimensions_mm",
+        "dimensions_mm",
+        "cable_paths",
+        "usb_connections"
+      ],
+      "glass_panes": [
+        {
+          "node": "GlassFront_S1_GlassPane",
+          "dimensions_m": [
+            0.4180000126361847,
+            0.10599999874830246,
+            0.006000000052154064
+          ]
+        }
+      ],
+      "check_counts": {
+        "browser_upload_size": 1,
+        "nonzero_nodes": 1,
+        "gltf_version": 1,
+        "embedded_single_buffer": 1,
+        "buffer_bounds": 1,
+        "buffer_view_bounds": 241,
+        "no_exported_cameras": 1,
+        "no_exported_lights": 1,
+        "embedded_images": 1,
+        "all_nodes_reachable": 1,
+        "nonzero_mesh_primitives": 108,
+        "unique_morph_names": 108,
+        "finite_nonzero_position_accessor": 108,
+        "valid_mesh_indices": 108,
+        "closed_mesh_morph_weights": 108,
+        "morph_names_match_primitive": 2,
+        "morph_topology_and_finite": 2,
+        "closed_node_morph_weights": 191,
+        "nonzero_geometry": 1,
+        "unique_node_names": 1,
+        "all_published_nodes_geometry_material_transform_morph_preserved": 1,
+        "metadata_node_resolves_uniquely": 8,
+        "new_glass_geometry_present": 1,
+        "only_declared_glass_and_shared_attachment_nodes_added": 1,
+        "published_metadata_preserved": 6,
+        "default_glass": 1,
+        "exact_two_front_options": 1,
+        "exact_variant_assembly_coverage": 1,
+        "capacity_unchanged": 1,
+        "own_tray_binding": 1,
+        "nonempty_unique_variant_binding": 2,
+        "variant_root_bound": 2,
+        "front_root_direct_tray_child": 2,
+        "complete_variant_subtree_binding": 2,
+        "no_cross_bay_or_variant_shared_nodes": 2,
+        "variant_extras_match": 76,
+        "default_visibility_contract": 76,
+        "all_front_parts_follow_own_tray": 76,
+        "mutually_exclusive_node_sets": 1,
+        "shared_attachment_own_bay_name": 11,
+        "shared_attachment_follows_own_tray": 11,
+        "shared_attachment_visible_in_both_variants": 11,
+        "shared_attachment_outside_variant_subtrees": 11,
+        "physical_glass_mesh": 1,
+        "same_glass_material_as_left_A1": 1,
+        "glass_physical_size_metres_y_up": 1,
+        "recessed_handle_parts_present": 1
+      },
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "limits": "Decoded GLB and metadata checks. Default visibility is an extras contract: live Three.js mutual visibility must be verified separately. No continuous collision, grip ergonomics, glass strength or electrical/thermal certification."
+}

@@ -1,0 +1,172 @@
+{
+  "status": "layout_contract",
+  "units": "metres",
+  "dimensions_cm": [
+    510,
+    300,
+    280
+  ],
+  "dimensions_mm": [
+    5100,
+    3000,
+    2800
+  ],
+  "basis": "model",
+  "root_node": "RoomEnvironmentRoot",
+  "glb_file": "room_environment.glb",
+  "coordinate_space": "cabinet_local_gltf",
+  "interior_bounds_m": {
+    "min": [
+      -2.55,
+      0,
+      -0.425
+    ],
+    "max": [
+      2.55,
+      2.8,
+      2.575
+    ]
+  },
+  "bounds_m": {
+    "min": [
+      -2.55,
+      0,
+      -0.425
+    ],
+    "max": [
+      2.55,
+      2.8,
+      2.575
+    ]
+  },
+  "cutaway_node_names": [
+    "RoomWall_Front",
+    "RoomWall_Right",
+    "RoomRoof"
+  ],
+  "rear_clearance_mm": 100,
+  "operation_zone_mm": 1200,
+  "rear_maintenance_available": false,
+  "rear_maintenance_note": "后距仅100 mm，无法开启当前后维护门；房间模式禁用后门，布线检查回到整柜模式。实际检修需先移柜。",
+  "operation_zone_bounds_m": {
+    "min": [
+      -1.65,
+      0,
+      0.325
+    ],
+    "max": [
+      1.65,
+      1.85,
+      1.525
+    ]
+  },
+  "components": {
+    "room:layout": {
+      "title": "机要室空间布局",
+      "dimensions_mm": [
+        5100,
+        3000,
+        2800
+      ],
+      "basis": "model",
+      "notes": "5100×3000×2800 mm为参考图设计假设；坐标按室内左前角。非施工图或规范验收。"
+    },
+    "room:walls": {
+      "title": "灰白墙体",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "墙厚120 mm向净空间外侧建模；前/右墙可剖切展示。"
+    },
+    "room:floor": {
+      "title": "模块化灰色地面",
+      "dimensions_mm": [
+        5100,
+        3000,
+        80
+      ],
+      "basis": "model",
+      "notes": "净地坪Z0；地材和防护性能未选型认证。"
+    },
+    "room:ceiling": {
+      "title": "模块化吊顶与照明",
+      "dimensions_mm": [
+        5100,
+        3000,
+        30
+      ],
+      "basis": "model",
+      "notes": "吊顶下表面高2800 mm，展示可剖切。"
+    },
+    "room:security_door": {
+      "title": "右前侧门禁门",
+      "dimensions_mm": [
+        45,
+        900,
+        2100
+      ],
+      "basis": "model",
+      "notes": "右墙门洞900×2100 mm；门叶向室内左侧开启。图示门扫掠与操作区有50 mm名义间隔，非疏散合规结论。"
+    },
+    "room:workstation": {
+      "title": "管理工作台与座椅",
+      "dimensions_mm": [
+        600,
+        1200,
+        750
+      ],
+      "basis": "model",
+      "notes": "台面600×1200 mm，高750 mm。椅子停放于前方区域，不进入柜前1200 mm操作区。"
+    },
+    "room:security": {
+      "title": "门禁与监控示意",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "安装位置为设计假设；不代表设备实际覆盖率或安全认证。"
+    },
+    "room:signs": {
+      "title": "室内标识",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "机要室 / 涉密设备管理区 / 保密管理要求；仅短标识，不编造政策文本。"
+    },
+    "room:plants": {
+      "title": "室内绿植",
+      "dimensions_mm": null,
+      "basis": "model",
+      "notes": "作为少量环境陈设，不侵入柜前操作区与侧边300 mm预留带。"
+    }
+  },
+  "cabinet_source": "output/hybrid_glass_styled/smart_cabinet_33bay.blend",
+  "source_immutable": true,
+  "collision_roles": [
+    "wall",
+    "furniture",
+    "door",
+    "security_fixture",
+    "plant"
+  ],
+  "non_collision_roles": [
+    "floor",
+    "sign",
+    "lighting",
+    "display_helper"
+  ],
+  "notes": [
+    "房间环境独立导出，网页与33仓柜体共用同一实例。",
+    "右侧齐平抽屉面板行程32 cm，名义柜前120 cm区域剩余约88 cm；实际包络另按最终几何验收。左侧托盘外伸沿用其独立测量。",
+    "35 cm为底部外观对齐线，中央设备舱仍保留约68 cm净高。",
+    "右侧24抽屉支持透明玻璃和金属前板，三种视图保留同一方案选择；机构与32 cm行程保持一致。"
+  ],
+  "source_script": "scripts/hybrid_glass_room/build_room.py",
+  "cabinet_layout": {
+    "hinged_bays": 9,
+    "drawer_bays": 24,
+    "total_bays": 33,
+    "visual_baseline_cm": 35,
+    "equipment_chamber_height_cm": 68,
+    "drawer_front_options": [
+      "glass",
+      "metal"
+    ]
+  }
+}

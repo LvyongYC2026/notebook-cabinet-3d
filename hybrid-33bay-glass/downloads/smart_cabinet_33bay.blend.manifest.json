@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "compression": "none",
+  "filename": "smart_cabinet_33bay.blend",
+  "bytes": 5426474,
+  "sha256": "968aa7c60fc905d7ff2983d499a843e67cbcea88def32d6fb6eab174cdd44e03",
+  "encodedBytes": 5426474,
+  "parts": [
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-000.bin",
+      "bytes": 524288,
+      "sha256": "b3253e2d1220603b6a2a93f9f721f0e8eb6c853eb82b9ac3ec865ec8a1e90c3b"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-001.bin",
+      "bytes": 524288,
+      "sha256": "d775ab9b13f957797638a865092f75e3eac89257b3e6087107f9cabb10e1be7d"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-002.bin",
+      "bytes": 524288,
+      "sha256": "d5f416e00ae83790b6aff1d9ba0dec8ecde9f29e03816ef611ea27120cdef6ef"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-003.bin",
+      "bytes": 524288,
+      "sha256": "c1a75f6203f6f81639517ea7135f165b14c1d3bc4b7519e8d28a81261ff97622"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-004.bin",
+      "bytes": 524288,
+      "sha256": "699b8eb11c281fe0ca339939c1f1d6f4ff648edf953483ac3a097c49fc33b7e4"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-005.bin",
+      "bytes": 524288,
+      "sha256": "544677a8272400295e9210a0671c6d898ea56bbbe6bc8e78cac7546b4651110d"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-006.bin",
+      "bytes": 524288,
+      "sha256": "0e9193afef636251809cb72425c35deb91897139a2deceb872527090cdb9e455"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-007.bin",
+      "bytes": 524288,
+      "sha256": "7437336b0d8b568b47e0a6ac85d84de428f6fde790fe0a34486e703b1b0ca1b1"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-008.bin",
+      "bytes": 524288,
+      "sha256": "fd12cb218cd4c3efc19c09dabb8707f07f421fbd29e6b092afbbed9a416e8eb7"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-009.bin",
+      "bytes": 524288,
+      "sha256": "a66dea03dedde632c1c1168d8aac38903fe2be99786c8cf924f464de9a5f6df3"
+    },
+    {
+      "url": "chunks/968aa7c60fc905d7ff29/part-010.bin",
+      "bytes": 183594,
+      "sha256": "7d5351919739df623bef8af87cfb839d195fd0a76506802a9fb27216205c063b"
+    }
+  ]
+}

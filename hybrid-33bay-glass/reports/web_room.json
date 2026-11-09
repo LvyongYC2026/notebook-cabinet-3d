@@ -1,0 +1,80 @@
+{
+  "room_environment_has_no_cabinet_copy": true,
+  "status": "passed",
+  "scope": "Final glass-front/styled-laptop 33-bay and rebuilt room runtime GLBs; unchanged hinged single; shared model, lighting, camera and interaction regression",
+  "verified_at": "2026-11-09T09:25:38.958Z",
+  "unchanged_hinged_single_assets": {
+    "smart_cabinet_single_compartment.glb": {
+      "bytes": 4743476,
+      "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+    },
+    "single_compartment.json": {
+      "bytes": 66924,
+      "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+    }
+  },
+  "final_runtime_assets": {
+    "smart_cabinet.glb": {
+      "bytes": 24702236,
+      "sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc"
+    },
+    "components.json": {
+      "bytes": 3384089,
+      "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57"
+    },
+    "smart_cabinet_drawer.glb": {
+      "bytes": 1129328,
+      "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc"
+    },
+    "drawer_compartment.json": {
+      "bytes": 111838,
+      "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d"
+    },
+    "room_environment.glb": {
+      "bytes": 5633932,
+      "sha256": "78eb457b7cbb1975f70067f3de4d5bc45c0b3ecd4a8e6b58a52c5e9462aa9fdd"
+    },
+    "room_metadata.json": {
+      "bytes": 57384,
+      "sha256": "a14eda0e646eb0e344fbb9a8d51e67b7eb428acd524eaab21d0a77f533400ebf"
+    },
+    "smart_cabinet_single_compartment.glb": {
+      "bytes": 4743476,
+      "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+    },
+    "single_compartment.json": {
+      "bytes": 66924,
+      "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+    }
+  },
+  "room_glb_sha256": "78eb457b7cbb1975f70067f3de4d5bc45c0b3ecd4a8e6b58a52c5e9462aa9fdd",
+  "room_metadata_sha256": "a14eda0e646eb0e344fbb9a8d51e67b7eb428acd524eaab21d0a77f533400ebf",
+  "room_load_failure_recovery": true,
+  "room_requests_including_retry": 2,
+  "single_cached_requests": 1,
+  "cabinet_instance_and_transform_preserved": true,
+  "inflight_demo_and_tweens_cleared": true,
+  "rear_doors_locked": true,
+  "all_doors_front_only": true,
+  "wiring_switches_out_of_room": true,
+  "structure_switches_out_of_room": true,
+  "environment_restored": true,
+  "orthographic_top_view": true,
+  "interior_walls_and_camera_preserved": true,
+  "room_bay_focus_frontal": true,
+  "frontal_camera_and_hud_fit_cases": 8,
+  "max_frontal_camera_x_error_mm": 2.220446049250313e-13,
+  "focus_resets_hud_scroll": true,
+  "dimensions_room_labels": 5,
+  "selected_bay_labels": 2,
+  "dimension_geometry_rebuilds_during_120_camera_updates": 0,
+  "room_round_trips": 3,
+  "usb_in_room": {
+    "bays": 33,
+    "actual_endpoint_checks": 660,
+    "occupancy_pose_checks": 495,
+    "max_endpoint_error_mm": 9.313225746154789e-7,
+    "nic_and_usb_follow_tray": true,
+    "ethernet_keeps_connected_while_empty": true
+  }
+}

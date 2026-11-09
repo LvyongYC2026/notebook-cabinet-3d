@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "compression": "none",
+  "filename": "smart_cabinet_drawer.blend",
+  "bytes": 348204,
+  "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7",
+  "encodedBytes": 348204,
+  "parts": [
+    {
+      "url": "chunks/6f0198a72d60563388ae/part-000.bin",
+      "bytes": 348204,
+      "sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7"
+    }
+  ]
+}

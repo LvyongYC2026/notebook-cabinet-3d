@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "compression": "none",
+  "filename": "render_drawer_styled.png",
+  "bytes": 4985988,
+  "sha256": "7f992088ffa01464044a545a1530a7caa48d6f1ae4ac2791593568195270829d",
+  "encodedBytes": 4985988,
+  "parts": [
+    {
+      "url": "chunks/7f992088ffa01464044a/part-000.bin",
+      "bytes": 524288,
+      "sha256": "361ed794e4c20cbc42e4ca93dd759213da90147b497c32378e9b6d928abe6265"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-001.bin",
+      "bytes": 524288,
+      "sha256": "9c63714dc3ab85ffdaeae567613f28da28cbb62c9efc314443a79c128e367a50"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-002.bin",
+      "bytes": 524288,
+      "sha256": "b1b8f299413fe01ea3a05445960999c4a048031618a02da630004a0f93e64a8a"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-003.bin",
+      "bytes": 524288,
+      "sha256": "51105d55480a4a4f69591c6effb80e53648b54674620b214e55a3d03d66e1ff7"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-004.bin",
+      "bytes": 524288,
+      "sha256": "9cef2e17ea361c5972fafcba312ac3d6f5b57c3eb580f5dc5b12373a6996f63a"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-005.bin",
+      "bytes": 524288,
+      "sha256": "f10e3002175dd2b137b9afe45078609c59e4b3c3ece700d312fc23e482b9a13e"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-006.bin",
+      "bytes": 524288,
+      "sha256": "5f0bc0320f00b77d6d577884baf5dfbb9713bccc6b928a3d34c646718b617b0e"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-007.bin",
+      "bytes": 524288,
+      "sha256": "0dfd2b9a363fb20fef28358f7568037dd8e703276390704eeff72e3c1d75efd8"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-008.bin",
+      "bytes": 524288,
+      "sha256": "700f8afbd19a7d02ab49973c53061f61c02f6909aa6f9762f5061e8204357576"
+    },
+    {
+      "url": "chunks/7f992088ffa01464044a/part-009.bin",
+      "bytes": 267396,
+      "sha256": "ef369777014d3af9574ad136fb05d737e3e07132b9e0b5e6bbcafaca255fbfab"
+    }
+  ]
+}

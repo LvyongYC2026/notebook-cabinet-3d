@@ -1,0 +1,1692 @@
+{
+  "blend_sha256": "c98ba02fa544de48916ed0436ab6bfe66795f15c8514ecdaada12825dcce7e1c",
+  "drawer_count": 1,
+  "variant_count": 2,
+  "travel_samples_mm": [
+    0,
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200,
+    220,
+    240,
+    260,
+    280,
+    300,
+    320
+  ],
+  "fixed_mesh_counts": {
+    "metal": 57,
+    "glass": 57
+  },
+  "coverage": {
+    "metal": {
+      "source_meshes": {
+        "S1": 26
+      },
+      "active_native_cables": 2
+    },
+    "glass": {
+      "source_meshes": {
+        "S1": 66
+      },
+      "active_native_cables": 2
+    }
+  },
+  "poses": [
+    {
+      "variant": "metal",
+      "travel_mm": 0,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 20,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 40,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 60,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 80,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 100,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 120,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 140,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 160,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 180,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 200,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 220,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 240,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 260,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 280,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 300,
+      "intersections": []
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 320,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 0,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 20,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 40,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 60,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 80,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 100,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 120,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 140,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 160,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 180,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 200,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 220,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 240,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 260,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 280,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 300,
+      "intersections": []
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 320,
+      "intersections": []
+    }
+  ],
+  "same_tray_unexpected": [],
+  "declared_attachment_contacts": [
+    {
+      "variant": "metal",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Ear_Left"
+      ],
+      "target": "S1_FrontReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "metal",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Left_Lower_Outer"
+      ],
+      "target": "S1_FrontReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "metal",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Left_Lower_Inner"
+      ],
+      "target": "S1_FrontReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "metal",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Ear_Right"
+      ],
+      "target": "S1_FrontReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "metal",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Right_Lower_Inner"
+      ],
+      "target": "S1_FrontReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "metal",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Right_Lower_Outer"
+      ],
+      "target": "S1_FrontReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "glass",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Ear_Left"
+      ],
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "glass",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Left_Lower_Outer"
+      ],
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "glass",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Left_Lower_Inner"
+      ],
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "glass",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Ear_Right"
+      ],
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "glass",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Right_Lower_Inner"
+      ],
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    },
+    {
+      "variant": "glass",
+      "bay": "S1",
+      "source_parts": [
+        "DrawerFrontAttachment_S1_Weld_Right_Lower_Outer"
+      ],
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "classification": "shared ear/weld touches selected lower metal return top"
+    }
+  ],
+  "connection_probes": [
+    {
+      "variant": "metal",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "metal",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "S1_FrontReturnHorizontal",
+      "gap_mm": 4.749745128457272e-08,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 0,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 20,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 40,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 60,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 80,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 100,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 120,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 140,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 160,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 180,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 200,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 220,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 240,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.1429732441693994e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 260,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 280,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 300,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "upper",
+      "target": "S1_FrontBridge",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Left",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "upper",
+      "target": "S1_FrontBridge.001",
+      "gap_mm": 2.0265579223424646e-06,
+      "passed": true
+    },
+    {
+      "variant": "glass",
+      "travel_mm": 320,
+      "bay": "S1",
+      "ear": "DrawerFrontAttachment_S1_Ear_Right",
+      "joint": "lower",
+      "target": "GlassFront_S1_FrameReturnHorizontal",
+      "gap_mm": 1.6391277311150754e-07,
+      "passed": true
+    }
+  ],
+  "intersection_count": 0,
+  "connection_probe_failures": 0,
+  "method": "Both variants; evaluated mesh BVH, all 24 or single moving fronts/shared ears against every active fixed mesh, native cable and other drawer payload. Same-Tray rigid relations checked once per variant; physical upper/lower joints ray-probed at each position.",
+  "limits": "17 sampled positions, not continuous swept-volume, fatigue or strength certification. Glazing gasket/retainer assembly contacts are not treated as moving-mechanism collisions.",
+  "status": "passed"
+}

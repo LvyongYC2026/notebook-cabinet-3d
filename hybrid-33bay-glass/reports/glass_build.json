@@ -1,0 +1,75 @@
+{
+  "status": "built_pending_independent_audit",
+  "parameters": {
+    "default_variant": "glass",
+    "front_width_mm": 444,
+    "front_height_mm": 154,
+    "front_depth_mm": 16,
+    "bottom_z_mm": -28,
+    "side_frame_width_mm": 15,
+    "bottom_frame_height_mm": 16,
+    "top_grip_band_height_mm": 36,
+    "sheet_thickness_mm": 2,
+    "glass_thickness_mm": 6,
+    "glass_edge_capture_mm": 2,
+    "glass_center_y_mm": -319,
+    "handle_aperture_mm": [
+      112,
+      24
+    ],
+    "handle_center_z_mm": 108
+  },
+  "scenes": [
+    {
+      "role": "whole",
+      "source_blend_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+      "source_metadata_sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e",
+      "original_object_count": 5577,
+      "original_geometry_sha256": "723667e27d415b69c7311eb0483a7d196435f7eba8ef969ab9c51ed7122df5eb",
+      "preserved_original_geometry": true,
+      "front_count": 24,
+      "new_object_count": 1656,
+      "default_variant": "glass",
+      "files": {
+        "smart_cabinet_33bay.blend": {
+          "sha256": "319907c604d989b9e4bd22a63a4c4eb8b8557fffbb5bda16087d77fba279b672",
+          "bytes": 5002609
+        },
+        "smart_cabinet.glb": {
+          "sha256": "f1ac7ddebaa1ee471de2481a3d669d24a10f2858f455f1f3640c32a1027f8f2f",
+          "bytes": 24292488
+        },
+        "components.json": {
+          "sha256": "dcfcf7f408e2a77a3d857029ed7a468a2921f7429c63237743da8b4c4e690332",
+          "bytes": 3377667
+        }
+      }
+    },
+    {
+      "role": "single",
+      "source_blend_sha256": "3e13686b9ae0970db7c880815001d2f2234e184812e54e53a03f283e565101df",
+      "source_metadata_sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34",
+      "original_object_count": 122,
+      "original_geometry_sha256": "f6a7774d6a1bd1cb57c2ca4c469d98705314d0d1713d89df337dee5113f0bf45",
+      "preserved_original_geometry": true,
+      "front_count": 1,
+      "new_object_count": 69,
+      "default_variant": "glass",
+      "files": {
+        "smart_cabinet_drawer.blend": {
+          "sha256": "c98ba02fa544de48916ed0436ab6bfe66795f15c8514ecdaada12825dcce7e1c",
+          "bytes": 391462
+        },
+        "smart_cabinet_drawer.glb": {
+          "sha256": "5d7de54b1efa9101bd4d3c935475e20b260206977514295abb1e44358b35f320",
+          "bytes": 798340
+        },
+        "drawer_compartment.json": {
+          "sha256": "2c6d0fc624448fedaabdab505d976cde01f704f5f1706275994d67a084baec10",
+          "bytes": 111015
+        }
+      }
+    }
+  ],
+  "limits": "Visual/mechanical design assumptions; no glass-strength, load, electrical or thermal qualification."
+}
