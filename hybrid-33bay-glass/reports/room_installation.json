@@ -1,0 +1,191 @@
+{
+  "blend_sha256": "7d5b422710f5ddd401c96ca423d9a374c8abc74b3e50ab020d03ba9d871b5ff1",
+  "source_blend_sha256": "968aa7c60fc905d7ff2983d499a843e67cbcea88def32d6fb6eab174cdd44e03",
+  "source_objects_checked": 7545,
+  "expected_bay_count": 33,
+  "actual_tray_count": 33,
+  "front_hinged_doors": 10,
+  "right_drawer_count": 24,
+  "source_geometry_or_hierarchy_changes": [],
+  "cabinet_root_count": 1,
+  "cabinet_root_position_m": [
+    2.549999952316284,
+    2.575000047683716,
+    0.0
+  ],
+  "cabinet_root_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "room_environment_meshes": 400,
+  "collision_environment_meshes": 260,
+  "front_door_sweep_samples": [
+    {
+      "fraction": 0.0,
+      "intersections": []
+    },
+    {
+      "fraction": 0.05,
+      "intersections": []
+    },
+    {
+      "fraction": 0.1,
+      "intersections": []
+    },
+    {
+      "fraction": 0.15,
+      "intersections": []
+    },
+    {
+      "fraction": 0.2,
+      "intersections": []
+    },
+    {
+      "fraction": 0.25,
+      "intersections": []
+    },
+    {
+      "fraction": 0.3,
+      "intersections": []
+    },
+    {
+      "fraction": 0.35,
+      "intersections": []
+    },
+    {
+      "fraction": 0.4,
+      "intersections": []
+    },
+    {
+      "fraction": 0.45,
+      "intersections": []
+    },
+    {
+      "fraction": 0.5,
+      "intersections": []
+    },
+    {
+      "fraction": 0.55,
+      "intersections": []
+    },
+    {
+      "fraction": 0.6,
+      "intersections": []
+    },
+    {
+      "fraction": 0.65,
+      "intersections": []
+    },
+    {
+      "fraction": 0.7,
+      "intersections": []
+    },
+    {
+      "fraction": 0.75,
+      "intersections": []
+    },
+    {
+      "fraction": 0.8,
+      "intersections": []
+    },
+    {
+      "fraction": 0.85,
+      "intersections": []
+    },
+    {
+      "fraction": 0.9,
+      "intersections": []
+    },
+    {
+      "fraction": 0.95,
+      "intersections": []
+    },
+    {
+      "fraction": 1.0,
+      "intersections": []
+    }
+  ],
+  "tray_samples": [
+    {
+      "travel_cm": 0.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 2.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 4.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 6.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 8.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 10.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 12.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 14.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 16.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 18.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 20.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 22.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 24.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 26.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 28.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 30.0,
+      "intersections": []
+    },
+    {
+      "travel_cm": 32.0,
+      "intersections": []
+    }
+  ],
+  "front_moving_min_room_y_cm": 170.3923463821411,
+  "tray_assembly_min_room_y_cm": 193.00000667572021,
+  "operation_zone_front_boundary_cm": 105,
+  "remaining_depth_after_front_door_sweep_cm": 65.39234638214111,
+  "remaining_depth_after_tray_assembly_cm": 88.00000667572021,
+  "limits": "Surface intersections at 21 door fractions and 17 tray positions. Entire tray assemblies include laptops and connected parts; mechanical tray dimension labels use tray metal only. Excludes floor contact and clearance guide overlays. No egress, thermal, structural or manufacturing certification. Rear maintenance doors are unavailable in room mode because nominal rear clearance is 10 cm.",
+  "unexpected_cabinet_descendants": [],
+  "furniture_or_door_in_closed_operation_zone": [],
+  "furniture_or_door_in_cabinet_envelope": [],
+  "placement_matches_reference": true,
+  "intersection_count": 0,
+  "status": "passed"
+}

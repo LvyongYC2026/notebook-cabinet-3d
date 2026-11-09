@@ -1,0 +1,677 @@
+{
+  "status": "passed_within_scope",
+  "assets": [
+    {
+      "role": "cabinet",
+      "baseline_glb_sha256": "f1ac7ddebaa1ee471de2481a3d669d24a10f2858f455f1f3640c32a1027f8f2f",
+      "glb_sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc",
+      "baseline_metadata_sha256": "dcfcf7f408e2a77a3d857029ed7a468a2921f7429c63237743da8b4c4e690332",
+      "metadata_sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57",
+      "statistics": {
+        "unique_meshes": 1387,
+        "primitives": 1415,
+        "vertices_in_unique_primitives": 701538
+      },
+      "original_nodes_compared": 7233,
+      "exact_mesh_replacements": [
+        "B10_LaptopBase",
+        "B10_LaptopClosedLid",
+        "B10_LaptopHinge",
+        "B10_LaptopHinge.001",
+        "B11_LaptopBase",
+        "B11_LaptopClosedLid",
+        "B11_LaptopHinge",
+        "B11_LaptopHinge.001",
+        "B12_LaptopBase",
+        "B12_LaptopClosedLid",
+        "B12_LaptopHinge",
+        "B12_LaptopHinge.001",
+        "B13_LaptopBase",
+        "B13_LaptopClosedLid",
+        "B13_LaptopHinge",
+        "B13_LaptopHinge.001",
+        "B14_LaptopBase",
+        "B14_LaptopClosedLid",
+        "B14_LaptopHinge",
+        "B14_LaptopHinge.001",
+        "B15_LaptopBase",
+        "B15_LaptopClosedLid",
+        "B15_LaptopHinge",
+        "B15_LaptopHinge.001",
+        "B16_LaptopBase",
+        "B16_LaptopClosedLid",
+        "B16_LaptopHinge",
+        "B16_LaptopHinge.001",
+        "B17_LaptopBase",
+        "B17_LaptopClosedLid",
+        "B17_LaptopHinge",
+        "B17_LaptopHinge.001",
+        "B18_LaptopBase",
+        "B18_LaptopClosedLid",
+        "B18_LaptopHinge",
+        "B18_LaptopHinge.001",
+        "B19_LaptopBase",
+        "B19_LaptopClosedLid",
+        "B19_LaptopHinge",
+        "B19_LaptopHinge.001",
+        "B1_LaptopBase",
+        "B1_LaptopClosedLid",
+        "B1_LaptopHinge",
+        "B1_LaptopHinge.001",
+        "B20_LaptopBase",
+        "B20_LaptopClosedLid",
+        "B20_LaptopHinge",
+        "B20_LaptopHinge.001",
+        "B21_LaptopBase",
+        "B21_LaptopClosedLid",
+        "B21_LaptopHinge",
+        "B21_LaptopHinge.001",
+        "B22_LaptopBase",
+        "B22_LaptopClosedLid",
+        "B22_LaptopHinge",
+        "B22_LaptopHinge.001",
+        "B23_LaptopBase",
+        "B23_LaptopClosedLid",
+        "B23_LaptopHinge",
+        "B23_LaptopHinge.001",
+        "B24_LaptopBase",
+        "B24_LaptopClosedLid",
+        "B24_LaptopHinge",
+        "B24_LaptopHinge.001",
+        "B2_LaptopBase",
+        "B2_LaptopClosedLid",
+        "B2_LaptopHinge",
+        "B2_LaptopHinge.001",
+        "B3_LaptopBase",
+        "B3_LaptopClosedLid",
+        "B3_LaptopHinge",
+        "B3_LaptopHinge.001",
+        "B4_LaptopBase",
+        "B4_LaptopClosedLid",
+        "B4_LaptopHinge",
+        "B4_LaptopHinge.001",
+        "B5_LaptopBase",
+        "B5_LaptopClosedLid",
+        "B5_LaptopHinge",
+        "B5_LaptopHinge.001",
+        "B6_LaptopBase",
+        "B6_LaptopClosedLid",
+        "B6_LaptopHinge",
+        "B6_LaptopHinge.001",
+        "B7_LaptopBase",
+        "B7_LaptopClosedLid",
+        "B7_LaptopHinge",
+        "B7_LaptopHinge.001",
+        "B8_LaptopBase",
+        "B8_LaptopClosedLid",
+        "B8_LaptopHinge",
+        "B8_LaptopHinge.001",
+        "B9_LaptopBase",
+        "B9_LaptopClosedLid",
+        "B9_LaptopHinge",
+        "B9_LaptopHinge.001"
+      ],
+      "unexpected_deltas": [],
+      "added_nodes": 312,
+      "original_connected_ports_preserved": [
+        "B1_LaptopDCIn",
+        "B1_LaptopUSBIn",
+        "B2_LaptopDCIn",
+        "B2_LaptopUSBIn",
+        "B3_LaptopDCIn",
+        "B3_LaptopUSBIn",
+        "B4_LaptopDCIn",
+        "B4_LaptopUSBIn",
+        "B5_LaptopDCIn",
+        "B5_LaptopUSBIn",
+        "B6_LaptopDCIn",
+        "B6_LaptopUSBIn",
+        "B7_LaptopDCIn",
+        "B7_LaptopUSBIn",
+        "B8_LaptopDCIn",
+        "B8_LaptopUSBIn",
+        "B9_LaptopDCIn",
+        "B9_LaptopUSBIn",
+        "B10_LaptopDCIn",
+        "B10_LaptopUSBIn",
+        "B11_LaptopDCIn",
+        "B11_LaptopUSBIn",
+        "B12_LaptopDCIn",
+        "B12_LaptopUSBIn",
+        "B13_LaptopDCIn",
+        "B13_LaptopUSBIn",
+        "B14_LaptopDCIn",
+        "B14_LaptopUSBIn",
+        "B15_LaptopDCIn",
+        "B15_LaptopUSBIn",
+        "B16_LaptopDCIn",
+        "B16_LaptopUSBIn",
+        "B17_LaptopDCIn",
+        "B17_LaptopUSBIn",
+        "B18_LaptopDCIn",
+        "B18_LaptopUSBIn",
+        "B19_LaptopDCIn",
+        "B19_LaptopUSBIn",
+        "B20_LaptopDCIn",
+        "B20_LaptopUSBIn",
+        "B21_LaptopDCIn",
+        "B21_LaptopUSBIn",
+        "B22_LaptopDCIn",
+        "B22_LaptopUSBIn",
+        "B23_LaptopDCIn",
+        "B23_LaptopUSBIn",
+        "B24_LaptopDCIn",
+        "B24_LaptopUSBIn"
+      ],
+      "cosmetic_bounds": [
+        {
+          "bay_id": "B1",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B2",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B3",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B4",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B5",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B6",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B7",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B8",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B9",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B10",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B11",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B12",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            3.319291863590479e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B13",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B14",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B15",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B16",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B17",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B18",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B19",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B20",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B21",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -2.6411726139485836e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.029999997233971953,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B22",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -1.210719347000122e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.03000000584870577,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B23",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -1.210719347000122e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.03000000584870577,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        },
+        {
+          "bay_id": "B24",
+          "gltf_yup_min_m": [
+            -0.12000003457069397,
+            -1.210719347000122e-08,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.17999997735023499,
+            0.03000000584870577,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        }
+      ],
+      "embedded_images": [
+        {
+          "index": 0,
+          "bytes": 152178,
+          "mime_type": "image/png"
+        },
+        {
+          "index": 1,
+          "bytes": 13975,
+          "mime_type": "image/png"
+        },
+        {
+          "index": 2,
+          "bytes": 8923,
+          "mime_type": "image/png"
+        }
+      ],
+      "check_counts": {
+        "browser_upload_size": 1,
+        "nonzero_nodes": 1,
+        "gltf_version": 1,
+        "embedded_single_buffer": 1,
+        "buffer_bounds": 1,
+        "buffer_view_bounds": 4089,
+        "no_exported_cameras": 1,
+        "no_exported_lights": 1,
+        "embedded_images": 1,
+        "all_nodes_reachable": 1,
+        "nonzero_mesh_primitives": 1387,
+        "unique_morph_names": 1387,
+        "finite_nonzero_position_accessor": 1415,
+        "valid_mesh_indices": 1415,
+        "closed_mesh_morph_weights": 1387,
+        "morph_names_match_primitive": 65,
+        "morph_topology_and_finite": 65,
+        "closed_node_morph_weights": 7545,
+        "nonzero_geometry": 1,
+        "all_exact_replaceable_nodes_exist": 1,
+        "only_exact_laptop_meshes_changed": 1,
+        "all_original_node_extras_preserved": 1,
+        "every_expected_cosmetic_mesh_replaced": 1,
+        "style_details_present": 1,
+        "new_node_name_scope": 1,
+        "metadata_node_resolves_uniquely": 768,
+        "new_style_direct_laptop_child": 312,
+        "own_laptop_component_binding": 312,
+        "empty_bay_detail_visibility_contract": 312,
+        "style_outside_front_variant_contract": 312,
+        "all_laptops_have_style_details": 1,
+        "all_cosmetic_geometry_inside_30x21x3cm_envelope": 24,
+        "brushed_silver_lid_material": 24,
+        "brushed_lid_uv_present": 24,
+        "brushed_lid_texture_binding": 48,
+        "original_connected_port_exactly_preserved": 48,
+        "laptop_metadata_exists": 24,
+        "nominal_laptop_envelope_metadata": 24,
+        "all_noncosmetic_metadata_exactly_preserved": 1,
+        "appearance_scope_contract": 1,
+        "appearance_source_metadata_binding": 1,
+        "embedded_texture_image": 3,
+        "valid_nonempty_image_payload": 3,
+        "texture_source_resolves": 4,
+        "brushed_color_and_roughness_textures_embedded": 1,
+        "inputs_stable_during_audit": 1
+      },
+      "errors": [],
+      "passed": true
+    },
+    {
+      "role": "drawer",
+      "baseline_glb_sha256": "5d7de54b1efa9101bd4d3c935475e20b260206977514295abb1e44358b35f320",
+      "glb_sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc",
+      "baseline_metadata_sha256": "2c6d0fc624448fedaabdab505d976cde01f704f5f1706275994d67a084baec10",
+      "metadata_sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d",
+      "statistics": {
+        "unique_meshes": 121,
+        "primitives": 121,
+        "vertices_in_unique_primitives": 35184
+      },
+      "original_nodes_compared": 191,
+      "exact_mesh_replacements": [
+        "S1_LaptopBase",
+        "S1_LaptopClosedLid",
+        "S1_LaptopHinge",
+        "S1_LaptopHinge.001"
+      ],
+      "unexpected_deltas": [],
+      "added_nodes": 13,
+      "original_connected_ports_preserved": [
+        "S1_LaptopDCIn",
+        "S1_LaptopUSBIn"
+      ],
+      "cosmetic_bounds": [
+        {
+          "bay_id": "S1",
+          "gltf_yup_min_m": [
+            -0.12000000663101673,
+            -3.346940502524376e-10,
+            0.04499999829567969
+          ],
+          "gltf_yup_max_m": [
+            0.18000000528991222,
+            0.03000000026077032,
+            0.255000002682209
+          ],
+          "new_detail_nodes": 13
+        }
+      ],
+      "embedded_images": [
+        {
+          "index": 0,
+          "bytes": 13975,
+          "mime_type": "image/png"
+        },
+        {
+          "index": 1,
+          "bytes": 8923,
+          "mime_type": "image/png"
+        }
+      ],
+      "check_counts": {
+        "browser_upload_size": 1,
+        "nonzero_nodes": 1,
+        "gltf_version": 1,
+        "embedded_single_buffer": 1,
+        "buffer_bounds": 1,
+        "buffer_view_bounds": 275,
+        "no_exported_cameras": 1,
+        "no_exported_lights": 1,
+        "embedded_images": 1,
+        "all_nodes_reachable": 1,
+        "nonzero_mesh_primitives": 121,
+        "unique_morph_names": 121,
+        "finite_nonzero_position_accessor": 121,
+        "valid_mesh_indices": 121,
+        "closed_mesh_morph_weights": 121,
+        "morph_names_match_primitive": 2,
+        "morph_topology_and_finite": 2,
+        "closed_node_morph_weights": 204,
+        "nonzero_geometry": 1,
+        "all_exact_replaceable_nodes_exist": 1,
+        "only_exact_laptop_meshes_changed": 1,
+        "all_original_node_extras_preserved": 1,
+        "every_expected_cosmetic_mesh_replaced": 1,
+        "style_details_present": 1,
+        "new_node_name_scope": 1,
+        "metadata_node_resolves_uniquely": 32,
+        "new_style_direct_laptop_child": 13,
+        "own_laptop_component_binding": 13,
+        "empty_bay_detail_visibility_contract": 13,
+        "style_outside_front_variant_contract": 13,
+        "all_laptops_have_style_details": 1,
+        "all_cosmetic_geometry_inside_30x21x3cm_envelope": 1,
+        "brushed_silver_lid_material": 1,
+        "brushed_lid_uv_present": 1,
+        "brushed_lid_texture_binding": 2,
+        "original_connected_port_exactly_preserved": 2,
+        "laptop_metadata_exists": 1,
+        "nominal_laptop_envelope_metadata": 1,
+        "all_noncosmetic_metadata_exactly_preserved": 1,
+        "appearance_scope_contract": 1,
+        "appearance_source_metadata_binding": 1,
+        "embedded_texture_image": 2,
+        "valid_nonempty_image_payload": 2,
+        "texture_source_resolves": 2,
+        "brushed_color_and_roughness_textures_embedded": 1,
+        "inputs_stable_during_audit": 1
+      },
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "limits": "Decoded exported geometry/metadata/texture and exact cosmetic delta. Empty-bay visibility is an extras contract, not a live browser check. No continuous collision, physical laptop fit, cooling or electrical certification."
+}

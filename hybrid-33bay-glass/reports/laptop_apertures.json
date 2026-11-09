@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "source_blend_sha256": "6f0198a72d60563388ae8b954846d806f74d5b1271e5a0c2bbcafe28f21470c7",
+  "scope": "Shell aperture depth and styled mesh solid/material integrity; includes original USB/DC entry clearances, excludes connector bodies themselves. Full motion and interface retention are separately audited.",
+  "openings": [
+    {
+      "opening": "wired USB",
+      "shell_clearance_cm": 0.5499988859486913,
+      "minimum_cm": 0.5
+    },
+    {
+      "opening": "wired DC",
+      "shell_clearance_cm": 0.584998719853214,
+      "minimum_cm": 0.5
+    },
+    {
+      "opening": "spare USB",
+      "shell_clearance_cm": 0.5499988859486913,
+      "minimum_cm": 0.5
+    },
+    {
+      "opening": "audio",
+      "shell_clearance_cm": 0.5499988859486913,
+      "minimum_cm": 0.5
+    },
+    {
+      "opening": "vent",
+      "shell_clearance_cm": 0.44999868161007106,
+      "minimum_cm": 0.4
+    },
+    {
+      "opening": "finger recess",
+      "shell_clearance_cm": 0.5000010123175099,
+      "minimum_cm": 0.4
+    }
+  ],
+  "styled_solids": [
+    {
+      "name": "S1_LaptopBase",
+      "signed_volume_m3": 0.0015705413611900856,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_LaptopClosedLid",
+      "signed_volume_m3": 0.0002498206809966259,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_LaptopHinge",
+      "signed_volume_m3": 1.3458820163560474e-06,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_LaptopHinge.001",
+      "signed_volume_m3": 1.3458820163560474e-06,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_AudioWell",
+      "signed_volume_m3": 6.068089828552708e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_RearHingeRecess",
+      "signed_volume_m3": 4.6248574391270794e-07,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_SpareUSBBack",
+      "signed_volume_m3": 4.3025086091499236e-08,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_SpareUSBEdge0.0112",
+      "signed_volume_m3": 4.113932221839349e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_SpareUSBEdge0.0168",
+      "signed_volume_m3": 4.113932221839349e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_SpareUSBSide-0.179",
+      "signed_volume_m3": 1.8817677348825025e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_SpareUSBSide-0.191",
+      "signed_volume_m3": 1.8817677348825025e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_SpareUSBTongue",
+      "signed_volume_m3": 3.89526052133369e-08,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_UndersideScrew0",
+      "signed_volume_m3": 3.785458080976247e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_UndersideScrew1",
+      "signed_volume_m3": 3.785458080976247e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_UndersideScrew2",
+      "signed_volume_m3": 3.785458080976247e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_UndersideScrew3",
+      "signed_volume_m3": 3.785458080976247e-09,
+      "nonmanifold_edges": 0
+    },
+    {
+      "name": "S1_Style_VentInterior",
+      "signed_volume_m3": 1.7619833975760108e-07,
+      "nonmanifold_edges": 0
+    }
+  ]
+}
