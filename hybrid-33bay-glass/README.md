@@ -2,6 +2,8 @@
 
 本版本在上一版33仓数字资产上增加透明抽屉前板，保留原金属方案。网页默认玻璃，可通过底部“抽屉前板方案”菜单切换；机要室、整柜、右侧抽屉单仓使用同一选择。左侧开门单仓保持原结构。
 
+[下载本版全部工程、模型、参数及高清图](https://lvyongyc2026.github.io/notebook-cabinet-3d/downloads.html)。下载页恢复完整原始文件，文件名及模型内容不因传输方式改变。
+
 ## 结构与接口
 
 - 整柜仍为330 ×65 ×185 cm，左9个开门仓、右24个抽屉仓。底部35 cm外观水平线、中央设备仓、空仓A3/B2/B6/B20及32 cm抽拉行程不变。
@@ -18,18 +20,19 @@
 
 | 路径 | 内容 |
 |---|---|
-| `smart_cabinet_33bay.blend` | 可编辑整柜，包含两种抽屉前板 |
-| `smart_cabinet_drawer.blend` | 独立抽屉单仓，包含两种前板 |
-| `smart_cabinet_room_and_product.blend` | 机要室/产品双场景，使用同一整柜 |
+| 下载：`smart_cabinet_33bay.blend` | 可编辑整柜，包含两种抽屉前板 |
+| 下载：`smart_cabinet_drawer.blend` | 独立抽屉单仓，包含两种前板 |
+| 下载：`smart_cabinet_room_and_product.blend` | 机要室/产品双场景，使用同一整柜 |
 | `scripts/hybrid_glass/` | 增量参数化建模和渲染脚本 |
 | `scripts/laptop_style/` | 闭合笔记本外观增量脚本与材质 |
 | `scripts/hybrid_glass_room/` | 房间生成、视图控制、渲染、字体与许可证 |
 | `source_metadata/` | 冻结的上一版33仓元数据，用于可靠重建 |
 | `reports/` | 资产保留、面板运动、房间和网页验证报告 |
-| `renders/` | 当前玻璃方案整柜、抽屉及机要室渲染 |
+| 下载页“产品渲染” | 当前玻璃方案整柜、抽屉、笔记本及机要室高清图 |
+| `downloads/` | 原始工程与渲染的传输清单和数据分片 |
 | `release_manifest.json` | 本次发布文件大小与SHA-256清单 |
 
-网页GLB与元数据位于仓库根目录`assets/`。旧33仓源模型保留在`hybrid-33bay/`；其README早期指向的根`assets/`已更新为当前版本，重建本版必须使用这里冻结的`source_metadata/`。
+当前网页GLB与元数据通过根目录`assets/*.manifest.json`及分片提供，下载页恢复完整文件。根目录旧`assets/*.glb`/JSON保留作上一版资产，当前网页不会把它们作为缺片时的回退。旧33仓源模型保留在`hybrid-33bay/`；重建本版请使用该目录原生模型和这里冻结的`source_metadata/`。
 
 ## 重建与参数
 
@@ -87,6 +90,8 @@ blender --background output/glass_room/smart_cabinet_room_and_product.blend \
 两阶段建模命令自动输出GLB、JSON和构建报告；网页使用`output/styled/`最终资产。拉丝与标识使用已打包PNG/ORM纹理，可由`generate_texture.py`和随包OFL字体重建（需要Pillow）。坐标单位米，Blender Z向上导出为glTF Y向上；原机械层级及线缆形态键保留。导出包含两种前板，GLB本身没有统一的初始隐藏标准，因此不要直接同时显示两个前板。
 
 本站`front-variants.js`读取元数据`drawer_front_variants`，按组件根节点在首帧前执行互斥可见性；`initial_hidden`保留默认状态。其它Three.js项目集成时也应处理此契约，并保留玻璃材质、透明排序、形态键和托盘父子关系。元数据内部计量单位不变，界面统一换算成cm。
+
+本站`asset-loader.js`对六项新运行资产读取相应`.manifest.json`，依序获取同源分片、逐片校验SHA-256、无损解压，并验证完整文件长度与SHA后才解析模型/参数。下载页使用同一解码器恢复原文件。清单缺失、分片损坏、解压失败时显示错误，不会静默展示上一版模型。恢复传输所用代码及报告与建模报告分别保留；数字资产内容仍与原冻结SHA完全一致。
 
 ## 验证范围
 
