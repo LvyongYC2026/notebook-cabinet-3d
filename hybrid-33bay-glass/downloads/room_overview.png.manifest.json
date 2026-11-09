@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "compression": "none",
+  "filename": "room_overview.png",
+  "bytes": 3855588,
+  "sha256": "9946ada5c3521e0136f4a9ea1f725f0f7b24a7cbb2a8551265eaa841834f1778",
+  "encodedBytes": 3855588,
+  "parts": [
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-000.bin",
+      "bytes": 524288,
+      "sha256": "9fef16b7b2eec8af66989f7012aad2afaa9a5477b51c046425026b43532e3246"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-001.bin",
+      "bytes": 524288,
+      "sha256": "b91b560d0a1837e0adcb27d99f541bac359a3d8d53f36ced21ccf9936a7b59e3"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-002.bin",
+      "bytes": 524288,
+      "sha256": "4e8b13306bbe37dc6f8d458512359af6c00cacda3f8a2a8a3e33172cd141d82b"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-003.bin",
+      "bytes": 524288,
+      "sha256": "3dd65d0f820493148e2d479d5eafdcb4a1d07ddf94058ea967684956741b6892"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-004.bin",
+      "bytes": 524288,
+      "sha256": "56226b867442d1d4b7261dc22b47ceacf21c967f63498862ea7662dd0d720554"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-005.bin",
+      "bytes": 524288,
+      "sha256": "aa5235375f5d6b230924bd137658021f94572c0e91a55496b1ecc1952fb876c2"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-006.bin",
+      "bytes": 524288,
+      "sha256": "1d11225d5dff349baf249ae1fe23ff6de6235c42a292eeafe3cdb4cce5892a4d"
+    },
+    {
+      "url": "chunks/9946ada5c3521e0136f4/part-007.bin",
+      "bytes": 185572,
+      "sha256": "34ac35b2bc89a4c5f44ef6708065290bdaa87390b90b20930dceebbe3509b244"
+    }
+  ]
+}
