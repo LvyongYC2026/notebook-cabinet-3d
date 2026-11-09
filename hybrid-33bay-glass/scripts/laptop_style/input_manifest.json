@@ -1,0 +1,26 @@
+{
+  "smart_cabinet_33bay.blend": {
+    "bytes": 5002609,
+    "sha256": "319907c604d989b9e4bd22a63a4c4eb8b8557fffbb5bda16087d77fba279b672"
+  },
+  "smart_cabinet.glb": {
+    "bytes": 24292488,
+    "sha256": "f1ac7ddebaa1ee471de2481a3d669d24a10f2858f455f1f3640c32a1027f8f2f"
+  },
+  "components.json": {
+    "bytes": 3377667,
+    "sha256": "dcfcf7f408e2a77a3d857029ed7a468a2921f7429c63237743da8b4c4e690332"
+  },
+  "single_drawer/smart_cabinet_drawer.blend": {
+    "bytes": 391462,
+    "sha256": "c98ba02fa544de48916ed0436ab6bfe66795f15c8514ecdaada12825dcce7e1c"
+  },
+  "single_drawer/smart_cabinet_drawer.glb": {
+    "bytes": 798340,
+    "sha256": "5d7de54b1efa9101bd4d3c935475e20b260206977514295abb1e44358b35f320"
+  },
+  "single_drawer/drawer_compartment.json": {
+    "bytes": 111015,
+    "sha256": "2c6d0fc624448fedaabdab505d976cde01f704f5f1706275994d67a084baec10"
+  }
+}
