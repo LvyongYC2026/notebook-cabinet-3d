@@ -1,0 +1,2798 @@
+{
+  "status": "passed_preserved_scope",
+  "baseline_blend_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
+  "candidate_blend_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+  "baseline_objects": 1488,
+  "candidate_scope_objects": 1367,
+  "unchanged_objects": 1228,
+  "scope_roots": [
+    "Module_Left",
+    "Module_Center",
+    "FixedAC_A1",
+    "FixedAC_A2",
+    "FixedAC_A3",
+    "FixedAC_A4",
+    "FixedAC_A5",
+    "FixedAC_A6",
+    "FixedAC_A7",
+    "FixedAC_A8",
+    "FixedAC_A9",
+    "FixedNetwork_A1",
+    "FixedNetwork_A2",
+    "FixedNetwork_A3",
+    "FixedNetwork_A4",
+    "FixedNetwork_A5",
+    "FixedNetwork_A6",
+    "FixedNetwork_A7",
+    "FixedNetwork_A8",
+    "FixedNetwork_A9"
+  ],
+  "explicit_allow_rules": [
+    "Hybrid35cmSeam_(A[789]|Center)"
+  ],
+  "explicit_allowed_object_names": [
+    "A1_RearServiceRail",
+    "A2_RearServiceRail",
+    "A3_RearServiceRail",
+    "A4_RearServiceRail",
+    "A5_RearServiceRail",
+    "A6_RearServiceRail",
+    "A7_RearServiceRail",
+    "A8_RearServiceRail",
+    "A9_RearServiceRail",
+    "Center_FrontFrame",
+    "Center_RearPost",
+    "Center_RearPost.001",
+    "Control_Text",
+    "Equipment_Control18_DesignPlaceholder",
+    "Equipment_PDU18",
+    "Equipment_RearMountFrame",
+    "Equipment_Switch24",
+    "FixedAC_A1",
+    "FixedAC_A2",
+    "FixedAC_A3",
+    "FixedAC_A4",
+    "FixedAC_A5",
+    "FixedAC_A6",
+    "FixedAC_A7",
+    "FixedAC_A8",
+    "FixedAC_A9",
+    "FixedNetwork_A1",
+    "FixedNetwork_A2",
+    "FixedNetwork_A3",
+    "FixedNetwork_A4",
+    "FixedNetwork_A5",
+    "FixedNetwork_A6",
+    "FixedNetwork_A7",
+    "FixedNetwork_A8",
+    "FixedNetwork_A9",
+    "Housing_Center_Side",
+    "Housing_Center_Side.001",
+    "Housing_Left_Side.001",
+    "Left_RearPost.001",
+    "Mains_Inlet",
+    "PDU_Contact",
+    "PDU_Contact.001",
+    "PDU_Contact.002",
+    "PDU_Contact.003",
+    "PDU_Contact.004",
+    "PDU_Contact.005",
+    "PDU_Contact.006",
+    "PDU_Contact.007",
+    "PDU_Contact.008",
+    "PDU_Contact.009",
+    "PDU_Contact.010",
+    "PDU_Contact.011",
+    "PDU_Contact.012",
+    "PDU_Contact.013",
+    "PDU_Contact.014",
+    "PDU_Contact.015",
+    "PDU_Contact.016",
+    "PDU_Contact.017",
+    "PDU_Contact.018",
+    "PDU_Contact.019",
+    "PDU_Contact.020",
+    "PDU_Contact.021",
+    "PDU_Contact.022",
+    "PDU_Contact.023",
+    "PDU_Contact.024",
+    "PDU_Contact.025",
+    "PDU_Contact.026",
+    "PDU_Contact.027",
+    "PDU_Contact.028",
+    "PDU_Contact.029",
+    "PDU_Contact.030",
+    "PDU_Contact.031",
+    "PDU_Contact.032",
+    "PDU_Contact.033",
+    "PDU_Contact.034",
+    "PDU_Contact.035",
+    "PDU_Outlet_01",
+    "PDU_Outlet_02",
+    "PDU_Outlet_03",
+    "PDU_Outlet_04",
+    "PDU_Outlet_05",
+    "PDU_Outlet_06",
+    "PDU_Outlet_07",
+    "PDU_Outlet_08",
+    "PDU_Outlet_09",
+    "PDU_Outlet_10",
+    "PDU_Outlet_11",
+    "PDU_Outlet_12",
+    "PDU_Outlet_13",
+    "PDU_Outlet_14",
+    "PDU_Outlet_15",
+    "PDU_Outlet_16",
+    "PDU_Outlet_17",
+    "PDU_Outlet_18",
+    "PDU_Status",
+    "PDU_Status.001",
+    "PDU_Status.002",
+    "PDU_Status.003",
+    "PDU_Status.004",
+    "PDU_Status.005",
+    "PDU_Status.006",
+    "PDU_Status.007",
+    "PDU_Status.008",
+    "PDU_Status.009",
+    "PDU_Status.010",
+    "PDU_Status.011",
+    "PDU_Status.012",
+    "PDU_Status.013",
+    "PDU_Status.014",
+    "PDU_Status.015",
+    "PDU_Status.016",
+    "PDU_Status.017",
+    "Switch_Label",
+    "Switch_PortSocket",
+    "Switch_PortSocket.001",
+    "Switch_PortSocket.002",
+    "Switch_PortSocket.003",
+    "Switch_PortSocket.004",
+    "Switch_PortSocket.005",
+    "Switch_PortSocket.006",
+    "Switch_PortSocket.007",
+    "Switch_PortSocket.008",
+    "Switch_PortSocket.009",
+    "Switch_PortSocket.010",
+    "Switch_PortSocket.011",
+    "Switch_PortSocket.012",
+    "Switch_PortSocket.013",
+    "Switch_PortSocket.014",
+    "Switch_PortSocket.015",
+    "Switch_PortSocket.016",
+    "Switch_PortSocket.017",
+    "Switch_PortSocket.018",
+    "Switch_PortSocket.019",
+    "Switch_PortSocket.020",
+    "Switch_PortSocket.021",
+    "Switch_PortSocket.022",
+    "Switch_PortSocket.023",
+    "Switch_Port_01",
+    "Switch_Port_02",
+    "Switch_Port_03",
+    "Switch_Port_04",
+    "Switch_Port_05",
+    "Switch_Port_06",
+    "Switch_Port_07",
+    "Switch_Port_08",
+    "Switch_Port_09",
+    "Switch_Port_10",
+    "Switch_Port_11",
+    "Switch_Port_12",
+    "Switch_Port_13",
+    "Switch_Port_14",
+    "Switch_Port_15",
+    "Switch_Port_16",
+    "Switch_Port_17",
+    "Switch_Port_18",
+    "Switch_Port_19",
+    "Switch_Port_20",
+    "Switch_Port_21",
+    "Switch_Port_22",
+    "Switch_Port_23",
+    "Switch_Port_24",
+    "Wiring_A1_EntryPlate",
+    "Wiring_A1_ac_Grommet",
+    "Wiring_A1_ac_WallClipBracket_0",
+    "Wiring_A1_ac_WallClipBracket_1",
+    "Wiring_A1_ac_WallClip_0",
+    "Wiring_A1_ac_WallClip_1",
+    "Wiring_A1_network_Grommet",
+    "Wiring_A1_network_WallClipBracket_0",
+    "Wiring_A1_network_WallClipBracket_1",
+    "Wiring_A1_network_WallClip_0",
+    "Wiring_A1_network_WallClip_1",
+    "Wiring_A2_EntryPlate",
+    "Wiring_A2_ac_Grommet",
+    "Wiring_A2_ac_WallClipBracket_0",
+    "Wiring_A2_ac_WallClipBracket_1",
+    "Wiring_A2_ac_WallClip_0",
+    "Wiring_A2_ac_WallClip_1",
+    "Wiring_A2_network_Grommet",
+    "Wiring_A2_network_WallClipBracket_0",
+    "Wiring_A2_network_WallClipBracket_1",
+    "Wiring_A2_network_WallClip_0",
+    "Wiring_A2_network_WallClip_1",
+    "Wiring_A3_EntryPlate",
+    "Wiring_A3_ac_Grommet",
+    "Wiring_A3_ac_WallClipBracket_0",
+    "Wiring_A3_ac_WallClipBracket_1",
+    "Wiring_A3_ac_WallClip_0",
+    "Wiring_A3_ac_WallClip_1",
+    "Wiring_A3_network_Grommet",
+    "Wiring_A3_network_WallClipBracket_0",
+    "Wiring_A3_network_WallClipBracket_1",
+    "Wiring_A3_network_WallClip_0",
+    "Wiring_A3_network_WallClip_1",
+    "Wiring_A4_EntryPlate",
+    "Wiring_A4_ac_Grommet",
+    "Wiring_A4_ac_WallClipBracket_0",
+    "Wiring_A4_ac_WallClipBracket_1",
+    "Wiring_A4_ac_WallClip_0",
+    "Wiring_A4_ac_WallClip_1",
+    "Wiring_A4_network_Grommet",
+    "Wiring_A4_network_WallClipBracket_0",
+    "Wiring_A4_network_WallClipBracket_1",
+    "Wiring_A4_network_WallClip_0",
+    "Wiring_A4_network_WallClip_1",
+    "Wiring_A5_EntryPlate",
+    "Wiring_A5_ac_Grommet",
+    "Wiring_A5_ac_WallClipBracket_0",
+    "Wiring_A5_ac_WallClipBracket_1",
+    "Wiring_A5_ac_WallClip_0",
+    "Wiring_A5_ac_WallClip_1",
+    "Wiring_A5_network_Grommet",
+    "Wiring_A5_network_WallClipBracket_0",
+    "Wiring_A5_network_WallClipBracket_1",
+    "Wiring_A5_network_WallClip_0",
+    "Wiring_A5_network_WallClip_1",
+    "Wiring_A6_EntryPlate",
+    "Wiring_A6_ac_Grommet",
+    "Wiring_A6_ac_WallClipBracket_0",
+    "Wiring_A6_ac_WallClipBracket_1",
+    "Wiring_A6_ac_WallClip_0",
+    "Wiring_A6_ac_WallClip_1",
+    "Wiring_A6_network_Grommet",
+    "Wiring_A6_network_WallClipBracket_0",
+    "Wiring_A6_network_WallClipBracket_1",
+    "Wiring_A6_network_WallClip_0",
+    "Wiring_A6_network_WallClip_1",
+    "Wiring_A7_EntryPlate",
+    "Wiring_A7_ac_Grommet",
+    "Wiring_A7_ac_WallClipBracket_0",
+    "Wiring_A7_ac_WallClipBracket_1",
+    "Wiring_A7_ac_WallClip_0",
+    "Wiring_A7_ac_WallClip_1",
+    "Wiring_A7_network_Grommet",
+    "Wiring_A7_network_WallClipBracket_0",
+    "Wiring_A7_network_WallClipBracket_1",
+    "Wiring_A7_network_WallClip_0",
+    "Wiring_A7_network_WallClip_1",
+    "Wiring_A8_EntryPlate",
+    "Wiring_A8_ac_Grommet",
+    "Wiring_A8_ac_WallClipBracket_0",
+    "Wiring_A8_ac_WallClipBracket_1",
+    "Wiring_A8_ac_WallClip_0",
+    "Wiring_A8_ac_WallClip_1",
+    "Wiring_A8_network_Grommet",
+    "Wiring_A8_network_WallClipBracket_0",
+    "Wiring_A8_network_WallClipBracket_1",
+    "Wiring_A8_network_WallClip_0",
+    "Wiring_A8_network_WallClip_1",
+    "Wiring_A9_EntryPlate",
+    "Wiring_A9_ac_Grommet",
+    "Wiring_A9_ac_WallClipBracket_0",
+    "Wiring_A9_ac_WallClipBracket_1",
+    "Wiring_A9_ac_WallClip_0",
+    "Wiring_A9_ac_WallClip_1",
+    "Wiring_A9_network_Grommet",
+    "Wiring_A9_network_WallClipBracket_0",
+    "Wiring_A9_network_WallClipBracket_1",
+    "Wiring_A9_network_WallClip_0",
+    "Wiring_A9_network_WallClip_1"
+  ],
+  "allowed_changes": [
+    {
+      "object": "A1_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A1_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A2_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A2_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A3_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A3_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A4_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A4_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A5_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A5_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A6_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A6_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A7_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A7_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A8_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A8_RearServiceRail"
+      ]
+    },
+    {
+      "object": "A9_RearServiceRail",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:A9_RearServiceRail"
+      ]
+    },
+    {
+      "object": "Center_FrontFrame",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Center_FrontFrame"
+      ]
+    },
+    {
+      "object": "Center_RearPost",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Center_RearPost"
+      ]
+    },
+    {
+      "object": "Center_RearPost.001",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Center_RearPost.001"
+      ]
+    },
+    {
+      "object": "Control_Text",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Control_Text"
+      ]
+    },
+    {
+      "object": "Equipment_Control18_DesignPlaceholder",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Equipment_Control18_DesignPlaceholder"
+      ]
+    },
+    {
+      "object": "Equipment_PDU18",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Equipment_PDU18"
+      ]
+    },
+    {
+      "object": "Equipment_RearMountFrame",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Equipment_RearMountFrame"
+      ]
+    },
+    {
+      "object": "Equipment_Switch24",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Equipment_Switch24"
+      ]
+    },
+    {
+      "object": "FixedAC_A1",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A1"
+      ]
+    },
+    {
+      "object": "FixedAC_A2",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A2"
+      ]
+    },
+    {
+      "object": "FixedAC_A3",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A3"
+      ]
+    },
+    {
+      "object": "FixedAC_A4",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A4"
+      ]
+    },
+    {
+      "object": "FixedAC_A5",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A5"
+      ]
+    },
+    {
+      "object": "FixedAC_A6",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A6"
+      ]
+    },
+    {
+      "object": "FixedAC_A7",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A7"
+      ]
+    },
+    {
+      "object": "FixedAC_A8",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A8"
+      ]
+    },
+    {
+      "object": "FixedAC_A9",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedAC_A9"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A1",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A1"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A2",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A2"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A3",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A3"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A4",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A4"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A5",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A5"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A6",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A6"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A7",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A7"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A8",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A8"
+      ]
+    },
+    {
+      "object": "FixedNetwork_A9",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:FixedNetwork_A9"
+      ]
+    },
+    {
+      "object": "Housing_Center_Side",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:Housing_Center_Side"
+      ]
+    },
+    {
+      "object": "Housing_Center_Side.001",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:Housing_Center_Side.001"
+      ]
+    },
+    {
+      "object": "Housing_Left_Side.001",
+      "fields": [
+        "geometry"
+      ],
+      "allowed_rules": [
+        "exact:Housing_Left_Side.001"
+      ]
+    },
+    {
+      "object": "Hybrid35cmSeam_A7",
+      "fields": [
+        "added"
+      ],
+      "allowed_rules": [
+        "Hybrid35cmSeam_(A[789]|Center)"
+      ]
+    },
+    {
+      "object": "Hybrid35cmSeam_A8",
+      "fields": [
+        "added"
+      ],
+      "allowed_rules": [
+        "Hybrid35cmSeam_(A[789]|Center)"
+      ]
+    },
+    {
+      "object": "Hybrid35cmSeam_A9",
+      "fields": [
+        "added"
+      ],
+      "allowed_rules": [
+        "Hybrid35cmSeam_(A[789]|Center)"
+      ]
+    },
+    {
+      "object": "Hybrid35cmSeam_Center",
+      "fields": [
+        "added"
+      ],
+      "allowed_rules": [
+        "Hybrid35cmSeam_(A[789]|Center)"
+      ]
+    },
+    {
+      "object": "Left_RearPost.001",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Left_RearPost.001"
+      ]
+    },
+    {
+      "object": "Mains_Inlet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Mains_Inlet"
+      ]
+    },
+    {
+      "object": "PDU_Contact",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact"
+      ]
+    },
+    {
+      "object": "PDU_Contact.001",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.001"
+      ]
+    },
+    {
+      "object": "PDU_Contact.002",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.002"
+      ]
+    },
+    {
+      "object": "PDU_Contact.003",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.003"
+      ]
+    },
+    {
+      "object": "PDU_Contact.004",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.004"
+      ]
+    },
+    {
+      "object": "PDU_Contact.005",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.005"
+      ]
+    },
+    {
+      "object": "PDU_Contact.006",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.006"
+      ]
+    },
+    {
+      "object": "PDU_Contact.007",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.007"
+      ]
+    },
+    {
+      "object": "PDU_Contact.008",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.008"
+      ]
+    },
+    {
+      "object": "PDU_Contact.009",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.009"
+      ]
+    },
+    {
+      "object": "PDU_Contact.010",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.010"
+      ]
+    },
+    {
+      "object": "PDU_Contact.011",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.011"
+      ]
+    },
+    {
+      "object": "PDU_Contact.012",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.012"
+      ]
+    },
+    {
+      "object": "PDU_Contact.013",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.013"
+      ]
+    },
+    {
+      "object": "PDU_Contact.014",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.014"
+      ]
+    },
+    {
+      "object": "PDU_Contact.015",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.015"
+      ]
+    },
+    {
+      "object": "PDU_Contact.016",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.016"
+      ]
+    },
+    {
+      "object": "PDU_Contact.017",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.017"
+      ]
+    },
+    {
+      "object": "PDU_Contact.018",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.018"
+      ]
+    },
+    {
+      "object": "PDU_Contact.019",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.019"
+      ]
+    },
+    {
+      "object": "PDU_Contact.020",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.020"
+      ]
+    },
+    {
+      "object": "PDU_Contact.021",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.021"
+      ]
+    },
+    {
+      "object": "PDU_Contact.022",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.022"
+      ]
+    },
+    {
+      "object": "PDU_Contact.023",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.023"
+      ]
+    },
+    {
+      "object": "PDU_Contact.024",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.024"
+      ]
+    },
+    {
+      "object": "PDU_Contact.025",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.025"
+      ]
+    },
+    {
+      "object": "PDU_Contact.026",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.026"
+      ]
+    },
+    {
+      "object": "PDU_Contact.027",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.027"
+      ]
+    },
+    {
+      "object": "PDU_Contact.028",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.028"
+      ]
+    },
+    {
+      "object": "PDU_Contact.029",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.029"
+      ]
+    },
+    {
+      "object": "PDU_Contact.030",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.030"
+      ]
+    },
+    {
+      "object": "PDU_Contact.031",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.031"
+      ]
+    },
+    {
+      "object": "PDU_Contact.032",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.032"
+      ]
+    },
+    {
+      "object": "PDU_Contact.033",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.033"
+      ]
+    },
+    {
+      "object": "PDU_Contact.034",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.034"
+      ]
+    },
+    {
+      "object": "PDU_Contact.035",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Contact.035"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_01",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_01"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_02",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_02"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_03",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_03"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_04",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_04"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_05",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_05"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_06",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_06"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_07",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_07"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_08",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_08"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_09",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_09"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_10",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_10"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_11",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_11"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_12",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_12"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_13",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_13"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_14",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_14"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_15",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_15"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_16",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_16"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_17",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_17"
+      ]
+    },
+    {
+      "object": "PDU_Outlet_18",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Outlet_18"
+      ]
+    },
+    {
+      "object": "PDU_Status",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status"
+      ]
+    },
+    {
+      "object": "PDU_Status.001",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.001"
+      ]
+    },
+    {
+      "object": "PDU_Status.002",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.002"
+      ]
+    },
+    {
+      "object": "PDU_Status.003",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.003"
+      ]
+    },
+    {
+      "object": "PDU_Status.004",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.004"
+      ]
+    },
+    {
+      "object": "PDU_Status.005",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.005"
+      ]
+    },
+    {
+      "object": "PDU_Status.006",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.006"
+      ]
+    },
+    {
+      "object": "PDU_Status.007",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.007"
+      ]
+    },
+    {
+      "object": "PDU_Status.008",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.008"
+      ]
+    },
+    {
+      "object": "PDU_Status.009",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.009"
+      ]
+    },
+    {
+      "object": "PDU_Status.010",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.010"
+      ]
+    },
+    {
+      "object": "PDU_Status.011",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.011"
+      ]
+    },
+    {
+      "object": "PDU_Status.012",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.012"
+      ]
+    },
+    {
+      "object": "PDU_Status.013",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.013"
+      ]
+    },
+    {
+      "object": "PDU_Status.014",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.014"
+      ]
+    },
+    {
+      "object": "PDU_Status.015",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.015"
+      ]
+    },
+    {
+      "object": "PDU_Status.016",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.016"
+      ]
+    },
+    {
+      "object": "PDU_Status.017",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:PDU_Status.017"
+      ]
+    },
+    {
+      "object": "Switch_Label",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Label"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.001",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.001"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.002",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.002"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.003",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.003"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.004",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.004"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.005",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.005"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.006",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.006"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.007",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.007"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.008",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.008"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.009",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.009"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.010",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.010"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.011",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.011"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.012",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.012"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.013",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.013"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.014",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.014"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.015",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.015"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.016",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.016"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.017",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.017"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.018",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.018"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.019",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.019"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.020",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.020"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.021",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.021"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.022",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.022"
+      ]
+    },
+    {
+      "object": "Switch_PortSocket.023",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_PortSocket.023"
+      ]
+    },
+    {
+      "object": "Switch_Port_01",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_01"
+      ]
+    },
+    {
+      "object": "Switch_Port_02",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_02"
+      ]
+    },
+    {
+      "object": "Switch_Port_03",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_03"
+      ]
+    },
+    {
+      "object": "Switch_Port_04",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_04"
+      ]
+    },
+    {
+      "object": "Switch_Port_05",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_05"
+      ]
+    },
+    {
+      "object": "Switch_Port_06",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_06"
+      ]
+    },
+    {
+      "object": "Switch_Port_07",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_07"
+      ]
+    },
+    {
+      "object": "Switch_Port_08",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_08"
+      ]
+    },
+    {
+      "object": "Switch_Port_09",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_09"
+      ]
+    },
+    {
+      "object": "Switch_Port_10",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_10"
+      ]
+    },
+    {
+      "object": "Switch_Port_11",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_11"
+      ]
+    },
+    {
+      "object": "Switch_Port_12",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_12"
+      ]
+    },
+    {
+      "object": "Switch_Port_13",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_13"
+      ]
+    },
+    {
+      "object": "Switch_Port_14",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_14"
+      ]
+    },
+    {
+      "object": "Switch_Port_15",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_15"
+      ]
+    },
+    {
+      "object": "Switch_Port_16",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_16"
+      ]
+    },
+    {
+      "object": "Switch_Port_17",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_17"
+      ]
+    },
+    {
+      "object": "Switch_Port_18",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_18"
+      ]
+    },
+    {
+      "object": "Switch_Port_19",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_19"
+      ]
+    },
+    {
+      "object": "Switch_Port_20",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_20"
+      ]
+    },
+    {
+      "object": "Switch_Port_21",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_21"
+      ]
+    },
+    {
+      "object": "Switch_Port_22",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_22"
+      ]
+    },
+    {
+      "object": "Switch_Port_23",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_23"
+      ]
+    },
+    {
+      "object": "Switch_Port_24",
+      "fields": [
+        "missing"
+      ],
+      "allowed_rules": [
+        "exact:Switch_Port_24"
+      ]
+    },
+    {
+      "object": "Wiring_A1_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A1_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A1_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A1_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A1_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A1_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A1_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A1_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A1_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A1_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A1_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A1_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A2_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A2_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A2_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A2_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A2_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A2_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A2_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A2_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A2_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A2_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A2_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A2_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A3_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A3_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A3_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A3_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A3_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A3_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A3_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A3_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A3_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A3_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A3_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A3_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A4_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A4_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A4_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A4_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A4_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A4_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A4_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A4_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A4_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A4_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A4_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A4_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A5_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A5_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A5_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A5_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A5_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A5_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A5_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A5_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A5_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A5_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A5_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A5_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A6_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A6_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A6_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A6_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A6_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A6_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A6_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A6_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A6_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A6_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A6_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A6_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A7_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A7_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A7_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A7_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A7_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A7_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A7_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A7_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A7_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A7_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A7_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A7_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A8_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A8_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A8_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A8_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A8_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A8_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A8_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A8_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A8_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A8_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A8_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A8_network_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A9_EntryPlate",
+      "fields": [
+        "geometry",
+        "materials"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_EntryPlate"
+      ]
+    },
+    {
+      "object": "Wiring_A9_ac_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_ac_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A9_ac_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_ac_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A9_ac_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_ac_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A9_ac_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_ac_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A9_ac_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_ac_WallClip_1"
+      ]
+    },
+    {
+      "object": "Wiring_A9_network_Grommet",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_network_Grommet"
+      ]
+    },
+    {
+      "object": "Wiring_A9_network_WallClipBracket_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_network_WallClipBracket_0"
+      ]
+    },
+    {
+      "object": "Wiring_A9_network_WallClipBracket_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_network_WallClipBracket_1"
+      ]
+    },
+    {
+      "object": "Wiring_A9_network_WallClip_0",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_network_WallClip_0"
+      ]
+    },
+    {
+      "object": "Wiring_A9_network_WallClip_1",
+      "fields": [
+        "basis",
+        "cabinet_relative_transform"
+      ],
+      "allowed_rules": [
+        "exact:Wiring_A9_network_WallClip_1"
+      ]
+    }
+  ],
+  "unexpected_changes": [],
+  "limits": "Raw editable geometry, transforms, shader settings and driver fingerprints at frame 1. Does not certify collision, tolerances, thermal or electrical performance. External unpacked texture pixels are not read."
+}

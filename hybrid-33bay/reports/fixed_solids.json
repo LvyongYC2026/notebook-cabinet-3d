@@ -1,0 +1,3776 @@
+{
+  "blend_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+  "metadata_sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e",
+  "route_count": 104,
+  "fixed_mesh_count": 3581,
+  "broadphase_pairs": 29066,
+  "review_pairs": [],
+  "expected_endpoint_pairs": [
+    {
+      "route": "FixedAC_MainsToInput",
+      "part": "Mains_Inlet",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.297,
+          0.135
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_MainsToInput",
+      "part": "Wiring_Input_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.256,
+          0.135
+        ]
+      ],
+      "max_distance_from_route_end_mm": 10.0,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_InputToDistribution",
+      "part": "Wiring_Input_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.246,
+          0.147
+        ]
+      ],
+      "max_distance_from_route_end_mm": 12.0,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_InputToDistribution",
+      "part": "Wiring_NonBackup_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.2,
+          0.246,
+          0.288
+        ]
+      ],
+      "max_distance_from_route_end_mm": 12.0,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_DistributionToPDU",
+      "part": "Wiring_NonBackup_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.212,
+          0.2518667,
+          0.3
+        ]
+      ],
+      "max_distance_from_route_end_mm": 13.3573,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_DistributionToUPS",
+      "part": "Wiring_NonBackup_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.212,
+          0.2412,
+          0.2989103
+        ]
+      ],
+      "max_distance_from_route_end_mm": 12.9702,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_DistributionToUPS",
+      "part": "Wiring_UPS_InputSocket",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.15,
+          0.178,
+          0.22
+        ]
+      ],
+      "max_distance_from_route_end_mm": 4.0,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_UPSToCritical",
+      "part": "Wiring_Critical_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0510639,
+          0.2421,
+          0.288
+        ]
+      ],
+      "max_distance_from_route_end_mm": 12.6626,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_UPSToCritical",
+      "part": "Wiring_UPS_OutputSocket",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.15,
+          0.178,
+          0.26
+        ]
+      ],
+      "max_distance_from_route_end_mm": 4.0,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_CriticalToHost",
+      "part": "Wiring_Critical_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 14,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.058,
+          0.2544,
+          0.312
+        ]
+      ],
+      "max_distance_from_route_end_mm": 14.6478,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_CriticalToHost",
+      "part": "Wiring_Host_PowerInlet",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.18,
+          0.11,
+          0.53
+        ]
+      ],
+      "max_distance_from_route_end_mm": 4.0,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_CriticalToSwitch",
+      "part": "Wiring_Critical_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0498606,
+          0.24468,
+          0.312
+        ]
+      ],
+      "max_distance_from_route_end_mm": 12.0732,
+      "nearest_end_to_surface_mm": 10.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_CriticalToSwitch",
+      "part": "Wiring_Switch_PowerInlet",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.18,
+          0.13,
+          0.7
+        ]
+      ],
+      "max_distance_from_route_end_mm": 4.0,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_CriticalToControlPower_ACInput",
+      "part": "Wiring_Critical_Terminal",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.038,
+          0.247037,
+          0.3
+        ]
+      ],
+      "max_distance_from_route_end_mm": 4.1322,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_CriticalToControlPower_ACInput",
+      "part": "Wiring_ControlPower_ACInput_PowerInlet",
+      "hybrid_role": "existing",
+      "surface_pair_count": 10,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.129,
+          0.0094194,
+          0.56
+        ]
+      ],
+      "max_distance_from_route_end_mm": 9.0187,
+      "nearest_end_to_surface_mm": 4.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedDC_ControlPowerToController",
+      "part": "Wiring_ControlPower_24VDC_Output",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.195,
+          0.0089724,
+          0.5434556
+        ]
+      ],
+      "max_distance_from_route_end_mm": 8.0186,
+      "nearest_end_to_surface_mm": 3.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedDC_ControlPowerToController",
+      "part": "Wiring_Controller_24VDC_Input",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.205,
+          0.005007,
+          0.465139
+        ]
+      ],
+      "max_distance_from_route_end_mm": 3.0032,
+      "nearest_end_to_surface_mm": 3.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A1",
+      "part": "HybridSwitch_Plug_01",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.199,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A2",
+      "part": "HybridSwitch_Plug_02",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1817,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A3",
+      "part": "HybridSwitch_Plug_03",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1644,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A4",
+      "part": "HybridSwitch_Plug_04",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1471,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A5",
+      "part": "HybridSwitch_Plug_05",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1298,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A6",
+      "part": "HybridSwitch_Plug_06",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1125,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A7",
+      "part": "HybridSwitch_Plug_07",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0952,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A8",
+      "part": "HybridSwitch_Plug_08",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0779,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_A9",
+      "part": "HybridSwitch_Plug_09",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0606,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_Server",
+      "part": "Wiring_Server_DataConnector",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.012,
+          0.118,
+          0.514
+        ]
+      ],
+      "max_distance_from_route_end_mm": 7.0,
+      "nearest_end_to_surface_mm": 6.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_Server",
+      "part": "HybridSwitch_Plug_34",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0433,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_LockController",
+      "part": "Wiring_LockController_DataConnector",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.202,
+          0.082,
+          0.466
+        ]
+      ],
+      "max_distance_from_route_end_mm": 7.0,
+      "nearest_end_to_surface_mm": 6.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_LockController",
+      "part": "HybridSwitch_Plug_35",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.026,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_PDUManagement",
+      "part": "Wiring_PDUManagement_DataConnector",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0006382,
+          0.219,
+          0.605
+        ]
+      ],
+      "max_distance_from_route_end_mm": 7.029,
+      "nearest_end_to_surface_mm": 6.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_PDUManagement",
+      "part": "HybridSwitch_Plug_36",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0087,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_UPSManagement",
+      "part": "Wiring_UPSManagement_DataConnector",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.15,
+          0.183,
+          0.32
+        ]
+      ],
+      "max_distance_from_route_end_mm": 7.0,
+      "nearest_end_to_surface_mm": 6.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_UPSManagement",
+      "part": "HybridSwitch_Plug_37",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0086,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_ExternalManagement",
+      "part": "Wiring_ExternalManagement_DataConnector",
+      "hybrid_role": "existing",
+      "surface_pair_count": 10,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.228,
+          0.2844521,
+          0.8032877
+        ]
+      ],
+      "max_distance_from_route_end_mm": 8.6665,
+      "nearest_end_to_surface_mm": 6.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_ExternalManagement",
+      "part": "HybridSwitch_Plug_38",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0259,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": false,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A1",
+      "part": "A1_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -1.6169997,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A1",
+      "part": "HybridPDU_Plug_01",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.196,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A2",
+      "part": "A2_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -1.1669998,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A2",
+      "part": "HybridPDU_Plug_02",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.147,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A3",
+      "part": "A3_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.7169997,
+          -0.0825,
+          1.443
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A3",
+      "part": "HybridPDU_Plug_03",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.098,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A4",
+      "part": "A4_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -1.6169997,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A4",
+      "part": "HybridPDU_Plug_04",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.049,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A5",
+      "part": "A5_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -1.1669998,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A5",
+      "part": "HybridPDU_Plug_05",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A6",
+      "part": "A6_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.7169997,
+          -0.0825,
+          0.993
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A6",
+      "part": "HybridPDU_Plug_06",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.049,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A7",
+      "part": "A7_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -1.6169997,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A7",
+      "part": "HybridPDU_Plug_07",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.098,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A8",
+      "part": "A8_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -1.1669998,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A8",
+      "part": "HybridPDU_Plug_08",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.147,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A9",
+      "part": "A9_Refined_fixed_ac_socket_body",
+      "hybrid_role": "existing",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.7169997,
+          -0.0825,
+          0.543
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.5,
+      "nearest_end_to_surface_mm": 0.5,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_A9",
+      "part": "HybridPDU_Plug_09",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.196,
+          0.228,
+          0.579
+        ]
+      ],
+      "max_distance_from_route_end_mm": 1.0,
+      "nearest_end_to_surface_mm": 1.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B1",
+      "part": "HybridSwitch_Plug_10",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0433,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B1",
+      "part": "HybridRearPatch_Input_B1",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.184,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B1",
+      "part": "B1_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          1.59
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B1",
+      "part": "HybridRearPatch_Output_B1",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.184,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B1",
+      "part": "B1_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          1.615
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B1",
+      "part": "HybridPDU_Plug_10",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.189,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B2",
+      "part": "HybridSwitch_Plug_11",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.026,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B2",
+      "part": "HybridRearPatch_Input_B2",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.168,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B2",
+      "part": "B2_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          1.59
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B2",
+      "part": "HybridRearPatch_Output_B2",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.168,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B2",
+      "part": "B2_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          1.615
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B2",
+      "part": "HybridPDU_Plug_11",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.189,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B3",
+      "part": "HybridSwitch_Plug_12",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0087,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B3",
+      "part": "HybridRearPatch_Input_B3",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.152,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B3",
+      "part": "B3_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          1.59
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B3",
+      "part": "HybridRearPatch_Output_B3",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.152,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B3",
+      "part": "B3_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          1.615
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B3",
+      "part": "HybridPDU_Plug_12",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.189,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B4",
+      "part": "HybridSwitch_Plug_13",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0086,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B4",
+      "part": "HybridRearPatch_Input_B4",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.136,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B4",
+      "part": "B4_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          1.4299999
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B4",
+      "part": "HybridRearPatch_Output_B4",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.136,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B4",
+      "part": "B4_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          1.455
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B4",
+      "part": "HybridPDU_Plug_13",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.135,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B5",
+      "part": "HybridSwitch_Plug_14",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0259,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B5",
+      "part": "HybridRearPatch_Input_B5",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.12,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B5",
+      "part": "B5_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          1.4299999
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B5",
+      "part": "HybridRearPatch_Output_B5",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.12,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B5",
+      "part": "B5_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          1.455
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B5",
+      "part": "HybridPDU_Plug_14",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.135,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B6",
+      "part": "HybridSwitch_Plug_15",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0432,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B6",
+      "part": "HybridRearPatch_Input_B6",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.104,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B6",
+      "part": "B6_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          1.4299999
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B6",
+      "part": "HybridRearPatch_Output_B6",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.104,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B6",
+      "part": "B6_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          1.455
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B6",
+      "part": "HybridPDU_Plug_15",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.135,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B7",
+      "part": "HybridSwitch_Plug_16",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0605,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B7",
+      "part": "HybridRearPatch_Input_B7",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.088,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B7",
+      "part": "B7_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          1.27
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B7",
+      "part": "HybridRearPatch_Output_B7",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.088,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B7",
+      "part": "B7_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          1.295
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B7",
+      "part": "HybridPDU_Plug_16",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.081,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B8",
+      "part": "HybridSwitch_Plug_17",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0778,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B8",
+      "part": "HybridRearPatch_Input_B8",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.072,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B8",
+      "part": "B8_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          1.27
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B8",
+      "part": "HybridRearPatch_Output_B8",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.072,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B8",
+      "part": "B8_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          1.295
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B8",
+      "part": "HybridPDU_Plug_17",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.081,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B9",
+      "part": "HybridSwitch_Plug_18",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.0951,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B9",
+      "part": "HybridRearPatch_Input_B9",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.056,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B9",
+      "part": "B9_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          1.27
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B9",
+      "part": "HybridRearPatch_Output_B9",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.056,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B9",
+      "part": "B9_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          1.295
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B9",
+      "part": "HybridPDU_Plug_18",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.081,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B10",
+      "part": "HybridSwitch_Plug_19",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.1124,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B10",
+      "part": "HybridRearPatch_Input_B10",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.04,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B10",
+      "part": "B10_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          1.11
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B10",
+      "part": "HybridRearPatch_Output_B10",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.04,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B10",
+      "part": "B10_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          1.135
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B10",
+      "part": "HybridPDU_Plug_19",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.027,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B11",
+      "part": "HybridSwitch_Plug_20",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.1297,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B11",
+      "part": "HybridRearPatch_Input_B11",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.024,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B11",
+      "part": "B11_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          1.11
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B11",
+      "part": "HybridRearPatch_Output_B11",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.024,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B11",
+      "part": "B11_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          1.135
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B11",
+      "part": "HybridPDU_Plug_20",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.027,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B12",
+      "part": "HybridSwitch_Plug_21",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.147,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B12",
+      "part": "HybridRearPatch_Input_B12",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.008,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B12",
+      "part": "B12_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          1.11
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B12",
+      "part": "HybridRearPatch_Output_B12",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.008,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B12",
+      "part": "B12_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          1.135
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B12",
+      "part": "HybridPDU_Plug_21",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.027,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B13",
+      "part": "HybridSwitch_Plug_22",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.1643,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B13",
+      "part": "HybridRearPatch_Input_B13",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.008,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B13",
+      "part": "B13_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          0.95
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B13",
+      "part": "HybridRearPatch_Output_B13",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.008,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B13",
+      "part": "B13_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          0.975
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B13",
+      "part": "HybridPDU_Plug_22",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.027,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B14",
+      "part": "HybridSwitch_Plug_23",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.1816,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B14",
+      "part": "HybridRearPatch_Input_B14",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.024,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B14",
+      "part": "B14_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          0.95
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B14",
+      "part": "HybridRearPatch_Output_B14",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.024,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B14",
+      "part": "B14_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          0.975
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B14",
+      "part": "HybridPDU_Plug_23",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.027,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B15",
+      "part": "HybridSwitch_Plug_24",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.1989,
+          -0.2,
+          0.687
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B15",
+      "part": "HybridRearPatch_Input_B15",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.04,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B15",
+      "part": "B15_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          0.95
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B15",
+      "part": "HybridRearPatch_Output_B15",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.04,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B15",
+      "part": "B15_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 11,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          0.975
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B15",
+      "part": "HybridPDU_Plug_24",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.027,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B16",
+      "part": "HybridSwitch_Plug_25",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.199,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B16",
+      "part": "HybridRearPatch_Input_B16",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.056,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B16",
+      "part": "B16_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          0.79
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B16",
+      "part": "HybridRearPatch_Output_B16",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.056,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B16",
+      "part": "B16_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          0.815
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B16",
+      "part": "HybridPDU_Plug_25",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.081,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B17",
+      "part": "HybridSwitch_Plug_26",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1817,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B17",
+      "part": "HybridRearPatch_Input_B17",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.072,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B17",
+      "part": "B17_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          0.79
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B17",
+      "part": "HybridRearPatch_Output_B17",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.072,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B17",
+      "part": "B17_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          0.815
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B17",
+      "part": "HybridPDU_Plug_26",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.081,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B18",
+      "part": "HybridSwitch_Plug_27",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1644,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B18",
+      "part": "HybridRearPatch_Input_B18",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.088,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B18",
+      "part": "B18_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          0.79
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B18",
+      "part": "HybridRearPatch_Output_B18",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.088,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B18",
+      "part": "B18_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          0.815
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B18",
+      "part": "HybridPDU_Plug_27",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.081,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B19",
+      "part": "HybridSwitch_Plug_28",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1471,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B19",
+      "part": "HybridRearPatch_Input_B19",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.104,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B19",
+      "part": "B19_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          0.63
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B19",
+      "part": "HybridRearPatch_Output_B19",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.104,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B19",
+      "part": "B19_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          0.655
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B19",
+      "part": "HybridPDU_Plug_28",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.135,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B20",
+      "part": "HybridSwitch_Plug_29",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1298,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B20",
+      "part": "HybridRearPatch_Input_B20",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.12,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B20",
+      "part": "B20_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          0.63
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B20",
+      "part": "HybridRearPatch_Output_B20",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.12,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B20",
+      "part": "B20_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          0.655
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B20",
+      "part": "HybridPDU_Plug_29",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.135,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B21",
+      "part": "HybridSwitch_Plug_30",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.1125,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B21",
+      "part": "HybridRearPatch_Input_B21",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.136,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B21",
+      "part": "B21_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          0.63
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B21",
+      "part": "HybridRearPatch_Output_B21",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.136,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B21",
+      "part": "B21_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          0.655
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B21",
+      "part": "HybridPDU_Plug_30",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.135,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B22",
+      "part": "HybridSwitch_Plug_31",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0952,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B22",
+      "part": "HybridRearPatch_Input_B22",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.152,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B22",
+      "part": "B22_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.326,
+          0.267,
+          0.47
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B22",
+      "part": "HybridRearPatch_Output_B22",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.152,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B22",
+      "part": "B22_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.425,
+          0.245,
+          0.495
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B22",
+      "part": "HybridPDU_Plug_31",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.189,
+          0.228,
+          0.611
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B23",
+      "part": "HybridSwitch_Plug_32",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0779,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B23",
+      "part": "HybridRearPatch_Input_B23",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.168,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B23",
+      "part": "B23_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.776,
+          0.267,
+          0.47
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B23",
+      "part": "HybridRearPatch_Output_B23",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.168,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B23",
+      "part": "B23_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.875,
+          0.245,
+          0.495
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B23",
+      "part": "HybridPDU_Plug_32",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.189,
+          0.228,
+          0.643
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B24",
+      "part": "HybridSwitch_Plug_33",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          -0.0606,
+          -0.2,
+          0.708
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "HybridNetwork_SwitchToPatch_B24",
+      "part": "HybridRearPatch_Input_B24",
+      "hybrid_role": "connector",
+      "surface_pair_count": 6,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.184,
+          0.312,
+          0.932
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B24",
+      "part": "B24_FixedNetworkSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.226,
+          0.267,
+          0.47
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedNetwork_B24",
+      "part": "HybridRearPatch_Output_B24",
+      "hybrid_role": "connector",
+      "surface_pair_count": 7,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.184,
+          0.312,
+          0.888
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B24",
+      "part": "B24_FixedACSocket",
+      "hybrid_role": "connector",
+      "surface_pair_count": 9,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          1.325,
+          0.245,
+          0.495
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    },
+    {
+      "route": "FixedAC_B24",
+      "part": "HybridPDU_Plug_33",
+      "hybrid_role": "connector",
+      "surface_pair_count": 8,
+      "centerline_contact_count": 1,
+      "contact_positions_blender_m": [
+        [
+          0.189,
+          0.228,
+          0.675
+        ]
+      ],
+      "max_distance_from_route_end_mm": 0.0,
+      "nearest_end_to_surface_mm": 0.0,
+      "explicit_endpoint_node": true,
+      "endpoint_inside_compact_connector": true,
+      "classification": "expected endpoint connection; compact connector contains route end or touches within0.35mm, all measured crossings within25mm"
+    }
+  ],
+  "method": "Evaluated actual tube/solid mesh BVH surface overlap plus centerline ray contacts. Includes new fasteners/service supports; does not blanket-ignore clips. Moves no geometry.",
+  "limits": "Surface intersections and declared endpoint classification; not electrical insulation/EMC, material tolerance, manufacturing, mechanical load or thermal certification.",
+  "empty_fixed_mesh_names": [],
+  "status": "passed"
+}

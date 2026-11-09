@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "scope": "Frozen final 33-bay and drawer-single GLBs; interaction, native endpoints, occupancy, camera and dimensions; independent Blender collision audit is separate",
+  "verified_at": "2026-11-09T04:57:24.336Z",
+  "whole_native": {
+    "native_cables": 65,
+    "visible_native_cables": 62,
+    "hidden_native_reserve": 3,
+    "static_paths": [
+      "cable_A3_power"
+    ],
+    "total_cable_paths": 66,
+    "poses_mm": [
+      0,
+      80,
+      160,
+      240,
+      320
+    ],
+    "native_pose_cases": 325,
+    "max_endpoint_error_mm": 0.0000226497650079871,
+    "max_length_deviation_mm": 0.004062638653635986,
+    "parked_empty_dc_fixed": true
+  },
+  "whole_usb": {
+    "bays": 33,
+    "actual_endpoint_checks": 660,
+    "occupancy_pose_checks": 495,
+    "max_endpoint_error_mm": 9.313225746154789e-7,
+    "nic_and_usb_follow_tray": true,
+    "ethernet_keeps_connected_while_empty": true
+  },
+  "mechanisms": {
+    "doors": 13,
+    "trays": 33,
+    "right_drawers": 24,
+    "left_hinged": 9,
+    "all_24_drawers_sequentially_exercised": true,
+    "interlock_frames": 2469,
+    "rapid_reversal": true,
+    "batch_front_never_opens_drawers": true,
+    "hinged_clearance_and_retraction_gate": true,
+    "multi_digit_picking": true
+  },
+  "demo": {
+    "drawer": "B24",
+    "vertical_then_forward": true,
+    "reverse_return": true,
+    "transfer_frames": 110,
+    "usb_dc_disconnected_before_motion": true,
+    "ethernet_always_connected": true,
+    "interrupted_path_cleared": true
+  },
+  "drawer_native": {
+    "native_cables": 2,
+    "visible_native_cables": 2,
+    "hidden_native_reserve": 0,
+    "static_paths": [],
+    "total_cable_paths": 2,
+    "poses_mm": [
+      0,
+      80,
+      160,
+      240,
+      320
+    ],
+    "native_pose_cases": 10,
+    "max_endpoint_error_mm": 0.00002265968877192538,
+    "max_length_deviation_mm": 0.000018809977518685628,
+    "parked_empty_dc_fixed": true
+  },
+  "drawer_usb": {
+    "bays": 1,
+    "actual_endpoint_checks": 20,
+    "occupancy_pose_checks": 15,
+    "max_endpoint_error_mm": 5.551115123125783e-14,
+    "nic_and_usb_follow_tray": true,
+    "ethernet_keeps_connected_while_empty": true
+  },
+  "drawer_camera_entries": {
+    "cutaway": {
+      "azimuth": 0.62,
+      "elevation": 0.72
+    },
+    "restore_shell": {
+      "azimuth": 0.62,
+      "elevation": 0.72
+    },
+    "front": {
+      "elevation": 0.72
+    },
+    "rear": {
+      "elevation": 0.72
+    }
+  },
+  "drawer_camera": [
+    {
+      "width": 1048,
+      "visible_laptop_lid_samples": 9,
+      "focused_tray_and_cables_fit": true
+    },
+    {
+      "width": 390,
+      "visible_laptop_lid_samples": 9,
+      "focused_tray_and_cables_fit": true
+    }
+  ],
+  "hinged_native": {
+    "native_cables": 2,
+    "visible_native_cables": 2,
+    "hidden_native_reserve": 0,
+    "static_paths": [],
+    "total_cable_paths": 2,
+    "poses_mm": [
+      0,
+      80,
+      160,
+      240,
+      320
+    ],
+    "native_pose_cases": 10,
+    "max_endpoint_error_mm": 0.000008573556325958295,
+    "max_length_deviation_mm": 0.002603823688104967,
+    "parked_empty_dc_fixed": true
+  },
+  "hinged_usb": {
+    "bays": 1,
+    "actual_endpoint_checks": 20,
+    "occupancy_pose_checks": 15,
+    "max_endpoint_error_mm": 4.6566128730773926e-7,
+    "nic_and_usb_follow_tray": true,
+    "ethernet_keeps_connected_while_empty": true
+  },
+  "single_variants": {
+    "default": "drawer",
+    "independent_cached_models": true,
+    "load_retry_keeps_current_model": true,
+    "round_trips": 3,
+    "requests_including_retry": 3,
+    "dimension_setting_preserved": true
+  },
+  "fixed_network_routes": {
+    "inspected": 33,
+    "physical_segments": 57,
+    "port_mapping_and_cm_length": true
+  },
+  "unchanged_left_single_assets": true,
+  "frozen_assets": {
+    "status": "frozen_final_geometry_revision9",
+    "copied_at": "2026-11-09T04:55:57.539763+00:00",
+    "assets": {
+      "smart_cabinet.glb": {
+        "bytes": 22759636,
+        "sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a"
+      },
+      "components.json": {
+        "bytes": 3343931,
+        "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+      },
+      "smart_cabinet_drawer.glb": {
+        "bytes": 588924,
+        "sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78"
+      },
+      "drawer_compartment.json": {
+        "bytes": 108188,
+        "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+      },
+      "room_environment.glb": {
+        "bytes": 5638360,
+        "sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6"
+      },
+      "room_metadata.json": {
+        "bytes": 57171,
+        "sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f"
+      }
+    }
+  },
+  "source_sha256": {
+    "app.js": "48e6cf127dab574351511901cb12c5dfc7556c584218f0099d96221cc4d3663a",
+    "dimensions.js": "b74874e11e3330c99ba15cd16406f5d15a201cabb9e01ee2fe8786c4b17a8652",
+    "wiring.js": "862a1b4ddc2882fc29c323d2fce872e2607c1e15add97ec0e93bac95886d9b61",
+    "room-scene.js": "69a77053d7c7f675f1592ade8a5890732f226d69ccf17ae0f8b66d0f0af4d13d",
+    "index.html": "5a2d6fb83e2b481ff2d6dc6474aba864a544bc69ff32661bce10a9faf9969177",
+    "room.css": "41ae2877175a4c38e8e29d4f085edc3aa056eec88b2181d7623f94117f627c4e"
+  }
+}
