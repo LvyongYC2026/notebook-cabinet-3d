@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T15:16:15.096Z",
+  "catalog_items": 13,
+  "no_automatic_download": true,
+  "only_one_concurrent_download": true,
+  "original_filename_and_blob": true,
+  "delayed_object_url_cleanup": true,
+  "error_does_not_save_file": true,
+  "download_and_catalog_retry": true,
+  "accessible_labels": true,
+  "source_sha256": "2eb756337da33c591ba6722fe609bbb809d06121a7cfcc1daa6576121ed4b65b"
+}

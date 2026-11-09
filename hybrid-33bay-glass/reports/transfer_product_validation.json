@@ -1,0 +1,121 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-09T15:14:26.990Z",
+  "scope": "Read-only dual-front candidate GLBs; real optimized nodes, motion and cached scene integration. Browser appearance and physical collision review are separate.",
+  "whole_native": {
+    "native_cables": 65,
+    "visible_native_cables": 62,
+    "hidden_native_reserve": 3,
+    "static_paths": [
+      "cable_A3_power"
+    ],
+    "total_cable_paths": 66,
+    "poses_mm": [
+      0,
+      80,
+      160,
+      240,
+      320
+    ],
+    "native_pose_cases": 325,
+    "max_endpoint_error_mm": 0.0000226497650079871,
+    "max_length_deviation_mm": 0.004062638653635986,
+    "parked_empty_dc_fixed": true
+  },
+  "whole_usb": {
+    "bays": 33,
+    "actual_endpoint_checks": 660,
+    "occupancy_pose_checks": 495,
+    "max_endpoint_error_mm": 9.313225746154789e-7,
+    "nic_and_usb_follow_tray": true,
+    "ethernet_keeps_connected_while_empty": true
+  },
+  "usb_and_ac_ports": {
+    "actual_mesh_components": 4,
+    "cm_dimensions_from_metadata_or_mesh": true,
+    "usb_ethernet_topology_explicit": true
+  },
+  "drawer_native": {
+    "native_cables": 2,
+    "visible_native_cables": 2,
+    "hidden_native_reserve": 0,
+    "static_paths": [],
+    "total_cable_paths": 2,
+    "poses_mm": [
+      0,
+      80,
+      160,
+      240,
+      320
+    ],
+    "native_pose_cases": 10,
+    "max_endpoint_error_mm": 0.00002265968877192538,
+    "max_length_deviation_mm": 0.000018809977518685628,
+    "parked_empty_dc_fixed": true
+  },
+  "drawer_usb": {
+    "bays": 1,
+    "actual_endpoint_checks": 20,
+    "occupancy_pose_checks": 15,
+    "max_endpoint_error_mm": 5.551115123125783e-14,
+    "nic_and_usb_follow_tray": true,
+    "ethernet_keeps_connected_while_empty": true
+  },
+  "front_variants": {
+    "appearance_menu_keeps_demo_running": true,
+    "default": "glass",
+    "whole_assemblies": 24,
+    "single_assemblies": 1,
+    "optimized_identity_preserved": true,
+    "initial_hidden_leaves_restored": true,
+    "glass_material_shared_with_hinged_front": true,
+    "exclusive_variants": true,
+    "motion_state_preserved_switches": 10,
+    "inflight_tween_preserved": true,
+    "empty_bays_covered": [
+      "B2",
+      "B6",
+      "B20"
+    ],
+    "hidden_glass_selection_remaps_to_front": true,
+    "focused_hud_preserved": true,
+    "dimensions_protrusion_cm": 32,
+    "dimensions_total_depth_cm": 97,
+    "dimension_rebuilds_during_180_updates": 0,
+    "reset_preserves_choice": true,
+    "structure_preserves_choice": true,
+    "cached_models_share_choice": true,
+    "cabinet_room_share_instance": true,
+    "mode_round_trips": 3,
+    "hinged_single_unaffected": true
+  },
+  "published_asset_backups_unchanged": true,
+  "runtime_candidate_assets_match_sources": true,
+  "unrelated_runtime_assets_unchanged": true,
+  "rebuilt_room_matches_source": true,
+  "candidate_assets": {
+    "smart_cabinet.glb": {
+      "bytes": 24702236,
+      "sha256": "19b9be57bb72377e6f113c87af0be3974927e66d28e67bac1739422cd214e8cc"
+    },
+    "components.json": {
+      "bytes": 3384089,
+      "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57"
+    },
+    "smart_cabinet_drawer.glb": {
+      "bytes": 1129328,
+      "sha256": "d5fb34fc7372292637750abe670f560309086815682556e7e336eda72b4db8bc"
+    },
+    "drawer_compartment.json": {
+      "bytes": 111838,
+      "sha256": "649927bbc4af713f3ed94d72692a2908ec89f4028e9d11ee0ad203607536dc0d"
+    }
+  },
+  "source_sha256": {
+    "app.js": "a224a3489d26c346078493b6ab09860d339e1aee7d93faff6a238d2b86cdae85",
+    "dimensions.js": "18dc95fa5b41ab439162621eca11512db195b82648ea014822eae69f22858af1",
+    "front-variants.js": "ce12b25aac4078bc4715ff0d11615a8b7349a19a8054244331f202225185b383",
+    "front-variants.css": "8125035712d2cd1520c53a7e2a46a2c96301bd46fd164a5c9782b473a10bd515",
+    "index.html": "190a7145baa3eae0099d5d8310da7363fcb551e8840e9e63b59c8b295f345b90"
+  }
+}
