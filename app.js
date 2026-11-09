@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { loadModel, loadJSON } from './asset-loader.js?v=20261109-front-variants-v2';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { CabinetDimensions } from './dimensions.js?v=20261109-front-variants-v1';
-import { formatLengthCm, lengthTextToCm } from './length-format.js?v=20261109-front-variants-v1';
-import { WiringPanel } from './wiring.js?v=20261109-front-variants-v1';
-import { CabinetRoom } from './room-scene.js?v=20261109-front-variants-v1';
-import { DrawerFrontVariants, frontVariantOf } from './front-variants.js?v=20261109-front-variants-v1';
+import { CabinetDimensions } from './dimensions.js?v=20261109-front-variants-v2';
+import { formatLengthCm, lengthTextToCm } from './length-format.js?v=20261109-front-variants-v2';
+import { WiringPanel } from './wiring.js?v=20261109-front-variants-v2';
+import { CabinetRoom } from './room-scene.js?v=20261109-front-variants-v2';
+import { DrawerFrontVariants, frontVariantOf } from './front-variants.js?v=20261109-front-variants-v2';
 
 const $ = id => document.getElementById(id);
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -770,8 +770,8 @@ async function setModelMode(mode,type=state.singleType){
     if(mode==='single'&&!modelContexts.has(targetKey)){
       $('loading').hidden=false;$('loading').setAttribute('aria-label',type==='drawer'?'正在加载闭盖抽屉仓':'正在加载开门笔记本仓');
       if(!singleAssetPromises.has(type)){
-        const glb=type==='drawer'?'./assets/smart_cabinet_drawer.glb?v=20261109-front-variants-v1':'./assets/smart_cabinet_single_compartment.glb?v=20261109-front-variants-v1',json=type==='drawer'?'./assets/drawer_compartment.json?v=20261109-front-variants-v1':'./assets/single_compartment.json?v=20261109-front-variants-v1';
-        singleAssetPromises.set(type,Promise.all([new GLTFLoader().loadAsync(glb),fetch(json).then(response=>{if(!response.ok)throw new Error('单仓参数无法读取');return response.json();})]).catch(error=>{singleAssetPromises.delete(type);throw error;}));
+        const glb=type==='drawer'?'./assets/smart_cabinet_drawer.glb?v=20261109-front-variants-v2':'./assets/smart_cabinet_single_compartment.glb?v=20261109-front-variants-v2',json=type==='drawer'?'./assets/drawer_compartment.json?v=20261109-front-variants-v2':'./assets/single_compartment.json?v=20261109-front-variants-v2';
+        singleAssetPromises.set(type,Promise.all([loadModel(glb),loadJSON(json)]).catch(error=>{singleAssetPromises.delete(type);throw error;}));
       }
       asset=await singleAssetPromises.get(type);
     }
@@ -902,8 +902,8 @@ async function init(){
     controls.addEventListener('start',()=>{orbitMotion=null;cancelTween(camera.position);cancelTween(controls.target);stopDemo();pauseRotation();});
     const observer=new ResizeObserver(resize);observer.observe($('viewer'));resize();
     const [gltf,meta]=await Promise.all([
-      new GLTFLoader().loadAsync('./assets/smart_cabinet.glb?v=20261109-front-variants-v1'),
-      fetch('./assets/components.json?v=20261109-front-variants-v1',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('组件参数文件无法读取');return response.json();})
+      loadModel('./assets/smart_cabinet.glb?v=20261109-front-variants-v2'),
+      loadJSON('./assets/components.json?v=20261109-front-variants-v2')
     ]);
     if(!meta?.components||typeof meta.components!=='object'||!Array.isArray(meta.cable_paths))throw new Error('组件或动态线缆参数不完整');
     normalizeMetadata(meta);createFallbackMetadata();model=gltf.scene;scene.add(model);setupModel();

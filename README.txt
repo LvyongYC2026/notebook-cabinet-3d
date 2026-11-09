@@ -199,3 +199,8 @@
   机要室：https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=room
   精细单仓：https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=single
   源码仓库：https://github.com/LvyongYC2026/notebook-cabinet-3d
+
+资料下载
+  浏览器打开同目录 downloads.html，按需下载整柜、抽屉单仓、机要室的 Blender 工程、
+  网页模型与参数，以及4张产品渲染图。准备完成后由浏览器保存原文件。
+  本页面需 HTTPS 或 localhost，并使用支持原生解压的现代浏览器；不支持时会明确提示。

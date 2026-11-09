@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08131c">
+  <title>资料下载 · 中技安全科技有限公司</title>
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#e9f3f8;background:#08131c}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#16323d 0,transparent 55%);min-height:100vh}main{max-width:960px;margin:auto;padding:64px 28px 80px}a{color:#90deef;text-underline-offset:4px}h1{font-size:clamp(27px,5vw,38px);letter-spacing:.02em;margin:30px 0 14px}header p{color:#a9bcc8;line-height:1.8;max-width:680px}h2{font-size:19px;margin:36px 0 14px}.download-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.download-item{padding:19px;background:#0e202b;border:1px solid #29414e;border-radius:14px;display:flex;align-items:center;gap:14px;min-width:0}.file-info{flex:1;min-width:0}.file-label{font-weight:600;line-height:1.6}.file-type{font-size:12px;color:#9cb4c2;letter-spacing:.09em;margin-top:4px}button{font:inherit;color:#c8f6ff;background:#173b48;border:1px solid #407487;border-radius:9px;padding:11px 16px;min-height:44px;cursor:pointer;white-space:nowrap}button:hover:not(:disabled){background:#205365}button:focus-visible,a:focus-visible{outline:3px solid #81def4;outline-offset:4px}button:disabled{cursor:wait;opacity:.48}#downloadStatus{position:sticky;top:12px;z-index:2;border:1px solid #345c6d;border-radius:12px;padding:14px 18px;background:#102a36;line-height:1.6;box-shadow:0 8px 30px #0004}#downloadStatus:empty{display:none}#downloadStatus.error{border-color:#a76e58;color:#ffcfb6}.retry{margin-top:12px}footer{margin-top:36px;color:#96aebd;font-size:13px;line-height:1.8}[hidden]{display:none!important}@media(max-width:620px){main{padding:32px 18px 50px}.download-list{grid-template-columns:1fr}.download-item{padding:16px}h2{margin-top:28px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header><a href="./">返回三维展示</a><h1>产品资料下载</h1><p>中技安全科技有限公司 · 笔记本智能管理存储柜<br>下载可编辑的 Blender 工程、三维模型、配套参数及产品渲染图。</p></header>
+    <p id="downloadStatus" role="status" aria-live="polite">正在读取资料目录…</p>
+    <button id="retryCatalog" class="retry" hidden>重新读取目录</button>
+    <div id="downloadGroups"></div>
+    <footer>选择文件后，请等待准备完成，再按浏览器提示保存。Blender 工程可在本机继续编辑，GLB 与配套参数用于网页集成。</footer>
+    <noscript><p>请开启 JavaScript 后下载资料。</p></noscript>
+  </main>
+  <script type="module" src="downloads.js?v=20261109-front-variants-v2"></script>
+</body>
+</html>

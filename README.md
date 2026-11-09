@@ -4,6 +4,8 @@
 
 [进入机要室](https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=room) · [查看整柜](https://lvyongyc2026.github.io/notebook-cabinet-3d/) · [查看单仓](https://lvyongyc2026.github.io/notebook-cabinet-3d/?view=single)
 
+[下载当前Blender工程、GLB、参数及高清渲染](https://lvyongyc2026.github.io/notebook-cabinet-3d/downloads.html)
+
 ## 当前布局
 
 整柜外尺寸为 **宽330 × 深65 × 高185 cm**，采用左135、中央60、右135 cm的三模块布局。
@@ -56,6 +58,8 @@ python3 -m http.server 8765
 ```
 
 访问 `http://127.0.0.1:8765/`。不能用`file://`直接打开。GitHub Pages从`main`分支根目录发布，无构建步骤，`.nojekyll`禁用Jekyll。所有网页模型与Three.js依赖使用本站相对路径。
+
+当前大文件采用无损分片传输，由页面校验并恢复完整原文件。浏览器需要支持DecompressionStream与WebCrypto，通过HTTPS或localhost访问。下载页提供原名、原字节的文件；直接读取仓库旧`assets/*.glb`并不代表当前展示版本，集成当前版本请使用下载页或`asset-loader.js`及对应清单。左侧开门单仓仍复用原文件。
 
 ## 保留的历史工程
 

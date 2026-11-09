@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { formatLengthCm } from './length-format.js?v=20261109-front-variants-v1';
+import { formatLengthCm } from './length-format.js?v=20261109-front-variants-v2';
 
 const point=(x,y,z)=>new THREE.Vector3(x,y,z);
 const cm=metres=>`${formatLengthCm(metres*1000)} cm`;
