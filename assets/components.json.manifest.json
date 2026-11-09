@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "compression": "gzip",
+  "filename": "components.json",
+  "bytes": 3384089,
+  "sha256": "be27a095813f00c35b9f413f351647c8c8a6cff349e86267cba8b9a713137d57",
+  "encodedBytes": 385249,
+  "parts": [
+    {
+      "url": "chunks/e55fa74632575c12deb0/part-000.bin",
+      "bytes": 385249,
+      "sha256": "e55fa74632575c12deb08a23d072c63f10cdf1b54c4e17447ba1f849c5566c6f"
+    }
+  ]
+}

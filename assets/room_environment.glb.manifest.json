@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "compression": "gzip",
+  "filename": "room_environment.glb",
+  "bytes": 5633932,
+  "sha256": "78eb457b7cbb1975f70067f3de4d5bc45c0b3ecd4a8e6b58a52c5e9462aa9fdd",
+  "encodedBytes": 1039466,
+  "parts": [
+    {
+      "url": "chunks/e275f5fad2e462ff2402/part-000.bin",
+      "bytes": 524288,
+      "sha256": "3bd6dd35620c8f562eb339dd71954a5a2a126098ebcd1ff7813f283d5a98fecb"
+    },
+    {
+      "url": "chunks/e275f5fad2e462ff2402/part-001.bin",
+      "bytes": 515178,
+      "sha256": "e0524ef45b3fd5c837eba8ffeaa3ec0f200a4397d290be0e0e9f27d92a571a89"
+    }
+  ]
+}

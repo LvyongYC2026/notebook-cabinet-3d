@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "compression": "gzip",
+  "filename": "room_metadata.json",
+  "bytes": 57384,
+  "sha256": "a14eda0e646eb0e344fbb9a8d51e67b7eb428acd524eaab21d0a77f533400ebf",
+  "encodedBytes": 4979,
+  "parts": [
+    {
+      "url": "chunks/4ae5d185d2ffcbf9c43c/part-000.bin",
+      "bytes": 4979,
+      "sha256": "4ae5d185d2ffcbf9c43cb71b7254f42236490f3361960870cfe80813fff98f3c"
+    }
+  ]
+}
