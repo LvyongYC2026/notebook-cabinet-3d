@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#000000">
   <meta name="description" content="中技安全科技有限公司-笔记本智能管理存储柜">
   <title>中技安全科技有限公司-笔记本智能管理存储柜</title>
-  <link rel="stylesheet" href="styles.css?v=20261108-room-v1">
-  <link rel="stylesheet" href="panel-hud.css?v=20261108-room-v1">
-  <link rel="stylesheet" href="wiring.css?v=20261108-room-v1">
-  <link rel="stylesheet" href="room.css?v=20261108-room-v1">
+  <link rel="stylesheet" href="styles.css?v=20261109-hybrid33-v1">
+  <link rel="stylesheet" href="panel-hud.css?v=20261109-hybrid33-v1">
+  <link rel="stylesheet" href="wiring.css?v=20261109-hybrid33-v1">
+  <link rel="stylesheet" href="room.css?v=20261109-hybrid33-v1">
   <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
 </head>
 <body>
@@ -19,6 +19,10 @@
       <button id="viewRoom" class="scene-tab" role="tab" data-scene-mode="room" aria-selected="false" disabled>机要室</button>
       <button id="viewCabinet" class="scene-tab active" role="tab" data-scene-mode="cabinet" aria-selected="true" disabled>整柜</button>
       <button id="viewSingle" class="scene-tab" role="tab" data-scene-mode="single" aria-selected="false" disabled>单仓</button>
+    </nav>
+    <nav id="singleTypes" class="single-types" aria-label="单仓机构类型" hidden>
+      <button data-single-type="door" aria-pressed="false" title="左侧开门笔记本仓">开门仓</button>
+      <button data-single-type="drawer" aria-pressed="true" title="右侧闭盖笔记本抽屉仓">抽屉仓</button>
     </nav>
     <nav id="roomControls" class="room-controls" aria-label="机要室视角与布局" hidden>
       <button id="roomOverview" aria-pressed="true" title="机要室整体概览">概览</button>
@@ -67,6 +71,6 @@
     </nav>
   </main>
   <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
-  <script type="module" src="app.js?v=20261108-room-v1"></script>
+  <script type="module" src="app.js?v=20261109-hybrid33-v1"></script>
 </body>
 </html>

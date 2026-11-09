@@ -27,6 +27,7 @@ const expressionPattern = new RegExp(
   `(?<![A-Za-z_\\d.])(?:(${unitSource})\\s*[:：]?\\s*)?(${valueSource}(?:${separatorSource}${valueSource})*)`,
   'gi'
 );
+const radiusDiameterPattern = new RegExp(`(?<![A-Za-z_\\d])([RrØ⌀Φφ])\\s*(${numberSource})\\s*(${unitSource})`, 'g');
 const valuePattern = new RegExp(`(${numberSource})(?:\\s*(${unitSource}))?`, 'gi');
 const inchPattern = new RegExp(
   `(?<![A-Za-z_\\d.])(${numberSource})\\s*(?:英寸|寸)(?:\\s*(?:[（(]对角线[）)]|对角线))?`,
@@ -44,6 +45,7 @@ function isMillimetres(unit) {
  */
 export function lengthTextToCm(text) {
   let result = String(text ?? '');
+  result = result.replace(radiusDiameterPattern, (match, symbol, value, unit) => `${symbol}${formatNumber(numericValue(value.replace('−', '-')) / (isMillimetres(unit) ? 10 : 1))} cm`);
   result = result.replace(inchPattern, (match, value, offset, source) => {
     const preceding = source.slice(0, offset);
     const hasDiagonalLabel = /对角线(?:长度)?\s*(?:为|约|为约|[:：])?\s*$/.test(preceding);

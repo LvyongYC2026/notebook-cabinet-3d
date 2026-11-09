@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { formatLengthCm } from './length-format.js?v=20261108-room-v1';
+import { formatLengthCm } from './length-format.js?v=20261109-hybrid33-v1';
 
 const point=(x,y,z)=>new THREE.Vector3(x,y,z);
 const cm=metres=>`${formatLengthCm(metres*1000)} cm`;
@@ -13,8 +13,8 @@ export function measureTray(node,bay,mode,origin,travel,bodyDepth,cache=new Weak
   node.updateWorldMatrix(true,true);
   let local=cache.get(node);
   if(!local){
-    local=new THREE.Box3();const inverse=node.matrixWorld.clone().invert(),key=mode==='single'?'single:tray':`tray:${bay}`;
-    node.traverse(mesh=>{if(!mesh.isMesh||mesh.userData.component_key!==key||!isVisible(mesh))return;mesh.geometry.computeBoundingBox();local.union(mesh.geometry.boundingBox.clone().applyMatrix4(inverse.clone().multiply(mesh.matrixWorld)));});
+    local=new THREE.Box3();const inverse=node.matrixWorld.clone().invert(),key=mode==='single'?'single:tray':`tray:${bay}`,keys=new Set([key,...['drawer_front','drawer_body','drawer_handle'].map(part=>mode==='single'?`single:${part}`:`${part}:${bay}`)]);
+    node.traverse(mesh=>{if(!mesh.isMesh||!keys.has(mesh.userData.component_key)||!isVisible(mesh))return;mesh.geometry.computeBoundingBox();local.union(mesh.geometry.boundingBox.clone().applyMatrix4(inverse.clone().multiply(mesh.matrixWorld)));});
     if(local.isEmpty())return null;cache.set(node,local);
   }
   const matrix=new THREE.Matrix4().compose(origin.position,node.quaternion,node.scale);
@@ -42,7 +42,7 @@ export class CabinetDimensions{
     const [width,depth,height]=dimensions.map(value=>Number(value)/1000),bay=mode==='single'?'S1':refs.trays.has(selection?.bay)?selection.bay:'A7',tray=refs.trays.get(bay);if(!tray)return;
     model.updateMatrixWorld(true);
     const data=measureTray(tray.node,bay,mode,originals.get(tray.node),tray.travel,depth,this.cache);if(!data)return;
-    this.summary={mode,bay,closedDimensionsMm:[...dimensions],...data};
+    data.accessType=tray.accessType||'hinged';this.summary={mode,bay,closedDimensionsMm:[...dimensions],...data};
     // Fixed world-side dimensions do not flip when the camera crosses an axis.
     // Parent/module translation moves the tray group, never rebuilds its DOM.
     const signature=[model.uuid,bay,focused,width,depth,height,context.sceneMode].join('|');
@@ -103,7 +103,7 @@ export class CabinetDimensions{
     this.dimension('extension',point(ex,ey,data.front),point(ex,ey,box.max.z),`最大前伸 ${cm(data.protrusion)}`,`后侧至盘前缘 ${cm(data.totalDepth)}`,point(1,0,0),palette.tray,[point(box.max.x,ey,data.front),point(ex,ey,data.front),point(box.max.x,ey,box.max.z),point(ex,ey,box.max.z)]);
     this.progressLine=this.line([point(0,0,0),point(0,0,0)],palette.tray,false,.95);
     this.trayBounds.copy(box).union(data.closed).expandByScalar(small?.075:.09);this.bounds.union(this.trayBounds);
-    if(this.note)this.note.textContent=`闭合外形 ${cm(width)} × ${cm(depth)} × ${cm(height)}（宽×深×高） · 设计示意\n虚线为 ${data.bay} 全抽托盘范围；门开启另占空间，非人员通道`;
+    if(this.note)this.note.textContent=`闭合外形 ${cm(width)} × ${cm(depth)} × ${cm(height)}（宽×深×高） · 设计示意\n虚线为 ${data.bay} 全抽${data.accessType==='drawer'?'抽屉':'托盘'}范围；不含门扇及人员通道`;
   }
   getBounds(trayOnly=false){return (trayOnly?this.trayBounds:this.bounds).clone();}
   render(camera,viewport,panel=null,time=performance.now()){
