@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { formatLengthCm } from './length-format.js?v=20261109-hybrid33-v1';
+import { formatLengthCm } from './length-format.js?v=20261109-front-variants-v1';
 
 const point=(x,y,z)=>new THREE.Vector3(x,y,z);
 const cm=metres=>`${formatLengthCm(metres*1000)} cm`;
@@ -13,7 +13,7 @@ export function measureTray(node,bay,mode,origin,travel,bodyDepth,cache=new Weak
   node.updateWorldMatrix(true,true);
   let local=cache.get(node);
   if(!local){
-    local=new THREE.Box3();const inverse=node.matrixWorld.clone().invert(),key=mode==='single'?'single:tray':`tray:${bay}`,keys=new Set([key,...['drawer_front','drawer_body','drawer_handle'].map(part=>mode==='single'?`single:${part}`:`${part}:${bay}`)]);
+    local=new THREE.Box3();const inverse=node.matrixWorld.clone().invert(),key=mode==='single'?'single:tray':`tray:${bay}`,keys=new Set([key,...['drawer_front','drawer_body','drawer_handle','drawer_glass'].map(part=>mode==='single'?`single:${part}`:`${part}:${bay}`)]);
     node.traverse(mesh=>{if(!mesh.isMesh||!keys.has(mesh.userData.component_key)||!isVisible(mesh))return;mesh.geometry.computeBoundingBox();local.union(mesh.geometry.boundingBox.clone().applyMatrix4(inverse.clone().multiply(mesh.matrixWorld)));});
     if(local.isEmpty())return null;cache.set(node,local);
   }
@@ -32,6 +32,7 @@ export class CabinetDimensions{
     this.bodyBounds=new THREE.Box3();this.layoutKey='';this.pairDirections=new Map();this.layoutStats={domBuilds:0,layouts:0,frames:0,maxCorrectionStep:0,maxAnchorStep:0};
     if(host)host.hidden=true;if(note)note.hidden=true;
   }
+  invalidateGeometry(){this.cache=new WeakMap();this.signature='';}
   setEnabled(enabled){this.enabled=Boolean(enabled);this.group.visible=this.enabled;if(this.host)this.host.hidden=!this.enabled;if(this.note)this.note.hidden=!this.enabled;if(!this.enabled)this.clear();}
   clear(){this.group.traverse(child=>{child.geometry?.dispose();child.material?.dispose();});this.group.clear();this.labels=[];this.host?.replaceChildren();this.signature='';this.layoutKey='';this.pairDirections.clear();this.bounds.makeEmpty();this.trayBounds.makeEmpty();this.trayGroup=null;this.drawingGroup=null;}
   sync(context){

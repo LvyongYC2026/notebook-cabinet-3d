@@ -1,0 +1,10 @@
+.front-variant-menu{position:absolute;z-index:7;left:50%;bottom:max(87px,calc(env(safe-area-inset-bottom) + 67px));transform:translateX(-50%);width:276px;padding:12px;background:linear-gradient(145deg,#152832f5,#081119fa);border:1px solid #82c5d34a;border-radius:14px;box-shadow:0 12px 44px #000a;backdrop-filter:blur(22px)}
+.front-variant-menu p{margin:0 0 9px;color:#b8d5e0;font-size:12px;letter-spacing:.04em}
+.front-variant-options{display:flex;gap:7px}
+.front-variant-options button{flex:1;min-height:44px;padding:9px 10px;border:1px solid #769baa36;border-radius:9px;background:#52798c0c;color:#9cb5c2;font-size:13px}
+.front-variant-options button[aria-pressed="true"]{background:#398fa42a;border-color:#77c9d77d;color:#c5f5fb}
+.has-front-variants .toolbar{grid-template-columns:repeat(17,40px)}
+@media(min-width:621px) and (max-width:800px){.has-front-variants .toolbar{grid-template-columns:repeat(17,32px)}.has-front-variants .toolbar>.icon-button{width:32px}}
+@media(max-width:620px){.has-front-variants .toolbar{grid-template-columns:repeat(9,34px);gap:1px 3px}.has-front-variants .toolbar>.icon-button{width:34px}.front-variant-menu{bottom:max(122px,calc(env(safe-area-inset-bottom) + 108px));max-width:calc(100% - 28px)}}
+@media(max-width:359px){.has-front-variants .toolbar{grid-template-columns:repeat(9,30px);gap:1px 2px}.has-front-variants .toolbar>.icon-button{width:30px}}
+@media(max-height:540px) and (min-width:621px){.front-variant-menu{bottom:64px}}
