@@ -9,8 +9,15 @@
 .room-mode #viewer{top:171px}.room-mode .component-panel{top:179px;max-height:calc(100% - 300px)}
 .room-mode .product-header{background:linear-gradient(#000c,#0000)}
 .room-mode .dimension-label{background:#081923ed}
+.single-types{position:absolute;top:120px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:4px;padding:3px;border:1px solid #9ec4cc30;border-radius:9px;background:#10202bdd;backdrop-filter:blur(16px)}
+.single-types button{min-width:88px;height:34px;border:1px solid transparent;border-radius:6px;background:none;color:#aac2ce;font-size:12px}
+.single-types button[aria-pressed="true"]{color:#e1f8fa;background:#6fbec72b}
+.single-mode #viewer{top:171px}.single-mode .component-panel{top:179px;max-height:calc(100% - 300px)}
 .wiring-panel{top:125px}.wiring-open .room-controls{visibility:hidden}
+.wiring-open .single-types{visibility:hidden}
 @media(max-width:620px){.product-header{height:64px;padding:13px 18px 8px}.scene-tabs{top:64px}.scene-tab{height:34px;min-width:83px;font-size:12px}#viewer{top:113px}.room-controls{top:112px}.room-controls button{min-width:48px;height:33px}.room-mode #viewer{top:159px}.component-panel,.room-mode .component-panel{top:auto;max-height:min(45dvh,calc(100% - 270px))}.component-panel.is-focused,.room-mode .component-panel.is-focused{max-height:min(300px,36dvh)}.room-mode .dimension-note{font-size:8px}}
 @media(max-height:540px) and (min-width:621px){.product-header{height:43px;padding:6px}.scene-tabs{top:40px}.scene-tab{height:29px}.room-controls{top:82px}.room-controls button{height:28px}#viewer{top:86px}.room-mode #viewer{top:122px}.component-panel{top:92px}.room-mode .component-panel{top:125px;max-height:calc(100% - 210px)}}
 @media(max-width:620px){.wiring-panel{top:114px}}
+@media(max-width:620px){.single-types{top:112px}.single-types button{height:33px}.single-mode #viewer{top:159px}.single-mode .component-panel{top:auto;max-height:min(45dvh,calc(100% - 270px))}.single-mode .component-panel.is-focused{max-height:min(300px,36dvh)}}
 @media(max-height:540px) and (min-width:621px){.wiring-panel{top:86px}}
+@media(max-height:540px) and (min-width:621px){.single-types{top:82px}.single-types button{height:28px}.single-mode #viewer{top:122px}.single-mode .component-panel{top:125px;max-height:calc(100% - 210px)}}

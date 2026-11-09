@@ -136,7 +136,7 @@
       "notes": "作为少量环境陈设，不侵入柜前操作区与侧边300 mm预留带。"
     }
   },
-  "cabinet_source": "output/cabinet/wiring_release/smart_cabinet_18bay.blend",
+  "cabinet_source": "output/hybrid_candidate/smart_cabinet_33bay.blend",
   "source_immutable": true,
   "collision_roles": [
     "wall",
@@ -152,10 +152,18 @@
     "display_helper"
   ],
   "notes": [
-    "只导出房间环境，不包含柜子副本、摄影棚、相机或灯光对象。",
-    "原参考图1200−320=880 mm属于行程示意；真实托盘外伸与门扫掠将单独取现有几何核验。"
+    "房间环境独立导出，网页与33仓柜体共用同一实例。",
+    "右侧齐平抽屉面板行程32 cm，名义柜前120 cm区域剩余约88 cm；实际包络另按最终几何验收。左侧托盘外伸沿用其独立测量。",
+    "35 cm为底部外观对齐线，中央设备舱仍保留约68 cm净高。"
   ],
-  "source_script": "scripts/room/build_room.py",
+  "source_script": "scripts/hybrid_room/build_room.py",
+  "cabinet_layout": {
+    "hinged_bays": 9,
+    "drawer_bays": 24,
+    "total_bays": 33,
+    "visual_baseline_cm": 35,
+    "equipment_chamber_height_cm": 68
+  },
   "coordinate_mapping": {
     "blender_room_origin": "interior left-front floor corner",
     "blender_room_to_cabinet_translation_m": [
@@ -365,8 +373,8 @@
       "RoomRoof"
     ]
   },
-  "cabinet_source_sha256": "81c0fe823ede81c715ebc82dcd3435ecc06cef8a3c73ee331536223e4133d1c0",
-  "cabinet_mesh_signature": "0fc9bfc9d79aa1f326b0afeb8fe0441fe06e6835b2bfbd3b74befd808e3020ae",
+  "cabinet_source_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+  "cabinet_mesh_signature": "e4c2ca075bd23b1eb6f7247b7462efb064ff6cfaeb7f6b2188b01e505366d348",
   "cabinet_geometry_unchanged": true,
   "environment_nodes": [
     {
@@ -2323,7 +2331,7 @@
     ]
   },
   "font": {
-    "path": "scripts/room/assets/room_signage_subset.ttf",
+    "path": "scripts/hybrid_room/assets/room_signage_subset.ttf",
     "license": "SIL OFL 1.1",
     "source": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
     "texts": [

@@ -3,24 +3,25 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { CabinetDimensions } from './dimensions.js?v=20261108-room-v1';
-import { formatLengthCm, lengthTextToCm } from './length-format.js?v=20261108-room-v1';
-import { WiringPanel } from './wiring.js?v=20261108-room-v1';
-import { CabinetRoom } from './room-scene.js?v=20261108-room-v1';
+import { CabinetDimensions } from './dimensions.js?v=20261109-hybrid33-v1';
+import { formatLengthCm, lengthTextToCm } from './length-format.js?v=20261109-hybrid33-v1';
+import { WiringPanel } from './wiring.js?v=20261109-hybrid33-v1';
+import { CabinetRoom } from './room-scene.js?v=20261109-hybrid33-v1';
 
 const $ = id => document.getElementById(id);
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const bayIds = ['A','B'].flatMap(side=>Array.from({length:9},(_,index)=>`${side}${index+1}`));
+let bayIds = [...Array.from({length:9},(_,i)=>`A${i+1}`),...Array.from({length:24},(_,i)=>`B${i+1}`)];
 const singleDefaultAngle=THREE.MathUtils.degToRad(4.5);
-const state = { loaded:false, autoRotate:false, structure:false, glass:true, selection:null, demo:false, mode:'cabinet', sceneMode:'cabinet', roomView:'overview', switching:false, dimensions:false, wiring:false, wiringInspection:false };
+const state = { loaded:false, autoRotate:false, structure:false, glass:true, selection:null, demo:false, mode:'cabinet', singleType:'drawer', sceneMode:'cabinet', roomView:'overview', switching:false, dimensions:false, wiring:false, wiringInspection:false };
 function makeRefs(){return {doors:new Map(),trays:new Map(),laptops:new Map(),adapters:new Map(),modules:new Map(),housings:[],statuses:new Map(),components:new Map(),cables:[],usb:new Map(),interiorLights:[]};}
 let refs = makeRefs();
 const modelContexts=new Map();
-let singleAssetPromise=null,stageLights,groundPool,roomEnvironment=null;
+const singleAssetPromises=new Map();
+let stageLights,groundPool,roomEnvironment=null;
 let loadErrorAction=()=>location.reload();
 const originals = new Map();
 const tweens = [];
-const emptyBays = new Set(['A3','B2','B6']);
+const emptyBays = new Set(['A3','B2','B6','B20']);
 const meshDescriptors = new WeakMap();
 const fallbackMetadata = {};
 let metadata = {}, metadataDocument = {};
@@ -40,6 +41,13 @@ const icon = {
 };
 
 function announce(text){ $('announcement').textContent=lengthTextToCm(text); }
+function singleDefaultAzimuth(){return state.singleType==='drawer'?.62:singleDefaultAngle;}
+function singleDefaultElevation(){return state.singleType==='drawer'?.72:.2;}
+function defaultMechanismBounds(){const box=mechanismTargetBounds();return state.mode==='single'&&state.singleType==='drawer'?box.expandByScalar(.012):box;}
+function contextKey(mode=state.mode,type=state.singleType){return mode==='single'?`single:${type}`:'cabinet';}
+function isDrawerBay(bay){return refs.trays.get(bay)?.accessType==='drawer'||(state.mode==='single'&&state.singleType==='drawer')||metadata[`bay:${bay}`]?.access_type==='drawer';}
+function baySupportHeight(bay){const info=metadata[`bay:${bay}`]||{},value=info.support_height_mm??info.support_mm;if(Number.isFinite(Number(value)))return Number(value);const row=Math.floor((Number(bay.slice(1))-1)/3);return isDrawerBay(bay)?1500-row*160:1250-row*450;}
+function drawerPeers(bay){return [...refs.trays].filter(([id,tray])=>id!==bay&&tray.accessType==='drawer'&&(state.mode==='single'||id[0]===bay[0]));}
 function isVisible(object){for(let node=object;node;node=node.parent)if(!node.visible)return false;return true;}
 function setPressed(id,pressed){const button=$(id);button.setAttribute('aria-pressed',String(pressed));button.classList.toggle('active',pressed);}
 function saveOrigin(node){if(node&&!originals.has(node))originals.set(node,{position:node.position.clone(),rotation:node.rotation.clone(),visible:node.visible});}
@@ -90,10 +98,22 @@ function mechanismTargetBounds(measure=currentBounds){
   const saved=[];for(const motion of tweens){if(motion.object===camera.position||motion.object===controls.target)continue;saved.push([motion.object,motion.property,motion.object[motion.property]]);motion.object[motion.property]=motion.to;}
   updateDynamicCables();model.updateMatrixWorld(true);const bounds=measure();for(let i=saved.length-1;i>=0;i--){const [object,key,value]=saved[i];object[key]=value;}updateDynamicCables();model.updateMatrixWorld(true);return bounds;
 }
+function fitVisibleDrawer(angle,elevation,immediate){
+  // A shallow open drawer leaves most corners of its depth box empty. Fit the
+  // actual target-pose vertices so its front panel and lid occupy the stage.
+  const points=mechanismTargetBounds(()=>{const values=[];model.traverse(mesh=>{if(!mesh.isMesh||!isVisible(mesh))return;for(let i=0;i<mesh.geometry.attributes.position.count;i++)values.push(mesh.localToWorld(mesh.getVertexPosition(i,new THREE.Vector3())));});return values;});
+  if(!points.length)return false;
+  const center=new THREE.Box3().setFromPoints(points).getCenter(new THREE.Vector3()),direction=new THREE.Vector3(Math.sin(angle)*Math.cos(elevation),Math.sin(elevation),Math.cos(angle)*Math.cos(elevation)),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize(),up=new THREE.Vector3().crossVectors(direction,right).normalize();
+  const tangent=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tx=tangent*camera.aspect*.86,ty=tangent*.92;let xp=-Infinity,xn=-Infinity,yp=-Infinity,yn=-Infinity;
+  for(const point of points){point.sub(center);const x=point.dot(right),y=point.dot(up),z=point.dot(direction);xp=Math.max(xp,x+tx*z);xn=Math.max(xn,-x+tx*z);yp=Math.max(yp,y+ty*z);yn=Math.max(yn,-y+ty*z);}
+  const distance=Math.max((xp+xn)/(2*tx),(yp+yn)/(2*ty),.3)+.004,target=center.addScaledVector(right,(xp-xn)/2).addScaledVector(up,(yp-yn)/2);
+  controls.maxDistance=Math.max(16,distance*1.25);orbitTo(angle,elevation,distance,target,immediate?0:.9);return true;
+}
 function fitView(angle=Math.PI/8,elevation=.12,immediate=false,bounds=currentBounds()){
   // Keep the immersive camera inside complete walls; explicit component focus
   // has its own fitted pose and opens the cutaway only if that pose is outside.
   if(state.sceneMode==='room'&&state.roomView==='interior'&&!camera.isOrthographicCamera)return;
+  if(state.mode==='single'&&state.singleType==='drawer'&&!state.dimensions&&!state.selection&&fitVisibleDrawer(angle,elevation,immediate))return;
   if(camera.isOrthographicCamera){if(state.dimensions){syncDimensions();bounds=bounds.clone().union(dimensionLayer.getBounds());}fitRoomTop(bounds);return;}
   if(state.dimensions){const annotationBounds=mechanismTargetBounds(()=>{syncDimensions();return dimensionLayer.getBounds();});bounds=bounds.clone().union(annotationBounds);if(state.selection){const direction=new THREE.Vector3(Math.sin(angle)*Math.cos(elevation),Math.sin(elevation),Math.cos(angle)*Math.cos(elevation));const pose=focusPoseForBox(bounds,direction,camera.aspect,camera.fov,dimensionViewRegion());controls.maxDistance=Math.max(16,pose.distance*1.25);moveCamera(pose.position,pose.target,immediate?0:.9);return;}}
   const {center,distance}=fitDistanceForBox(bounds,angle,elevation,camera.aspect,camera.fov);
@@ -102,7 +122,7 @@ function fitView(angle=Math.PI/8,elevation=.12,immediate=false,bounds=currentBou
 }
 function setWiring(open){
   state.wiring=Boolean(open);setPressed('wiringView',state.wiring);const label=state.wiring?'关闭布线方案':'查看布线方案';$('wiringView').title=label;$('wiringView').setAttribute('aria-label',label);$('stage').classList.toggle('wiring-open',state.wiring);
-  if(state.wiring){stopDemo();pauseRotation();closePanel();wiringPanel??=new WiringPanel($('wiringPanel'),()=>setWiring(false),inspectWiringInModel);const cabinet=modelContexts.get('cabinet')?.refs||refs;wiringPanel.setModelStatus?.({usb:cabinet.usb.size===18,fixed:cabinet.components.has('wiring:fixed')});wiringPanel.setOpen(true);announce(cabinet.usb.size===18?'布线方案已打开。可进入柜内查看USB接线与后侧固定主干。':'布线方案已打开。USB数据接入为待选型设计，当前三维模型采用原生RJ45接入。');}
+  if(state.wiring){stopDemo();pauseRotation();closePanel();wiringPanel??=new WiringPanel($('wiringPanel'),()=>setWiring(false),inspectWiringInModel);const context=modelContexts.get('cabinet'),cabinet=context?.refs||refs,cabinetDocument=context?.metadataDocument||metadataDocument,hasUsb=cabinet.trays.size>0&&cabinet.usb.size===cabinet.trays.size;wiringPanel.setModelStatus?.({usb:hasUsb,fixed:cabinet.components.has('wiring:fixed'),bayIds:[...cabinet.trays.keys()],emptyBays:[...emptyBays],switchPorts:cabinetDocument.switch_port_count||cabinetDocument.switch_ports||undefined,portPlan:cabinetDocument.switch_port_plan});wiringPanel.setOpen(true);announce(hasUsb?'布线方案已打开。可进入柜内查看USB接线与后侧固定主干。':'布线方案已打开。USB数据接入为待选型设计，当前三维模型采用原生RJ45接入。');}
   else {wiringPanel?.setOpen(false);$('wiringView').focus?.({preventScroll:true});}
 }
 function dimensionViewRegion(){
@@ -137,13 +157,13 @@ function inferBay(object){
   if(state.mode==='single')return 'S1';
   for(let node=object;node;node=node.parent){
     const data=node.userData||{};if(data.bay_id||data.bayId)return String(data.bay_id||data.bayId);
-    const match=node.name.match(/(?:^|_)([AB][1-9])(?:_|$)/);if(match)return match[1];
+    const match=node.name.match(/(?:^|_)([AB][1-9]\d*)(?:_|$)/);if(match)return match[1];
   }
   return '';
 }
 function inferModule(object){for(let node=object;node;node=node.parent){const match=node.name.match(/^Module_(Left|Center|Right)/);if(match)return match[1];}return '';}
 function inherited(object,key){for(let node=object;node;node=node.parent)if(node.userData?.[key]!==undefined)return node.userData[key];return undefined;}
-function isDoorPivot(node){return /^(DoorPivot_|RearDoorPivot_|EquipmentDoorPivot|SingleDoorPivot)/.test(node.name)||(!node.isMesh&&node.userData?.interaction==='door');}
+function isDoorPivot(node){return !node.isMesh&&(/^(DoorPivot_|RearDoorPivot_|EquipmentDoorPivot|SingleDoorPivot)/.test(node.name)||node.userData?.interaction==='door');}
 function doorAncestor(object){for(let node=object;node;node=node.parent)if(isDoorPivot(node))return node;return null;}
 function movingAnchor(object){
   for(let node=object.parent;node;node=node.parent)if(isDoorPivot(node)||/^(Tray_|Laptop_|Bay_|Module_)/.test(node.name)||node.userData?.interaction==='tray')return node;
@@ -165,7 +185,7 @@ function fallbackKey(mesh,bay,door){
     if(/LED|LightChannel/.test(name))return `lighting:${bay}`;
     return `bay:${bay}`;
   }
-  const part=name.match(/^Equipment_(UPS|MiniPC|Switch24|Control12|DC24V|Breaker|FanHousing|FanCore|PDU)/);
+  const part=name.match(/^Equipment_(UPS|MiniPC|Switch24|Switch48|Control12|Control33|DC24V|Breaker|FanHousing|FanCore|PDU)/);
   if(part)return `equipment:${part[1]}`;
   return 'cabinet';
 }
@@ -179,23 +199,24 @@ function describeMesh(mesh){
 function normalizeMetadata(data){
   metadataDocument=data||{};const source=data?.components||data?.items||data||{};
   if(Array.isArray(source))metadata=Object.fromEntries(source.map(item=>[String(item.key||item.component_key||item.name),item]));else metadata=source;
+  const ids=Object.keys(metadata).filter(key=>/^bay:[AB][1-9]\d*$/.test(key)).map(key=>key.slice(4));if(ids.length)bayIds=ids.sort((a,b)=>a[0].localeCompare(b[0])||Number(a.slice(1))-Number(b.slice(1)));
   if(Array.isArray(data?.empty_bays)){emptyBays.clear();data.empty_bays.forEach(id=>emptyBays.add(id));}
 }
 function createFallbackMetadata(){
-  fallbackMetadata.cabinet={title:'笔记本智能管理存储柜',dimensions_mm:[3300,650,1850],basis:'model',notes:'按用户18仓要求扩展：左右各3列×3层，三模块宽度1350 + 600 + 1350 mm。'};
+  fallbackMetadata.cabinet={title:'笔记本智能管理存储柜',dimensions_mm:[3300,650,1850],basis:'model',notes:`${bayIds.length}个仓位，三模块宽度1350 + 600 + 1350 mm；具体机构与数量以当前模型参数为准。`};
   fallbackMetadata.screen={title:'32 英寸竖向触摸屏',dimensions_mm:[398.5,null,708.4],basis:'user',notes:'可视区域；外框 435 × 750 × 50 mm 为模型示意。中心离地 1285 mm。'};
   fallbackMetadata.equipment_bay={title:'屏下设备舱',dimensions_mm:[540,500,680],basis:'model',notes:'参考有效包络；文档建议净高 650–700 mm，模型取 680 mm。'};
   for(const id of bayIds){
-    const height=1250-Math.floor((Number(id[1])-1)/3)*450;
-    fallbackMetadata[`bay:${id}`]={title:`${id} 仓位${emptyBays.has(id)?' · 空仓':''}`,dimensions_mm:[420,420,420],basis:'document',notes:`建议有效净空不小于 420 × 420 × 420 mm。承托面离地 ${height} mm。`};
+    const height=baySupportHeight(id),drawer=isDrawerBay(id);
+    fallbackMetadata[`bay:${id}`]={title:`${id} 仓位${emptyBays.has(id)?' · 空仓':''}`,dimensions_mm:drawer?null:[420,420,420],basis:drawer?'model':'document',notes:drawer?`闭盖笔记本抽屉仓，承托面离地 ${height} mm；净空与取放范围按当前组件参数校核。`:`建议有效净空不小于 420 × 420 × 420 mm。承托面离地 ${height} mm。`};
     fallbackMetadata[`door:${id}`]={title:`${id} 透明仓门`,dimensions_mm:null,basis:'model',notes:'左侧铰链，右侧锁闭。玻璃厚度模型取 6 mm；最终装配需选型校核。'};
     fallbackMetadata[`glass:${id}`]={title:`${id} 安全玻璃`,dimensions_mm:null,basis:'model',notes:'玻璃厚度模型取 6 mm。'};
     fallbackMetadata[`tray:${id}`]={title:`${id} 抽拉托盘`,dimensions_mm:null,basis:'model',notes:'抽拉行程模型取 320 mm，文档建议范围 300–350 mm。'};
-    fallbackMetadata[`laptop:${id}`]={title:`${id} 笔记本`,dimensions_mm:[320,225,18],basis:'model',notes:'电脑机型与开盖姿态为占位示意。'};
+    fallbackMetadata[`laptop:${id}`]={title:`${id} 笔记本`,dimensions_mm:[320,225,18],basis:'model',notes:drawer?'闭盖运行状态为展示示意；充电、网络连接与文件接收需分别验证。':'电脑机型与开盖姿态为占位示意。'};
     fallbackMetadata[`adapter:${id}`]={title:`${id} 电源适配器`,dimensions_mm:null,basis:'model'};
     for(const [key,title] of [['outlet','电源插座'],['network','网络连接'],['detection','检测接口预留'],['lighting','仓内照明']])fallbackMetadata[`${key}:${id}`]={title:`${id} ${title}`,basis:'model'};
   }
-  for(const [key,title] of Object.entries({UPS:'UPS 后备设备',MiniPC:'紧凑主机',Switch24:'24 口交换机',Control12:'锁控采集控制器',DC24V:'24V 低压电源',Breaker:'配电保护器件',FanHousing:'设备舱风机',FanCore:'设备舱风机',PDU:'配电单元'}))fallbackMetadata[`equipment:${key}`]={title,basis:'model'};
+  for(const [key,title] of Object.entries({UPS:'UPS 后备设备',MiniPC:'紧凑主机',Switch24:'24 口交换机',Switch48:'48 口交换机',Control33:'33 路锁控采集控制器',Control12:'锁控采集控制器',DC24V:'24V 低压电源',Breaker:'配电保护器件',FanHousing:'设备舱风机',FanCore:'设备舱风机',PDU:'配电单元'}))fallbackMetadata[`equipment:${key}`]={title,basis:'model'};
   for(const [key,title] of [['Left','左模块后维护门'],['Center','中央后维护门'],['Right','右模块后维护门']])fallbackMetadata[`rear:${key}`]={title,basis:'model',notes:'后维护门可开启，门体与通风孔为结构示意。'};
 }
 function getMeta(descriptor){
@@ -208,15 +229,17 @@ function registerComponents(){
   model.traverse(mesh=>{if(!mesh.isMesh)return;const descriptor=meshDescriptors.get(mesh)||describeMesh(mesh);meshDescriptors.set(mesh,descriptor);if(!refs.components.has(descriptor.key))refs.components.set(descriptor.key,[]);refs.components.get(descriptor.key).push(mesh);if(descriptor.housing)refs.housings.push(mesh);});
   if(state.mode==='cabinet'){
     const routes=metadataDocument.wiring_design?.fixed_routes||[];
-    for(const route of routes){if(route.kind!=='network'||!bayIds.includes(route.bay_id))continue;const bay=route.bay_id,key=`wiring:network:${bay}`;if(!refs.components.has(key))continue;const port=(bay[0]==='B'?9:0)+Number(bay.slice(1));metadata[key]={title:`${bay} 仓 → 交换机 ${String(port).padStart(2,'0')} 口`,basis:'model',facts:[{label:'固定路径长度',value:`${route.length_mm} mm`,basis:'model'},{label:'连接方式',value:'独立星形网络支线'}],notes:'路径长度为当前模型中心线的设计值，不含仓内活动网线、端接或施工下料余量；实际线长与弯曲半径须工程复核。'};}
+    const byBay=new Map();
+    for(const route of routes){if(route.kind!=='network'||!bayIds.includes(route.bay_id))continue;if(!byBay.has(route.bay_id))byBay.set(route.bay_id,[]);byBay.get(route.bay_id).push(route);}
+    for(const [bay,segments]of byBay){const key=`wiring:network:${bay}`;if(!refs.components.has(key))continue;const port=metadataDocument.switch_port_plan?.find(item=>item.endpoint===bay)?.port??bayIds.indexOf(bay)+1,length=segments.reduce((sum,route)=>sum+Number(route.length_mm||0),0);metadata[key]={title:`${bay} 仓 → 交换机 ${String(port).padStart(2,'0')} 口`,basis:'model',facts:[{label:segments.length>1?'固定路径合计':'固定路径长度',value:`${length} mm`,basis:'model'},...(segments.length>1?[{label:'固定网络段',value:`${segments.length} 段（经后侧配线端接）`}]:[]),{label:'连接方式',value:'独立星形网络支线'}],notes:'路径长度为当前模型固定线段中心线设计值之和，不含仓内活动网线、端接或施工下料余量；实际线长与弯曲半径须工程复核。'};}
     const networks=[...refs.components].filter(([key])=>key==='wiring:network'||key.startsWith('wiring:network:')).flatMap(([,meshes])=>meshes);if(networks.length)refs.components.set('wiring:network',[...new Set(networks)]);
   }
   if(state.mode==='single'){
     const keys=['single:interface_panel','single:network','single:ac_socket','single:adapter','single:adapter_bracket'];if(!refs.components.has('single:interface_panel'))keys.push('single:power');
-    refs.components.set('single:interfaces',[...new Set(keys.flatMap(key=>refs.components.get(key)||[]))]);
+    refs.components.set('single:interfaces',[...new Set([...(refs.components.get('single:interfaces')||[]),...keys.flatMap(key=>refs.components.get(key)||[])])]);
     if(refs.usb.has('S1')){refs.components.set('single:usb_system',[...new Set(['single:usb_nic','single:usb','single:cables','single:tray'].flatMap(key=>refs.components.get(key)||[]))]);metadata['single:usb_system']={title:'托盘USB网卡与活动接线',basis:'model',notes:'网卡留在托盘，蓝色Ethernet始终连接并随盘；USB短线随盘，DC线独立活动。设备与夹具为结构示意，实际规格须选型验证。'};}
   }
-  if(state.mode==='cabinet'){const keys=metadataDocument.wiring_view?.fixed_component_keys||[...refs.components.keys()].filter(key=>/^(trunk|duct|fixed_data|fixed_ac|fixed_control):/.test(key));const meshes=[...new Set(keys.flatMap(key=>refs.components.get(key)||[]))];if(meshes.length){refs.components.set('wiring:fixed',meshes);metadata['wiring:fixed']={title:'后侧固定布线与分区线槽',basis:'model',notes:'18仓星形数据支线、固定AC与低压控制分区。主干沿固定框架布置，结构剖视保持模块原位。查看布线时暂时隐藏可拆AC盖板，关闭浮窗后恢复；实际器件、线槽、保护与额定值仍需工程选型验证。'};}}
+  if(state.mode==='cabinet'){const keys=metadataDocument.wiring_view?.fixed_component_keys||[...refs.components.keys()].filter(key=>/^(trunk|duct|fixed_data|fixed_ac|fixed_control):/.test(key));const meshes=[...new Set([...(refs.components.get('single:interfaces')||[]),...keys.flatMap(key=>refs.components.get(key)||[])])];if(meshes.length){refs.components.set('wiring:fixed',meshes);metadata['wiring:fixed']={title:'后侧固定布线与分区线槽',basis:'model',notes:`${bayIds.length}仓星形数据支线、固定AC与低压控制分区。主干沿固定框架布置，结构剖视保持模块原位。查看布线时暂时隐藏可拆AC盖板，关闭浮窗后恢复；实际器件、线槽、保护与额定值仍需工程选型验证。`};}}
 }
 
 function optimizeMeshes(root){
@@ -224,7 +247,7 @@ function optimizeMeshes(root){
   root.traverse(mesh=>{
     if(!mesh.isMesh)return;
     const descriptor=describeMesh(mesh);meshDescriptors.set(mesh,descriptor);
-    if(Array.isArray(mesh.material)||mesh.isSkinnedMesh||mesh.morphTargetInfluences?.length||mesh.userData.dynamicCable||mesh.userData.preserveCable||!isVisible(mesh)||mesh.name.startsWith('TouchDisplay_')||/^[AB][1-9]_PowerAdapter$/.test(mesh.name))return;
+    if(Array.isArray(mesh.material)||mesh.isSkinnedMesh||mesh.morphTargetInfluences?.length||mesh.userData.dynamicCable||mesh.userData.preserveCable||!isVisible(mesh)||mesh.name.startsWith('TouchDisplay_')||/^[AB][1-9]\d*_PowerAdapter$/.test(mesh.name))return;
     const anchor=movingAnchor(mesh);if(!anchor)return;
     const attributes=Object.keys(mesh.geometry.attributes).sort().join(',');
     const key=[anchor.uuid,descriptor.key,descriptor.bay,descriptor.doorName,descriptor.action,descriptor.housing,descriptor.glass,descriptor.status,mesh.material.uuid,attributes,Boolean(mesh.geometry.index)].join('|');
@@ -279,15 +302,20 @@ function setDoor(doorOrName,open,delay=0){
 }
 function setTray(bay,open){
   const tray=refs.trays.get(bay);if(!tray)return;
-  const door=refs.doors.get(state.mode==='single'?'SingleDoorPivot':`DoorPivot_${bay}`);
+  const door=isDrawerBay(bay)?null:refs.doors.get(state.mode==='single'?'SingleDoorPivot':`DoorPivot_${bay}`);
+  const peers=open&&isDrawerBay(bay)?drawerPeers(bay):[];
+  for(const [id,other]of peers)if(other.open||!trayIsClosed(other))setTray(id,false);
   if(open&&door&&!door.open)setDoor(door,true);
-  tray.open=Boolean(open);tween(tray.node.position,'z',originals.get(tray.node).position.z+(open?tray.travel:0),.8,0,open&&door?()=>doorClearsTray(door):null);
+  const gate=open?()=>peers.every(([,other])=>trayIsClosed(other))&&(!door||doorClearsTray(door)):null;
+  tray.open=Boolean(open);tween(tray.node.position,'z',originals.get(tray.node).position.z+(open?tray.travel:0),.8,0,gate);
   if(renderer)renderer.shadowMap.needsUpdate=true;updatePanelActions();
   if(!state.demo&&state.selection?.bay===bay&&$('componentPanel').classList.contains('is-focused'))focusComponent({trayBay:bay});
 }
 function setGlass(transparent){if(!refs.glassMaterial)return;state.glass=transparent;refs.glassMaterial.opacity=transparent?.09:.78;refs.glassMaterial.color.set(transparent?0xd5e9ed:0xa5bdcb);setPressed('glassView',transparent);}
 function toggleAllDoors(){
   stopDemo();closePanel();const direction=intendedViewingDirection(),rear=state.sceneMode!=='room'&&direction.z<-.12;
+  if(state.mode==='single'&&state.singleType==='drawer'){const tray=refs.trays.get('S1');if(tray)setTray('S1',!tray.open);fitView(singleDefaultAzimuth(),singleDefaultElevation(),false,defaultMechanismBounds());return;}
+  if(!rear)for(const [bay,tray]of refs.trays)if(tray.accessType==='drawer')setTray(bay,false);
   const doors=[...refs.doors.values()].filter(door=>state.mode==='single'||(rear?door.kind==='rear':door.kind!=='rear'));
   const open=doors.some(door=>!door.open);doors.forEach((door,index)=>setDoor(door,open,reducedMotion?0:index*.025));
   fitView(Math.atan2(direction.x,direction.z),Math.asin(direction.y),false,mechanismTargetBounds());
@@ -299,15 +327,19 @@ function setStructure(on){
   refs.housings.forEach(mesh=>mesh.visible=!on);
   for(const [name,node]of refs.modules){const offset=on&&!refs.components.has('wiring:fixed')?(name==='Left'?-.16:name==='Right'?.16:0):0;tween(node.position,'x',originals.get(node).position.x+offset);}
   for(const door of refs.doors.values())if(door.kind==='equipment'||door.kind==='rear')setDoor(door,on);
-  fitView(viewingDirection().z<0?Math.PI+Math.PI/9:Math.PI/9,.12,false,mechanismTargetBounds());
+  const rear=intendedViewingDirection().z<0;
+  if(state.mode==='single'&&state.singleType==='drawer')fitView((rear?Math.PI:0)+singleDefaultAzimuth(),singleDefaultElevation(),false,defaultMechanismBounds());
+  else fitView(rear?Math.PI+Math.PI/9:Math.PI/9,.12,false,mechanismTargetBounds());
 }
 function restoreOccupancy(){
-  for(const [id,node]of refs.laptops){cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=!emptyBays.has(id);node.userData.demoHideAt=0;node.userData.reconnectAt=0;setBayCablesParked(id,false);}
+  for(const [id,node]of refs.laptops){cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=!emptyBays.has(id);node.userData.demoHideAt=0;node.userData.reconnectAt=0;delete node.userData.demoPath;setBayCablesParked(id,false);}
   for(const node of refs.adapters.values()){cancelTween(node.position);node.position.copy(originals.get(node).position);node.visible=originals.get(node).visible;node.userData.demoHideAt=0;}
 }
 function updateDemoOccupancy(time){
   let moving=false;
   for(const [bay,node]of refs.laptops){
+    const path=node.userData.demoPath;
+    if(path){const progress=Math.min(Math.max((time-path.start)/path.duration,0),1),part=progress*(path.points.length-1),index=Math.min(Math.floor(part),path.points.length-2),t=part-index,ease=t*t*(3-2*t);node.position.copy(path.points[index]).lerp(path.points[index+1],ease);moving=true;if(progress===1){delete node.userData.demoPath;if(path.returning)setBayCablesParked(bay,false);else node.visible=false;}}
     if(node.userData.demoHideAt&&time>=node.userData.demoHideAt){node.visible=false;node.userData.demoHideAt=0;moving=true;}
     if(node.userData.reconnectAt&&time>=node.userData.reconnectAt){node.userData.reconnectAt=0;setBayCablesParked(bay,false);}
   }
@@ -317,7 +349,7 @@ function resetView(){
   if(!state.loaded)return;stopDemo();pauseRotation();closePanel();state.structure=false;setPressed('structureView',false);
   refs.housings.forEach(mesh=>mesh.visible=true);for(const [name,node]of refs.modules)tweenVector(node.position,originals.get(node).position,.6);
   if(state.mode==='single'){
-    setTray('S1',false);setDoor('SingleDoorPivot',true);restoreOccupancy();setGlass(true);fitView(singleDefaultAngle,.2,false,mechanismTargetBounds());return;
+    setTray('S1',state.singleType==='drawer');setDoor('SingleDoorPivot',true);restoreOccupancy();setGlass(true);fitView(singleDefaultAzimuth(),singleDefaultElevation(),false,defaultMechanismBounds());return;
   }
   for(const door of refs.doors.values())setDoor(door,false);for(const id of refs.trays.keys())if(!refs.doors.has(`DoorPivot_${id}`))setTray(id,false);
   restoreOccupancy();setGlass(true);if(state.sceneMode==='room'){setRoomView('overview');return;}fitView(Math.PI/8,.12,false,fitBox);
@@ -339,10 +371,10 @@ function showComponent(descriptor){
   if(Array.isArray(dimensions))['宽','深','高'].forEach((label,index)=>{const div=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=dimensions[index]==null?'—':formatLengthCm(dimensions[index]);const unit=document.createElement('small');unit.textContent='cm';dd.append(unit);div.append(dt,dd);list.append(div);});
   $('componentFacts').replaceChildren();
   if(descriptor.bay&&state.mode==='cabinet'&&!descriptor.key.startsWith('wiring:network:')){
-    const support=1250-Math.floor((Number(descriptor.bay[1])-1)/3)*450;
-    addFact('仓内建议净空','≥420 × 420 × 420 mm','document');addFact('承托面离地',`${support} mm`,'document');
+    const support=baySupportHeight(descriptor.bay),drawer=isDrawerBay(descriptor.bay);
+    if(!drawer)addFact('仓内建议净空','≥420 × 420 × 420 mm','document');else{addFact('仓型','闭盖笔记本抽屉仓');addFact('开启策略','右模块一次开启一个抽屉');}addFact('承托面离地',`${support} mm`,drawer?'model':'document');
     if(emptyBays.has(descriptor.bay))addFact('当前模型','空仓');
-    if(descriptor.doorName||descriptor.glass)addFact('玻璃厚度','6 mm','model');
+    if(!drawer&&(descriptor.doorName||descriptor.glass))addFact('玻璃厚度','6 mm','model');
     if(refs.trays.has(descriptor.bay))addFact('托盘行程',`${number(refs.trays.get(descriptor.bay).travel*1000)} mm`,'model');
   }
   if(descriptor.name.startsWith('TouchDisplay_')||descriptor.key==='screen'){
@@ -357,7 +389,7 @@ function updatePanelActions(){
   const door=relatedDoor(descriptor),doorButton=$('toggleComponentDoor');doorButton.hidden=!door||(state.sceneMode==='room'&&door.kind==='rear');
   if(door){const label=`${door.open?'关闭':'打开'}${door.title}`;doorButton.title=label;doorButton.setAttribute('aria-label',label);doorButton.setAttribute('aria-pressed',String(door.open));doorButton.querySelector('svg').innerHTML=door.open?icon.doorClose:icon.doorOpen;}
   const tray=descriptor.key.startsWith('wiring:network:')?null:refs.trays.get(descriptor.bay),trayButton=$('toggleComponentTray');trayButton.hidden=!tray;
-  if(tray){const label=`${tray.open?'收回':'抽出'} ${descriptor.bay} 托盘`;trayButton.title=label;trayButton.setAttribute('aria-label',label);trayButton.setAttribute('aria-pressed',String(tray.open));trayButton.querySelector('svg').innerHTML=tray.open?icon.trayIn:icon.trayOut;}
+  if(tray){const label=`${tray.open?'收回':'抽出'} ${descriptor.bay} ${isDrawerBay(descriptor.bay)?'抽屉':'托盘'}`;trayButton.title=label;trayButton.setAttribute('aria-label',label);trayButton.setAttribute('aria-pressed',String(tray.open));trayButton.querySelector('svg').innerHTML=tray.open?icon.trayIn:icon.trayOut;}
   $('inspectSingle').hidden=state.mode==='single'||!descriptor.bay;
   $('focusSinglePorts').hidden=state.mode!=='single';$('focusSingleTray').hidden=state.mode!=='single';
 }
@@ -366,8 +398,8 @@ function componentBox(descriptor){
   const box=new THREE.Box3();
   // A bay-level inspection must keep its opened door, tray and contents together.
   // Dedicated device/port/lock selections continue to use only their component.
-  const bayLevel=/^(glass|door|tray|bay):[AB][1-9]$/.test(descriptor.key);
-  const bayNode=state.mode==='single'&&descriptor.key==='single:tray'?model.getObjectByName('SingleTray'):state.mode==='single'&&/^single:(door|glass)$/.test(descriptor.key)?model:bayLevel&&descriptor.bay?model.getObjectByName(`Bay_${descriptor.bay}`):null;
+  const bayLevel=/^(glass|door|tray|bay|drawer_front):[AB][1-9]\d*$/.test(descriptor.key);
+  const bayNode=state.mode==='single'&&(descriptor.key==='single:tray'||(state.singleType==='drawer'&&/^single:(drawer_front|drawer_body|drawer_handle)$/.test(descriptor.key)))?model.getObjectByName('SingleTray'):state.mode==='single'&&/^single:(door|glass)$/.test(descriptor.key)?model:bayLevel&&descriptor.bay?model.getObjectByName(`Bay_${descriptor.bay}`):null;
   if(bayNode){model.updateMatrixWorld(true);bayNode.traverse(mesh=>{if(mesh.isMesh&&isVisible(mesh))box.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));});}
   else for(const mesh of refs.components.get(descriptor.key)||[])if(isVisible(mesh))box.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));
   if(state.mode==='single'&&descriptor.key==='single:tray')for(const key of ['single:tray','single:cables'])for(const mesh of refs.components.get(key)||[])if(isVisible(mesh))box.expandByObject(mesh,Boolean(mesh.morphTargetInfluences?.length));
@@ -399,17 +431,22 @@ function focusComponent(options={}){
   if(camera.isOrthographicCamera){useRoomProjection(false);state.roomView='inspect';updateSceneControls();options={...options,direction:new THREE.Vector3(.15,.25,1).normalize()};}
   const descriptor=state.selection;if(!descriptor)return;stopDemo();$('componentPanel').classList.add('is-focused');$('componentPanel').scrollTop=0;
   const focusDescriptor=options.trayBay?{...descriptor,key:state.mode==='single'?'single:tray':`bay:${options.trayBay}`,bay:options.trayBay}:descriptor;
-  const box=mechanismTargetBounds(()=>{const targetBox=componentBox(focusDescriptor);if(state.dimensions){syncDimensions();targetBox.union(dimensionLayer.getBounds(true));}return targetBox;});const direction=options.direction?.clone()||viewingDirection();if(state.sceneMode==='room'&&/^(glass|door|tray|bay):[AB][1-9]$/.test(focusDescriptor.key))direction.set(0,.2,1);if(state.mode==='single'&&!/^single:(housing|door|glass|hinges|ventilation)$/.test(focusDescriptor.key))direction.set(/^single:(interfaces|interface_panel|network|power|ac_socket|adapter|adapter_bracket|cables|usb_nic|usb|usb_system)$/.test(focusDescriptor.key)?.4:Math.tan(singleDefaultAngle),.2,1);direction.y=THREE.MathUtils.clamp(direction.y,.1,.36);direction.normalize();
+  const box=mechanismTargetBounds(()=>{const targetBox=componentBox(focusDescriptor);if(state.dimensions){syncDimensions();targetBox.union(dimensionLayer.getBounds(true));}return targetBox;});const direction=options.direction?.clone()||viewingDirection();if(state.sceneMode==='room'&&/^(glass|door|tray|bay|drawer_front):[AB][1-9]\d*$/.test(focusDescriptor.key))direction.set(0,.2,1);if(state.mode==='single'&&!/^single:(housing|door|glass|hinges|ventilation)$/.test(focusDescriptor.key))direction.set(/^single:(interfaces|interface_panel|network|power|ac_socket|adapter|adapter_bracket|cables|usb_nic|usb|usb_system)$/.test(focusDescriptor.key)?.4:Math.tan(singleDefaultAngle),.2,1);if(state.mode==='single'&&state.singleType==='drawer'&&/^single:(tray|drawer_front|drawer_body|drawer_handle|laptop|usb|usb_nic|usb_system)$/.test(focusDescriptor.key))direction.y=Math.tan(singleDefaultElevation());direction.y=THREE.MathUtils.clamp(direction.y,.1,state.mode==='single'&&state.singleType==='drawer'?1.2:.36);direction.normalize();
   const panel=$('componentPanel').getBoundingClientRect(),view=$('viewer').getBoundingClientRect();
   let left=24,right=viewport.width-24,top=viewport.height*.06,bottom=viewport.height*.94;
   if(viewport.width>620)right=Math.max(viewport.width*.25,panel.left-view.left-24);
   else {left=viewport.width*.05;right=viewport.width*.95;bottom=Math.max(viewport.height*.22,panel.top-view.top-18);}
   const region={left:2*left/viewport.width-1,right:2*right/viewport.width-1,top:1-2*top/viewport.height,bottom:1-2*bottom/viewport.height};
-  if(state.sceneMode==='room'&&/^(glass|door|tray|bay):[AB][1-9]$/.test(focusDescriptor.key)){
+  if(state.sceneMode==='room'&&/^(glass|door|tray|bay|drawer_front):[AB][1-9]\d*$/.test(focusDescriptor.key)){
     const bayNode=model.getObjectByName(`Bay_${focusDescriptor.bay}`),x=bayNode?bayNode.getWorldPosition(new THREE.Vector3()).x:box.getCenter(new THREE.Vector3()).x,half=Math.max(Math.abs(box.min.x-x),Math.abs(box.max.x-x));
     box.min.x=x-half;box.max.x=x+half;direction.copy(frontalDirectionForRegion(region,camera.aspect,camera.fov));
   }
   const pose=focusPoseForBox(box,direction,camera.aspect,camera.fov,region);if(state.sceneMode==='room'&&!roomEnvironment.bounds().containsPoint(pose.position)){setRoomCutaway(true);state.roomView='inspect';updateSceneControls();}controls.maxDistance=Math.max(16,pose.distance*1.25);moveCamera(pose.position,pose.target);
+}
+function showProductSide(rear=false){
+  if(state.sceneMode==='room'){setRoomView(rear?'top':'interior');return;}
+  stopDemo();closePanel();const drawer=state.mode==='single'&&state.singleType==='drawer';
+  fitView((rear?Math.PI:0)+(drawer?singleDefaultAzimuth():0),drawer?singleDefaultElevation():.07,false,drawer?defaultMechanismBounds():currentBounds());
 }
 function accessible(descriptor){
   if(state.structure||descriptor.doorName||descriptor.housing||descriptor.name.startsWith('TouchDisplay_')||descriptor.key==='cabinet')return true;
@@ -428,7 +465,8 @@ function setupPicking(){
     if(state.switching)return;
     if(!start||Math.hypot(event.clientX-start.x,event.clientY-start.y)>6||performance.now()-start.time>800)return;
     const result=hitTest(event.clientX,event.clientY);if(!result){closePanel();return;}stopDemo();pauseRotation();const descriptor=result.descriptor;
-    if(descriptor.doorName){const door=refs.doors.get(descriptor.doorName);if(door)setDoor(door,!door.open);}
+    if(descriptor.action==='drawer'&&isDrawerBay(descriptor.bay)){const tray=refs.trays.get(descriptor.bay);if(tray)setTray(descriptor.bay,!tray.open);}
+    else if(descriptor.doorName){const door=refs.doors.get(descriptor.doorName);if(door)setDoor(door,!door.open);}
     else if(!accessible(descriptor)){const door=relatedDoor(descriptor);if(door)setDoor(door,true);}
     showComponent(descriptor);
   });
@@ -464,23 +502,38 @@ function stopDemo(){
   state.demo=false;setPressed('demoToggle',false);$('demoToggle').title='播放借还演示';$('demoToggle').setAttribute('aria-label','播放借还演示');
   const id=state.demoBay;if(id){if(refs.doors.has(`DoorPivot_${id}`))setDoor(`DoorPivot_${id}`,false);else setTray(id,false);}restoreOccupancy();if(screenMesh)screenMesh.material=screenMaterial;
 }
-function startDemo(){
+function demoRemovalPoints(bay){
+  const source=metadata[`bay:${bay}`]?.remove_path_m||metadataDocument.refined_drawer_configuration?.remove_path_m;
+  if(!Array.isArray(source)||source.length<2||!source.every(validPoint))return null;
+  return source.map(value=>new THREE.Vector3(...value));
+}
+function animateLaptopTransfer(bay,returning){
+  const node=refs.laptops.get(bay);if(!node)return;
+  cancelTween(node.position);setBayCablesParked(bay,true);node.userData.demoHideAt=0;node.userData.reconnectAt=0;
+  const origin=originals.get(node).position,path=isDrawerBay(bay)&&demoRemovalPoints(bay);
+  if(path){const points=path.map(point=>point.add(origin));if(returning)points.reverse();node.position.copy(points[0]);node.visible=true;node.userData.demoPath={points,start:performance.now(),duration:reducedMotion?1:1100,returning};return;}
+  // Hinged bays retain their tested lift. Drawer demo requires its audited route.
+  if(isDrawerBay(bay))return;
+  if(returning){node.visible=true;node.position.copy(origin).add(new THREE.Vector3(0,.2,.1));tweenVector(node.position,origin,.9);node.userData.reconnectAt=performance.now()+950;}
+  else{tween(node.position,'y',origin.y+.2,.8);tween(node.position,'z',origin.z+.1,.8);node.userData.demoHideAt=performance.now()+850;}
+}
+function startDemo(requestedBay){
   if(state.mode!=='cabinet'||state.switching)return;
-  if(state.demo){stopDemo();return;}resetView();
-  const id=bayIds.find(bay=>refs.laptops.has(bay)&&!emptyBays.has(bay));if(!id)return;
+  if(state.demo){stopDemo();return;}const requested=typeof requestedBay==='string'?requestedBay:state.selection?.bay;
+  const id=refs.laptops.has(requested)&&!emptyBays.has(requested)?requested:bayIds.find(bay=>refs.laptops.has(bay)&&!emptyBays.has(bay)&&(!requested||isDrawerBay(bay)===isDrawerBay(requested)));if(!id)return;const drawer=isDrawerBay(id);if(drawer&&!demoRemovalPoints(id)){announce('抽屉取放路径参数尚未就绪，仍可手动查看抽屉。');return;}resetView();
   state.demo=true;state.demoBay=id;demoIndex=-1;closePanel();setPressed('demoToggle',true);$('demoToggle').title='停止借还演示';$('demoToggle').setAttribute('aria-label','停止借还演示');fitView(.12,.08);
   const steps=[
     [2200,()=>drawDemoScreen('身份核验','核验借用权限',id)],
     [1800,()=>drawDemoScreen('选择设备','定位可借用设备',id)],
-    [1400,()=>{drawDemoScreen('授权开门','请找到亮灯仓位',id);setDoor(`DoorPivot_${id}`,true);}],
-    [1700,()=>{drawDemoScreen('抽出托盘','固定适配器留在独立托架',id);setTray(id,true);}],
-    [1800,()=>{drawDemoScreen('取走设备',refs.usb.has(id)?'USB端随盘停靠，网线保留连接':'线头归入固定停车卡座',id);setBayCablesParked(id,true);for(const node of [refs.laptops.get(id)])if(node){tween(node.position,'y',originals.get(node).position.y+.2,.8);tween(node.position,'z',originals.get(node).position.z+.1,.8);node.userData.demoHideAt=performance.now()+850;}}],
-    [1700,()=>{drawDemoScreen('关闭锁定','分别确认门位与锁位',id);setTray(id,false);setDoor(`DoorPivot_${id}`,false,.6);}],
+    [1400,()=>{drawDemoScreen(drawer?'授权解锁抽屉':'授权开门','请找到亮灯仓位',id);setDoor(`DoorPivot_${id}`,true);}],
+    [1700,()=>{drawDemoScreen(drawer?'抽出抽屉':'抽出托盘','固定适配器留在独立托架',id);setTray(id,true);}],
+    [1800,()=>{drawDemoScreen('取走设备',refs.usb.has(id)?'USB端随盘停靠，网线保留连接':'线头归入固定停车卡座',id);animateLaptopTransfer(id,false);}],
+    [1700,()=>{drawDemoScreen('关闭锁定',drawer?'分别确认抽屉到位与锁位':'分别确认门位与锁位',id);setTray(id,false);setDoor(`DoorPivot_${id}`,false,.6);}],
     [2500,()=>drawDemoScreen('借用完成','电子借用记录',id,true)],
     [1800,()=>drawDemoScreen('归还电脑','再次核验身份与设备',id)],
     [1900,()=>{drawDemoScreen('打开归还仓','将设备放回所选仓位',id);setDoor(`DoorPivot_${id}`,true);setTray(id,true);}],
-    [2100,()=>{drawDemoScreen('放置与接线',refs.usb.has(id)?'连接USB与DC，确认网络与设备状态':'电源、网络、检测接口逐项确认',id);for(const node of [refs.laptops.get(id)])if(node){node.visible=true;node.userData.demoHideAt=0;node.position.copy(originals.get(node).position).add(new THREE.Vector3(0,.2,.1));tweenVector(node.position,originals.get(node).position,.9);node.userData.reconnectAt=performance.now()+950;}}],
-    [1700,()=>{drawDemoScreen('关闭锁定','门位与锁位分别确认',id);setTray(id,false);setDoor(`DoorPivot_${id}`,false,.6);}],
+    [2100,()=>{drawDemoScreen('放置与接线',refs.usb.has(id)?'连接USB与DC，确认网络与设备状态':'电源、网络、检测接口逐项确认',id);animateLaptopTransfer(id,true);}],
+    [1700,()=>{drawDemoScreen('关闭锁定',drawer?'抽屉到位与锁位分别确认':'门位与锁位分别确认',id);setTray(id,false);setDoor(`DoorPivot_${id}`,false,.6);}],
     [3000,()=>drawDemoScreen('设备已接收','电子回执 · 待检测',id,true)]
   ];
   const advance=()=>{if(!state.demo)return;demoIndex++;if(demoIndex>=steps.length){stopDemo();return;}const [duration,action]=steps[demoIndex];action();demoTimer=setTimeout(advance,duration);};advance();
@@ -544,7 +597,7 @@ function rebuildCable(cable,delta){
 }
 function setBayCablesParked(bay,parked){
   for(const cable of refs.cables){
-    if(cable.bay!==bay||cable.kind==='stowed')continue;const keepConnected=cable.spec.keep_connected_when_empty===true;cable.parked=Boolean(parked)&&!keepConnected;const cableParked=cable.parked;
+    if(cable.bay!==bay||cable.kind==='stowed')continue;const keepConnected=cable.spec.keep_connected_when_empty===true;cable.parked=(Boolean(parked)||!cable.initialOccupied)&&!keepConnected;const cableParked=cable.parked;
     cable.meshes.forEach(mesh=>mesh.visible=!cableParked);cable.connectorMeshes.forEach(mesh=>mesh.visible=!cableParked);cable.parkingMeshes.forEach(mesh=>mesh.visible=cableParked);
   }
   const usb=refs.usb.get(bay);if(usb){usb.parked=Boolean(parked)||!usb.initialOccupied;usb.nic.visible=true;usb.connected.forEach(mesh=>mesh.visible=!usb.parked);usb.parking.forEach(mesh=>mesh.visible=usb.parked);}
@@ -561,13 +614,13 @@ function prepareDynamicCables(){
   model.traverse(node=>{const name=canonical(node.name);if(!nodeIndex.has(name))nodeIndex.set(name,[]);nodeIndex.get(name).push(node);});
   const namedMeshes=names=>{const result=new Set();for(const name of names||[])for(const node of nodeIndex.get(canonical(name))||[])node.traverse(child=>{if(child.isMesh)result.add(child);});return [...result];};
   for(const spec of paths){
-    const bay=state.mode==='single'?'S1':String(spec.bay_id||''),stowed=spec.stowed===true||spec.motion==='stowed'||(state.mode==='cabinet'&&emptyBays.has(bay)&&spec.keep_connected_when_empty!==true);
+    const bay=state.mode==='single'?'S1':String(spec.bay_id||''),stowed=spec.stowed===true||spec.motion==='stowed';
     if(!['bay_local_gltf','single_local_gltf'].includes(spec.space)||!validPoint(spec.fixed)||(!stowed&&!validPoint(spec.moving)))throw new Error(`线缆路径参数不完整：${spec.id}`);
     const tray=refs.trays.get(bay),parent=model.getObjectByName(spec.parent_node||(state.mode==='single'?'SingleCabinetRoot':`Bay_${bay}`));
     if(!tray||!parent)throw new Error(`线缆所属仓位或托盘缺失：${spec.id}`);
     const sources=namedMeshes(spec.source_node_names),parkingMeshes=namedMeshes(spec.parking_node_names),connectorMeshes=namedMeshes(spec.moving_connector_node_names);
     for(const mesh of [...sources,...parkingMeshes,...connectorMeshes])mesh.userData.preserveCable=true;
-    const cable={spec,bay,tray,parent,meshes:sources,parkingMeshes,connectorMeshes,parked:stowed,lastDelta:NaN,length:0};
+    const cable={spec,bay,tray,parent,meshes:sources,parkingMeshes,connectorMeshes,initialOccupied:Boolean(spec.initial_occupied??refs.laptops.has(bay)),parked:stowed,lastDelta:NaN,length:0};
     if(stowed){
       if(!sources.length)throw new Error(`固定收纳线缆网格缺失：${spec.id}`);
       cable.kind='stowed';sources.forEach(mesh=>{mesh.visible=true;if(mesh.morphTargetInfluences)mesh.morphTargetInfluences.fill(0);});refs.cables.push(cable);rebuildCable(cable,0);continue;
@@ -615,7 +668,7 @@ function setupModel(){
   });
   for(const bay of bayIds){
     const tray=model.getObjectByName(`Tray_${bay}`),laptop=model.getObjectByName(`Laptop_${bay}`),adapter=model.getObjectByName(`${bay}_PowerAdapter`);
-    if(tray){saveOrigin(tray);refs.trays.set(bay,{node:tray,open:false,travel:Number(tray.userData.travel_mm??320)/1000});}
+    if(tray){saveOrigin(tray);refs.trays.set(bay,{node:tray,open:false,accessType:metadata[`bay:${bay}`]?.access_type||'hinged',travel:Number(tray.userData.travel_mm??320)/1000});}
     if(laptop){saveOrigin(laptop);refs.laptops.set(bay,laptop);}
     if(adapter){saveOrigin(adapter);refs.adapters.set(bay,adapter);}
   }
@@ -624,26 +677,26 @@ function setupModel(){
   restoreOccupancy();prepareDynamicCables();prepareUsbConnections();optimizeMeshes(model);fitBox=currentBounds();addInteriorLights();
 }
 function addInteriorLights(){
-  const add=(position,doors,intensity,distance)=>{const closedIntensity=state.mode==='single'?intensity*.38:0,light=new THREE.PointLight(0xffeed5,closedIntensity,distance,2);light.position.copy(position);model.add(light);refs.interiorLights.push({light,doors,intensity,closedIntensity});};
+  const add=(position,doors,intensity,distance,trays=[])=>{const closedIntensity=state.mode==='single'?intensity*.38:0,light=new THREE.PointLight(0xffeed5,closedIntensity,distance,2);light.position.copy(position);model.add(light);refs.interiorLights.push({light,doors,trays,intensity,closedIntensity});};
   if(state.mode==='single'){
-    const box=currentBounds(),center=box.getCenter(new THREE.Vector3());add(new THREE.Vector3(center.x,box.max.y-.045,box.max.z-.055),['SingleDoorPivot'],.095,.85);
+    const box=currentBounds(),center=box.getCenter(new THREE.Vector3());add(new THREE.Vector3(center.x,box.max.y-.045,box.max.z-.055),['SingleDoorPivot'],.095,.85,['S1']);
   }else{
-    for(const side of ['A','B'])for(let row=0;row<3;row++)add(new THREE.Vector3(side==='A'?-.975:.975,1.25-row*.45+.32,.22),[...[1,2,3].map(n=>`DoorPivot_${side}${row*3+n}`),`RearDoorPivot_${side==='A'?'Left':'Right'}`],.16,1.16);
+    for(const side of ['A','B']){const ids=bayIds.filter(id=>id[0]===side);for(let row=0;row<Math.ceil(ids.length/3);row++){const bays=ids.slice(row*3,row*3+3),drawer=bays.some(isDrawerBay),height=baySupportHeight(bays[0])/1000+(drawer?.10:.32);add(new THREE.Vector3(side==='A'?-.975:.975,height,.22),[...bays.map(id=>`DoorPivot_${id}`),`RearDoorPivot_${side==='A'?'Left':'Right'}`],drawer?.055:.16,drawer?.55:1.16,bays);}}
     add(new THREE.Vector3(0,.55,.17),['EquipmentDoorPivot','RearDoorPivot_Center'],.14,.88);
   }
 }
 function updateInteriorLights(delta){
-  for(const item of refs.interiorLights){const open=item.doors.some(name=>refs.doors.get(name)?.open),goal=open||state.structure?item.intensity:item.closedIntensity;item.light.intensity=THREE.MathUtils.damp(item.light.intensity,goal,6,delta);}
+  for(const item of refs.interiorLights){const open=item.doors.some(name=>refs.doors.get(name)?.open)||item.trays?.some(id=>refs.trays.get(id)?.open),goal=open||state.structure?item.intensity:item.closedIntensity;item.light.intensity=THREE.MathUtils.damp(item.light.intensity,goal,6,delta);}
 }
-function captureContext(){return {model,refs,metadata,metadataDocument,fitBox:fitBox.clone(),screenMesh,screenMaterial,structure:state.structure,glass:state.glass};}
-function applyContext(context){({model,refs,metadata,metadataDocument,fitBox,screenMesh,screenMaterial}=context);state.structure=context.structure;state.glass=context.glass;}
+function captureContext(){return {model,refs,metadata,metadataDocument,fitBox:fitBox.clone(),screenMesh,screenMaterial,structure:state.structure,glass:state.glass,singleType:state.singleType};}
+function applyContext(context){({model,refs,metadata,metadataDocument,fitBox,screenMesh,screenMaterial}=context);state.structure=context.structure;state.glass=context.glass;if(context.singleType)state.singleType=context.singleType;}
 function normalizeSingleMetadata(source){
   const document={...source,components:{},cable_paths:[]};
   const components=source?.components||{};
   if(!Object.keys(components).length)throw new Error('精细单仓组件参数不完整');
   for(const [key,value] of Object.entries(components))document.components[key]={...value,title:value.title||value.name||key,dimensions_mm:value.dimensions_mm||value.dimensions,basis:value.basis||'model'};
-  document.components['single:interfaces']={title:'左侧电源与网络接口',basis:'model',notes:'整体查看接口面板、RJ45、AC插座及独立适配器托架。点击具体部件可查看各自尺寸。'};
-  document.cable_paths=(source.cable_paths||[]).map(spec=>({...spec,bay_id:'S1',space:'single_local_gltf',parent_node:spec.parent_node||'SingleCabinetRoot',component_key:spec.component_key||'single:cables'}));
+  document.components['single:interfaces']??={title:'左侧电源与网络接口',basis:'model',notes:'整体查看接口面板、RJ45、AC插座及独立适配器托架。点击具体部件可查看各自尺寸。'};
+  document.cable_paths=(source.cable_paths||[]).map(spec=>({...spec,bay_id:'S1',space:'single_local_gltf',parent_node:spec.parent_node||(state.singleType==='drawer'?'SingleDrawerRoot':'SingleCabinetRoot'),component_key:spec.component_key||'single:cables'}));
   return document;
 }
 function setupSingleModel(){
@@ -652,38 +705,41 @@ function setupSingleModel(){
   const materials=new Set();
   model.traverse(node=>{
     if(node.name==='SingleDoorPivot'){saveOrigin(node);refs.doors.set(node.name,{node,bay:'S1',kind:'bay',swing:Number(node.userData.swing_degrees??node.userData.open_degrees??metadataDocument.interactions?.door?.angle_degrees??-100),open:false,title:'精细单仓玻璃门'});}
-    if(node.name==='SingleTray'){saveOrigin(node);refs.trays.set('S1',{node,open:false,travel:Number(node.userData.travel_mm??320)/1000});}
+    if(node.name==='SingleTray'){saveOrigin(node);refs.trays.set('S1',{node,open:false,accessType:state.singleType==='drawer'?'drawer':'hinged',travel:Number(node.userData.travel_mm??320)/1000});}
     if(node.isMesh){if(inherited(node,'initial_hidden')===true)node.visible=false;const descriptor=describeMesh(node);if(descriptor.glass)node.material=refs.glassMaterial;node.castShadow=!descriptor.glass;node.receiveShadow=true;for(const material of Array.isArray(node.material)?node.material:[node.material])if(material&&!materials.has(material)){materials.add(material);if(material.emissiveIntensity>1.2)material.emissiveIntensity=1.2;}}
   });
-  if(!refs.doors.size||!refs.trays.size)throw new Error('精细单仓门或托盘节点缺失');
+  if(!refs.trays.size||(state.singleType==='door'&&!refs.doors.size))throw new Error('精细单仓机构节点缺失');
   const laptop=model.getObjectByName('Laptop')||model.getObjectByName('SingleLaptop');if(laptop){saveOrigin(laptop);refs.laptops.set('S1',laptop);}
   prepareDynamicCables();prepareUsbConnections();optimizeMeshes(model);fitBox=currentBounds();addInteriorLights();
 }
-async function setModelMode(mode){
-  if(state.switching||mode===state.mode||!state.loaded)return;
-  state.switching=true;stopDemo();pauseRotation();closePanel();$('loadError').hidden=true;document.querySelectorAll('.toolbar button:not(#fullscreen)').forEach(button=>button.disabled=true);
+async function setModelMode(mode,type=state.singleType){
+  const targetKey=contextKey(mode,type);
+  if(state.switching||targetKey===contextKey()||!state.loaded)return targetKey===contextKey();
+  state.switching=true;stopDemo();pauseRotation();closePanel();$('loadError').hidden=true;document.querySelectorAll('.toolbar button:not(#fullscreen),[data-single-type]').forEach(button=>button.disabled=true);
+  const previousMode=state.mode,previousType=state.singleType,previousKey=contextKey();
   try{
     let asset;
-    if(mode==='single'&&!modelContexts.has('single')){
-      $('loading').hidden=false;$('loading').setAttribute('aria-label','正在加载精细单仓');
-      singleAssetPromise??=Promise.all([new GLTFLoader().loadAsync('./assets/smart_cabinet_single_compartment.glb?v=20261108-room-v1'),fetch('./assets/single_compartment.json?v=20261108-room-v1').then(response=>{if(!response.ok)throw new Error('精细单仓参数无法读取');return response.json();})]).catch(error=>{singleAssetPromise=null;throw error;});
-      asset=await singleAssetPromise;
+    if(mode==='single'&&!modelContexts.has(targetKey)){
+      $('loading').hidden=false;$('loading').setAttribute('aria-label',type==='drawer'?'正在加载闭盖抽屉仓':'正在加载开门笔记本仓');
+      if(!singleAssetPromises.has(type)){
+        const glb=type==='drawer'?'./assets/smart_cabinet_drawer.glb?v=20261109-hybrid33-v1':'./assets/smart_cabinet_single_compartment.glb?v=20261109-hybrid33-v1',json=type==='drawer'?'./assets/drawer_compartment.json?v=20261109-hybrid33-v1':'./assets/single_compartment.json?v=20261109-hybrid33-v1';
+        singleAssetPromises.set(type,Promise.all([new GLTFLoader().loadAsync(glb),fetch(json).then(response=>{if(!response.ok)throw new Error('单仓参数无法读取');return response.json();})]).catch(error=>{singleAssetPromises.delete(type);throw error;}));
+      }
+      asset=await singleAssetPromises.get(type);
     }
-    // Complete in-flight mechanisms before suspending their context.
     for(const motion of tweens)motion.object[motion.property]=motion.to;tweens.length=0;orbitMotion=null;updateDynamicCables();
-    modelContexts.set(state.mode,captureContext());model.visible=false;
-    const previousMode=state.mode;state.mode=mode;
+    modelContexts.set(previousKey,captureContext());model.visible=false;state.mode=mode;if(mode==='single')state.singleType=type;
     try{
-      if(modelContexts.has(mode))applyContext(modelContexts.get(mode));
-      else{refs=makeRefs();metadataDocument=normalizeSingleMetadata(asset[1]);metadata=metadataDocument.components;model=asset[0].scene;screenMesh=null;screenMaterial=null;state.structure=false;state.glass=true;scene.add(model);setupSingleModel();setDoor('SingleDoorPivot',true);modelContexts.set(mode,captureContext());}
-    }catch(error){model?.removeFromParent();state.mode=previousMode;applyContext(modelContexts.get(previousMode));throw error;}
+      if(modelContexts.has(targetKey))applyContext(modelContexts.get(targetKey));
+      else{refs=makeRefs();metadataDocument=normalizeSingleMetadata(asset[1]);metadata=metadataDocument.components;model=asset[0].scene;screenMesh=null;screenMaterial=null;state.structure=false;state.glass=true;scene.add(model);setupSingleModel();if(type==='drawer')setTray('S1',true);else setDoor('SingleDoorPivot',true);modelContexts.set(targetKey,captureContext());}
+    }catch(error){model?.removeFromParent();state.mode=previousMode;state.singleType=previousType;applyContext(modelContexts.get(previousKey));throw error;}
     model.visible=true;controls.minDistance=mode==='single'?.18:.35;
     setPressed('singleView',mode==='single');setPressed('structureView',state.structure);setGlass(state.glass);
-    $('singleView').title=mode==='single'?'返回18仓整柜':'单仓精细展示';$('singleView').setAttribute('aria-label',$('singleView').title);
-    $('demoToggle').disabled=mode==='single';$('viewer').setAttribute('aria-label',mode==='single'?'精细单仓三维展示，可点击玻璃门、托盘和接口':'智能柜三维展示，可旋转、缩放并点击柜门和内部部件');
-    setStageScale(mode==='single');fitView(mode==='single'?singleDefaultAngle:Math.PI/8,mode==='single'?.2:.12,true,mechanismTargetBounds());controls.update();renderer.shadowMap.needsUpdate=true;announce(mode==='single'?'精细单仓已就绪。可开关玻璃门，点击内部部件查看参数。':'已返回18仓整柜。');
-  }catch(error){if(mode==='single'&&!modelContexts.has('single'))singleAssetPromise=null;model.visible=true;console.error('Model switch failed:',error);const message=`${error.message}，点击重试。整柜仍可操作。`;announce(message);$('singleView').title=message;$('singleView').setAttribute('aria-label',message);$('loadError').title=message;$('loadError').setAttribute('aria-label',message);$('loadError').hidden=false;loadErrorAction=()=>setMode(mode);}
-  finally{state.switching=false;$('loading').hidden=true;document.querySelectorAll('.toolbar button:not(#fullscreen)').forEach(button=>button.disabled=false);$('demoToggle').disabled=state.mode==='single';}
+    $('singleView').title=mode==='single'?`返回${bayIds.length}仓整柜`:'单仓精细展示';$('singleView').setAttribute('aria-label',$('singleView').title);
+    $('demoToggle').disabled=mode==='single';
+    setStageScale(mode==='single');fitView(mode==='single'?singleDefaultAzimuth():Math.PI/8,mode==='single'?singleDefaultElevation():.12,true,defaultMechanismBounds());controls.update();renderer.shadowMap.needsUpdate=true;announce(mode==='single'?(type==='drawer'?'闭盖抽屉仓已就绪，可开关抽屉并查看内部接线。':'开门笔记本仓已就绪，可开关玻璃门并查看内部接线。'):`已返回${bayIds.length}仓整柜。`);return true;
+  }catch(error){if(mode==='single'&&!modelContexts.has(targetKey))singleAssetPromises.delete(type);model.visible=true;console.error('Model switch failed:',error);const message=`${error.message}，点击重试。当前模型仍可操作。`;announce(message);$('loadError').title=message;$('loadError').setAttribute('aria-label',message);$('loadError').hidden=false;loadErrorAction=()=>setMode(mode,{singleType:type});return false;}
+  finally{state.switching=false;$('loading').hidden=true;document.querySelectorAll('.toolbar button:not(#fullscreen),[data-single-type]').forEach(button=>button.disabled=false);$('demoToggle').disabled=state.mode==='single';}
 }
 function settleCabinetClosed(){
   stopDemo();pauseRotation();if(state.wiring)setWiring(false);closePanel();tweens.length=0;orbitMotion=null;
@@ -692,14 +748,17 @@ function settleCabinetClosed(){
   updateDynamicCables();
   for(const door of refs.doors.values()){door.node.rotation.copy(originals.get(door.node).rotation);door.open=false;}
   for(const node of refs.modules.values())node.position.copy(originals.get(node).position);
-  refs.housings.forEach(mesh=>mesh.visible=true);state.structure=false;setPressed('structureView',false);restoreOccupancy();setGlass(true);model.updateMatrixWorld(true);updateDynamicCables();modelContexts.set(state.mode,captureContext());
+  refs.housings.forEach(mesh=>mesh.visible=true);state.structure=false;setPressed('structureView',false);restoreOccupancy();setGlass(true);model.updateMatrixWorld(true);updateDynamicCables();modelContexts.set(contextKey(),captureContext());
 }
 function updateSceneControls(){
   for(const button of document.querySelectorAll('[data-scene-mode]')){const selected=button.dataset.sceneMode===state.sceneMode;button.setAttribute('aria-selected',String(selected));button.classList.toggle('active',selected);button.disabled=state.switching||!state.loaded;}
   const room=state.sceneMode==='room';$('stage').classList.toggle('room-mode',room);$('roomControls').hidden=!room;
-  document.querySelectorAll('.toolbar button:not(#fullscreen),.room-controls button').forEach(button=>button.disabled=state.switching||!state.loaded||(button.id==='demoToggle'&&state.mode==='single')||(room&&camera.isOrthographicCamera&&['rotateLeft','rotateRight','autoRotate'].includes(button.id)));
-  for(const [id,normal,label]of [['frontView','正面视图','机要室室内视角'],['backView','背面视图','机要室俯视'],['allDoors','开关当前侧全部柜门','开关全部正面柜门']]){$(id).title=room?label:normal;$(id).setAttribute('aria-label',$(id).title);}
-  $('viewer').setAttribute('aria-label',room?'机要室布局与智能柜，可点击柜门、抽盘和房间部件':state.mode==='single'?'精细单仓三维展示，可点击玻璃门、托盘和接口':'智能柜三维展示，可旋转、缩放并点击柜门和内部部件');
+  $('singleTypes').hidden=state.sceneMode!=='single';$('stage').classList.toggle('single-mode',state.sceneMode==='single');
+  for(const button of document.querySelectorAll('[data-single-type]')){const selected=button.dataset.singleType===state.singleType;button.setAttribute('aria-pressed',String(selected));button.classList.toggle('active',selected);button.disabled=state.switching;}
+  document.querySelectorAll('.toolbar button:not(#fullscreen),.room-controls button').forEach(button=>button.disabled=state.switching||!state.loaded||(button.id==='demoToggle'&&state.mode==='single')||(button.id==='glassView'&&state.mode==='single'&&state.singleType==='drawer')||(room&&camera.isOrthographicCamera&&['rotateLeft','rotateRight','autoRotate'].includes(button.id)));
+  for(const [id,normal,label]of [['frontView','正面视图','机要室室内视角'],['backView','背面视图','机要室俯视'],['allDoors','开关当前侧柜门；收回抽屉','开关正面柜门；收回抽屉']]){$(id).title=room?label:normal;$(id).setAttribute('aria-label',$(id).title);}
+  if(state.mode==='single'&&state.singleType==='drawer'){for(const [id,label]of [['allDoors','开关抽屉'],['frontView','抽屉前侧俯视'],['backView','抽屉后侧俯视']]){$(id).title=label;$(id).setAttribute('aria-label',label);}}
+  $('viewer').setAttribute('aria-label',room?'机要室布局与智能柜，可点击柜门、抽盘和房间部件':state.mode==='single'?(state.singleType==='drawer'?'闭盖抽屉仓三维展示，可点击前板开关抽屉并查看接口':'开门单仓三维展示，可点击玻璃门、托盘和接口'):'智能柜三维展示，可旋转、缩放并点击柜门和内部部件');
   for(const [id,key]of [['roomOverview','overview'],['roomInterior','interior'],['roomTop','top']])setPressed(id,state.roomView===key);
   if(renderer?.domElement&&lastSceneModeLayout!==state.sceneMode){lastSceneModeLayout=state.sceneMode;resize();}
 }
@@ -723,8 +782,9 @@ function setRoomView(view='overview',immediate=false){
   }else fitView(view==='top'?0:Math.PI/7,view==='top'?1.38:.61,immediate,roomEnvironment.bounds().expandByScalar(.12));
   updateSceneControls();
 }
-async function setMode(next){
-  if(!['cabinet','single','room'].includes(next)||!state.loaded||state.switching||next===state.sceneMode)return;
+async function setMode(next,options={}){
+  const type=['door','drawer'].includes(options.singleType)?options.singleType:'drawer';
+  if(!['cabinet','single','room'].includes(next)||!state.loaded||state.switching||(next===state.sceneMode&&(next!=='single'||type===state.singleType)))return;
   if(state.wiring)setWiring(false);
   if(next==='room'){
     state.switching=true;updateSceneControls();$('loading').hidden=false;$('loading').setAttribute('aria-label','正在加载机要室环境');$('loadError').hidden=true;
@@ -736,7 +796,7 @@ async function setMode(next){
     settleCabinetClosed();roomEnvironment.activate(stageLights,groundPool);state.sceneMode='room';controls.minDistance=.35;controls.maxDistance=30;setRoomView('overview',true);$('loading').hidden=true;renderer.shadowMap.needsUpdate=true;announce('机要室已就绪。后距10 cm，后维护门保持关闭；可操作正面仓门与托盘。');
   }else{
     if(state.sceneMode==='room'){settleCabinetClosed();useRoomProjection(false);camera.fov=35;camera.updateProjectionMatrix();roomEnvironment.deactivate();state.sceneMode='cabinet';setStageScale(false);}
-    await setModelMode(next);state.sceneMode=state.mode;
+    await setModelMode(next,type);state.sceneMode=state.mode;
     if(next==='cabinet'&&state.mode==='cabinet'){controls.minDistance=.35;fitView(Math.PI/8,.12,true,fitBox);}
     renderer.shadowMap.needsUpdate=true;
   }
@@ -753,7 +813,7 @@ async function inspectWiringInModel(target){
   const descriptor={key:'wiring:fixed',bay:'',module:'',doorName:'',name:'后侧固定布线',housing:false};showComponent(descriptor);focusComponent({direction:new THREE.Vector3(.12,.14,-1).normalize()});
 }
 function selectSingleComponent(key){
-  const meshes=refs.components.get(key);if(!meshes?.length)return;const door=refs.doors.get('SingleDoorPivot');if(door&&!door.open)setDoor(door,true);const descriptor={...(meshDescriptors.get(meshes[0])||describeMesh(meshes[0])),key};if(key==='single:interfaces')descriptor.doorName='';showComponent(descriptor);focusComponent();
+  const meshes=refs.components.get(key);if(!meshes?.length)return;if(state.singleType==='drawer')setTray('S1',true);const door=refs.doors.get('SingleDoorPivot');if(door&&!door.open)setDoor(door,true);const descriptor={...(meshDescriptors.get(meshes[0])||describeMesh(meshes[0])),key};if(key==='single:interfaces')descriptor.doorName='';showComponent(descriptor);focusComponent();
 }
 function setStageScale(single){
   const scale=single?.26:1;groundPool.scale.set(scale,scale,scale);groundPool.position.y=fitBox.min.y-.008;
@@ -792,14 +852,14 @@ async function init(){
     controls.addEventListener('start',()=>{orbitMotion=null;cancelTween(camera.position);cancelTween(controls.target);stopDemo();pauseRotation();});
     const observer=new ResizeObserver(resize);observer.observe($('viewer'));resize();
     const [gltf,meta]=await Promise.all([
-      new GLTFLoader().loadAsync('./assets/smart_cabinet.glb?v=20261108-room-v1'),
-      fetch('./assets/components.json?v=20261108-room-v1',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('组件参数文件无法读取');return response.json();})
+      new GLTFLoader().loadAsync('./assets/smart_cabinet.glb?v=20261109-hybrid33-v1'),
+      fetch('./assets/components.json?v=20261109-hybrid33-v1',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('组件参数文件无法读取');return response.json();})
     ]);
     if(!meta?.components||typeof meta.components!=='object'||!Array.isArray(meta.cable_paths))throw new Error('组件或动态线缆参数不完整');
     normalizeMetadata(meta);createFallbackMetadata();model=gltf.scene;scene.add(model);setupModel();
     state.loaded=true;document.querySelectorAll('.toolbar button:disabled').forEach(button=>button.disabled=false);
     modelContexts.set('cabinet',captureContext());setStageScale(false);setupPicking();fitView(Math.PI/8,.12,true);controls.update();$('loading').hidden=true;renderer.shadowMap.needsUpdate=true;
-    window.cabinetShowcase={state,scene,renderer,get camera(){return camera;},controls,setDimensions,setWiring,inspectWiringInModel,setRoomView,setRoomCutaway,get room(){return roomEnvironment;},get wiring(){return wiringPanel;},get dimensions(){return dimensionLayer;},get refs(){return refs;},get model(){return model;},get metadata(){return metadata;},setDoor,setTray,setMode,resetView,setStructure,focusComponent,selectSingleComponent,showComponent,getDiagnostics:()=>({loaded:state.loaded,mode:state.mode,sceneMode:state.sceneMode,cachedModes:[...modelContexts.keys()],doors:refs.doors.size,rearDoors:[...refs.doors.values()].filter(d=>d.kind==='rear').length,trays:refs.trays.size,usbConnections:refs.usb.size,emptyBays:[...emptyBays],components:refs.components.size,dynamicCables:refs.cables.filter(cable=>cable.kind!=='stowed').length,stowedCables:refs.cables.filter(cable=>cable.kind==='stowed').length,cablesTotal:refs.cables.length,cableLengths:refs.cables.map(cable=>({id:cable.spec.id,length_mm:Math.round(cable.length*1000),rest_length_mm:cable.spec.rest_length_mm})),metadataEntries:Object.keys(metadata).length,meshes:(()=>{let n=0;model.traverse(o=>{if(o.isMesh)n++;});return n;})(),drawCalls:renderer.info.render.calls})};
+    window.cabinetShowcase={state,scene,renderer,get camera(){return camera;},get controls(){return controls;},setDimensions,setWiring,inspectWiringInModel,setRoomView,setRoomCutaway,get room(){return roomEnvironment;},get wiring(){return wiringPanel;},get dimensions(){return dimensionLayer;},get refs(){return refs;},get model(){return model;},get metadata(){return metadata;},setDoor,setTray,setMode,resetView,setStructure,focusComponent,selectSingleComponent,showComponent,getDiagnostics:()=>({loaded:state.loaded,mode:state.mode,sceneMode:state.sceneMode,cachedModes:[...modelContexts.keys()],doors:refs.doors.size,rearDoors:[...refs.doors.values()].filter(d=>d.kind==='rear').length,trays:refs.trays.size,usbConnections:refs.usb.size,emptyBays:[...emptyBays],singleType:state.singleType,drawerBays:[...refs.trays].filter(([,tray])=>tray.accessType==='drawer').map(([bay])=>bay),components:refs.components.size,dynamicCables:refs.cables.filter(cable=>cable.kind!=='stowed').length,stowedCables:refs.cables.filter(cable=>cable.kind==='stowed').length,cablesTotal:refs.cables.length,cableLengths:refs.cables.map(cable=>({id:cable.spec.id,length_mm:Math.round(cable.length*1000),rest_length_mm:cable.spec.rest_length_mm})),metadataEntries:Object.keys(metadata).length,meshes:(()=>{let n=0;model.traverse(o=>{if(o.isMesh)n++;});return n;})(),drawCalls:renderer.info.render.calls})};
     announce('机柜已就绪。可直接点击仓门、维护门与内部部件。');
     updateSceneControls();const initialMode=requestedInitialMode(location.search);if(initialMode!=='cabinet')await setMode(initialMode);
   }catch(error){console.error('Cabinet initialization failed:',error);$('loading').hidden=true;const message=location.protocol==='file:'?'请双击启动演示.command，经本地HTTP地址打开页面':`${error.message||'模型未能载入'}，请确认本地服务和assets文件完整后重试`;$('loadError').title=message;$('loadError').setAttribute('aria-label',message);$('loadError').hidden=false;announce(message);}
@@ -833,17 +893,18 @@ function animate(time){
 $('zoomIn').addEventListener('click',()=>zoom(.82));$('zoomOut').addEventListener('click',()=>zoom(1.22));
 document.querySelectorAll('[data-scene-mode]').forEach(button=>button.addEventListener('click',()=>setMode(button.dataset.sceneMode)));
 document.querySelector('.scene-tabs').addEventListener('keydown',event=>{const buttons=[...document.querySelectorAll('[data-scene-mode]')],i=buttons.indexOf(event.target);if(i<0||!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const index=event.key==='Home'?0:event.key==='End'?2:(i+(event.key==='ArrowRight'?1:2))%3;buttons[index].focus();setMode(buttons[index].dataset.sceneMode);});
+document.querySelectorAll('[data-single-type]').forEach(button=>button.addEventListener('click',()=>setMode('single',{singleType:button.dataset.singleType})));
 $('roomOverview').addEventListener('click',()=>setRoomView('overview'));$('roomInterior').addEventListener('click',()=>setRoomView('interior'));$('roomTop').addEventListener('click',()=>setRoomView('top'));$('roomCutaway').addEventListener('click',()=>setRoomCutaway(!roomEnvironment?.cutaway));$('roomInfo').addEventListener('click',()=>showComponent({key:'room:layout',bay:'',module:'',doorName:'',name:'机要室布局'}));
 
 $('rotateLeft').addEventListener('click',()=>rotate(-Math.PI/8));$('rotateRight').addEventListener('click',()=>rotate(Math.PI/8));
 $('autoRotate').addEventListener('click',()=>{stopDemo();closePanel();state.autoRotate=!state.autoRotate;controls.autoRotate=state.autoRotate;setPressed('autoRotate',state.autoRotate);});
 $('resetView').addEventListener('click',resetView);
-$('frontView').addEventListener('click',()=>{if(state.sceneMode==='room'){setRoomView('interior');return;}stopDemo();closePanel();fitView(0,.07);});$('backView').addEventListener('click',()=>{if(state.sceneMode==='room'){setRoomView('top');return;}stopDemo();closePanel();fitView(Math.PI,.07);});
+$('frontView').addEventListener('click',()=>showProductSide(false));$('backView').addEventListener('click',()=>showProductSide(true));
 $('dimensionsView').addEventListener('click',()=>setDimensions(!state.dimensions));
 $('wiringView').addEventListener('click',()=>setWiring(!state.wiring));
 document.querySelector('.toolbar').addEventListener('click',event=>{if(state.wiring&&event.target.closest('button')?.id!=='wiringView')setWiring(false);},true);
 $('allDoors').addEventListener('click',toggleAllDoors);$('singleView').addEventListener('click',()=>setMode(state.mode==='single'?'cabinet':'single'));
-$('inspectSingle').addEventListener('click',()=>setMode('single'));$('focusSinglePorts').addEventListener('click',()=>selectSingleComponent('single:interfaces'));$('focusSingleTray').addEventListener('click',()=>selectSingleComponent('single:tray'));
+$('inspectSingle').addEventListener('click',()=>setMode('single',{singleType:isDrawerBay(state.selection?.bay)?'drawer':'door'}));$('focusSinglePorts').addEventListener('click',()=>selectSingleComponent('single:interfaces'));$('focusSingleTray').addEventListener('click',()=>selectSingleComponent('single:tray'));
 $('glassView').addEventListener('click',()=>setGlass(!state.glass));$('structureView').addEventListener('click',()=>setStructure(!state.structure));$('demoToggle').addEventListener('click',startDemo);
 $('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('stage').requestFullscreen();}catch{announce('当前浏览器不支持全屏。');}});
 $('panelClose').addEventListener('click',()=>{closePanel();if(state.dimensions){const d=intendedViewingDirection();fitView(Math.atan2(d.x,d.z),Math.asin(d.y));}});$('focusComponent').addEventListener('click',focusComponent);

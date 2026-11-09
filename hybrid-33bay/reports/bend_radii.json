@@ -1,0 +1,841 @@
+{
+  "metadata_sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e",
+  "route_count": 104,
+  "status": "passed",
+  "routes": [
+    {
+      "name": "FixedAC_MainsToInput",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": null,
+      "point_index": null,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_InputToDistribution",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": null,
+      "point_index": null,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_DistributionToPDU",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 36.74832276537535,
+      "point_index": 36,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_DistributionToUPS",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 38.77171627924311,
+      "point_index": 8,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_UPSToCritical",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 37.85290628805746,
+      "point_index": 17,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_CriticalToHost",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 39.99150564496161,
+      "point_index": 7,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_CriticalToSwitch",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 39.198612530389426,
+      "point_index": 39,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_CriticalToControlPower_ACInput",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 32.33955863446292,
+      "point_index": 4,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedDC_ControlPowerToController",
+      "kind": "dc_control",
+      "minimum_sampled_radius_mm": 27.057893069309994,
+      "point_index": 35,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A1",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 27.858138279256057,
+      "point_index": 68,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A2",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 27.858138279256057,
+      "point_index": 68,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A3",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 27.857968704386774,
+      "point_index": 67,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A4",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 26.641540181383945,
+      "point_index": 68,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A5",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 26.64241648935419,
+      "point_index": 66,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A6",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 26.642015711478937,
+      "point_index": 67,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A7",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 26.040560840994942,
+      "point_index": 66,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A8",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 26.040560840994942,
+      "point_index": 66,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_A9",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 26.04215738667282,
+      "point_index": 68,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_Server",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 24.499363243417537,
+      "point_index": 39,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_LockController",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.049379182532274,
+      "point_index": 78,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_PDUManagement",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 20.159697533212846,
+      "point_index": 66,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_UPSManagement",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 20.089311079458742,
+      "point_index": 30,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_ExternalManagement",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 34.99746525773201,
+      "point_index": 26,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A1",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.99999999996028,
+      "point_index": 88,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A2",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.99999999996028,
+      "point_index": 88,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A3",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.99999999996028,
+      "point_index": 88,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A4",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.999999999975884,
+      "point_index": 79,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A5",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.999999999975884,
+      "point_index": 79,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A6",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.999999999975884,
+      "point_index": 79,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A7",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.999999999975884,
+      "point_index": 79,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A8",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.999999999975884,
+      "point_index": 79,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_A9",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 34.999999999975884,
+      "point_index": 79,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B1",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570775597607714,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B1",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B1",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998187281748354,
+      "point_index": 2,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B2",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570633679225306,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B2",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B2",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997146814749826,
+      "point_index": 59,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B3",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57067676864886,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B3",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B3",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997146814749826,
+      "point_index": 59,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B4",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57069450964694,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B4",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B4",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997885201521726,
+      "point_index": 59,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B5",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570755328597123,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B5",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B5",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998161974385262,
+      "point_index": 25,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B6",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570735057771213,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B6",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B6",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997093531482893,
+      "point_index": 56,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B7",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570674233713447,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B7",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B7",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998187281748354,
+      "point_index": 2,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B8",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570633679225306,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B8",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B8",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997054124083753,
+      "point_index": 57,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B9",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57071478094052,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B9",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B9",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997054124083753,
+      "point_index": 57,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B10",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57071478094052,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B10",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B10",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998008159382344,
+      "point_index": 59,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B11",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570917450004586,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B11",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B11",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.9956696691514,
+      "point_index": 58,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B12",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57099855725774,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B12",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B12",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.9956696691514,
+      "point_index": 58,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B13",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.570917450004586,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B13",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B13",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998187281748354,
+      "point_index": 2,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B14",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57099855725774,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B14",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B14",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998161974385262,
+      "point_index": 25,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B15",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.57116055425879,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B15",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B15",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998161974385262,
+      "point_index": 25,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B16",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602031052058354,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B16",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B16",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998187281748354,
+      "point_index": 2,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B17",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602275330152224,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B17",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B17",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.996288216120394,
+      "point_index": 54,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B18",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602031052058354,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B18",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B18",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.996288216120394,
+      "point_index": 54,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B19",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602438250277427,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B19",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B19",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998187281748354,
+      "point_index": 2,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B20",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602438250277427,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B20",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B20",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997870943029987,
+      "point_index": 25,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B21",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602804267063483,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B21",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B21",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.997870943029987,
+      "point_index": 25,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B22",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.60251966659282,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B22",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.014830931773854,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B22",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.998187281748354,
+      "point_index": 2,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B23",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602356804796823,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B23",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 21.912112790057567,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B23",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.996548649176138,
+      "point_index": 58,
+      "design_target_mm": 25,
+      "passed": true
+    },
+    {
+      "name": "HybridNetwork_SwitchToPatch_B24",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.602417840959127,
+      "point_index": 4,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedNetwork_B24",
+      "kind": "network",
+      "minimum_sampled_radius_mm": 22.886711786938704,
+      "point_index": 69,
+      "design_target_mm": 20,
+      "passed": true
+    },
+    {
+      "name": "FixedAC_B24",
+      "kind": "ac",
+      "minimum_sampled_radius_mm": 27.996548649176138,
+      "point_index": 58,
+      "design_target_mm": 25,
+      "passed": true
+    }
+  ],
+  "method": "Circumradius of every three consecutive sampled centreline points, in millimetres.",
+  "limits": "Checks the existing geometric design targets only. Actual cable specification, bend-fatigue and installation qualification remain unverified."
+}

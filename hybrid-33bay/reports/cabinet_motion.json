@@ -1,0 +1,7034 @@
+{
+  "blend_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+  "single": false,
+  "expected_trays": 33,
+  "actual_trays": 33,
+  "drawer_ids": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9",
+    "B10",
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "B15",
+    "B16",
+    "B17",
+    "B18",
+    "B19",
+    "B20",
+    "B21",
+    "B22",
+    "B23",
+    "B24"
+  ],
+  "fixed_mesh_count": 3012,
+  "fixed_role_counts": {
+    "existing": 997,
+    "structure": 28,
+    "slide_fixed": 288,
+    "service": 910,
+    "connector": 617,
+    "cable_fixed": 170,
+    "label": 2
+  },
+  "excluded_attached_hardware": {
+    "B1_RailSupport": "fastener",
+    "B1_RailSupport.001": "fastener",
+    "B1_RailSupport.002": "fastener",
+    "B1_RailSupport.003": "fastener",
+    "B1_LockMount": "fastener",
+    "B1_ServicePlateMountEar": "fastener",
+    "B1_ServicePlateMountEar.001": "fastener",
+    "B1_ServicePlateMountEar.002": "fastener",
+    "B1_ServicePlateMountEar.003": "fastener",
+    "B1_SocketSupport": "fastener",
+    "B1_SocketSupport.001": "fastener",
+    "B1_SocketSupport.002": "fastener",
+    "B1_SocketSupport.003": "fastener",
+    "B1_AdapterBasketBracket": "fastener",
+    "B1_AdapterBasketBracket.001": "fastener",
+    "B1_AdapterBearingPad": "fastener",
+    "B2_RailSupport": "fastener",
+    "B2_RailSupport.001": "fastener",
+    "B2_RailSupport.002": "fastener",
+    "B2_RailSupport.003": "fastener",
+    "B2_LockMount": "fastener",
+    "B2_ServicePlateMountEar": "fastener",
+    "B2_ServicePlateMountEar.001": "fastener",
+    "B2_ServicePlateMountEar.002": "fastener",
+    "B2_ServicePlateMountEar.003": "fastener",
+    "B2_SocketSupport": "fastener",
+    "B2_SocketSupport.001": "fastener",
+    "B2_SocketSupport.002": "fastener",
+    "B2_SocketSupport.003": "fastener",
+    "B2_AdapterBasketBracket": "fastener",
+    "B2_AdapterBasketBracket.001": "fastener",
+    "B2_AdapterBearingPad": "fastener",
+    "B3_RailSupport": "fastener",
+    "B3_RailSupport.001": "fastener",
+    "B3_RailSupport.002": "fastener",
+    "B3_RailSupport.003": "fastener",
+    "B3_LockMount": "fastener",
+    "B3_ServicePlateMountEar": "fastener",
+    "B3_ServicePlateMountEar.001": "fastener",
+    "B3_ServicePlateMountEar.002": "fastener",
+    "B3_ServicePlateMountEar.003": "fastener",
+    "B3_SocketSupport": "fastener",
+    "B3_SocketSupport.001": "fastener",
+    "B3_SocketSupport.002": "fastener",
+    "B3_SocketSupport.003": "fastener",
+    "B3_AdapterBasketBracket": "fastener",
+    "B3_AdapterBasketBracket.001": "fastener",
+    "B3_AdapterBearingPad": "fastener",
+    "B4_RailSupport": "fastener",
+    "B4_RailSupport.001": "fastener",
+    "B4_RailSupport.002": "fastener",
+    "B4_RailSupport.003": "fastener",
+    "B4_LockMount": "fastener",
+    "B4_ServicePlateMountEar": "fastener",
+    "B4_ServicePlateMountEar.001": "fastener",
+    "B4_ServicePlateMountEar.002": "fastener",
+    "B4_ServicePlateMountEar.003": "fastener",
+    "B4_SocketSupport": "fastener",
+    "B4_SocketSupport.001": "fastener",
+    "B4_SocketSupport.002": "fastener",
+    "B4_SocketSupport.003": "fastener",
+    "B4_AdapterBasketBracket": "fastener",
+    "B4_AdapterBasketBracket.001": "fastener",
+    "B4_AdapterBearingPad": "fastener",
+    "B5_RailSupport": "fastener",
+    "B5_RailSupport.001": "fastener",
+    "B5_RailSupport.002": "fastener",
+    "B5_RailSupport.003": "fastener",
+    "B5_LockMount": "fastener",
+    "B5_ServicePlateMountEar": "fastener",
+    "B5_ServicePlateMountEar.001": "fastener",
+    "B5_ServicePlateMountEar.002": "fastener",
+    "B5_ServicePlateMountEar.003": "fastener",
+    "B5_SocketSupport": "fastener",
+    "B5_SocketSupport.001": "fastener",
+    "B5_SocketSupport.002": "fastener",
+    "B5_SocketSupport.003": "fastener",
+    "B5_AdapterBasketBracket": "fastener",
+    "B5_AdapterBasketBracket.001": "fastener",
+    "B5_AdapterBearingPad": "fastener",
+    "B6_RailSupport": "fastener",
+    "B6_RailSupport.001": "fastener",
+    "B6_RailSupport.002": "fastener",
+    "B6_RailSupport.003": "fastener",
+    "B6_LockMount": "fastener",
+    "B6_ServicePlateMountEar": "fastener",
+    "B6_ServicePlateMountEar.001": "fastener",
+    "B6_ServicePlateMountEar.002": "fastener",
+    "B6_ServicePlateMountEar.003": "fastener",
+    "B6_SocketSupport": "fastener",
+    "B6_SocketSupport.001": "fastener",
+    "B6_SocketSupport.002": "fastener",
+    "B6_SocketSupport.003": "fastener",
+    "B6_AdapterBasketBracket": "fastener",
+    "B6_AdapterBasketBracket.001": "fastener",
+    "B6_AdapterBearingPad": "fastener",
+    "B7_RailSupport": "fastener",
+    "B7_RailSupport.001": "fastener",
+    "B7_RailSupport.002": "fastener",
+    "B7_RailSupport.003": "fastener",
+    "B7_LockMount": "fastener",
+    "B7_ServicePlateMountEar": "fastener",
+    "B7_ServicePlateMountEar.001": "fastener",
+    "B7_ServicePlateMountEar.002": "fastener",
+    "B7_ServicePlateMountEar.003": "fastener",
+    "B7_SocketSupport": "fastener",
+    "B7_SocketSupport.001": "fastener",
+    "B7_SocketSupport.002": "fastener",
+    "B7_SocketSupport.003": "fastener",
+    "B7_AdapterBasketBracket": "fastener",
+    "B7_AdapterBasketBracket.001": "fastener",
+    "B7_AdapterBearingPad": "fastener",
+    "B8_RailSupport": "fastener",
+    "B8_RailSupport.001": "fastener",
+    "B8_RailSupport.002": "fastener",
+    "B8_RailSupport.003": "fastener",
+    "B8_LockMount": "fastener",
+    "B8_ServicePlateMountEar": "fastener",
+    "B8_ServicePlateMountEar.001": "fastener",
+    "B8_ServicePlateMountEar.002": "fastener",
+    "B8_ServicePlateMountEar.003": "fastener",
+    "B8_SocketSupport": "fastener",
+    "B8_SocketSupport.001": "fastener",
+    "B8_SocketSupport.002": "fastener",
+    "B8_SocketSupport.003": "fastener",
+    "B8_AdapterBasketBracket": "fastener",
+    "B8_AdapterBasketBracket.001": "fastener",
+    "B8_AdapterBearingPad": "fastener",
+    "B9_RailSupport": "fastener",
+    "B9_RailSupport.001": "fastener",
+    "B9_RailSupport.002": "fastener",
+    "B9_RailSupport.003": "fastener",
+    "B9_LockMount": "fastener",
+    "B9_ServicePlateMountEar": "fastener",
+    "B9_ServicePlateMountEar.001": "fastener",
+    "B9_ServicePlateMountEar.002": "fastener",
+    "B9_ServicePlateMountEar.003": "fastener",
+    "B9_SocketSupport": "fastener",
+    "B9_SocketSupport.001": "fastener",
+    "B9_SocketSupport.002": "fastener",
+    "B9_SocketSupport.003": "fastener",
+    "B9_AdapterBasketBracket": "fastener",
+    "B9_AdapterBasketBracket.001": "fastener",
+    "B9_AdapterBearingPad": "fastener",
+    "B10_RailSupport": "fastener",
+    "B10_RailSupport.001": "fastener",
+    "B10_RailSupport.002": "fastener",
+    "B10_RailSupport.003": "fastener",
+    "B10_LockMount": "fastener",
+    "B10_ServicePlateMountEar": "fastener",
+    "B10_ServicePlateMountEar.001": "fastener",
+    "B10_ServicePlateMountEar.002": "fastener",
+    "B10_ServicePlateMountEar.003": "fastener",
+    "B10_SocketSupport": "fastener",
+    "B10_SocketSupport.001": "fastener",
+    "B10_SocketSupport.002": "fastener",
+    "B10_SocketSupport.003": "fastener",
+    "B10_AdapterBasketBracket": "fastener",
+    "B10_AdapterBasketBracket.001": "fastener",
+    "B10_AdapterBearingPad": "fastener",
+    "B11_RailSupport": "fastener",
+    "B11_RailSupport.001": "fastener",
+    "B11_RailSupport.002": "fastener",
+    "B11_RailSupport.003": "fastener",
+    "B11_LockMount": "fastener",
+    "B11_ServicePlateMountEar": "fastener",
+    "B11_ServicePlateMountEar.001": "fastener",
+    "B11_ServicePlateMountEar.002": "fastener",
+    "B11_ServicePlateMountEar.003": "fastener",
+    "B11_SocketSupport": "fastener",
+    "B11_SocketSupport.001": "fastener",
+    "B11_SocketSupport.002": "fastener",
+    "B11_SocketSupport.003": "fastener",
+    "B11_AdapterBasketBracket": "fastener",
+    "B11_AdapterBasketBracket.001": "fastener",
+    "B11_AdapterBearingPad": "fastener",
+    "B12_RailSupport": "fastener",
+    "B12_RailSupport.001": "fastener",
+    "B12_RailSupport.002": "fastener",
+    "B12_RailSupport.003": "fastener",
+    "B12_LockMount": "fastener",
+    "B12_ServicePlateMountEar": "fastener",
+    "B12_ServicePlateMountEar.001": "fastener",
+    "B12_ServicePlateMountEar.002": "fastener",
+    "B12_ServicePlateMountEar.003": "fastener",
+    "B12_SocketSupport": "fastener",
+    "B12_SocketSupport.001": "fastener",
+    "B12_SocketSupport.002": "fastener",
+    "B12_SocketSupport.003": "fastener",
+    "B12_AdapterBasketBracket": "fastener",
+    "B12_AdapterBasketBracket.001": "fastener",
+    "B12_AdapterBearingPad": "fastener",
+    "B13_RailSupport": "fastener",
+    "B13_RailSupport.001": "fastener",
+    "B13_RailSupport.002": "fastener",
+    "B13_RailSupport.003": "fastener",
+    "B13_LockMount": "fastener",
+    "B13_ServicePlateMountEar": "fastener",
+    "B13_ServicePlateMountEar.001": "fastener",
+    "B13_ServicePlateMountEar.002": "fastener",
+    "B13_ServicePlateMountEar.003": "fastener",
+    "B13_SocketSupport": "fastener",
+    "B13_SocketSupport.001": "fastener",
+    "B13_SocketSupport.002": "fastener",
+    "B13_SocketSupport.003": "fastener",
+    "B13_AdapterBasketBracket": "fastener",
+    "B13_AdapterBasketBracket.001": "fastener",
+    "B13_AdapterBearingPad": "fastener",
+    "B14_RailSupport": "fastener",
+    "B14_RailSupport.001": "fastener",
+    "B14_RailSupport.002": "fastener",
+    "B14_RailSupport.003": "fastener",
+    "B14_LockMount": "fastener",
+    "B14_ServicePlateMountEar": "fastener",
+    "B14_ServicePlateMountEar.001": "fastener",
+    "B14_ServicePlateMountEar.002": "fastener",
+    "B14_ServicePlateMountEar.003": "fastener",
+    "B14_SocketSupport": "fastener",
+    "B14_SocketSupport.001": "fastener",
+    "B14_SocketSupport.002": "fastener",
+    "B14_SocketSupport.003": "fastener",
+    "B14_AdapterBasketBracket": "fastener",
+    "B14_AdapterBasketBracket.001": "fastener",
+    "B14_AdapterBearingPad": "fastener",
+    "B15_RailSupport": "fastener",
+    "B15_RailSupport.001": "fastener",
+    "B15_RailSupport.002": "fastener",
+    "B15_RailSupport.003": "fastener",
+    "B15_LockMount": "fastener",
+    "B15_ServicePlateMountEar": "fastener",
+    "B15_ServicePlateMountEar.001": "fastener",
+    "B15_ServicePlateMountEar.002": "fastener",
+    "B15_ServicePlateMountEar.003": "fastener",
+    "B15_SocketSupport": "fastener",
+    "B15_SocketSupport.001": "fastener",
+    "B15_SocketSupport.002": "fastener",
+    "B15_SocketSupport.003": "fastener",
+    "B15_AdapterBasketBracket": "fastener",
+    "B15_AdapterBasketBracket.001": "fastener",
+    "B15_AdapterBearingPad": "fastener",
+    "B16_RailSupport": "fastener",
+    "B16_RailSupport.001": "fastener",
+    "B16_RailSupport.002": "fastener",
+    "B16_RailSupport.003": "fastener",
+    "B16_LockMount": "fastener",
+    "B16_ServicePlateMountEar": "fastener",
+    "B16_ServicePlateMountEar.001": "fastener",
+    "B16_ServicePlateMountEar.002": "fastener",
+    "B16_ServicePlateMountEar.003": "fastener",
+    "B16_SocketSupport": "fastener",
+    "B16_SocketSupport.001": "fastener",
+    "B16_SocketSupport.002": "fastener",
+    "B16_SocketSupport.003": "fastener",
+    "B16_AdapterBasketBracket": "fastener",
+    "B16_AdapterBasketBracket.001": "fastener",
+    "B16_AdapterBearingPad": "fastener",
+    "B17_RailSupport": "fastener",
+    "B17_RailSupport.001": "fastener",
+    "B17_RailSupport.002": "fastener",
+    "B17_RailSupport.003": "fastener",
+    "B17_LockMount": "fastener",
+    "B17_ServicePlateMountEar": "fastener",
+    "B17_ServicePlateMountEar.001": "fastener",
+    "B17_ServicePlateMountEar.002": "fastener",
+    "B17_ServicePlateMountEar.003": "fastener",
+    "B17_SocketSupport": "fastener",
+    "B17_SocketSupport.001": "fastener",
+    "B17_SocketSupport.002": "fastener",
+    "B17_SocketSupport.003": "fastener",
+    "B17_AdapterBasketBracket": "fastener",
+    "B17_AdapterBasketBracket.001": "fastener",
+    "B17_AdapterBearingPad": "fastener",
+    "B18_RailSupport": "fastener",
+    "B18_RailSupport.001": "fastener",
+    "B18_RailSupport.002": "fastener",
+    "B18_RailSupport.003": "fastener",
+    "B18_LockMount": "fastener",
+    "B18_ServicePlateMountEar": "fastener",
+    "B18_ServicePlateMountEar.001": "fastener",
+    "B18_ServicePlateMountEar.002": "fastener",
+    "B18_ServicePlateMountEar.003": "fastener",
+    "B18_SocketSupport": "fastener",
+    "B18_SocketSupport.001": "fastener",
+    "B18_SocketSupport.002": "fastener",
+    "B18_SocketSupport.003": "fastener",
+    "B18_AdapterBasketBracket": "fastener",
+    "B18_AdapterBasketBracket.001": "fastener",
+    "B18_AdapterBearingPad": "fastener",
+    "B19_RailSupport": "fastener",
+    "B19_RailSupport.001": "fastener",
+    "B19_RailSupport.002": "fastener",
+    "B19_RailSupport.003": "fastener",
+    "B19_LockMount": "fastener",
+    "B19_ServicePlateMountEar": "fastener",
+    "B19_ServicePlateMountEar.001": "fastener",
+    "B19_ServicePlateMountEar.002": "fastener",
+    "B19_ServicePlateMountEar.003": "fastener",
+    "B19_SocketSupport": "fastener",
+    "B19_SocketSupport.001": "fastener",
+    "B19_SocketSupport.002": "fastener",
+    "B19_SocketSupport.003": "fastener",
+    "B19_AdapterBasketBracket": "fastener",
+    "B19_AdapterBasketBracket.001": "fastener",
+    "B19_AdapterBearingPad": "fastener",
+    "B20_RailSupport": "fastener",
+    "B20_RailSupport.001": "fastener",
+    "B20_RailSupport.002": "fastener",
+    "B20_RailSupport.003": "fastener",
+    "B20_LockMount": "fastener",
+    "B20_ServicePlateMountEar": "fastener",
+    "B20_ServicePlateMountEar.001": "fastener",
+    "B20_ServicePlateMountEar.002": "fastener",
+    "B20_ServicePlateMountEar.003": "fastener",
+    "B20_SocketSupport": "fastener",
+    "B20_SocketSupport.001": "fastener",
+    "B20_SocketSupport.002": "fastener",
+    "B20_SocketSupport.003": "fastener",
+    "B20_AdapterBasketBracket": "fastener",
+    "B20_AdapterBasketBracket.001": "fastener",
+    "B20_AdapterBearingPad": "fastener",
+    "B21_RailSupport": "fastener",
+    "B21_RailSupport.001": "fastener",
+    "B21_RailSupport.002": "fastener",
+    "B21_RailSupport.003": "fastener",
+    "B21_LockMount": "fastener",
+    "B21_ServicePlateMountEar": "fastener",
+    "B21_ServicePlateMountEar.001": "fastener",
+    "B21_ServicePlateMountEar.002": "fastener",
+    "B21_ServicePlateMountEar.003": "fastener",
+    "B21_SocketSupport": "fastener",
+    "B21_SocketSupport.001": "fastener",
+    "B21_SocketSupport.002": "fastener",
+    "B21_SocketSupport.003": "fastener",
+    "B21_AdapterBasketBracket": "fastener",
+    "B21_AdapterBasketBracket.001": "fastener",
+    "B21_AdapterBearingPad": "fastener",
+    "B22_RailSupport": "fastener",
+    "B22_RailSupport.001": "fastener",
+    "B22_RailSupport.002": "fastener",
+    "B22_RailSupport.003": "fastener",
+    "B22_LockMount": "fastener",
+    "B22_ServicePlateMountEar": "fastener",
+    "B22_ServicePlateMountEar.001": "fastener",
+    "B22_ServicePlateMountEar.002": "fastener",
+    "B22_ServicePlateMountEar.003": "fastener",
+    "B22_SocketSupport": "fastener",
+    "B22_SocketSupport.001": "fastener",
+    "B22_SocketSupport.002": "fastener",
+    "B22_SocketSupport.003": "fastener",
+    "B22_AdapterBasketBracket": "fastener",
+    "B22_AdapterBasketBracket.001": "fastener",
+    "B22_AdapterBearingPad": "fastener",
+    "B23_RailSupport": "fastener",
+    "B23_RailSupport.001": "fastener",
+    "B23_RailSupport.002": "fastener",
+    "B23_RailSupport.003": "fastener",
+    "B23_LockMount": "fastener",
+    "B23_ServicePlateMountEar": "fastener",
+    "B23_ServicePlateMountEar.001": "fastener",
+    "B23_ServicePlateMountEar.002": "fastener",
+    "B23_ServicePlateMountEar.003": "fastener",
+    "B23_SocketSupport": "fastener",
+    "B23_SocketSupport.001": "fastener",
+    "B23_SocketSupport.002": "fastener",
+    "B23_SocketSupport.003": "fastener",
+    "B23_AdapterBasketBracket": "fastener",
+    "B23_AdapterBasketBracket.001": "fastener",
+    "B23_AdapterBearingPad": "fastener",
+    "B24_RailSupport": "fastener",
+    "B24_RailSupport.001": "fastener",
+    "B24_RailSupport.002": "fastener",
+    "B24_RailSupport.003": "fastener",
+    "B24_LockMount": "fastener",
+    "B24_ServicePlateMountEar": "fastener",
+    "B24_ServicePlateMountEar.001": "fastener",
+    "B24_ServicePlateMountEar.002": "fastener",
+    "B24_ServicePlateMountEar.003": "fastener",
+    "B24_SocketSupport": "fastener",
+    "B24_SocketSupport.001": "fastener",
+    "B24_SocketSupport.002": "fastener",
+    "B24_SocketSupport.003": "fastener",
+    "B24_AdapterBasketBracket": "fastener",
+    "B24_AdapterBasketBracket.001": "fastener",
+    "B24_AdapterBearingPad": "fastener",
+    "HybridRearPatch_Mount": "fastener",
+    "HybridRearPatch_Mount.001": "fastener",
+    "HybridRearPatch_MountRiser": "fastener",
+    "HybridRearPatch_MountReturn": "fastener",
+    "HybridRearPatch_MountRiser.001": "fastener",
+    "HybridRearPatch_MountReturn.001": "fastener",
+    "Hybrid_network_SupportBracket_0": "fastener",
+    "Hybrid_network_SupportBracket_0.001": "fastener",
+    "Hybrid_network_SupportBracket_0.002": "fastener",
+    "Hybrid_network_SupportBracket_0.003": "fastener",
+    "Hybrid_network_SupportBracket_0.004": "fastener",
+    "Hybrid_ac_SupportBracket_0": "fastener",
+    "Hybrid_ac_SupportBracket_0.001": "fastener",
+    "Hybrid_ac_SupportBracket_0.002": "fastener",
+    "Hybrid_ac_SupportBracket_0.003": "fastener",
+    "Hybrid_ac_SupportBracket_0.004": "fastener",
+    "Hybrid_network_SupportBracket_1": "fastener",
+    "Hybrid_network_SupportBracket_1.001": "fastener",
+    "Hybrid_network_SupportBracket_1.002": "fastener",
+    "Hybrid_network_SupportBracket_1.003": "fastener",
+    "Hybrid_network_SupportBracket_1.004": "fastener",
+    "Hybrid_ac_SupportBracket_1": "fastener",
+    "Hybrid_ac_SupportBracket_1.001": "fastener",
+    "Hybrid_ac_SupportBracket_1.002": "fastener",
+    "Hybrid_ac_SupportBracket_1.003": "fastener",
+    "Hybrid_ac_SupportBracket_1.004": "fastener",
+    "Hybrid_network_SupportBracket_2": "fastener",
+    "Hybrid_network_SupportBracket_2.001": "fastener",
+    "Hybrid_network_SupportBracket_2.002": "fastener",
+    "Hybrid_network_SupportBracket_2.003": "fastener",
+    "Hybrid_network_SupportBracket_2.004": "fastener",
+    "Hybrid_ac_SupportBracket_2": "fastener",
+    "Hybrid_ac_SupportBracket_2.001": "fastener",
+    "Hybrid_ac_SupportBracket_2.002": "fastener",
+    "Hybrid_ac_SupportBracket_2.003": "fastener",
+    "Hybrid_ac_SupportBracket_2.004": "fastener",
+    "Hybrid_ac_TroughLeg": "fastener",
+    "Hybrid_ac_TroughLeg.001": "fastener",
+    "Hybrid_ac_TroughLeg.002": "fastener",
+    "Hybrid_network_TroughLeg": "fastener",
+    "Hybrid_network_TroughLeg.001": "fastener",
+    "Hybrid_network_TroughLeg.002": "fastener"
+  },
+  "excluded_moving_rail_engagement": [
+    "B1_RailMoving",
+    "B1_RailDrawerBracket",
+    "B1_RailMoving.001",
+    "B1_RailDrawerBracket.001",
+    "B2_RailMoving",
+    "B2_RailDrawerBracket",
+    "B2_RailMoving.001",
+    "B2_RailDrawerBracket.001",
+    "B3_RailMoving",
+    "B3_RailDrawerBracket",
+    "B3_RailMoving.001",
+    "B3_RailDrawerBracket.001",
+    "B4_RailMoving",
+    "B4_RailDrawerBracket",
+    "B4_RailMoving.001",
+    "B4_RailDrawerBracket.001",
+    "B5_RailMoving",
+    "B5_RailDrawerBracket",
+    "B5_RailMoving.001",
+    "B5_RailDrawerBracket.001",
+    "B6_RailMoving",
+    "B6_RailDrawerBracket",
+    "B6_RailMoving.001",
+    "B6_RailDrawerBracket.001",
+    "B7_RailMoving",
+    "B7_RailDrawerBracket",
+    "B7_RailMoving.001",
+    "B7_RailDrawerBracket.001",
+    "B8_RailMoving",
+    "B8_RailDrawerBracket",
+    "B8_RailMoving.001",
+    "B8_RailDrawerBracket.001",
+    "B9_RailMoving",
+    "B9_RailDrawerBracket",
+    "B9_RailMoving.001",
+    "B9_RailDrawerBracket.001",
+    "B10_RailMoving",
+    "B10_RailDrawerBracket",
+    "B10_RailMoving.001",
+    "B10_RailDrawerBracket.001",
+    "B11_RailMoving",
+    "B11_RailDrawerBracket",
+    "B11_RailMoving.001",
+    "B11_RailDrawerBracket.001",
+    "B12_RailMoving",
+    "B12_RailDrawerBracket",
+    "B12_RailMoving.001",
+    "B12_RailDrawerBracket.001",
+    "B13_RailMoving",
+    "B13_RailDrawerBracket",
+    "B13_RailMoving.001",
+    "B13_RailDrawerBracket.001",
+    "B14_RailMoving",
+    "B14_RailDrawerBracket",
+    "B14_RailMoving.001",
+    "B14_RailDrawerBracket.001",
+    "B15_RailMoving",
+    "B15_RailDrawerBracket",
+    "B15_RailMoving.001",
+    "B15_RailDrawerBracket.001",
+    "B16_RailMoving",
+    "B16_RailDrawerBracket",
+    "B16_RailMoving.001",
+    "B16_RailDrawerBracket.001",
+    "B17_RailMoving",
+    "B17_RailDrawerBracket",
+    "B17_RailMoving.001",
+    "B17_RailDrawerBracket.001",
+    "B18_RailMoving",
+    "B18_RailDrawerBracket",
+    "B18_RailMoving.001",
+    "B18_RailDrawerBracket.001",
+    "B19_RailMoving",
+    "B19_RailDrawerBracket",
+    "B19_RailMoving.001",
+    "B19_RailDrawerBracket.001",
+    "B20_RailMoving",
+    "B20_RailDrawerBracket",
+    "B20_RailMoving.001",
+    "B20_RailDrawerBracket.001",
+    "B21_RailMoving",
+    "B21_RailDrawerBracket",
+    "B21_RailMoving.001",
+    "B21_RailDrawerBracket.001",
+    "B22_RailMoving",
+    "B22_RailDrawerBracket",
+    "B22_RailMoving.001",
+    "B22_RailDrawerBracket.001",
+    "B23_RailMoving",
+    "B23_RailDrawerBracket",
+    "B23_RailMoving.001",
+    "B23_RailDrawerBracket.001",
+    "B24_RailMoving",
+    "B24_RailDrawerBracket",
+    "B24_RailMoving.001",
+    "B24_RailDrawerBracket.001"
+  ],
+  "moving_object_counts": {
+    "A1": 17,
+    "A2": 17,
+    "A3": 12,
+    "A4": 17,
+    "A5": 17,
+    "A6": 17,
+    "A7": 17,
+    "A8": 17,
+    "A9": 17,
+    "B1": 51,
+    "B2": 43,
+    "B3": 51,
+    "B4": 51,
+    "B5": 51,
+    "B6": 43,
+    "B7": 51,
+    "B8": 51,
+    "B9": 51,
+    "B10": 51,
+    "B11": 51,
+    "B12": 51,
+    "B13": 51,
+    "B14": 51,
+    "B15": 51,
+    "B16": 51,
+    "B17": 51,
+    "B18": 51,
+    "B19": 51,
+    "B20": 43,
+    "B21": 51,
+    "B22": 51,
+    "B23": 51,
+    "B24": 51
+  },
+  "dynamic_cable_counts": {
+    "B1": 2,
+    "B2": 1,
+    "B3": 2,
+    "B4": 2,
+    "B5": 2,
+    "B6": 1,
+    "B7": 2,
+    "B8": 2,
+    "B9": 2,
+    "B10": 2,
+    "B11": 2,
+    "B12": 2,
+    "B13": 2,
+    "B14": 2,
+    "B15": 2,
+    "B16": 2,
+    "B17": 2,
+    "B18": 2,
+    "B19": 2,
+    "B20": 1,
+    "B21": 2,
+    "B22": 2,
+    "B23": 2,
+    "B24": 2
+  },
+  "clearance": [
+    {
+      "bay": "B1",
+      "support_z_cm": 150.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_0"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B2",
+      "support_z_cm": 150.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_1"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B3",
+      "support_z_cm": 150.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "BTopCeiling_2"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B4",
+      "support_z_cm": 134.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B1_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B5",
+      "support_z_cm": 134.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B2_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B6",
+      "support_z_cm": 134.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B3_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B7",
+      "support_z_cm": 117.99999,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B4_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B8",
+      "support_z_cm": 117.99999,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B5_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B9",
+      "support_z_cm": 117.99999,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B6_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B10",
+      "support_z_cm": 102.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B7_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B11",
+      "support_z_cm": 102.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B8_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B12",
+      "support_z_cm": 102.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 12.99999,
+          "obstacle": "B9_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 12.99999,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B13",
+      "support_z_cm": 86.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B10_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B14",
+      "support_z_cm": 86.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B11_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B15",
+      "support_z_cm": 86.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B12_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B16",
+      "support_z_cm": 70.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B13_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B17",
+      "support_z_cm": 70.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B14_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B18",
+      "support_z_cm": 70.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B15_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B19",
+      "support_z_cm": 54.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B16_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B20",
+      "support_z_cm": 54.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B17_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B21",
+      "support_z_cm": 54.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "B18_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B22",
+      "support_z_cm": 38.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B19_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B23",
+      "support_z_cm": 38.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B20_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    },
+    {
+      "bay": "B24",
+      "support_z_cm": 38.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.00001,
+          "obstacle": "B21_FixedShelf"
+        }
+      ],
+      "minimum_clear_cm": 13.00001,
+      "all_rays_bounded": true
+    }
+  ],
+  "poses": [
+    {
+      "name": "simultaneous_0",
+      "travel_mm": {
+        "A1": 0,
+        "A2": 0,
+        "A3": 0,
+        "A4": 0,
+        "A5": 0,
+        "A6": 0,
+        "A7": 0,
+        "A8": 0,
+        "A9": 0,
+        "B1": 0,
+        "B2": 0,
+        "B3": 0,
+        "B4": 0,
+        "B5": 0,
+        "B6": 0,
+        "B7": 0,
+        "B8": 0,
+        "B9": 0,
+        "B10": 0,
+        "B11": 0,
+        "B12": 0,
+        "B13": 0,
+        "B14": 0,
+        "B15": 0,
+        "B16": 0,
+        "B17": 0,
+        "B18": 0,
+        "B19": 0,
+        "B20": 0,
+        "B21": 0,
+        "B22": 0,
+        "B23": 0,
+        "B24": 0
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_20",
+      "travel_mm": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "A6": 20,
+        "A7": 20,
+        "A8": 20,
+        "A9": 20,
+        "B1": 20,
+        "B2": 20,
+        "B3": 20,
+        "B4": 20,
+        "B5": 20,
+        "B6": 20,
+        "B7": 20,
+        "B8": 20,
+        "B9": 20,
+        "B10": 20,
+        "B11": 20,
+        "B12": 20,
+        "B13": 20,
+        "B14": 20,
+        "B15": 20,
+        "B16": 20,
+        "B17": 20,
+        "B18": 20,
+        "B19": 20,
+        "B20": 20,
+        "B21": 20,
+        "B22": 20,
+        "B23": 20,
+        "B24": 20
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_40",
+      "travel_mm": {
+        "A1": 40,
+        "A2": 40,
+        "A3": 40,
+        "A4": 40,
+        "A5": 40,
+        "A6": 40,
+        "A7": 40,
+        "A8": 40,
+        "A9": 40,
+        "B1": 40,
+        "B2": 40,
+        "B3": 40,
+        "B4": 40,
+        "B5": 40,
+        "B6": 40,
+        "B7": 40,
+        "B8": 40,
+        "B9": 40,
+        "B10": 40,
+        "B11": 40,
+        "B12": 40,
+        "B13": 40,
+        "B14": 40,
+        "B15": 40,
+        "B16": 40,
+        "B17": 40,
+        "B18": 40,
+        "B19": 40,
+        "B20": 40,
+        "B21": 40,
+        "B22": 40,
+        "B23": 40,
+        "B24": 40
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_60",
+      "travel_mm": {
+        "A1": 60,
+        "A2": 60,
+        "A3": 60,
+        "A4": 60,
+        "A5": 60,
+        "A6": 60,
+        "A7": 60,
+        "A8": 60,
+        "A9": 60,
+        "B1": 60,
+        "B2": 60,
+        "B3": 60,
+        "B4": 60,
+        "B5": 60,
+        "B6": 60,
+        "B7": 60,
+        "B8": 60,
+        "B9": 60,
+        "B10": 60,
+        "B11": 60,
+        "B12": 60,
+        "B13": 60,
+        "B14": 60,
+        "B15": 60,
+        "B16": 60,
+        "B17": 60,
+        "B18": 60,
+        "B19": 60,
+        "B20": 60,
+        "B21": 60,
+        "B22": 60,
+        "B23": 60,
+        "B24": 60
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_80",
+      "travel_mm": {
+        "A1": 80,
+        "A2": 80,
+        "A3": 80,
+        "A4": 80,
+        "A5": 80,
+        "A6": 80,
+        "A7": 80,
+        "A8": 80,
+        "A9": 80,
+        "B1": 80,
+        "B2": 80,
+        "B3": 80,
+        "B4": 80,
+        "B5": 80,
+        "B6": 80,
+        "B7": 80,
+        "B8": 80,
+        "B9": 80,
+        "B10": 80,
+        "B11": 80,
+        "B12": 80,
+        "B13": 80,
+        "B14": 80,
+        "B15": 80,
+        "B16": 80,
+        "B17": 80,
+        "B18": 80,
+        "B19": 80,
+        "B20": 80,
+        "B21": 80,
+        "B22": 80,
+        "B23": 80,
+        "B24": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_100",
+      "travel_mm": {
+        "A1": 100,
+        "A2": 100,
+        "A3": 100,
+        "A4": 100,
+        "A5": 100,
+        "A6": 100,
+        "A7": 100,
+        "A8": 100,
+        "A9": 100,
+        "B1": 100,
+        "B2": 100,
+        "B3": 100,
+        "B4": 100,
+        "B5": 100,
+        "B6": 100,
+        "B7": 100,
+        "B8": 100,
+        "B9": 100,
+        "B10": 100,
+        "B11": 100,
+        "B12": 100,
+        "B13": 100,
+        "B14": 100,
+        "B15": 100,
+        "B16": 100,
+        "B17": 100,
+        "B18": 100,
+        "B19": 100,
+        "B20": 100,
+        "B21": 100,
+        "B22": 100,
+        "B23": 100,
+        "B24": 100
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_120",
+      "travel_mm": {
+        "A1": 120,
+        "A2": 120,
+        "A3": 120,
+        "A4": 120,
+        "A5": 120,
+        "A6": 120,
+        "A7": 120,
+        "A8": 120,
+        "A9": 120,
+        "B1": 120,
+        "B2": 120,
+        "B3": 120,
+        "B4": 120,
+        "B5": 120,
+        "B6": 120,
+        "B7": 120,
+        "B8": 120,
+        "B9": 120,
+        "B10": 120,
+        "B11": 120,
+        "B12": 120,
+        "B13": 120,
+        "B14": 120,
+        "B15": 120,
+        "B16": 120,
+        "B17": 120,
+        "B18": 120,
+        "B19": 120,
+        "B20": 120,
+        "B21": 120,
+        "B22": 120,
+        "B23": 120,
+        "B24": 120
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_140",
+      "travel_mm": {
+        "A1": 140,
+        "A2": 140,
+        "A3": 140,
+        "A4": 140,
+        "A5": 140,
+        "A6": 140,
+        "A7": 140,
+        "A8": 140,
+        "A9": 140,
+        "B1": 140,
+        "B2": 140,
+        "B3": 140,
+        "B4": 140,
+        "B5": 140,
+        "B6": 140,
+        "B7": 140,
+        "B8": 140,
+        "B9": 140,
+        "B10": 140,
+        "B11": 140,
+        "B12": 140,
+        "B13": 140,
+        "B14": 140,
+        "B15": 140,
+        "B16": 140,
+        "B17": 140,
+        "B18": 140,
+        "B19": 140,
+        "B20": 140,
+        "B21": 140,
+        "B22": 140,
+        "B23": 140,
+        "B24": 140
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_160",
+      "travel_mm": {
+        "A1": 160,
+        "A2": 160,
+        "A3": 160,
+        "A4": 160,
+        "A5": 160,
+        "A6": 160,
+        "A7": 160,
+        "A8": 160,
+        "A9": 160,
+        "B1": 160,
+        "B2": 160,
+        "B3": 160,
+        "B4": 160,
+        "B5": 160,
+        "B6": 160,
+        "B7": 160,
+        "B8": 160,
+        "B9": 160,
+        "B10": 160,
+        "B11": 160,
+        "B12": 160,
+        "B13": 160,
+        "B14": 160,
+        "B15": 160,
+        "B16": 160,
+        "B17": 160,
+        "B18": 160,
+        "B19": 160,
+        "B20": 160,
+        "B21": 160,
+        "B22": 160,
+        "B23": 160,
+        "B24": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_180",
+      "travel_mm": {
+        "A1": 180,
+        "A2": 180,
+        "A3": 180,
+        "A4": 180,
+        "A5": 180,
+        "A6": 180,
+        "A7": 180,
+        "A8": 180,
+        "A9": 180,
+        "B1": 180,
+        "B2": 180,
+        "B3": 180,
+        "B4": 180,
+        "B5": 180,
+        "B6": 180,
+        "B7": 180,
+        "B8": 180,
+        "B9": 180,
+        "B10": 180,
+        "B11": 180,
+        "B12": 180,
+        "B13": 180,
+        "B14": 180,
+        "B15": 180,
+        "B16": 180,
+        "B17": 180,
+        "B18": 180,
+        "B19": 180,
+        "B20": 180,
+        "B21": 180,
+        "B22": 180,
+        "B23": 180,
+        "B24": 180
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_200",
+      "travel_mm": {
+        "A1": 200,
+        "A2": 200,
+        "A3": 200,
+        "A4": 200,
+        "A5": 200,
+        "A6": 200,
+        "A7": 200,
+        "A8": 200,
+        "A9": 200,
+        "B1": 200,
+        "B2": 200,
+        "B3": 200,
+        "B4": 200,
+        "B5": 200,
+        "B6": 200,
+        "B7": 200,
+        "B8": 200,
+        "B9": 200,
+        "B10": 200,
+        "B11": 200,
+        "B12": 200,
+        "B13": 200,
+        "B14": 200,
+        "B15": 200,
+        "B16": 200,
+        "B17": 200,
+        "B18": 200,
+        "B19": 200,
+        "B20": 200,
+        "B21": 200,
+        "B22": 200,
+        "B23": 200,
+        "B24": 200
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_220",
+      "travel_mm": {
+        "A1": 220,
+        "A2": 220,
+        "A3": 220,
+        "A4": 220,
+        "A5": 220,
+        "A6": 220,
+        "A7": 220,
+        "A8": 220,
+        "A9": 220,
+        "B1": 220,
+        "B2": 220,
+        "B3": 220,
+        "B4": 220,
+        "B5": 220,
+        "B6": 220,
+        "B7": 220,
+        "B8": 220,
+        "B9": 220,
+        "B10": 220,
+        "B11": 220,
+        "B12": 220,
+        "B13": 220,
+        "B14": 220,
+        "B15": 220,
+        "B16": 220,
+        "B17": 220,
+        "B18": 220,
+        "B19": 220,
+        "B20": 220,
+        "B21": 220,
+        "B22": 220,
+        "B23": 220,
+        "B24": 220
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_240",
+      "travel_mm": {
+        "A1": 240,
+        "A2": 240,
+        "A3": 240,
+        "A4": 240,
+        "A5": 240,
+        "A6": 240,
+        "A7": 240,
+        "A8": 240,
+        "A9": 240,
+        "B1": 240,
+        "B2": 240,
+        "B3": 240,
+        "B4": 240,
+        "B5": 240,
+        "B6": 240,
+        "B7": 240,
+        "B8": 240,
+        "B9": 240,
+        "B10": 240,
+        "B11": 240,
+        "B12": 240,
+        "B13": 240,
+        "B14": 240,
+        "B15": 240,
+        "B16": 240,
+        "B17": 240,
+        "B18": 240,
+        "B19": 240,
+        "B20": 240,
+        "B21": 240,
+        "B22": 240,
+        "B23": 240,
+        "B24": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_260",
+      "travel_mm": {
+        "A1": 260,
+        "A2": 260,
+        "A3": 260,
+        "A4": 260,
+        "A5": 260,
+        "A6": 260,
+        "A7": 260,
+        "A8": 260,
+        "A9": 260,
+        "B1": 260,
+        "B2": 260,
+        "B3": 260,
+        "B4": 260,
+        "B5": 260,
+        "B6": 260,
+        "B7": 260,
+        "B8": 260,
+        "B9": 260,
+        "B10": 260,
+        "B11": 260,
+        "B12": 260,
+        "B13": 260,
+        "B14": 260,
+        "B15": 260,
+        "B16": 260,
+        "B17": 260,
+        "B18": 260,
+        "B19": 260,
+        "B20": 260,
+        "B21": 260,
+        "B22": 260,
+        "B23": 260,
+        "B24": 260
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_280",
+      "travel_mm": {
+        "A1": 280,
+        "A2": 280,
+        "A3": 280,
+        "A4": 280,
+        "A5": 280,
+        "A6": 280,
+        "A7": 280,
+        "A8": 280,
+        "A9": 280,
+        "B1": 280,
+        "B2": 280,
+        "B3": 280,
+        "B4": 280,
+        "B5": 280,
+        "B6": 280,
+        "B7": 280,
+        "B8": 280,
+        "B9": 280,
+        "B10": 280,
+        "B11": 280,
+        "B12": 280,
+        "B13": 280,
+        "B14": 280,
+        "B15": 280,
+        "B16": 280,
+        "B17": 280,
+        "B18": 280,
+        "B19": 280,
+        "B20": 280,
+        "B21": 280,
+        "B22": 280,
+        "B23": 280,
+        "B24": 280
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_300",
+      "travel_mm": {
+        "A1": 300,
+        "A2": 300,
+        "A3": 300,
+        "A4": 300,
+        "A5": 300,
+        "A6": 300,
+        "A7": 300,
+        "A8": 300,
+        "A9": 300,
+        "B1": 300,
+        "B2": 300,
+        "B3": 300,
+        "B4": 300,
+        "B5": 300,
+        "B6": 300,
+        "B7": 300,
+        "B8": 300,
+        "B9": 300,
+        "B10": 300,
+        "B11": 300,
+        "B12": 300,
+        "B13": 300,
+        "B14": 300,
+        "B15": 300,
+        "B16": 300,
+        "B17": 300,
+        "B18": 300,
+        "B19": 300,
+        "B20": 300,
+        "B21": 300,
+        "B22": 300,
+        "B23": 300,
+        "B24": 300
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_320",
+      "travel_mm": {
+        "A1": 320,
+        "A2": 320,
+        "A3": 320,
+        "A4": 320,
+        "A5": 320,
+        "A6": 320,
+        "A7": 320,
+        "A8": 320,
+        "A9": 320,
+        "B1": 320,
+        "B2": 320,
+        "B3": 320,
+        "B4": 320,
+        "B5": 320,
+        "B6": 320,
+        "B7": 320,
+        "B8": 320,
+        "B9": 320,
+        "B10": 320,
+        "B11": 320,
+        "B12": 320,
+        "B13": 320,
+        "B14": 320,
+        "B15": 320,
+        "B16": 320,
+        "B17": 320,
+        "B18": 320,
+        "B19": 320,
+        "B20": 320,
+        "B21": 320,
+        "B22": 320,
+        "B23": 320,
+        "B24": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B1_80",
+      "travel_mm": {
+        "B1": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B1_160",
+      "travel_mm": {
+        "B1": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B1_240",
+      "travel_mm": {
+        "B1": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B1_320",
+      "travel_mm": {
+        "B1": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B2_80",
+      "travel_mm": {
+        "B2": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B2_160",
+      "travel_mm": {
+        "B2": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B2_240",
+      "travel_mm": {
+        "B2": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B2_320",
+      "travel_mm": {
+        "B2": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B3_80",
+      "travel_mm": {
+        "B3": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B3_160",
+      "travel_mm": {
+        "B3": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B3_240",
+      "travel_mm": {
+        "B3": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B3_320",
+      "travel_mm": {
+        "B3": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B4_80",
+      "travel_mm": {
+        "B4": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B4_160",
+      "travel_mm": {
+        "B4": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B4_240",
+      "travel_mm": {
+        "B4": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B4_320",
+      "travel_mm": {
+        "B4": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B5_80",
+      "travel_mm": {
+        "B5": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B5_160",
+      "travel_mm": {
+        "B5": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B5_240",
+      "travel_mm": {
+        "B5": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B5_320",
+      "travel_mm": {
+        "B5": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B6_80",
+      "travel_mm": {
+        "B6": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B6_160",
+      "travel_mm": {
+        "B6": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B6_240",
+      "travel_mm": {
+        "B6": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B6_320",
+      "travel_mm": {
+        "B6": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B7_80",
+      "travel_mm": {
+        "B7": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B7_160",
+      "travel_mm": {
+        "B7": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B7_240",
+      "travel_mm": {
+        "B7": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B7_320",
+      "travel_mm": {
+        "B7": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B8_80",
+      "travel_mm": {
+        "B8": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B8_160",
+      "travel_mm": {
+        "B8": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B8_240",
+      "travel_mm": {
+        "B8": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B8_320",
+      "travel_mm": {
+        "B8": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B9_80",
+      "travel_mm": {
+        "B9": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B9_160",
+      "travel_mm": {
+        "B9": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B9_240",
+      "travel_mm": {
+        "B9": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B9_320",
+      "travel_mm": {
+        "B9": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B10_80",
+      "travel_mm": {
+        "B10": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B10_160",
+      "travel_mm": {
+        "B10": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B10_240",
+      "travel_mm": {
+        "B10": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B10_320",
+      "travel_mm": {
+        "B10": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B11_80",
+      "travel_mm": {
+        "B11": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B11_160",
+      "travel_mm": {
+        "B11": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B11_240",
+      "travel_mm": {
+        "B11": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B11_320",
+      "travel_mm": {
+        "B11": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B12_80",
+      "travel_mm": {
+        "B12": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B12_160",
+      "travel_mm": {
+        "B12": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B12_240",
+      "travel_mm": {
+        "B12": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B12_320",
+      "travel_mm": {
+        "B12": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B13_80",
+      "travel_mm": {
+        "B13": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B13_160",
+      "travel_mm": {
+        "B13": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B13_240",
+      "travel_mm": {
+        "B13": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B13_320",
+      "travel_mm": {
+        "B13": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B14_80",
+      "travel_mm": {
+        "B14": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B14_160",
+      "travel_mm": {
+        "B14": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B14_240",
+      "travel_mm": {
+        "B14": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B14_320",
+      "travel_mm": {
+        "B14": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B15_80",
+      "travel_mm": {
+        "B15": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B15_160",
+      "travel_mm": {
+        "B15": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B15_240",
+      "travel_mm": {
+        "B15": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B15_320",
+      "travel_mm": {
+        "B15": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B16_80",
+      "travel_mm": {
+        "B16": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B16_160",
+      "travel_mm": {
+        "B16": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B16_240",
+      "travel_mm": {
+        "B16": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B16_320",
+      "travel_mm": {
+        "B16": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B17_80",
+      "travel_mm": {
+        "B17": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B17_160",
+      "travel_mm": {
+        "B17": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B17_240",
+      "travel_mm": {
+        "B17": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B17_320",
+      "travel_mm": {
+        "B17": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B18_80",
+      "travel_mm": {
+        "B18": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B18_160",
+      "travel_mm": {
+        "B18": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B18_240",
+      "travel_mm": {
+        "B18": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B18_320",
+      "travel_mm": {
+        "B18": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B19_80",
+      "travel_mm": {
+        "B19": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B19_160",
+      "travel_mm": {
+        "B19": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B19_240",
+      "travel_mm": {
+        "B19": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B19_320",
+      "travel_mm": {
+        "B19": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B20_80",
+      "travel_mm": {
+        "B20": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B20_160",
+      "travel_mm": {
+        "B20": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B20_240",
+      "travel_mm": {
+        "B20": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B20_320",
+      "travel_mm": {
+        "B20": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B21_80",
+      "travel_mm": {
+        "B21": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B21_160",
+      "travel_mm": {
+        "B21": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B21_240",
+      "travel_mm": {
+        "B21": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B21_320",
+      "travel_mm": {
+        "B21": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B22_80",
+      "travel_mm": {
+        "B22": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B22_160",
+      "travel_mm": {
+        "B22": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B22_240",
+      "travel_mm": {
+        "B22": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B22_320",
+      "travel_mm": {
+        "B22": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B23_80",
+      "travel_mm": {
+        "B23": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B23_160",
+      "travel_mm": {
+        "B23": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B23_240",
+      "travel_mm": {
+        "B23": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B23_320",
+      "travel_mm": {
+        "B23": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B24_80",
+      "travel_mm": {
+        "B24": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B24_160",
+      "travel_mm": {
+        "B24": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B24_240",
+      "travel_mm": {
+        "B24": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_B24_320",
+      "travel_mm": {
+        "B24": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "checker_0_160_320",
+      "travel_mm": {
+        "B1": 0,
+        "B2": 160,
+        "B3": 320,
+        "B4": 0,
+        "B5": 160,
+        "B6": 320,
+        "B7": 0,
+        "B8": 160,
+        "B9": 320,
+        "B10": 0,
+        "B11": 160,
+        "B12": 320,
+        "B13": 0,
+        "B14": 160,
+        "B15": 320,
+        "B16": 0,
+        "B17": 160,
+        "B18": 320,
+        "B19": 0,
+        "B20": 160,
+        "B21": 320,
+        "B22": 0,
+        "B23": 160,
+        "B24": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "checker_320_0_160",
+      "travel_mm": {
+        "B1": 320,
+        "B2": 0,
+        "B3": 160,
+        "B4": 320,
+        "B5": 0,
+        "B6": 160,
+        "B7": 320,
+        "B8": 0,
+        "B9": 160,
+        "B10": 320,
+        "B11": 0,
+        "B12": 160,
+        "B13": 320,
+        "B14": 0,
+        "B15": 160,
+        "B16": 320,
+        "B17": 0,
+        "B18": 160,
+        "B19": 320,
+        "B20": 0,
+        "B21": 160,
+        "B22": 320,
+        "B23": 0,
+        "B24": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "closed",
+      "travel_mm": {},
+      "intersections": []
+    }
+  ],
+  "intentional_cable_engagement": [
+    "Dynamic network to own FixedNetworkFeed and NICNetworkPlug",
+    "Dynamic DC to own FixedAdapterDC and DCMovingPlug"
+  ],
+  "limits": "Sampled evaluated surface intersections and clearance rays; excludes intentional nested rails/fastener engagement. Does not establish continuous clearance, tolerances, load, stability, heat or electrical compliance.",
+  "intersection_count": 0,
+  "clearance_pass": true,
+  "coverage_pass": true,
+  "status": "passed"
+}

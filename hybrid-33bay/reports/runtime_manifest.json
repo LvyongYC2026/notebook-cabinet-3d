@@ -1,0 +1,78 @@
+{
+  "index.html": {
+    "bytes": 9235,
+    "sha256": "5a2d6fb83e2b481ff2d6dc6474aba864a544bc69ff32661bce10a9faf9969177"
+  },
+  "app.js": {
+    "bytes": 99754,
+    "sha256": "48e6cf127dab574351511901cb12c5dfc7556c584218f0099d96221cc4d3663a"
+  },
+  "styles.css": {
+    "bytes": 10702,
+    "sha256": "daa72a4c28e6be39d1840787929d2dd875728d48076dd21b0790559006868ee8"
+  },
+  "panel-hud.css": {
+    "bytes": 6632,
+    "sha256": "1df3c48e2fda1503b5d4e8d305e2f046bdc2a611e505a34970715c3d78e109d4"
+  },
+  "dimensions.js": {
+    "bytes": 16993,
+    "sha256": "b74874e11e3330c99ba15cd16406f5d15a201cabb9e01ee2fe8786c4b17a8652"
+  },
+  "length-format.js": {
+    "bytes": 3438,
+    "sha256": "2933548c72ac479a6403c7ce30e6b72af396c0c63338b2c3babed0ce18073bf4"
+  },
+  "wiring.js": {
+    "bytes": 16533,
+    "sha256": "862a1b4ddc2882fc29c323d2fce872e2607c1e15add97ec0e93bac95886d9b61"
+  },
+  "wiring.css": {
+    "bytes": 8529,
+    "sha256": "8c816bcd02e4533b26c21a42f08effcf6f5aab9002c4449145dcf9f90b6931c2"
+  },
+  "room-scene.js": {
+    "bytes": 4217,
+    "sha256": "69a77053d7c7f675f1592ade8a5890732f226d69ccf17ae0f8b66d0f0af4d13d"
+  },
+  "room.css": {
+    "bytes": 3364,
+    "sha256": "41ae2877175a4c38e8e29d4f085edc3aa056eec88b2181d7623f94117f627c4e"
+  },
+  "README.txt": {
+    "bytes": 15196,
+    "sha256": "44a05fc1a1f646eb9b306393414838ebabf7649af445035221a33a6adb48e80f"
+  },
+  "assets/smart_cabinet.glb": {
+    "bytes": 22759636,
+    "sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a"
+  },
+  "assets/components.json": {
+    "bytes": 3343931,
+    "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+  },
+  "assets/smart_cabinet_single_compartment.glb": {
+    "bytes": 4743476,
+    "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+  },
+  "assets/single_compartment.json": {
+    "bytes": 66924,
+    "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+  },
+  "assets/smart_cabinet_drawer.glb": {
+    "bytes": 588924,
+    "sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78"
+  },
+  "assets/drawer_compartment.json": {
+    "bytes": 108188,
+    "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+  },
+  "assets/room_environment.glb": {
+    "bytes": 5638360,
+    "sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6"
+  },
+  "assets/room_metadata.json": {
+    "bytes": 57171,
+    "sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f"
+  }
+}

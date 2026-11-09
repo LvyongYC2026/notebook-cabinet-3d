@@ -1,0 +1,420 @@
+{
+  "blend_sha256": "3e13686b9ae0970db7c880815001d2f2234e184812e54e53a03f283e565101df",
+  "single": true,
+  "expected_trays": 1,
+  "actual_trays": 1,
+  "drawer_ids": [
+    "S1"
+  ],
+  "fixed_mesh_count": 41,
+  "fixed_role_counts": {
+    "slide_fixed": 12,
+    "service": 18,
+    "connector": 4,
+    "cable_fixed": 3,
+    "structure": 4
+  },
+  "excluded_attached_hardware": {
+    "S1_RailSupport": "fastener",
+    "S1_RailSupport.001": "fastener",
+    "S1_RailSupport.002": "fastener",
+    "S1_RailSupport.003": "fastener",
+    "S1_LockMount": "fastener",
+    "S1_ServicePlateMountEar": "fastener",
+    "S1_ServicePlateMountEar.001": "fastener",
+    "S1_ServicePlateMountEar.002": "fastener",
+    "S1_ServicePlateMountEar.003": "fastener",
+    "S1_SocketSupport": "fastener",
+    "S1_SocketSupport.001": "fastener",
+    "S1_SocketSupport.002": "fastener",
+    "S1_SocketSupport.003": "fastener",
+    "S1_AdapterBasketBracket": "fastener",
+    "S1_AdapterBasketBracket.001": "fastener",
+    "S1_AdapterBearingPad": "fastener"
+  },
+  "excluded_moving_rail_engagement": [
+    "S1_RailMoving",
+    "S1_RailDrawerBracket",
+    "S1_RailMoving.001",
+    "S1_RailDrawerBracket.001"
+  ],
+  "moving_object_counts": {
+    "S1": 51
+  },
+  "dynamic_cable_counts": {
+    "S1": 2
+  },
+  "clearance": [
+    {
+      "bay": "S1",
+      "support_z_cm": 3.0,
+      "rays": [
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -11.899999999999999,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            -4.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            3.0,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            10.5,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -25.4
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -20.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -15.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -10.0
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        },
+        {
+          "xy_cm": [
+            17.9,
+            -4.6
+          ],
+          "clear_cm": 13.0,
+          "obstacle": "SingleDrawerHousingRoof"
+        }
+      ],
+      "minimum_clear_cm": 13.0,
+      "all_rays_bounded": true
+    }
+  ],
+  "poses": [
+    {
+      "name": "simultaneous_0",
+      "travel_mm": {
+        "S1": 0
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_20",
+      "travel_mm": {
+        "S1": 20
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_40",
+      "travel_mm": {
+        "S1": 40
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_60",
+      "travel_mm": {
+        "S1": 60
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_80",
+      "travel_mm": {
+        "S1": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_100",
+      "travel_mm": {
+        "S1": 100
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_120",
+      "travel_mm": {
+        "S1": 120
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_140",
+      "travel_mm": {
+        "S1": 140
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_160",
+      "travel_mm": {
+        "S1": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_180",
+      "travel_mm": {
+        "S1": 180
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_200",
+      "travel_mm": {
+        "S1": 200
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_220",
+      "travel_mm": {
+        "S1": 220
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_240",
+      "travel_mm": {
+        "S1": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_260",
+      "travel_mm": {
+        "S1": 260
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_280",
+      "travel_mm": {
+        "S1": 280
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_300",
+      "travel_mm": {
+        "S1": 300
+      },
+      "intersections": []
+    },
+    {
+      "name": "simultaneous_320",
+      "travel_mm": {
+        "S1": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_S1_80",
+      "travel_mm": {
+        "S1": 80
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_S1_160",
+      "travel_mm": {
+        "S1": 160
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_S1_240",
+      "travel_mm": {
+        "S1": 240
+      },
+      "intersections": []
+    },
+    {
+      "name": "individual_S1_320",
+      "travel_mm": {
+        "S1": 320
+      },
+      "intersections": []
+    },
+    {
+      "name": "closed",
+      "travel_mm": {},
+      "intersections": []
+    }
+  ],
+  "intentional_cable_engagement": [
+    "Dynamic network to own FixedNetworkFeed and NICNetworkPlug",
+    "Dynamic DC to own FixedAdapterDC and DCMovingPlug"
+  ],
+  "limits": "Sampled evaluated surface intersections and clearance rays; excludes intentional nested rails/fastener engagement. Does not establish continuous clearance, tolerances, load, stability, heat or electrical compliance.",
+  "intersection_count": 0,
+  "clearance_pass": true,
+  "coverage_pass": true,
+  "status": "passed"
+}

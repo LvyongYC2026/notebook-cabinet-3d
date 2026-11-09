@@ -1,0 +1,349 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4412,
+      "sha256": "0d60b3253a5d0e5ec90a3cd9f78e12d79e44375688dd76514a832deca88d0fc7"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 15196,
+      "sha256": "44a05fc1a1f646eb9b306393414838ebabf7649af445035221a33a6adb48e80f"
+    },
+    {
+      "path": "app.js",
+      "bytes": 99754,
+      "sha256": "48e6cf127dab574351511901cb12c5dfc7556c584218f0099d96221cc4d3663a"
+    },
+    {
+      "path": "assets/components.json",
+      "bytes": 3343931,
+      "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+    },
+    {
+      "path": "assets/drawer_compartment.json",
+      "bytes": 108188,
+      "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+    },
+    {
+      "path": "assets/room_environment.glb",
+      "bytes": 5638360,
+      "sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6"
+    },
+    {
+      "path": "assets/room_metadata.json",
+      "bytes": 57171,
+      "sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f"
+    },
+    {
+      "path": "assets/smart_cabinet.glb",
+      "bytes": 22759636,
+      "sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a"
+    },
+    {
+      "path": "assets/smart_cabinet_drawer.glb",
+      "bytes": 588924,
+      "sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78"
+    },
+    {
+      "path": "dimensions.js",
+      "bytes": 16993,
+      "sha256": "b74874e11e3330c99ba15cd16406f5d15a201cabb9e01ee2fe8786c4b17a8652"
+    },
+    {
+      "path": "hybrid-33bay/README.md",
+      "bytes": 6475,
+      "sha256": "f01743d994dcb48e4629fa274b358ef68855330cfcbfa751e42bbfeadac286d8"
+    },
+    {
+      "path": "hybrid-33bay/renders/cabinet.png",
+      "bytes": 5394735,
+      "sha256": "273f1c8185d92255306f8e7f26b0d73796d6e2b212a7584c22b2dcae9a1b8f3a"
+    },
+    {
+      "path": "hybrid-33bay/renders/drawer.png",
+      "bytes": 4828606,
+      "sha256": "f172f115174e3c9b96c1496811d4eb6770b143479479542002eb8ca9c061e642"
+    },
+    {
+      "path": "hybrid-33bay/renders/room_operation.png",
+      "bytes": 3652839,
+      "sha256": "c733dee0086213eec99ea2ab2de5e35df65bd48f6f2c2f807f6320e075de4543"
+    },
+    {
+      "path": "hybrid-33bay/renders/room_overview.png",
+      "bytes": 3788064,
+      "sha256": "413ec0595ed7bfe78affdb658843b4df6f6a272b488cade682786887e245a043"
+    },
+    {
+      "path": "hybrid-33bay/reports/assets.json",
+      "bytes": 14114,
+      "sha256": "8033f062de7027e04ac527a11648431932ac3c7dd5ed6d5118f194e0c0a529d2"
+    },
+    {
+      "path": "hybrid-33bay/reports/bend_radii.json",
+      "bytes": 21528,
+      "sha256": "3c1acf2aa1533ebb0a6528fb60c98c414691af09f02951757d95cd732c30e0d1"
+    },
+    {
+      "path": "hybrid-33bay/reports/cabinet_motion.json",
+      "bytes": 149574,
+      "sha256": "9eff0b1ce8c462f5fe98e7b78250d445f62d856ef2c4a28a4302e6a27fde2278"
+    },
+    {
+      "path": "hybrid-33bay/reports/cable_separation.json",
+      "bytes": 6418,
+      "sha256": "3cfbe2f7d212de80f4e19a60766609aaee0a9c814afa973a337b676515357023"
+    },
+    {
+      "path": "hybrid-33bay/reports/connections.json",
+      "bytes": 362974,
+      "sha256": "ca25674a2df979a957112111f1368c49d977d957bdc626bd5a27c927d369216a"
+    },
+    {
+      "path": "hybrid-33bay/reports/drawer_motion.json",
+      "bytes": 8805,
+      "sha256": "f580657baf2cdd89f1592e21d56c493c4499c8d2785ac81127c329c87bd0a1a2"
+    },
+    {
+      "path": "hybrid-33bay/reports/fixed_solids.json",
+      "bytes": 126605,
+      "sha256": "4c8fd93f1c0d4d26ba32d3898659510cbe10320fc0479758255f34147c51dc55"
+    },
+    {
+      "path": "hybrid-33bay/reports/frontend.json",
+      "bytes": 5346,
+      "sha256": "833ed091e6ab0fc2c2889a79677c8a89ea69006156bfa356a0945d50ca2cfaeb"
+    },
+    {
+      "path": "hybrid-33bay/reports/frontend_room_release.json",
+      "bytes": 18345,
+      "sha256": "65f54abe3fe8fdd125788f551c89238ed5dc6fa2460b445d624450cd425ffe0e"
+    },
+    {
+      "path": "hybrid-33bay/reports/left_motion.json",
+      "bytes": 569940,
+      "sha256": "3d777cf82a0f90f5bc26ce14c731201502a484e0f5275da1e37b47f42e2ad4ae"
+    },
+    {
+      "path": "hybrid-33bay/reports/preservation.json",
+      "bytes": 56692,
+      "sha256": "a32b94d490122f393b3fab1305019ad26c5182ebce35210918c6f8a5ba05f2da"
+    },
+    {
+      "path": "hybrid-33bay/reports/preservation_allowlist.json",
+      "bytes": 6737,
+      "sha256": "b450027584e410d72e5c136b94c8588ebe4cdc548eb09af1ea13187b7e45cc24"
+    },
+    {
+      "path": "hybrid-33bay/reports/rear_motion.json",
+      "bytes": 1920,
+      "sha256": "b7480b595d32befea6a8553ceeb21e1d0ff7b6d6c15a7fb898e9eba12b15f16a"
+    },
+    {
+      "path": "hybrid-33bay/reports/reverse_occupancy.json",
+      "bytes": 13095,
+      "sha256": "4672bed4c4162c630e36a8b305709888c1c76f78d0f45b78af2a47e6a81f8a03"
+    },
+    {
+      "path": "hybrid-33bay/reports/room_build.json",
+      "bytes": 615,
+      "sha256": "14b67a987a3887336342882715cbda5f3492a45acd00adc773df0186cc38dea0"
+    },
+    {
+      "path": "hybrid-33bay/reports/room_installation.json",
+      "bytes": 3982,
+      "sha256": "5d438222be1b8a35b60188555fb63b1d956066bb69b0a9239952eb39299f519b"
+    },
+    {
+      "path": "hybrid-33bay/reports/runtime_manifest.json",
+      "bytes": 2524,
+      "sha256": "c2b6822b8ce7ff6651464a90f634332791a9e84a51d7563ea97a6a65d3da6575"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_assets.py",
+      "bytes": 29190,
+      "sha256": "42f760f22ecbd4e8fb28ebe9ea86738e9e288551d7b38dd4f823030a25f8af5b"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_connections.py",
+      "bytes": 11045,
+      "sha256": "ce360513c497a1315582d4c3ede9fcedd0d83d3e0d653055fe85bd1e33fde17b"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_left.py",
+      "bytes": 15596,
+      "sha256": "971d58909638c0f6e55dfdaa9cb418f838d777f91637d0e1a16ca4530f597ec5"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_motion.py",
+      "bytes": 8341,
+      "sha256": "fdf2e9e50aa25ed15c5d4889589989f087320f25898c5299d28f1f5d004fc8f0"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_occupancy.py",
+      "bytes": 9474,
+      "sha256": "7ffc91ef0a8399292d2926ebceb1fb18ccaeee7a8cacf55fb12544f33de4a63a"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_preservation.py",
+      "bytes": 11850,
+      "sha256": "c44a18c7e9328f243ab9d0c4729fa4064d361f103da6c7262360c0e47c18744f"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_rear.py",
+      "bytes": 2622,
+      "sha256": "cfef2430738fd844c0cf736072f083abbb59c8e9cd019e0e0f1f18f048ef07f3"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_hybrid_room.py",
+      "bytes": 8135,
+      "sha256": "c2ac312eff90d8e598c4a79a6c1bb284bc52d16c670c9d1244389b0e3f5a60f9"
+    },
+    {
+      "path": "hybrid-33bay/scripts/audit_wiring_separation.py",
+      "bytes": 4361,
+      "sha256": "858733bc831d02e4e74c49fbbb258b6c0c3d052e79eb6bd68bbb8e92c1a34059"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/audit_bend_radii.py",
+      "bytes": 1992,
+      "sha256": "0b610787596b6dabc91500b5de86db2dc4cc4967ea4a4737d607fa18812b775e"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/audit_fixed_hybrid.py",
+      "bytes": 5242,
+      "sha256": "b6651456c7fd1a7dacd15e714b814f27b2b1604f8e031d4532ade4dbbca72967"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/build_hybrid.py",
+      "bytes": 12925,
+      "sha256": "578e5e0afe5228b5a346c535a19559962a895dbef25f6b8617bda5a77c886ce7"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/central_upgrade.py",
+      "bytes": 5639,
+      "sha256": "6b4fe8ad0b8f99139230f060467e1ae2aab0a93ce4f6e8e760473c6774adf595"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/config.py",
+      "bytes": 775,
+      "sha256": "721b5bff13b4020a2e0326a65e9752463aff010eb91e001f88e027f8dae5ac5f"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/drawer.py",
+      "bytes": 15451,
+      "sha256": "2656955d10688dd83b6a248b85d15c7df166145c57b9eed53cef6d3f7d8cb2e5"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/fixed_wiring.py",
+      "bytes": 22066,
+      "sha256": "19f8cf141477a109f0b0efca0670316cd85e65a0d264eac115bea41a69c123ed"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/geometry.py",
+      "bytes": 6905,
+      "sha256": "a55c2c215518f24b9054b235a86acee2262ecd9e98ec24179605a7be6fd77fbf"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid/render_preview.py",
+      "bytes": 2431,
+      "sha256": "ef66ae98b95d06210230ec098c79efb31d8b7b1b40f5e2432ed568337dc467b5"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/assets/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/assets/room_signage_subset.ttf",
+      "bytes": 24988,
+      "sha256": "48062b0b90d995ac7dd93e894f3eb074d9adc9a233e6a4c1a96eb09a50c6b2fb"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/build_room.py",
+      "bytes": 23946,
+      "sha256": "4749d390d1ebb14432ad6990f81773288e3fac01ea261e9be9cbbe548c0983a3"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/config.py",
+      "bytes": 1589,
+      "sha256": "8aae375a84492aa9fa6ae446191db2dc91b34f56f5ee6b78baceeba26c4c2eaa"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/metadata.py",
+      "bytes": 1758,
+      "sha256": "95b09ab35f8ce63589390dacaa9174a037dda9ed5ef50e167004b48c2c00afff"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/metadata_template.json",
+      "bytes": 4162,
+      "sha256": "e08315e8d61875ac2cea603687515e852b3f84d3d837a455e61eb2825f2e8a5c"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/render_views.py",
+      "bytes": 1977,
+      "sha256": "67485bc7c0cbecf2ae6c034e0593d91677ec6aac1771417f99ebdd733af68991"
+    },
+    {
+      "path": "hybrid-33bay/scripts/hybrid_room/setup_display_modes.py",
+      "bytes": 3305,
+      "sha256": "4c39962b72cd4998824a349f02b46dedfde20593f61eb2ef1a5ee5fcedf3c8c3"
+    },
+    {
+      "path": "hybrid-33bay/smart_cabinet_33bay.blend",
+      "bytes": 4586869,
+      "sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1"
+    },
+    {
+      "path": "hybrid-33bay/smart_cabinet_drawer.blend",
+      "bytes": 821310,
+      "sha256": "3e13686b9ae0970db7c880815001d2f2234e184812e54e53a03f283e565101df"
+    },
+    {
+      "path": "hybrid-33bay/smart_cabinet_room_and_product.blend",
+      "bytes": 4906062,
+      "sha256": "132d6de6d16173427644e6063cbdb15ca26ad79aa32f7b456072e09c2cdaece7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9235,
+      "sha256": "5a2d6fb83e2b481ff2d6dc6474aba864a544bc69ff32661bce10a9faf9969177"
+    },
+    {
+      "path": "length-format.js",
+      "bytes": 3438,
+      "sha256": "2933548c72ac479a6403c7ce30e6b72af396c0c63338b2c3babed0ce18073bf4"
+    },
+    {
+      "path": "panel-hud.css",
+      "bytes": 6632,
+      "sha256": "1df3c48e2fda1503b5d4e8d305e2f046bdc2a611e505a34970715c3d78e109d4"
+    },
+    {
+      "path": "room-scene.js",
+      "bytes": 4217,
+      "sha256": "69a77053d7c7f675f1592ade8a5890732f226d69ccf17ae0f8b66d0f0af4d13d"
+    },
+    {
+      "path": "room.css",
+      "bytes": 3364,
+      "sha256": "41ae2877175a4c38e8e29d4f085edc3aa056eec88b2181d7623f94117f627c4e"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 10702,
+      "sha256": "daa72a4c28e6be39d1840787929d2dd875728d48076dd21b0790559006868ee8"
+    },
+    {
+      "path": "wiring.css",
+      "bytes": 8529,
+      "sha256": "8c816bcd02e4533b26c21a42f08effcf6f5aab9002c4449145dcf9f90b6931c2"
+    },
+    {
+      "path": "wiring.js",
+      "bytes": 16533,
+      "sha256": "862a1b4ddc2882fc29c323d2fce872e2607c1e15add97ec0e93bac95886d9b61"
+    }
+  ]
+}

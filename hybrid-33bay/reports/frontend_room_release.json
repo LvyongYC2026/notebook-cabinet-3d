@@ -1,0 +1,454 @@
+{
+  "status": "passed_within_scope",
+  "verified_at": "2026-11-09T04:58:18.190027+00:00",
+  "release_revision": "20261109-hybrid33-v1",
+  "runtime_manifest": "showcase_hybrid33_release_manifest.json",
+  "runtime_manifest_sha256": "c2b6822b8ce7ff6651464a90f634332791a9e84a51d7563ea97a6a65d3da6575",
+  "runtime_file_count": 19,
+  "runtime_files": {
+    "index.html": {
+      "bytes": 9235,
+      "sha256": "5a2d6fb83e2b481ff2d6dc6474aba864a544bc69ff32661bce10a9faf9969177"
+    },
+    "app.js": {
+      "bytes": 99754,
+      "sha256": "48e6cf127dab574351511901cb12c5dfc7556c584218f0099d96221cc4d3663a"
+    },
+    "styles.css": {
+      "bytes": 10702,
+      "sha256": "daa72a4c28e6be39d1840787929d2dd875728d48076dd21b0790559006868ee8"
+    },
+    "panel-hud.css": {
+      "bytes": 6632,
+      "sha256": "1df3c48e2fda1503b5d4e8d305e2f046bdc2a611e505a34970715c3d78e109d4"
+    },
+    "dimensions.js": {
+      "bytes": 16993,
+      "sha256": "b74874e11e3330c99ba15cd16406f5d15a201cabb9e01ee2fe8786c4b17a8652"
+    },
+    "length-format.js": {
+      "bytes": 3438,
+      "sha256": "2933548c72ac479a6403c7ce30e6b72af396c0c63338b2c3babed0ce18073bf4"
+    },
+    "wiring.js": {
+      "bytes": 16533,
+      "sha256": "862a1b4ddc2882fc29c323d2fce872e2607c1e15add97ec0e93bac95886d9b61"
+    },
+    "wiring.css": {
+      "bytes": 8529,
+      "sha256": "8c816bcd02e4533b26c21a42f08effcf6f5aab9002c4449145dcf9f90b6931c2"
+    },
+    "room-scene.js": {
+      "bytes": 4217,
+      "sha256": "69a77053d7c7f675f1592ade8a5890732f226d69ccf17ae0f8b66d0f0af4d13d"
+    },
+    "room.css": {
+      "bytes": 3364,
+      "sha256": "41ae2877175a4c38e8e29d4f085edc3aa056eec88b2181d7623f94117f627c4e"
+    },
+    "README.txt": {
+      "bytes": 15196,
+      "sha256": "44a05fc1a1f646eb9b306393414838ebabf7649af445035221a33a6adb48e80f"
+    },
+    "assets/smart_cabinet.glb": {
+      "bytes": 22759636,
+      "sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a"
+    },
+    "assets/components.json": {
+      "bytes": 3343931,
+      "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+    },
+    "assets/smart_cabinet_single_compartment.glb": {
+      "bytes": 4743476,
+      "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+    },
+    "assets/single_compartment.json": {
+      "bytes": 66924,
+      "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+    },
+    "assets/smart_cabinet_drawer.glb": {
+      "bytes": 588924,
+      "sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78"
+    },
+    "assets/drawer_compartment.json": {
+      "bytes": 108188,
+      "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+    },
+    "assets/room_environment.glb": {
+      "bytes": 5638360,
+      "sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6"
+    },
+    "assets/room_metadata.json": {
+      "bytes": 57171,
+      "sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f"
+    }
+  },
+  "frontend_reports": {
+    "hybrid33_final_validation": {
+      "sha256": "833ed091e6ab0fc2c2889a79677c8a89ea69006156bfa356a0945d50ca2cfaeb",
+      "result": {
+        "status": "passed",
+        "scope": "Frozen final 33-bay and drawer-single GLBs; interaction, native endpoints, occupancy, camera and dimensions; independent Blender collision audit is separate",
+        "verified_at": "2026-11-09T04:57:24.336Z",
+        "whole_native": {
+          "native_cables": 65,
+          "visible_native_cables": 62,
+          "hidden_native_reserve": 3,
+          "static_paths": [
+            "cable_A3_power"
+          ],
+          "total_cable_paths": 66,
+          "poses_mm": [
+            0,
+            80,
+            160,
+            240,
+            320
+          ],
+          "native_pose_cases": 325,
+          "max_endpoint_error_mm": 2.26497650079871e-05,
+          "max_length_deviation_mm": 0.004062638653635986,
+          "parked_empty_dc_fixed": true
+        },
+        "whole_usb": {
+          "bays": 33,
+          "actual_endpoint_checks": 660,
+          "occupancy_pose_checks": 495,
+          "max_endpoint_error_mm": 9.313225746154789e-07,
+          "nic_and_usb_follow_tray": true,
+          "ethernet_keeps_connected_while_empty": true
+        },
+        "mechanisms": {
+          "doors": 13,
+          "trays": 33,
+          "right_drawers": 24,
+          "left_hinged": 9,
+          "all_24_drawers_sequentially_exercised": true,
+          "interlock_frames": 2469,
+          "rapid_reversal": true,
+          "batch_front_never_opens_drawers": true,
+          "hinged_clearance_and_retraction_gate": true,
+          "multi_digit_picking": true
+        },
+        "demo": {
+          "drawer": "B24",
+          "vertical_then_forward": true,
+          "reverse_return": true,
+          "transfer_frames": 110,
+          "usb_dc_disconnected_before_motion": true,
+          "ethernet_always_connected": true,
+          "interrupted_path_cleared": true
+        },
+        "drawer_native": {
+          "native_cables": 2,
+          "visible_native_cables": 2,
+          "hidden_native_reserve": 0,
+          "static_paths": [],
+          "total_cable_paths": 2,
+          "poses_mm": [
+            0,
+            80,
+            160,
+            240,
+            320
+          ],
+          "native_pose_cases": 10,
+          "max_endpoint_error_mm": 2.265968877192538e-05,
+          "max_length_deviation_mm": 1.8809977518685628e-05,
+          "parked_empty_dc_fixed": true
+        },
+        "drawer_usb": {
+          "bays": 1,
+          "actual_endpoint_checks": 20,
+          "occupancy_pose_checks": 15,
+          "max_endpoint_error_mm": 5.551115123125783e-14,
+          "nic_and_usb_follow_tray": true,
+          "ethernet_keeps_connected_while_empty": true
+        },
+        "drawer_camera_entries": {
+          "cutaway": {
+            "azimuth": 0.62,
+            "elevation": 0.72
+          },
+          "restore_shell": {
+            "azimuth": 0.62,
+            "elevation": 0.72
+          },
+          "front": {
+            "elevation": 0.72
+          },
+          "rear": {
+            "elevation": 0.72
+          }
+        },
+        "drawer_camera": [
+          {
+            "width": 1048,
+            "visible_laptop_lid_samples": 9,
+            "focused_tray_and_cables_fit": true
+          },
+          {
+            "width": 390,
+            "visible_laptop_lid_samples": 9,
+            "focused_tray_and_cables_fit": true
+          }
+        ],
+        "hinged_native": {
+          "native_cables": 2,
+          "visible_native_cables": 2,
+          "hidden_native_reserve": 0,
+          "static_paths": [],
+          "total_cable_paths": 2,
+          "poses_mm": [
+            0,
+            80,
+            160,
+            240,
+            320
+          ],
+          "native_pose_cases": 10,
+          "max_endpoint_error_mm": 8.573556325958295e-06,
+          "max_length_deviation_mm": 0.002603823688104967,
+          "parked_empty_dc_fixed": true
+        },
+        "hinged_usb": {
+          "bays": 1,
+          "actual_endpoint_checks": 20,
+          "occupancy_pose_checks": 15,
+          "max_endpoint_error_mm": 4.6566128730773926e-07,
+          "nic_and_usb_follow_tray": true,
+          "ethernet_keeps_connected_while_empty": true
+        },
+        "single_variants": {
+          "default": "drawer",
+          "independent_cached_models": true,
+          "load_retry_keeps_current_model": true,
+          "round_trips": 3,
+          "requests_including_retry": 3,
+          "dimension_setting_preserved": true
+        },
+        "fixed_network_routes": {
+          "inspected": 33,
+          "physical_segments": 57,
+          "port_mapping_and_cm_length": true
+        },
+        "unchanged_left_single_assets": true,
+        "frozen_assets": {
+          "status": "frozen_final_geometry_revision9",
+          "copied_at": "2026-11-09T04:55:57.539763+00:00",
+          "assets": {
+            "smart_cabinet.glb": {
+              "bytes": 22759636,
+              "sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a"
+            },
+            "components.json": {
+              "bytes": 3343931,
+              "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+            },
+            "smart_cabinet_drawer.glb": {
+              "bytes": 588924,
+              "sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78"
+            },
+            "drawer_compartment.json": {
+              "bytes": 108188,
+              "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+            },
+            "room_environment.glb": {
+              "bytes": 5638360,
+              "sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6"
+            },
+            "room_metadata.json": {
+              "bytes": 57171,
+              "sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f"
+            }
+          }
+        },
+        "source_sha256": {
+          "app.js": "48e6cf127dab574351511901cb12c5dfc7556c584218f0099d96221cc4d3663a",
+          "dimensions.js": "b74874e11e3330c99ba15cd16406f5d15a201cabb9e01ee2fe8786c4b17a8652",
+          "wiring.js": "862a1b4ddc2882fc29c323d2fce872e2607c1e15add97ec0e93bac95886d9b61",
+          "room-scene.js": "69a77053d7c7f675f1592ade8a5890732f226d69ccf17ae0f8b66d0f0af4d13d",
+          "index.html": "5a2d6fb83e2b481ff2d6dc6474aba864a544bc69ff32661bce10a9faf9969177",
+          "room.css": "41ae2877175a4c38e8e29d4f085edc3aa056eec88b2181d7623f94117f627c4e"
+        }
+      }
+    },
+    "hybrid33_room_final_validation": {
+      "sha256": "be298c2192ade2d536b1c2167f077449cd7a6b959d15150bb0c8eaef5f6e7370",
+      "result": {
+        "room_environment_has_no_cabinet_copy": true,
+        "status": "passed",
+        "scope": "Final frozen 33-bay and room runtime GLBs with unchanged hinged single; shared model, lighting, camera and interaction regression",
+        "verified_at": "2026-11-09T04:57:25.241Z",
+        "room_glb_sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6",
+        "room_metadata_sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f",
+        "room_load_failure_recovery": true,
+        "room_requests_including_retry": 2,
+        "single_cached_requests": 1,
+        "cabinet_instance_and_transform_preserved": true,
+        "inflight_demo_and_tweens_cleared": true,
+        "rear_doors_locked": true,
+        "all_doors_front_only": true,
+        "wiring_switches_out_of_room": true,
+        "structure_switches_out_of_room": true,
+        "environment_restored": true,
+        "orthographic_top_view": true,
+        "interior_walls_and_camera_preserved": true,
+        "room_bay_focus_frontal": true,
+        "frontal_camera_and_hud_fit_cases": 8,
+        "max_frontal_camera_x_error_mm": 0,
+        "focus_resets_hud_scroll": true,
+        "dimensions_room_labels": 5,
+        "selected_bay_labels": 2,
+        "dimension_geometry_rebuilds_during_120_camera_updates": 0,
+        "room_round_trips": 3,
+        "usb_in_room": {
+          "bays": 33,
+          "actual_endpoint_checks": 660,
+          "occupancy_pose_checks": 495,
+          "max_endpoint_error_mm": 9.313225746154789e-07,
+          "nic_and_usb_follow_tray": true,
+          "ethernet_keeps_connected_while_empty": true
+        },
+        "unchanged_hinged_single_assets": {
+          "smart_cabinet_single_compartment.glb": {
+            "bytes": 4743476,
+            "sha256": "5bbc2a2af173d9fa1a3b825a2525cc4b6063b6bb311d7d3a6158e4cf08c9da44"
+          },
+          "single_compartment.json": {
+            "bytes": 66924,
+            "sha256": "e257b7f0f542dad03e5ff3246a0774d3ff63835c450bb662211ba074ac79ac4c"
+          }
+        },
+        "final_runtime_assets": {
+          "status": "frozen_final_geometry_revision9",
+          "copied_at": "2026-11-09T04:55:57.539763+00:00",
+          "assets": {
+            "smart_cabinet.glb": {
+              "bytes": 22759636,
+              "sha256": "4a164680e6a3b0d5ab1a9df1d6d9dc30b1bb181dc9ddbf67ce46d34194071f4a"
+            },
+            "components.json": {
+              "bytes": 3343931,
+              "sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e"
+            },
+            "smart_cabinet_drawer.glb": {
+              "bytes": 588924,
+              "sha256": "a52d2b6c6dd5e2031bf6a88566e68549ef6c0aeb1deff43b79d214f08b903b78"
+            },
+            "drawer_compartment.json": {
+              "bytes": 108188,
+              "sha256": "c4ccbf2af4746b729b4306a60ca98ee955d25a5b5ca0f6527b06aa9be7e7cd34"
+            },
+            "room_environment.glb": {
+              "bytes": 5638360,
+              "sha256": "3f95d6d78000f866a243c78c48e0c5ac101339e2a3bc47ebe4c2c69bfe700ad6"
+            },
+            "room_metadata.json": {
+              "bytes": 57171,
+              "sha256": "8d978395ee3c42157125b4758f11ca6440703d75364d75084e6d5744dc70478f"
+            }
+          }
+        }
+      }
+    },
+    "hybrid33_cm_final_validation": {
+      "sha256": "3545b6fb87ed89cae9424b4564558e51fb22d4050114213008a99251a74f4fdb",
+      "result": {
+        "numericCases": 21,
+        "syntheticCases": 39,
+        "metadataStrings": 1230,
+        "convertedStrings": 169,
+        "examples": [
+          {
+            "path": "components.json.components.cabinet.notes",
+            "before": "3300×650×1850 mm；左9开盖存储仓，右24闭盖抽屉；35 cm为外观分缝，中央高设备舱保留。",
+            "after": "330×65×185 cm；左9开盖存储仓，右24闭盖抽屉；35 cm为外观分缝，中央高设备舱保留。"
+          },
+          {
+            "path": "components.json.components.screen.title",
+            "before": "32英寸竖向触摸屏",
+            "after": "对角线81.28 cm竖向触摸屏"
+          },
+          {
+            "path": "components.json.components.screen.notes",
+            "before": "32英寸为用户修改；可视区398.5×708.4 mm。外框435×50×750 mm为选型示意，中心离地1285 mm。",
+            "after": "对角线81.28 cm为用户修改；可视区39.85×70.84 cm。外框43.5×5×75 cm为选型示意，中心离地128.5 cm。"
+          },
+          {
+            "path": "components.json.components.equipment_bay.notes",
+            "before": "文档参考净高650–700 mm，本模型取680 mm；交换机上部、主机中层、UPS低位、控制配电右侧。",
+            "after": "文档参考净高65–70 cm，本模型取68 cm；交换机上部、主机中层、UPS低位、控制配电右侧。"
+          },
+          {
+            "path": "components.json.components.fan.notes",
+            "before": "110 mm风机芯外形示意；含保护网，风量和热性能需实测。",
+            "after": "11 cm风机芯外形示意；含保护网，风量和热性能需实测。"
+          },
+          {
+            "path": "components.json.components.rear:Left.notes",
+            "before": "225个贯通散热孔，单孔约48.0×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+            "after": "225个贯通散热孔，单孔约4.8×0.9 cm；0.15 cm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥60 cm。"
+          },
+          {
+            "path": "components.json.components.rear:Center.notes",
+            "before": "150个贯通散热孔，单孔约54.7×9 mm；1.5 mm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥600 mm。",
+            "after": "150个贯通散热孔，单孔约5.47×0.9 cm；0.15 cm板厚。门与孔尺寸为本次设计值；后维护净距文档建议≥60 cm。"
+          }
+        ]
+      }
+    },
+    "hybrid33_urls_final_validation": {
+      "sha256": "348e26bfd356e30ee4c60c8d4b419923bb97ebd4282fbb3760c03efb3d67b0ef",
+      "result": {
+        "status": "passed",
+        "version": "20261109-hybrid33-v1",
+        "project_subdirectory_mapping": true,
+        "query_stripped_for_file_lookup": true,
+        "versioned_references": 18,
+        "pending_frozen_assets": [],
+        "all_resources_present": true
+      }
+    },
+    "hybrid33_wiring_final_validation": {
+      "sha256": "00a243adc750aae39580e479e0d92c0f5ebeb04899493d4b1a0af9f196bd48b7",
+      "result": {
+        "ports": 48,
+        "bay_ports": 33,
+        "reserved_including_management": 38,
+        "spare": 10,
+        "diagram_configurations": 8,
+        "usb_and_native_mutually_exclusive": true,
+        "borrowed_usb_parking_design_explicit": true,
+        "mode_status_and_model_limitations_explicit": true,
+        "official_references": 5,
+        "keyboard_tabs_and_escape": true,
+        "close_button": true,
+        "no_upload_or_model_mutation": true
+      }
+    }
+  },
+  "left_targeted_blender_audit": {
+    "file": "output/hybrid_candidate/independent_hybrid_left.json",
+    "sha256": "0a6e161bee7e288437c087824a70fd799d81b698973d5e3ea655232251fba93d",
+    "script_sha256": "971d58909638c0f6e55dfdaa9cb418f838d777f91637d0e1a16ca4530f597ec5",
+    "blend_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+    "metadata_sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e",
+    "fixed_objects": 2586,
+    "tray_positions": 17,
+    "door_angles": 21,
+    "doors": 9,
+    "native_cables": 17,
+    "intersections": 0,
+    "endpoint_exemptions_triggered": 0,
+    "morph_pose_failures": [],
+    "empty_fixed_meshes": [],
+    "source_files_unchanged": true
+  },
+  "validation_boundaries": [
+    "Frontend checks decode actual final GLB hierarchy, morph positions and geometry; browser appearance/gestures are accepted separately by root CUA.",
+    "Only targeted A-side fixed/new obstacle surface intersections are certified by the included Blender audit; B/rear/room/continuous mechanical clearance remain independent audit scopes.",
+    "Dimension layout stability algorithm remains unchanged from the earlier 1444-frame legacy-compatibility report. Final model checks cover live travel values, measured protrusion/depth, mode persistence and HUD-free projection; they do not claim a second 1444-frame rotation run.",
+    "No website deployment was performed by this agent."
+  ]
+}

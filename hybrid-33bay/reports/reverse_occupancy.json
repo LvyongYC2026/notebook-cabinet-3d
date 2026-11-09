@@ -1,0 +1,495 @@
+{
+  "source_blend_sha256": "685e035fe7484d59c2f96483ef68dbaa9ec817b27da5bdb06705f2ec7a29a2f1",
+  "metadata_sha256": "77adecdb095a32f1c5adb5b2381eaa41fc93e426e4fa7cce052270064f7d623e",
+  "original_occupancy": {
+    "B1": true,
+    "B2": false
+  },
+  "tested_occupancy": {
+    "B1": false,
+    "B2": true
+  },
+  "fixed_mesh_count": 4278,
+  "moving_mesh_counts": {
+    "B1": 36,
+    "B2": 44
+  },
+  "dynamic_cable_counts": {
+    "B1": 1,
+    "B2": 2
+  },
+  "exact_endpoint_pair_exemptions": [
+    [
+      "B1_DCMovingPlug",
+      "DynamicCable_B1_power"
+    ],
+    [
+      "B1_NICNetworkPlug",
+      "DynamicCable_B1_network"
+    ],
+    [
+      "B2_DCMovingPlug",
+      "DynamicCable_B2_power"
+    ],
+    [
+      "B2_NICNetworkPlug",
+      "DynamicCable_B2_network"
+    ],
+    [
+      "DynamicCable_B1_network",
+      "FixedNetworkFeed_B1"
+    ],
+    [
+      "DynamicCable_B1_power",
+      "FixedAdapterDC_B1"
+    ],
+    [
+      "DynamicCable_B2_network",
+      "FixedNetworkFeed_B2"
+    ],
+    [
+      "DynamicCable_B2_power",
+      "FixedAdapterDC_B2"
+    ]
+  ],
+  "poses": [
+    {
+      "travel_mm": 0,
+      "intersections": [],
+      "intentional_endpoint_contacts": [
+        [
+          "B1_NICNetworkPlug",
+          "DynamicCable_B1_network"
+        ],
+        [
+          "B2_DCMovingPlug",
+          "DynamicCable_B2_power"
+        ],
+        [
+          "B2_NICNetworkPlug",
+          "DynamicCable_B2_network"
+        ],
+        [
+          "DynamicCable_B1_network",
+          "FixedNetworkFeed_B1"
+        ],
+        [
+          "DynamicCable_B2_network",
+          "FixedNetworkFeed_B2"
+        ],
+        [
+          "DynamicCable_B2_power",
+          "FixedAdapterDC_B2"
+        ]
+      ],
+      "endpoint_checks": [
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B1_NICUSBEntry",
+          "distance_to_surface_mm": 3e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B1_USBParkedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_ParkingDCPlug",
+          "distance_to_surface_mm": 3.999949,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B2_NICUSBEntry",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B2_USBConnectedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_DCMovingPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "travel_mm": 80,
+      "intersections": [],
+      "intentional_endpoint_contacts": [
+        [
+          "B1_NICNetworkPlug",
+          "DynamicCable_B1_network"
+        ],
+        [
+          "B2_DCMovingPlug",
+          "DynamicCable_B2_power"
+        ],
+        [
+          "B2_NICNetworkPlug",
+          "DynamicCable_B2_network"
+        ],
+        [
+          "DynamicCable_B1_network",
+          "FixedNetworkFeed_B1"
+        ],
+        [
+          "DynamicCable_B2_network",
+          "FixedNetworkFeed_B2"
+        ],
+        [
+          "DynamicCable_B2_power",
+          "FixedAdapterDC_B2"
+        ]
+      ],
+      "endpoint_checks": [
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B1_NICUSBEntry",
+          "distance_to_surface_mm": 3e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B1_USBParkedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_ParkingDCPlug",
+          "distance_to_surface_mm": 3.999949,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B2_NICUSBEntry",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B2_USBConnectedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_DCMovingPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "travel_mm": 160,
+      "intersections": [],
+      "intentional_endpoint_contacts": [
+        [
+          "B1_NICNetworkPlug",
+          "DynamicCable_B1_network"
+        ],
+        [
+          "B2_DCMovingPlug",
+          "DynamicCable_B2_power"
+        ],
+        [
+          "B2_NICNetworkPlug",
+          "DynamicCable_B2_network"
+        ],
+        [
+          "DynamicCable_B1_network",
+          "FixedNetworkFeed_B1"
+        ],
+        [
+          "DynamicCable_B2_network",
+          "FixedNetworkFeed_B2"
+        ],
+        [
+          "DynamicCable_B2_power",
+          "FixedAdapterDC_B2"
+        ]
+      ],
+      "endpoint_checks": [
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B1_NICUSBEntry",
+          "distance_to_surface_mm": 3e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B1_USBParkedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_NICNetworkPlug",
+          "distance_to_surface_mm": 1.5e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_ParkingDCPlug",
+          "distance_to_surface_mm": 3.999949,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B2_NICUSBEntry",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B2_USBConnectedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_NICNetworkPlug",
+          "distance_to_surface_mm": 1.5e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_DCMovingPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "travel_mm": 240,
+      "intersections": [],
+      "intentional_endpoint_contacts": [
+        [
+          "B1_NICNetworkPlug",
+          "DynamicCable_B1_network"
+        ],
+        [
+          "B2_DCMovingPlug",
+          "DynamicCable_B2_power"
+        ],
+        [
+          "B2_NICNetworkPlug",
+          "DynamicCable_B2_network"
+        ],
+        [
+          "DynamicCable_B1_network",
+          "FixedNetworkFeed_B1"
+        ],
+        [
+          "DynamicCable_B2_network",
+          "FixedNetworkFeed_B2"
+        ],
+        [
+          "DynamicCable_B2_power",
+          "FixedAdapterDC_B2"
+        ]
+      ],
+      "endpoint_checks": [
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B1_NICUSBEntry",
+          "distance_to_surface_mm": 3e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B1_USBParkedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_ParkingDCPlug",
+          "distance_to_surface_mm": 3.999949,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B2_NICUSBEntry",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B2_USBConnectedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_DCMovingPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "travel_mm": 320,
+      "intersections": [],
+      "intentional_endpoint_contacts": [
+        [
+          "B2_DCMovingPlug",
+          "DynamicCable_B2_power"
+        ],
+        [
+          "DynamicCable_B1_network",
+          "FixedNetworkFeed_B1"
+        ],
+        [
+          "DynamicCable_B2_network",
+          "FixedNetworkFeed_B2"
+        ],
+        [
+          "DynamicCable_B2_power",
+          "FixedAdapterDC_B2"
+        ]
+      ],
+      "endpoint_checks": [
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B1_NICUSBEntry",
+          "distance_to_surface_mm": 3e-05,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B1_USBParkedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B1_ParkingDCPlug",
+          "distance_to_surface_mm": 3.999949,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB NIC endpoint",
+          "target": "B2_NICUSBEntry",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "USB plug endpoint",
+          "target": "B2_USBConnectedPlug",
+          "distance_to_surface_mm": 3.000021,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_NICNetworkPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        },
+        {
+          "kind": "DC/network endpoint",
+          "target": "B2_DCMovingPlug",
+          "distance_to_surface_mm": 0.0,
+          "within_target_bounds": true,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "limits": "Reverse occupancy of B1/B2 only, five discrete poses; evaluated surface intersections, explicit endpoint checks. Does not certify continuous motion, tolerances or all occupied/empty combinations. Ordinary attached fasteners and sliding rail engagements are outside this spot check. No scene file saved.",
+  "coverage_pass": true,
+  "intersection_count": 0,
+  "endpoint_check_count": 40,
+  "endpoint_failure_count": 0,
+  "status": "passed_within_scope"
+}
